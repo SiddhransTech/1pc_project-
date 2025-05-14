@@ -99,25 +99,3 @@ ERROR - 2025-05-14 16:52:47 --> Severity: Warning --> Undefined array key "symbo
 ERROR - 2025-05-14 16:52:47 --> Severity: Warning --> Undefined array key "currency_settings_id" /home/u824676608/domains/siddhrans.in/public_html/1percentcharityclub/application/views/front/header/header.php 153
 ERROR - 2025-05-14 16:52:47 --> Severity: Warning --> Undefined variable $currency_id /home/u824676608/domains/siddhrans.in/public_html/1percentcharityclub/application/views/front/header/header.php 153
 ERROR - 2025-05-14 16:52:47 --> Severity: Warning --> Undefined property: stdClass::$posted_by /home/u824676608/domains/siddhrans.in/public_html/1percentcharityclub/application/views/front/channel_detail/index.php 25
-ERROR - 2025-05-14 13:57:02 --> 404 Page Not Found: Uploads/blog_image
-ERROR - 2025-05-14 13:57:13 --> 404 Page Not Found: Uploads/blog_image
-ERROR - 2025-05-14 17:27:41 --> Severity: Warning --> Undefined variable $preloader_bg C:\xampp\htdocs\1pc\application\views\front\preloader.php 101
-ERROR - 2025-05-14 17:27:41 --> Severity: Warning --> Undefined variable $c_name C:\xampp\htdocs\1pc\application\views\front\header\header.php 142
-ERROR - 2025-05-14 17:27:41 --> Severity: Warning --> Undefined variable $symbol C:\xampp\htdocs\1pc\application\views\front\header\header.php 142
-ERROR - 2025-05-14 17:27:41 --> Severity: Warning --> Undefined array key "currency_settings_id" C:\xampp\htdocs\1pc\application\views\front\header\header.php 150
-ERROR - 2025-05-14 17:27:41 --> Severity: Warning --> Undefined variable $currency_id C:\xampp\htdocs\1pc\application\views\front\header\header.php 150
-ERROR - 2025-05-14 17:27:41 --> Severity: Warning --> Undefined array key "currency_settings_id" C:\xampp\htdocs\1pc\application\views\front\header\header.php 151
-ERROR - 2025-05-14 17:27:41 --> Severity: Warning --> Undefined array key "symbol" C:\xampp\htdocs\1pc\application\views\front\header\header.php 152
-ERROR - 2025-05-14 17:27:41 --> Severity: Warning --> Undefined array key "currency_settings_id" C:\xampp\htdocs\1pc\application\views\front\header\header.php 153
-ERROR - 2025-05-14 17:27:41 --> Severity: Warning --> Undefined variable $currency_id C:\xampp\htdocs\1pc\application\views\front\header\header.php 153
-ERROR - 2025-05-14 13:57:47 --> 404 Page Not Found: Uploads/blog_image
-ERROR - 2025-05-14 17:27:51 --> Severity: Warning --> Undefined variable $preloader_bg C:\xampp\htdocs\1pc\application\views\front\preloader.php 101
-ERROR - 2025-05-14 17:27:51 --> Severity: Warning --> Undefined variable $c_name C:\xampp\htdocs\1pc\application\views\front\header\header.php 142
-ERROR - 2025-05-14 17:27:51 --> Severity: Warning --> Undefined variable $symbol C:\xampp\htdocs\1pc\application\views\front\header\header.php 142
-ERROR - 2025-05-14 17:27:51 --> Severity: Warning --> Undefined array key "currency_settings_id" C:\xampp\htdocs\1pc\application\views\front\header\header.php 150
-ERROR - 2025-05-14 17:27:51 --> Severity: Warning --> Undefined variable $currency_id C:\xampp\htdocs\1pc\application\views\front\header\header.php 150
-ERROR - 2025-05-14 17:27:51 --> Severity: Warning --> Undefined array key "currency_settings_id" C:\xampp\htdocs\1pc\application\views\front\header\header.php 151
-ERROR - 2025-05-14 17:27:51 --> Severity: Warning --> Undefined array key "symbol" C:\xampp\htdocs\1pc\application\views\front\header\header.php 152
-ERROR - 2025-05-14 17:27:51 --> Severity: Warning --> Undefined array key "currency_settings_id" C:\xampp\htdocs\1pc\application\views\front\header\header.php 153
-ERROR - 2025-05-14 17:27:51 --> Severity: Warning --> Undefined variable $currency_id C:\xampp\htdocs\1pc\application\views\front\header\header.php 153
-ERROR - 2025-05-14 13:57:54 --> 404 Page Not Found: Uploads/blog_image
