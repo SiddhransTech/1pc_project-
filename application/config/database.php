@@ -64,15 +64,21 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
+
+	// for local
 	// 'hostname' => 'localhost',
 	// 'username' => 'root',
 	// 'password' => '',
 	// 'database' => '1pc',
-	// 'dbdriver' => 'mysqli',
+
+	// for production
 	'hostname' => 'localhost',
 	'username' => 'u824676608_1percentcharit',
 	'password' => 'Charity@123',
 	'database' => 'u824676608_1percentcharit',
+
+
+	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
