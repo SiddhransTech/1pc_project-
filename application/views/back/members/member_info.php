@@ -218,19 +218,7 @@
 										<?=$education_and_career[0]['occupation']?>
 									</td>
 								</tr>
-								<tr>
-									<td>
-										<b><?php echo translate('annual_income')?> / <?=$this->lang->line('annual_income'); ?></b>
-									</td>
-									<td>
-										<?=$education_and_career[0]['annual_income']?>
-									</td>
-									<td>
-										<b></b>
-									</td>
-									<td>
-									</td>
-								</tr>
+								
 							</table>
 			      </div>
 			    </div>
@@ -561,20 +549,11 @@
 											<td>
 												<?=$this->Crud_model->get_type_name_by_id('religion', $spiritual_and_social_background[0]['religion']);?>
 											</td>
-											<td>
-												<b><?php echo translate('caste_/_sect')?> / <?=$this->lang->line('caste_sect'); ?></b>
-											</td>
-											<td>
-												<?=$this->Crud_model->get_type_name_by_id('caste', $spiritual_and_social_background[0]['caste'], 'caste_name');?>
-											</td>
+											
 										</tr>
 										<tr>
-											<td>
-												<b><?php echo translate('sub-Caste')?> / <?=$this->lang->line('sub_caste'); ?></b>
-											</td>
-											<td>
-												<?=$this->Crud_model->get_type_name_by_id('sub_caste', $spiritual_and_social_background[0]['sub_caste'], 'sub_caste_name');?>
-											</td>
+											
+											
 											<td>
 												<b><?php echo translate('Kula')?> / <?=$this->lang->line('kula'); ?></b>
 											</td>
@@ -670,12 +649,7 @@
 											<td>
 												<?=$this->Crud_model->get_type_name_by_id('decision', $life_style[0]['smoke'])?>
 											</td>
-											<td>
-												<b><?php echo translate('living_with')?> / <?=$this->lang->line('living_with'); ?></b>
-											</td>
-											<td>
-												<?=$life_style[0]['living_with']?>
-											</td>
+											
 										</tr>
 									</table>
 			          </div>
@@ -803,6 +777,23 @@
 
 											</td>
 										</tr>
+										<tr>
+										<td>
+											<b><?php echo translate('wife') ?> / <?= $this->lang->line('wife'); ?></b>
+										</td>
+										<td>
+											<?= $family_info[0]['wife'] ?>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<b><?php echo translate('children') ?> / <?= $this->lang->line('children'); ?></b>
+										</td>
+										<td>
+											<?= $family_info[0]['children'] ?>
+										</td>
+									</tr>
+
 									</table>
 			          </div>
 			        </div>
@@ -817,7 +808,7 @@
 		            </div>
 		            <div class="panel-body">
 		              <table class="table">
-										<tr>
+										<!-- <tr>
 											<td>
 												<b><?php echo translate('home_district')?> / <?=$this->lang->line('home_district'); ?></b>
 											</td>
@@ -844,7 +835,16 @@
 											<td>
 												<?=$additional_personal_details[0]['special_circumstances']?>
 											</td>
-										</tr>
+										</tr> -->
+										<tr>
+									<td>
+										<b><?php echo translate('anniversary')?> / <?=$this->lang->line('anniversary'); ?></b>
+									</td>
+									<td>
+										<?=$additional_personal_details[0]['anniversary']?>
+									</td>
+								</tr>
+
 									</table>
 			          </div>
 			        </div>

@@ -753,7 +753,7 @@ class Crud_model extends CI_Model
         if ($admin->role == 1) {
             return true;
         } else {
-            $role             = $admin->role;
+            $role  = $admin->role;
             $role_permissions = json_decode($this->Crud_model->get_type_name_by_id('role', $role, 'permission'));
             if (in_array($permission, $role_permissions)) {
                 return true;

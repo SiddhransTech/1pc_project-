@@ -108,12 +108,16 @@
                                 <?php
                                 if ($this->db->get_where('frontend_settings', array('type' => 'spiritual_and_social_background'))->row()->value == "yes") {
                                 ?>
-                                <div class="form-group has-feedback">
-                                    <label for="" class="text-uppercase"><?php echo translate('religion')?></label>
-                                    <?= $this->Crud_model->select_html('religion', 'religion', 'name', 'edit', 'form-control form-control-sm selectpicker s_religion', $home_religion, '', '', ''); ?>
-                                    <div class="help-block with-errors">
+                               <?php
+                                    /*
+                                    <div class="form-group has-feedback">
+                                        <label for="" class="text-uppercase"><?php echo translate('religion')?></label>
+                                        <?= $this->Crud_model->select_html('religion', 'religion', 'name', 'edit', 'form-control form-control-sm selectpicker s_religion', $home_religion, '', '', ''); ?>
+                                        <div class="help-block with-errors">
+                                        </div>
                                     </div>
-                                </div>
+                                  
+
                                 <div class="form-group has-feedback">
                                     <label for="" class="text-uppercase"><?php echo translate('caste_/_sect')?></label>
 
@@ -152,6 +156,9 @@
                                     
                                     </select>    
                                 </div>
+                                  */
+                                    ?>
+                                    
                                 <?php
                                 }
                                 ?>

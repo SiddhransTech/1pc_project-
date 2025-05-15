@@ -22,20 +22,7 @@
                             <?=$education_and_career_data[0]['occupation']?>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="td-label">
-                            <span><?php echo translate('annual_income')?></span>
-                        </td>
-                        <td>
-                            <?=$education_and_career_data[0]['annual_income']?>
-                        </td>
-                        <td>
-                            
-                        </td>
-                        <td>
-                            
-                        </td>
-                    </tr>
+               
                 </tbody>
             </table>
         </div>

@@ -1305,6 +1305,46 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                                    <!-- Children Field -->
+                                    <div class="col-md-6">
+                                        <div class="form-group has-feedback">
+                                            <label for="children" class="text-uppercase c-gray-light">
+                                                <?php echo translate('children') ?> / <?= $this->lang->line('children'); ?>
+                                            </label>
+                                            <input type="text" class="form-control no-resize" name="children" 
+                                                value="<?php 
+                                                    if (!empty($form_contents)) {
+                                                        echo $form_contents['children']; 
+                                                    } else { 
+                                                        echo $family_info[0]['children']; 
+                                                    } 
+                                                ?>">
+                                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Wife Field -->
+                                    <div class="col-md-6">
+                                        <div class="form-group has-feedback">
+                                            <label for="wife" class="text-uppercase c-gray-light">
+                                                <?php echo translate('wife') ?> / <?= $this->lang->line('wife'); ?>
+                                            </label>
+                                            <input type="text" class="form-control no-resize" name="wife" 
+                                                value="<?php 
+                                                    if (!empty($form_contents)) {
+                                                        echo $form_contents['wife']; 
+                                                    } else { 
+                                                        echo $family_info[0]['wife']; 
+                                                    } 
+                                                ?>">
+                                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
 
                 </div>
                 </div>
@@ -1314,13 +1354,23 @@
             <?php
               if ($this->db->get_where('frontend_settings', array('type' => 'additional_personal_details'))->row()->value == "yes") {
             ?>
-                <!--<div class="panel panel-dark">-->
-                <!--<div class="panel-heading">-->
-                <!--    <h3 class="panel-title"><?php echo translate('additional_personal_details')?> / <?=$this->lang->line('additional_personal_details'); ?></h3>-->
-                <!--</div>-->
-                <!--<div class="panel-body">-->
-                <!--  <div class='clearfix'></div>-->
-
+               <div class="panel panel-dark">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><?php echo translate('additional_personal_details')?> / <?=$this->lang->line('additional_personal_details'); ?></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class='clearfix'></div>
+                   <div class="row">
+            <div class="col-md-6">
+                <div class="form-group has-feedback">
+                    <label for="anniversary" class="text-uppercase c-gray-light"><?php echo translate('anniversary')?> / <?=$this->lang->line('anniversary'); ?></label>
+                    <input type="text" class="form-control no-resize" name="anniversary" value="<?php if(!empty($form_contents)){echo $form_contents['anniversary'];} else{echo $additional_personal_details[0]['anniversary'];}?>">
+                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+ </div> </div>
                 <!--<div class="row">-->
                 <!--    <div class="col-md-6">-->
                 <!--        <div class="form-group has-feedback">-->
@@ -1364,7 +1414,7 @@
                 <!--</div>-->
 
                 <!--</div>-->
-                <!--</div>-->
+                <!-- </div> -->
                 <?php } ?>
 
 

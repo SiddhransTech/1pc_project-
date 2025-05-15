@@ -629,7 +629,7 @@ class Admin extends CI_Controller
 						}
 						$nestedData['member_since'] = date('d/m/Y h:i:s A', strtotime($member->member_since));
 						$nestedData['member_status'] = $acnt_status_button;
-						$nestedData['options'] = "<a href='" . base_url() . "admin/members/" . $para1 . "/view_member/" . $member->member_id . "' id='demo-dt-view-btn' class='btn btn-primary btn-xs add-tooltip' data-toggle='tooltip' data-placement='top' title='" . translate('view_profile') . "' ><i class='fa fa-eye'></i></a>
+						$nestedData['options'] = "<a href='" . base_url() . "admin/members/" . $para1 . "/view_member/" . $member->member_id . "' id='demo-dt-view-btn' class='btn btn-primary btn-xs add-tooltip' data-toggle='tooltip' data-placement='top' title='" . translate('view_profile' ) . "' ><i class='fa fa-eye'></i></a>
 						 <a href='" . base_url() . "admin/members/" . $para1 . "/edit_member/" . $member->member_id . "' id='demo-dt-edit-btn' class='btn btn-primary btn-xs add-tooltip' data-toggle='tooltip' data-placement='top' title='" . translate('edit_profile') . "' ><i class='fa fa-edit'></i></a>
 			                <a href='" . base_url() . "admin/members/" . $para1 . "/print_member/" . $member->member_id . "' id='demo-dt-pdf-btn' class='btn btn-primary btn-xs add-tooltip' data-toggle='tooltip' data-placement='top' title='" . translate('Generate_Pdf') . "' ><i class='fa fa-file-pdf-o'></i></a>			
 									
@@ -1549,20 +1549,25 @@ class Admin extends CI_Controller
 
 					// ------------------------------------Family Information------------------------------------ //
 					$family_info[] = array(
-						'father'				=>  $this->input->post('father'),
-						'mother'				=>	$this->input->post('mother'),
-						'brother_sister'		=>	$this->input->post('brother_sister')
+						'father'            => $this->input->post('father'),
+						'mother'            => $this->input->post('mother'),
+						'brother_sister'    => $this->input->post('brother_sister'),
+						'wife'              => $this->input->post('wife'),
+						'children'          => $this->input->post('children')
 					);
+
 					$data['family_info'] = json_encode($family_info);
 					// ------------------------------------Family Information------------------------------------ //
 
 					// ------------------------------------ Additional Personal Details------------------------------------ //
-					$additional_personal_details[] = array(
-						'home_district'	=>  $this->input->post('home_district'),
-						'family_residence'				=>	$this->input->post('family_residence'),
-						'fathers_occupation'			=>	$this->input->post('fathers_occupation'),
-						'special_circumstances'			=>	$this->input->post('special_circumstances')
-					);
+		       $additional_personal_details[] = array(
+					// 'home_district'         => $this->input->post('home_district'),
+					// 'family_residence'      => $this->input->post('family_residence'),
+					// 'fathers_occupation'    => $this->input->post('fathers_occupation'),
+					// 'special_circumstances' => $this->input->post('special_circumstances'),
+					'anniversary'           => $this->input->post('anniversary')
+				);
+
 					$data['additional_personal_details'] = json_encode($additional_personal_details);
 					// ------------------------------------ Additional Personal Details------------------------------------ //
 

@@ -260,10 +260,11 @@ AffTracker.generalClick( "index" );
 						                <!--<a class="nav-link <?php if($page == 'stories' || $page == 'story_detail'){?>nav_active<?php }?>" href="<?=base_url()?>home/stories" aria-haspopup="true" aria-expanded="false">-->
 						                <!--<?php echo translate('happy_stories')?></a>-->
 						                <!--</li>-->
-						                <li class="custom-nav">
+						                <!-- <li class="custom-nav">
 						                <a class="nav-link <?php if($page == 'stories' || $page == 'story_detail'){?>nav_active<?php }?>" href="https://gpaevents.in/" target="_blank" aria-haspopup="true" aria-expanded="false">
 						                <?php echo translate('Book Event')?></a>
-						                </li>
+						                </li> -->
+										
 						                         <li class="custom-nav">
 						                <a class="nav-link <?php if($page == 'media'){?>nav_active<?php }?>" href="<?=base_url()?>home/media" aria-haspopup="true" aria-expanded="false">
 						                <?php echo translate('media / Press')?></a>
