@@ -356,6 +356,72 @@ class Home extends CI_Controller {
     /* member_kundali_modal and member_video_modal stop*/
     
     
+    
+    // function member_profile($para1="",$para2="")
+    // {
+    //     if ($this->member_permission() == FALSE) {
+    //         redirect(base_url().'home/login', 'refresh');
+    //     }
+
+    //     if ($para1 != "" || $para1 != NULL) {
+    //         $is_valid = $this->db->get_where("member", array("member_id" => $para1))->row()->member_id;
+    //         if (!$is_valid) {
+    //             redirect(base_url().'home', 'refresh');
+    //         }
+    //         if ($this->db->get_where("member", array("member_id" => $para1))->row()->is_closed == 'yes') {
+    //             redirect(base_url().'home', 'refresh');
+    //         }
+    //         $member_id = $this->session->userdata('member_id');
+    //         $ignored_ids = $this->Crud_model->get_type_name_by_id('member', $member_id, 'ignored');
+    //         $ignored_ids = json_decode($ignored_ids, true);
+
+    //         if (!in_array($para1, $ignored_ids) && $para1 != $member_id) {
+    //             $page_data['title'] = "Member Profile || ".$this->system_title;
+    //             $page_data['top'] = "profile.php";
+    //             $page_data['page'] = "member_profile";
+    //             $page_data['bottom'] = "profile.php";
+    //             $page_data['get_member'] = $this->db->get_where("member", array("member_id" => $para1))->result();
+
+    //             $this->load->view('front/index', $page_data);
+    //         }
+    //         else {
+    //             redirect(base_url().'home/listing', 'refresh');
+    //         }
+    //     } else {
+    //         redirect(base_url().'home/listing', 'refresh');
+    //     }
+
+    // }
+
+
+public function member_profile($para1 = "", $para2 = "")
+{
+    if (!empty($para1)) {
+        $member = $this->db->get_where("member", ["member_id" => $para1])->row();
+
+        if (!$member || $member->is_closed === 'yes') {
+            redirect(base_url().'home', 'refresh');
+        }
+
+        $current_member_id = $this->session->userdata('member_id');
+        $ignored_ids_json = $this->Crud_model->get_type_name_by_id('member', $current_member_id, 'ignored');
+        $ignored_ids = json_decode($ignored_ids_json, true) ?? [];
+
+        if (!in_array($para1, $ignored_ids) && $para1 != $current_member_id) {
+            $page_data['title'] = "Member Profile || " . $this->system_title;
+            $page_data['top'] = "profile.php";
+            $page_data['page'] = "member_profile";
+            $page_data['bottom'] = "profile.php";
+            $page_data['get_member'] = [$member]; // using already-fetched $member
+
+            $this->load->view('front/index', $page_data);
+        } else {
+            redirect(base_url() . 'home/listing', 'refresh');
+        }
+    } else {
+        redirect(base_url() . 'home/listing', 'refresh');
+    }
+}
 
 
     function ajax_member_list($para1="",$para2="")

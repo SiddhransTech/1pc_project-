@@ -69,7 +69,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-	'database' => '1pc-old',
+	'database' => '1pc',
 
 	// for production
 	// 'hostname' => 'localhost',
