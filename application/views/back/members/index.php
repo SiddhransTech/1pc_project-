@@ -357,19 +357,19 @@
                             </th>
                             <?php } ?>
 
-                            <th width="2%">
+                            <!--<th width="2%">-->
                                 <?php //echo translate('followers')?>
-                                <?php echo translate('caste')?>
-                            </th>
+                            <!--    <?php echo translate('caste')?>-->
+                            <!--</th>-->
 
                             <!-- <th width="2%">
 						<?php //echo translate('alert')?>
 						</th> -->
 
-                            <th width="2%">
+                            <!--<th width="2%">-->
                                 <?php //echo translate('profile_reported')?>
-                                <?php echo translate('sub caste')?>
-                            </th>
+                            <!--    <?php echo translate('sub caste')?>-->
+                            <!--</th>-->
 
                              
                             <?php //if ($parameter == "free_members" ): ?>
@@ -599,12 +599,12 @@ $(document).ready(function() {
                 },
                 <?php } ?>
 
-                {
-                    "data": "caste"
-                },
-                {
-                    "data": "sub_caste"
-                },
+                // {
+                //     "data": "caste"
+                // },
+                // {
+                //     "data": "sub_caste"
+                // },
                 {
                     "data": "member_since"
                 },
@@ -657,12 +657,13 @@ $(document).ready(function() {
 						if($member_approval == 'yes') { ?> {
                     "data": "status"
                 },
-                <?php } ?> {
-                    "data": "caste"
-                },
-                {
-                    "data": "sub_caste"
-                },
+                <?php } ?> 
+                // {
+                //     "data": "caste"
+                // },
+                // {
+                //     "data": "sub_caste"
+                // },
                 {
                     "data": "member_since"
                 },

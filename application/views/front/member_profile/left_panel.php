@@ -236,24 +236,34 @@
             <div class="stats-entry">
                 <span class="stats-label text-uppercase text-left pl-2"><?php echo translate('age');?></span>
                 <span class="stats-label text-uppercase text-left pl-2"><?php echo translate('mother_tongue');?></span>
-                <span class="stats-label text-uppercase text-left pl-2"><?php echo translate('religion');?></span>
-                <span class="stats-label text-uppercase text-left pl-2"><?php echo translate('caste_/_sect');?></span>
-                <span class="stats-label text-uppercase text-left pl-2"><?php echo translate('height');?></span>
+                <!--<span class="stats-label text-uppercase text-left pl-2"><?php echo translate('religion');?></span>-->
+                <!--<span class="stats-label text-uppercase text-left pl-2"><?php echo translate('caste_/_sect');?></span>-->
+                <!--<span class="stats-label text-uppercase text-left pl-2"><?php echo translate('height');?></span>-->
                 <span class="stats-label text-uppercase text-left pl-2"><?php echo translate('location');?></span>
             </div>
 
             <div class="stats-entry">
                 <span class="stats-label text-uppercase text-left pl-2"> <?=$calculated_age = (date('Y') - date('Y', $get_member[0]->date_of_birth));?>&nbsp</span>
                 <span class="stats-label text-uppercase text-left pl-2"><?=$this->Crud_model->get_type_name_by_id('language', $language_data[0]['mother_tongue']);?>&nbsp</span>
-                <span class="stats-label text-uppercase text-left pl-2"><?=$this->Crud_model->get_type_name_by_id('religion', $spiritual_and_social_background_data[0]['religion']);?>&nbsp</span>
-                <span class="stats-label text-uppercase text-left pl-2">
-                    <?php
-                        if($spiritual_and_social_background_data[0]['caste'] != null){
-                            echo $this->db->get_where('caste', array('caste_id'=>$spiritual_and_social_background_data[0]['caste']))->row()->caste_name;
-                        }
-                    ?>
-                    &nbsp</span>
-                <span class="stats-label text-uppercase text-left pl-2"><?=$get_member[0]->height." ".translate('feet')?>&nbsp</span>
+              <!-- Display the member's religion using the `Crud_model` helper function -->
+                    <!-- <span class="stats-label text-uppercase text-left pl-2">
+                        <?=$this->Crud_model->get_type_name_by_id('religion', $spiritual_and_social_background_data[0]['religion']);?>&nbsp
+                    </span> -->
+                    
+                    <!-- Display the member's caste if it is not null -->
+                    <!-- <span class="stats-label text-uppercase text-left pl-2">
+                        <?php  
+                            if ($spiritual_and_social_background_data[0]['caste'] != null) {
+                                echo $this->db->get_where('caste', array('caste_id' => $spiritual_and_social_background_data[0]['caste']))->row()->caste_name;
+                            }
+                        ?>&nbsp
+                    </span> -->
+                    
+                    <!-- Display the member's height in feet -->
+                    <!-- <span class="stats-label text-uppercase text-left pl-2">
+                        <?=$get_member[0]->height . " " . translate('feet')?>&nbsp
+                    </span> -->
+
                 <span class="stats-label text-uppercase text-left pl-2"><?php if($present_address_data[0]['country']){echo $this->Crud_model->get_type_name_by_id('state', $present_address_data[0]['state']).', '.$this->Crud_model->get_type_name_by_id('country', $present_address_data[0]['country']);}?>&nbsp</span>
             </div>
         </div>
