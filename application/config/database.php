@@ -70,7 +70,7 @@ $db['default'] = array(
 	'username' => 'root',
 	'password' => '',
 	'database' => '1pc',
-
+//   
 	// for production
 	// 'hostname' => 'localhost',
 	// 'username' => 'u824676608_1percentcharit',

@@ -51,8 +51,8 @@
 									</li>
 									
 								<?php } if ($this->Crud_model->admin_permission('premium_members')){?>
-									<li <?php if($page_name=="premium_members"){ ?> class="active-link" <?php } ?>>
-										<a href="<?=base_url()?>admin/members/premium_members"><i class="fa fa-user-o"></i><?php echo translate('Legion Members')?></a>
+									<li <?php if($page_name=="mahamandali_members"){ ?> class="active-link" <?php } ?>>
+										<a href="<?=base_url()?>admin/members/premium_members"><i class="fa fa-user"></i><?php echo translate('registered_members')?></a>
 									</li>
 								<?php } if ($this->Crud_model->admin_permission('add_members')){?>
 									<li <?php if($page_name=="add_member"){ ?> class="active-link" <?php } ?>>

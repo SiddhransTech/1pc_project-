@@ -10528,3 +10528,31 @@ INFO - 2025-05-21 08:56:12 --> Controller Class Initialized
 INFO - 2025-05-21 12:26:12 --> Language file loaded: language/kannada/member_lang.php
 INFO - 2025-05-21 12:26:12 --> Final output sent to browser
 DEBUG - 2025-05-21 12:26:12 --> Total execution time: 0.1267
+ERROR - 2025-05-21 13:22:30 --> Severity: error --> Exception: syntax error, unexpected token "<<" /Applications/XAMPP/xamppfiles/htdocs/1pc/application/views/back/navigation.php 20
+ERROR - 2025-05-21 13:23:46 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:23:46 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:23:46 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:23:46 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:23:46 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:23:46 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:23:46 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:23:46 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:23:46 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:27:28 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:27:28 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:27:28 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:27:28 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:27:28 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:27:28 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:27:28 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:27:29 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:27:29 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:27:33 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:27:33 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:27:33 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:27:33 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:27:33 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:27:33 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:27:33 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:27:33 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
+ERROR - 2025-05-21 13:27:33 --> Severity: Warning --> Attempt to read property "permission_id" on null /Applications/XAMPP/xamppfiles/htdocs/1pc/application/models/Crud_model.php 752
