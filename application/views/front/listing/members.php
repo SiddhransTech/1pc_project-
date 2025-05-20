@@ -120,7 +120,7 @@ foreach ($get_all_members as $member):
             <?php if ($member->membership == 2): ?>
                 <a class="badge-corner badge-corner-red">
                     <span style="-ms-transform: rotate(45deg);/* IE 9 */-webkit-transform: rotate(45deg);/* Chrome, Safari, Opera */transform: rotate(45deg);font-size: 10px;margin-left: -14px;">
-                        <?=translate('national')?>
+                        <?=translate('premium')?>
                     </span>
                 </a>
             <?php endif ?>

@@ -17,10 +17,7 @@
 					if ($this->Crud_model->admin_permission('members'))
 					{ ?>
 						<li <?php if( $page_name=="free_members"
-										||$page_name=="premium_members"
-										||$page_name=="national_members"
-										||$page_name=="ngb_members"
-										||$page_name=="guest_members"
+										||$page_name=="mahamandali_members"
 											|| $page_name == "deleted_member"
 												|| $page_name=="add_member"
 													|| $page_name=="bulk_member_add"
@@ -37,22 +34,10 @@
 									<li <?php if($page_name=="free_members"){ ?> class="active-link" <?php } ?>>
 										<a href="<?=base_url()?>admin/members/free_members"><i class="fa fa-user-o"></i><?php echo translate('visitors')?></a>
 									</li>
-								<?php } if ($this->Crud_model->admin_permission('guest_members')){ ?>
-									<li <?php if($page_name=="guest_members"){ ?> class="active-link" <?php } ?>>
-										<a href="<?=base_url()?>admin/members/guest_members"><i class="fa fa-user-o"></i><?php echo translate('Guests')?></a>
-									</li>
-								<?php } if ($this->Crud_model->admin_permission('ngb_members')){ ?>
-									<li <?php if($page_name=="ngb_members"){ ?> class="active-link" <?php } ?>>
-										<a href="<?=base_url()?>admin/members/ngb_members"><i class="fa fa-user-o"></i><?php echo translate('NGB Members')?></a>
-									</li>
-								<?php } if ($this->Crud_model->admin_permission('national_members')){ ?>
-									<li <?php if($page_name=="national_members"){ ?> class="active-link" <?php } ?>>
-										<a href="<?=base_url()?>admin/members/national_members"><i class="fa fa-user-o"></i><?php echo translate('National Members')?></a>
-									</li>
 									
 								<?php } if ($this->Crud_model->admin_permission('premium_members')){?>
-									<li <?php if($page_name=="premium_members"){ ?> class="active-link" <?php } ?>>
-										<a href="<?=base_url()?>admin/members/premium_members"><i class="fa fa-user-o"></i><?php echo translate('Legion Members')?></a>
+									<li <?php if($page_name=="mahamandali_members"){ ?> class="active-link" <?php } ?>>
+										<a href="<?=base_url()?>admin/members/premium_members"><i class="fa fa-user"></i><?php echo translate('registered_members')?></a>
 									</li>
 								<?php } if ($this->Crud_model->admin_permission('add_members')){?>
 									<li <?php if($page_name=="add_member"){ ?> class="active-link" <?php } ?>>

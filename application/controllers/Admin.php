@@ -416,35 +416,22 @@ class Admin extends CI_Controller
 
 	function members($para1 = "", $para2 = "", $para3 = "", $para4 = "")
 	{
-
-		 $log_message = "members - para1: $para1, para2: $para2, para3: $para3, para4: $para4";
-    	log_message("info", $log_message);
 	     //error_reporting(E_ALL);
 	     // ini_set('display_errors',1);
 		if ($this->admin_permission() == FALSE) {
 			redirect(base_url() . 'admin/login', 'refresh');
 		} else {
-			// if (!empty($_POST['free_member_gender'])) {
-			// 	$this->session->set_userdata('free_member_status_type', $_POST['free_member_gender']);
-			// 	$this->session->set_userdata('free_filter_status', $_POST['free_filter_status']);
-			// 	$this->session->set_userdata('free_member_profile_image', $_POST['free_member_profile_image']);
-			// }
-
-			// if (!empty($_POST['premium_member_gender'])) {
-			// 	$this->session->set_userdata('premium_member_status_type', $_POST['premium_member_gender']);
-			// 	$this->session->set_userdata('premium_filter_status', $_POST['premium_filter_status']);
-			// 	$this->session->set_userdata('premium_member_profile_image', $_POST['premium_member_profile_image']);
-			// }
-			$member_types = ['guest', 'free', 'premium', 'ngb', 'national'];
-
-			foreach ($member_types as $type) {
-				if (!empty($_POST["{$type}_member_gender"])) {
-					$this->session->set_userdata("{$type}_member_status_type", $_POST["{$type}_member_gender"]);
-					$this->session->set_userdata("{$type}_filter_status", $_POST["{$type}_filter_status"]);
-					$this->session->set_userdata("{$type}_member_profile_image", $_POST["{$type}_member_profile_image"]);
-				}
+			if (!empty($_POST['free_member_gender'])) {
+				$this->session->set_userdata('free_member_status_type', $_POST['free_member_gender']);
+				$this->session->set_userdata('free_filter_status', $_POST['free_filter_status']);
+				$this->session->set_userdata('free_member_profile_image', $_POST['free_member_profile_image']);
 			}
 
+			if (!empty($_POST['premium_member_gender'])) {
+				$this->session->set_userdata('premium_member_status_type', $_POST['premium_member_gender']);
+				$this->session->set_userdata('premium_filter_status', $_POST['premium_filter_status']);
+				$this->session->set_userdata('premium_member_profile_image', $_POST['premium_member_profile_image']);
+			}
 
 			$member_approval = $this->db->get_where('general_settings', array('type' => 'member_approval_by_admin'))->row()->value;
 			$page_data['title'] = "Admin || " . $this->system_title;
@@ -489,89 +476,7 @@ class Admin extends CI_Controller
 							8 => 'sub_caste_name',
 						);
 					}
-				} 
-				elseif ($para1 == "premium_members") {
-					if ($member_approval == 'yes') {
-						$columns = array(
-							0 => '',
-							1 => 'member_profile_id',
-							2 => 'first_name',
-							3 => 'status',
-							4 => 'follower',
-							5 => 'reported_by',
-							6 => 'member_since',
-							7 => 'spiritual_and_social_background',
-							8 => 'sub_caste_name',
-						);
-					} else {
-						$columns = array(
-							0 => '',
-							1 => 'member_profile_id',
-							2 => 'first_name',
-                            3 => 'status',
-							4 => 'follower',
-							5 => 'reported_by',
-							6 => 'member_since',
-							7 => 'spiritual_and_social_background',
-							8 => 'sub_caste_name',
-						);
-					}
-				}
-				elseif ($para1 == "national_members") {
-					if ($member_approval == 'yes') {
-						$columns = array(
-							0 => '',
-							1 => 'member_profile_id',
-							2 => 'first_name',
-							3 => 'status',
-							4 => 'follower',
-							5 => 'reported_by',
-							6 => 'member_since',
-							7 => 'spiritual_and_social_background',
-							8 => 'sub_caste_name',
-						);
-					} else {
-						$columns = array(
-							0 => '',
-							1 => 'member_profile_id',
-							2 => 'first_name',
-                            3 => 'status',
-							4 => 'follower',
-							5 => 'reported_by',
-							6 => 'member_since',
-							7 => 'spiritual_and_social_background',
-							8 => 'sub_caste_name',
-						);
-					}
-				}
-				elseif ($para1 == "guest_members") {
-					if ($member_approval == 'yes') {
-						$columns = array(
-							0 => '',
-							1 => 'member_profile_id',
-							2 => 'first_name',
-							3 => 'status',
-							4 => 'follower',
-							5 => 'reported_by',
-							6 => 'member_since',
-							7 => 'spiritual_and_social_background',
-							8 => 'sub_caste_name',
-						);
-					} else {
-						$columns = array(
-							0 => '',
-							1 => 'member_profile_id',
-							2 => 'first_name',
-                            3 => 'status',
-							4 => 'follower',
-							5 => 'reported_by',
-							6 => 'member_since',
-							7 => 'spiritual_and_social_background',
-							8 => 'sub_caste_name',
-						);
-					}
-				}
-				elseif ($para1 == "ngb_members") {
+				} elseif ($para1 == "premium_members") {
 					if ($member_approval == 'yes') {
 						$columns = array(
 							0 => '',
@@ -612,16 +517,20 @@ class Admin extends CI_Controller
 
 				if ($para1 == "free_members") {
 					$member_type = 1;
-				}
-				 elseif ($para1 == "premium_members") {
+				} elseif ($para1 == "premium_members") {
 					$member_type = 2;
 				}
+<<<<<<< HEAD
 				 elseif ($para1 == "national_members") {
+					$member_type = 3;
 					$member_type = 3;
 				}
 				 elseif ($para1 == "ngb_members") {
 					$member_type = 4;
+					$member_type = 4;
 				}
+				 elseif ($para1 == "guest_members") {
+					$member_type = 0;
 				 elseif ($para1 == "guest_members") {
 					$member_type = 0;
 				}
@@ -783,75 +692,6 @@ class Admin extends CI_Controller
 						);
 					}
 				} elseif ($para1 == "premium_members") {
-					log_message("info","list of premium members");
-					if ($member_approval == 'yes') {
-						log_message("info","list of premium members");
-						$columns = array(
-							0 => '',
-							1 => 'member_profile_id',
-							2 => 'first_name',
-							3 => 'status',
-							4 => 'follower',
-							5 => 'reported_by',
-							6 => 'member_since',
-						);
-					} else {
-						$columns = array(
-							0 => '',
-							1 => 'member_profile_id',
-							2 => 'first_name',
-							3 => 'follower',
-							4 => 'reported_by',
-							5 => 'member_since',
-						);
-					}
-				
-				} elseif ($para1 == "guest_members") {
-					if ($member_approval == 'yes') {
-						$columns = array(
-							0 => '',
-							1 => 'member_profile_id',
-							2 => 'first_name',
-							3 => 'status',
-							4 => 'follower',
-							5 => 'reported_by',
-							6 => 'member_since',
-						);
-					} else {
-						$columns = array(
-							0 => '',
-							1 => 'member_profile_id',
-							2 => 'first_name',
-							3 => 'follower',
-							4 => 'reported_by',
-							5 => 'member_since',
-						);
-					}
-				}
-				elseif ($para1 == "ngb_members") {
-					if ($member_approval == 'yes') {
-						$columns = array(
-							0 => '',
-							1 => 'member_profile_id',
-							2 => 'first_name',
-							3 => 'status',
-							4 => 'follower',
-							5 => 'reported_by',
-							6 => 'member_since',
-						);
-					} else {
-						$columns = array(
-							0 => '',
-							1 => 'member_profile_id',
-							2 => 'first_name',
-							3 => 'follower',
-							4 => 'reported_by',
-							5 => 'member_since',
-						);
-					}
-				}
-				elseif ($para1 == "national_members") {
-					log_message("info","list of national members");
 					if ($member_approval == 'yes') {
 						$columns = array(
 							0 => '',
@@ -890,8 +730,7 @@ class Admin extends CI_Controller
 
 				if ($para1 == "free_members") {
 					$member_type = 1;
-				} 
-				elseif ($para1 == "premium_members") {
+				} elseif ($para1 == "premium_members") {
 					$member_type = 2;
 				}
 				elseif ($para1 == "guest_members") {
@@ -1154,6 +993,7 @@ class Admin extends CI_Controller
 				$page_data['parameter'] = "premium_members";
 				$page_data['page_name'] = "premium_members";
 				$this->load->view('back/index', $page_data);
+<<<<<<< HEAD
 			} 
 			
 			elseif ($para1 == "national_members") {
@@ -1175,13 +1015,13 @@ class Admin extends CI_Controller
 					$page_data['folder'] = "members";
 					$page_data['file'] = "view_member.php";
 					$page_data['bottom'] = "members/members.php";
-					$page_data['get_national_member_by_id'] = $this->db->get_where("member", array("membership" => 3, "member_id" => $para3))->result();
+					$page_data['get_national_members_by_id'] = $this->db->get_where("member", array("membership" => 3, "member_id" => $para3))->result();
 				} elseif ($para2 == "edit_member") {
 					$page_data['top'] 		= "members/members.php";
 					$page_data['folder'] 	= "members";
 					$page_data['file']	 	= "edit_member.php";
 					$page_data['bottom'] 	= "members/members.php";
-					$page_data['get_national_member_by_id'] = $this->db->get_where("member", array("membership" => 3, "member_id" => $para3))->result();
+					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 3, "member_id" => $para3))->result();
 				} elseif ($para2 == "print_member") {
 					$this->load->library('pdf');
 					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 3, "member_id" => $para3))->result();
@@ -1225,12 +1065,14 @@ class Admin extends CI_Controller
 				$this->load->view('back/index', $page_data);
 			}
 			elseif ($para1 == "guest_members") {
+			elseif ($para1 == "guest_members") {
 				if ($para2 == "") {
 					log_message("info","Guest Members entry point of funcitons");
 					$page_data['top'] = "members/index.php";
 					$page_data['folder'] = "members";
 					$page_data['file'] = "index.php";
 					$page_data['bottom'] = "members/index.php";
+					$page_data['get_premium_members'] = $this->db->get_where("member", array("membership" => 0))->result();
 					$page_data['get_premium_members'] = $this->db->get_where("member", array("membership" => 0))->result();
 					if ($this->session->flashdata('alert') == "edit") {
 						$page_data['success_alert'] = translate("you_have_successfully_edited_the_profile!");
@@ -1242,15 +1084,19 @@ class Admin extends CI_Controller
 					$page_data['folder'] = "members";
 					$page_data['file'] = "view_member.php";
 					$page_data['bottom'] = "members/members.php";
-					$page_data['get_guest_member_by_id'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
+					$page_data['get_guest_members_by_id'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
 				} elseif ($para2 == "edit_member") {
 					$page_data['top'] 		= "members/members.php";
 					$page_data['folder'] 	= "members";
 					$page_data['file']	 	= "edit_member.php";
 					$page_data['bottom'] 	= "members/members.php";
-					$page_data['get_guest_member_by_id'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
+					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
 				} elseif ($para2 == "print_member") {
 					$this->load->library('pdf');
+					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
+					$page_data['member_type'] = "guest";
+					$page_data['parameter'] = "guest_members";
+					$page_data['page_name'] = "guest_members";
 					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
 					$page_data['member_type'] = "guest";
 					$page_data['parameter'] = "guest_members";
@@ -1269,6 +1115,7 @@ class Admin extends CI_Controller
 					$page_data['folder'] = "members";
 					$page_data['file'] = "premium_star_matching.php";
 					$page_data['bottom'] = "members/index.php";
+					$page_data['get_premium_members'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
 					$page_data['get_premium_members'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
 					foreach ($page_data['get_premium_members'] as $get_premium_members) {
 						$page_data['nakshatra'] = json_decode($get_premium_members->astronomic_information, true);
@@ -1289,6 +1136,9 @@ class Admin extends CI_Controller
 				$page_data['member_type'] = "Guest";
 				$page_data['parameter'] = "guest_members";
 				$page_data['page_name'] = "guest_members";
+				$page_data['member_type'] = "Guest";
+				$page_data['parameter'] = "guest_members";
+				$page_data['page_name'] = "guest_members";
 				$this->load->view('back/index', $page_data);
 			}
 			elseif ($para1 == "ngb_members") {
@@ -1297,6 +1147,7 @@ class Admin extends CI_Controller
 					$page_data['folder'] = "members";
 					$page_data['file'] = "index.php";
 					$page_data['bottom'] = "members/index.php";
+					$page_data['get_premium_members'] = $this->db->get_where("member", array("membership" => 4))->result();
 					$page_data['get_premium_members'] = $this->db->get_where("member", array("membership" => 4))->result();
 					if ($this->session->flashdata('alert') == "edit") {
 						$page_data['success_alert'] = translate("you_have_successfully_edited_the_profile!");
@@ -1308,15 +1159,19 @@ class Admin extends CI_Controller
 					$page_data['folder'] = "members";
 					$page_data['file'] = "view_member.php";
 					$page_data['bottom'] = "members/members.php";
-					$page_data['get_ngb_member_by_id'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para3))->result();
+					$page_data['get_ngb_members_by_id'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para3))->result();
 				} elseif ($para2 == "edit_member") {
 					$page_data['top'] 		= "members/members.php";
 					$page_data['folder'] 	= "members";
 					$page_data['file']	 	= "edit_member.php";
 					$page_data['bottom'] 	= "members/members.php";
-					$page_data['get_ngb_member_by_id'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para3))->result();
+					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para3))->result();
 				} elseif ($para2 == "print_member") {
 					$this->load->library('pdf');
+					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para3))->result();
+					$page_data['member_type'] = "Ngb";
+					$page_data['parameter'] 	= "ngb_member";
+					$page_data['page_name'] 	= "ngb_member";
 					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para3))->result();
 					$page_data['member_type'] = "Ngb";
 					$page_data['parameter'] 	= "ngb_member";
@@ -1335,6 +1190,7 @@ class Admin extends CI_Controller
 					$page_data['folder'] = "members";
 					$page_data['file'] = "premium_star_matching.php";
 					$page_data['bottom'] = "members/index.php";
+					$page_data['get_premium_members'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para3))->result();
 					$page_data['get_premium_members'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para3))->result();
 					foreach ($page_data['get_premium_members'] as $get_premium_members) {
 						$page_data['nakshatra'] = json_decode($get_premium_members->astronomic_information, true);
@@ -1355,9 +1211,15 @@ class Admin extends CI_Controller
 				$page_data['member_type'] = "Ngb";
 				$page_data['parameter'] = "ngb_members";
 				$page_data['page_name'] = "ngb_members";
+				$page_data['member_type'] = "Ngb";
+				$page_data['parameter'] = "ngb_members";
+				$page_data['page_name'] = "ngb_members";
 				$this->load->view('back/index', $page_data);
 			}
 			 elseif ($para1 == "add_member") {
+=======
+			} elseif ($para1 == "add_member") {
+>>>>>>> 8204c8f ( chethan  commit set uped the project)
 				if ($para2 == "") {
 					$page_data['top'] 		= "members/index.php";
 					$page_data['folder'] 	= "members";
