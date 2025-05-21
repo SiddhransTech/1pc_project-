@@ -40,13 +40,13 @@
 							$member = $get_premium_member_by_id;
 						}
 						elseif ($member_type == "Guest") {
-							$member = $get_guest_members_by_id;
+							$member = $get_guest_member_by_id;
 						}
 						elseif ($member_type == "Ngb") {
-							$member = $get_ngb_members_by_id;
+							$member = $get_ngb_member_by_id;
 						}
 						elseif ($member_type == "National") {
-							$member = $get_national_members_by_id;
+							$member = $get_national_member_by_id;
 						}
 					?>
 						<?php

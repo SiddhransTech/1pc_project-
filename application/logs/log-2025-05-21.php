@@ -8378,3 +8378,2153 @@ ERROR - 2025-05-21 12:17:22 --> Severity: Warning --> Attempt to read property "
 INFO - 2025-05-21 12:17:22 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
 INFO - 2025-05-21 12:17:22 --> Final output sent to browser
 DEBUG - 2025-05-21 12:17:22 --> Total execution time: 0.5428
+INFO - 2025-05-21 08:48:26 --> Config Class Initialized
+INFO - 2025-05-21 08:48:26 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:48:26 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:48:26 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:48:26 --> URI Class Initialized
+INFO - 2025-05-21 08:48:26 --> Router Class Initialized
+INFO - 2025-05-21 08:48:26 --> Output Class Initialized
+INFO - 2025-05-21 08:48:26 --> Security Class Initialized
+DEBUG - 2025-05-21 08:48:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:48:26 --> Input Class Initialized
+INFO - 2025-05-21 08:48:26 --> Language Class Initialized
+INFO - 2025-05-21 08:48:26 --> Loader Class Initialized
+INFO - 2025-05-21 08:48:26 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:48:26 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:48:26 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:48:26 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:48:26 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:48:26 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:48:26 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:48:26 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:48:26 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:48:26 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:48:26 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:48:26 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:48:26 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:48:26 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:48:26 --> Controller Class Initialized
+INFO - 2025-05-21 12:18:26 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:18:26 --> members - para1: premium_members, para2: , para3: , para4: 
+ERROR - 2025-05-21 12:18:26 --> Severity: Warning --> Undefined variable $testx C:\xampp\htdocs\1pc\application\views\back\members\index.php 308
+ERROR - 2025-05-21 12:18:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:18:26 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:18:26 --> Final output sent to browser
+DEBUG - 2025-05-21 12:18:27 --> Total execution time: 0.4183
+INFO - 2025-05-21 08:48:27 --> Config Class Initialized
+INFO - 2025-05-21 08:48:27 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:48:27 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:48:27 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:48:27 --> URI Class Initialized
+INFO - 2025-05-21 08:48:27 --> Router Class Initialized
+INFO - 2025-05-21 08:48:27 --> Output Class Initialized
+INFO - 2025-05-21 08:48:27 --> Security Class Initialized
+DEBUG - 2025-05-21 08:48:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:48:27 --> Input Class Initialized
+INFO - 2025-05-21 08:48:27 --> Language Class Initialized
+INFO - 2025-05-21 08:48:27 --> Loader Class Initialized
+INFO - 2025-05-21 08:48:27 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:48:27 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:48:27 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:48:27 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:48:27 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:48:27 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:48:27 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:48:27 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:48:27 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:48:27 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:48:27 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:48:27 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:48:27 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:48:27 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:48:27 --> Controller Class Initialized
+INFO - 2025-05-21 12:18:27 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:18:27 --> members - para1: premium_members, para2: list_data, para3: , para4: 
+INFO - 2025-05-21 12:18:27 --> Final output sent to browser
+DEBUG - 2025-05-21 12:18:27 --> Total execution time: 0.1265
+INFO - 2025-05-21 08:48:28 --> Config Class Initialized
+INFO - 2025-05-21 08:48:28 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:48:28 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:48:28 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:48:28 --> URI Class Initialized
+INFO - 2025-05-21 08:48:28 --> Router Class Initialized
+INFO - 2025-05-21 08:48:28 --> Output Class Initialized
+INFO - 2025-05-21 08:48:28 --> Security Class Initialized
+DEBUG - 2025-05-21 08:48:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:48:28 --> Input Class Initialized
+INFO - 2025-05-21 08:48:28 --> Language Class Initialized
+INFO - 2025-05-21 08:48:28 --> Loader Class Initialized
+INFO - 2025-05-21 08:48:28 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:48:28 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:48:28 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:48:28 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:48:28 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:48:28 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:48:28 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:48:28 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:48:28 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:48:28 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:48:28 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:48:28 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:48:28 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:48:28 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:48:28 --> Controller Class Initialized
+INFO - 2025-05-21 12:18:28 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:18:28 --> members - para1: national_members, para2: , para3: , para4: 
+INFO - 2025-05-21 12:18:28 --> National Members entry point of funcitons
+ERROR - 2025-05-21 12:18:28 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:28 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:28 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:28 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:28 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:28 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:28 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:28 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:28 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:18:28 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:18:28 --> Final output sent to browser
+DEBUG - 2025-05-21 12:18:28 --> Total execution time: 0.4133
+INFO - 2025-05-21 08:48:28 --> Config Class Initialized
+INFO - 2025-05-21 08:48:28 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:48:28 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:48:28 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:48:28 --> URI Class Initialized
+INFO - 2025-05-21 08:48:28 --> Router Class Initialized
+INFO - 2025-05-21 08:48:28 --> Output Class Initialized
+INFO - 2025-05-21 08:48:28 --> Security Class Initialized
+DEBUG - 2025-05-21 08:48:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:48:28 --> Input Class Initialized
+INFO - 2025-05-21 08:48:28 --> Language Class Initialized
+INFO - 2025-05-21 08:48:29 --> Loader Class Initialized
+INFO - 2025-05-21 08:48:29 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:48:29 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:48:29 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:48:29 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:48:29 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:48:29 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:48:29 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:48:29 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:48:29 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:48:29 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:48:29 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:48:29 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:48:29 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:48:29 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:48:29 --> Controller Class Initialized
+INFO - 2025-05-21 12:18:29 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:18:29 --> members - para1: national_members, para2: list_data, para3: , para4: 
+INFO - 2025-05-21 12:18:29 --> Final output sent to browser
+DEBUG - 2025-05-21 12:18:29 --> Total execution time: 0.1252
+INFO - 2025-05-21 08:48:32 --> Config Class Initialized
+INFO - 2025-05-21 08:48:32 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:48:32 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:48:32 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:48:32 --> URI Class Initialized
+INFO - 2025-05-21 08:48:32 --> Router Class Initialized
+INFO - 2025-05-21 08:48:32 --> Output Class Initialized
+INFO - 2025-05-21 08:48:32 --> Security Class Initialized
+DEBUG - 2025-05-21 08:48:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:48:32 --> Input Class Initialized
+INFO - 2025-05-21 08:48:32 --> Language Class Initialized
+INFO - 2025-05-21 08:48:32 --> Loader Class Initialized
+INFO - 2025-05-21 08:48:32 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:48:32 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:48:32 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:48:32 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:48:32 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:48:32 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:48:32 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:48:32 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:48:32 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:48:32 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:48:32 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:48:32 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:48:32 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:48:32 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:48:32 --> Controller Class Initialized
+INFO - 2025-05-21 12:18:32 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:18:32 --> members - para1: national_members, para2: view_member, para3: 47, para4: 
+ERROR - 2025-05-21 12:18:32 --> Could not find the language line "wife"
+ERROR - 2025-05-21 12:18:32 --> Severity: Warning --> Undefined array key "wife" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 785
+ERROR - 2025-05-21 12:18:32 --> Could not find the language line "children"
+ERROR - 2025-05-21 12:18:32 --> Severity: Warning --> Undefined array key "children" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 793
+ERROR - 2025-05-21 12:18:32 --> Could not find the language line "anniversary"
+ERROR - 2025-05-21 12:18:32 --> Severity: Warning --> Undefined array key "anniversary" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 844
+ERROR - 2025-05-21 12:18:32 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:32 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:32 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:32 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:32 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:32 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:32 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:32 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:32 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:18:32 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:18:32 --> Final output sent to browser
+DEBUG - 2025-05-21 12:18:32 --> Total execution time: 0.5386
+INFO - 2025-05-21 08:48:39 --> Config Class Initialized
+INFO - 2025-05-21 08:48:39 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:48:39 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:48:39 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:48:39 --> URI Class Initialized
+INFO - 2025-05-21 08:48:39 --> Router Class Initialized
+INFO - 2025-05-21 08:48:39 --> Output Class Initialized
+INFO - 2025-05-21 08:48:39 --> Security Class Initialized
+DEBUG - 2025-05-21 08:48:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:48:39 --> Input Class Initialized
+INFO - 2025-05-21 08:48:39 --> Language Class Initialized
+INFO - 2025-05-21 08:48:39 --> Loader Class Initialized
+INFO - 2025-05-21 08:48:39 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:48:39 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:48:39 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:48:39 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:48:39 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:48:39 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:48:39 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:48:39 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:48:39 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:48:39 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:48:39 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:48:39 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:48:39 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:48:39 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:48:39 --> Controller Class Initialized
+INFO - 2025-05-21 12:18:39 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:18:39 --> members - para1: guest_members, para2: , para3: , para4: 
+INFO - 2025-05-21 12:18:39 --> Guest Members entry point of funcitons
+ERROR - 2025-05-21 12:18:40 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:40 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:40 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:40 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:40 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:40 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:40 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:40 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:40 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:18:40 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:18:40 --> Final output sent to browser
+DEBUG - 2025-05-21 12:18:40 --> Total execution time: 0.4175
+INFO - 2025-05-21 08:48:40 --> Config Class Initialized
+INFO - 2025-05-21 08:48:40 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:48:40 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:48:40 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:48:40 --> URI Class Initialized
+INFO - 2025-05-21 08:48:40 --> Router Class Initialized
+INFO - 2025-05-21 08:48:40 --> Output Class Initialized
+INFO - 2025-05-21 08:48:40 --> Security Class Initialized
+DEBUG - 2025-05-21 08:48:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:48:40 --> Input Class Initialized
+INFO - 2025-05-21 08:48:40 --> Language Class Initialized
+INFO - 2025-05-21 08:48:40 --> Loader Class Initialized
+INFO - 2025-05-21 08:48:40 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:48:40 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:48:40 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:48:40 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:48:40 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:48:40 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:48:40 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:48:40 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:48:40 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:48:40 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:48:40 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:48:40 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:48:40 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:48:40 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:48:40 --> Controller Class Initialized
+INFO - 2025-05-21 12:18:40 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:18:40 --> members - para1: guest_members, para2: list_data, para3: , para4: 
+INFO - 2025-05-21 12:18:40 --> Final output sent to browser
+DEBUG - 2025-05-21 12:18:40 --> Total execution time: 0.1298
+INFO - 2025-05-21 08:48:42 --> Config Class Initialized
+INFO - 2025-05-21 08:48:42 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:48:42 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:48:42 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:48:42 --> URI Class Initialized
+INFO - 2025-05-21 08:48:42 --> Router Class Initialized
+INFO - 2025-05-21 08:48:42 --> Output Class Initialized
+INFO - 2025-05-21 08:48:42 --> Security Class Initialized
+DEBUG - 2025-05-21 08:48:42 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:48:42 --> Input Class Initialized
+INFO - 2025-05-21 08:48:42 --> Language Class Initialized
+INFO - 2025-05-21 08:48:42 --> Loader Class Initialized
+INFO - 2025-05-21 08:48:42 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:48:42 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:48:42 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:48:42 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:48:42 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:48:42 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:48:42 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:48:42 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:48:42 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:48:42 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:48:42 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:48:42 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:48:42 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:48:42 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:48:42 --> Controller Class Initialized
+INFO - 2025-05-21 12:18:42 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:18:42 --> members - para1: free_members, para2: , para3: , para4: 
+ERROR - 2025-05-21 12:18:42 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:42 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:42 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:42 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:42 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:42 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:42 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:42 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:42 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:18:42 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:18:42 --> Final output sent to browser
+DEBUG - 2025-05-21 12:18:42 --> Total execution time: 0.4088
+INFO - 2025-05-21 08:48:42 --> Config Class Initialized
+INFO - 2025-05-21 08:48:42 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:48:42 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:48:42 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:48:42 --> URI Class Initialized
+INFO - 2025-05-21 08:48:42 --> Router Class Initialized
+INFO - 2025-05-21 08:48:42 --> Output Class Initialized
+INFO - 2025-05-21 08:48:42 --> Security Class Initialized
+DEBUG - 2025-05-21 08:48:42 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:48:42 --> Input Class Initialized
+INFO - 2025-05-21 08:48:42 --> Language Class Initialized
+INFO - 2025-05-21 08:48:42 --> Loader Class Initialized
+INFO - 2025-05-21 08:48:42 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:48:42 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:48:42 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:48:42 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:48:42 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:48:42 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:48:42 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:48:42 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:48:42 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:48:42 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:48:42 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:48:42 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:48:42 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:48:42 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:48:42 --> Controller Class Initialized
+INFO - 2025-05-21 12:18:42 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:18:42 --> members - para1: free_members, para2: list_data, para3: , para4: 
+INFO - 2025-05-21 12:18:42 --> Final output sent to browser
+DEBUG - 2025-05-21 12:18:42 --> Total execution time: 0.1471
+INFO - 2025-05-21 08:48:46 --> Config Class Initialized
+INFO - 2025-05-21 08:48:46 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:48:46 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:48:46 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:48:46 --> URI Class Initialized
+INFO - 2025-05-21 08:48:46 --> Router Class Initialized
+INFO - 2025-05-21 08:48:46 --> Output Class Initialized
+INFO - 2025-05-21 08:48:46 --> Security Class Initialized
+DEBUG - 2025-05-21 08:48:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:48:46 --> Input Class Initialized
+INFO - 2025-05-21 08:48:46 --> Language Class Initialized
+INFO - 2025-05-21 08:48:46 --> Loader Class Initialized
+INFO - 2025-05-21 08:48:46 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:48:46 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:48:46 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:48:46 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:48:46 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:48:46 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:48:46 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:48:46 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:48:46 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:48:46 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:48:46 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:48:46 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:48:46 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:48:46 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:48:46 --> Controller Class Initialized
+INFO - 2025-05-21 12:18:46 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:18:46 --> members - para1: guest_members, para2: , para3: , para4: 
+INFO - 2025-05-21 12:18:46 --> Guest Members entry point of funcitons
+ERROR - 2025-05-21 12:18:47 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:47 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:47 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:47 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:47 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:47 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:47 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:47 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:47 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:18:47 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:18:47 --> Final output sent to browser
+DEBUG - 2025-05-21 12:18:47 --> Total execution time: 0.4017
+INFO - 2025-05-21 08:48:47 --> Config Class Initialized
+INFO - 2025-05-21 08:48:47 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:48:47 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:48:47 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:48:47 --> URI Class Initialized
+INFO - 2025-05-21 08:48:47 --> Router Class Initialized
+INFO - 2025-05-21 08:48:47 --> Output Class Initialized
+INFO - 2025-05-21 08:48:47 --> Security Class Initialized
+DEBUG - 2025-05-21 08:48:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:48:47 --> Input Class Initialized
+INFO - 2025-05-21 08:48:47 --> Language Class Initialized
+INFO - 2025-05-21 08:48:47 --> Loader Class Initialized
+INFO - 2025-05-21 08:48:47 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:48:47 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:48:47 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:48:47 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:48:47 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:48:47 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:48:47 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:48:47 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:48:47 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:48:47 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:48:47 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:48:47 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:48:47 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:48:47 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:48:47 --> Controller Class Initialized
+INFO - 2025-05-21 12:18:47 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:18:47 --> members - para1: guest_members, para2: list_data, para3: , para4: 
+INFO - 2025-05-21 12:18:47 --> Final output sent to browser
+DEBUG - 2025-05-21 12:18:47 --> Total execution time: 0.1229
+INFO - 2025-05-21 08:48:50 --> Config Class Initialized
+INFO - 2025-05-21 08:48:50 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:48:50 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:48:50 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:48:50 --> URI Class Initialized
+INFO - 2025-05-21 08:48:50 --> Router Class Initialized
+INFO - 2025-05-21 08:48:50 --> Output Class Initialized
+INFO - 2025-05-21 08:48:50 --> Security Class Initialized
+DEBUG - 2025-05-21 08:48:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:48:50 --> Input Class Initialized
+INFO - 2025-05-21 08:48:50 --> Language Class Initialized
+INFO - 2025-05-21 08:48:50 --> Loader Class Initialized
+INFO - 2025-05-21 08:48:50 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:48:50 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:48:50 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:48:50 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:48:50 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:48:50 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:48:50 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:48:50 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:48:50 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:48:50 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:48:50 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:48:50 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:48:50 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:48:50 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:48:50 --> Controller Class Initialized
+INFO - 2025-05-21 12:18:50 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:18:50 --> members - para1: guest_members, para2: edit_member, para3: 44, para4: 
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $member C:\xampp\htdocs\1pc\application\views\back\members\edit_member.php 9
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> foreach() argument must be of type array|object, null given C:\xampp\htdocs\1pc\application\views\back\members\edit_member.php 9
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_member.php 40
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "member_id" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_member.php 40
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 2
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "member_id" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 2
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $image C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 12
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 12
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 12
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 14
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "first_name" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 14
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 14
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "last_name" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 14
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $education_and_career C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 16
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 16
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 16
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $present_address C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 19
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 19
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 19
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $present_address C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 19
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 19
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 19
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 24
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 30
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "member_id" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 30
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 32
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "is_blocked" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 32
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 39
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "is_blocked" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 39
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 39
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "member_id" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 39
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 46
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "follower" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 46
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 52
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "is_closed" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 52
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 56
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "is_closed" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 56
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 77
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $percent C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 32
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 36
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "member_id" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 36
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 38
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "percentage" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 38
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 50
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "member_profile_id" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 50
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 52
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "enquiry_time" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 52
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 71
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "introduction" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 71
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 87
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "first_name" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 87
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 96
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "last_name" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 96
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 113
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "gender" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 113
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 124
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "email" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 124
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 125
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "email" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 125
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 137
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "date_of_birth" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 137
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $basic_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 151
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 151
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 151
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $basic_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 165
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 165
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 165
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $basic_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 173
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 173
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 173
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 199
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "mobile" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 199
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 200
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "mobile" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 200
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $image C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 227
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 227
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 227
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $present_address C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 256
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 256
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 256
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $present_address C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 331
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 331
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 331
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $education_and_career C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 356
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 356
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 356
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $education_and_career C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 365
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 365
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 365
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $education_and_career C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 376
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 376
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 376
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $language C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 515
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 515
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 515
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $language C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 531
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 531
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 531
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $language C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 549
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 549
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 549
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $language C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 565
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 565
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 565
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 592
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 592
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 592
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 601
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 601
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 601
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 612
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 612
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 612
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 621
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 621
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 621
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 632
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 632
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 632
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 641
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 641
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 641
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 652
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 652
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 652
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 661
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 661
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 661
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 672
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 672
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 672
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 681
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 681
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 681
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $residency_information C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 764
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 764
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 764
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $residency_information C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 780
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 780
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 780
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $residency_information C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 799
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 799
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 799
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $residency_information C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 815
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 815
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 815
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $residency_information C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 829
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 829
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 829
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $spiritual_and_social_background C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 860
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 860
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 860
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $spiritual_and_social_background C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 936
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 936
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 936
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $spiritual_and_social_background C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 948
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 948
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 948
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $spiritual_and_social_background C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 976
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 976
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 976
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $life_style C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1036
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1036
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1036
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $life_style C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1050
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1050
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1050
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $life_style C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1070
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1070
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1070
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $life_style C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1081
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1081
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1081
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $permanent_address C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1180
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1180
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1180
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $permanent_address C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1255
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1255
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1255
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $family_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1280
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1280
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1280
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $family_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1289
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1289
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1289
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $family_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1301
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1301
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1301
+ERROR - 2025-05-21 12:18:50 --> Could not find the language line "children"
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $family_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1320
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1320
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1320
+ERROR - 2025-05-21 12:18:50 --> Could not find the language line "wife"
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $family_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1339
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1339
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1339
+ERROR - 2025-05-21 12:18:50 --> Could not find the language line "anniversary"
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $additional_personal_details C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1367
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1367
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1367
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $additional_personal_details C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1378
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1378
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1378
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $additional_personal_details C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1387
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1387
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1387
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $additional_personal_details C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1399
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1399
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1399
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $additional_personal_details C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1408
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1408
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1408
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_member.php 435
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "member_id" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_member.php 435
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:50 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:51 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:18:51 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:18:51 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:18:51 --> Final output sent to browser
+DEBUG - 2025-05-21 12:18:51 --> Total execution time: 0.7088
+INFO - 2025-05-21 08:48:51 --> Config Class Initialized
+INFO - 2025-05-21 08:48:51 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:48:51 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:48:51 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:48:51 --> URI Class Initialized
+INFO - 2025-05-21 08:48:51 --> Router Class Initialized
+INFO - 2025-05-21 08:48:51 --> Output Class Initialized
+INFO - 2025-05-21 08:48:51 --> Security Class Initialized
+DEBUG - 2025-05-21 08:48:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:48:51 --> Input Class Initialized
+INFO - 2025-05-21 08:48:51 --> Language Class Initialized
+INFO - 2025-05-21 08:48:51 --> Loader Class Initialized
+INFO - 2025-05-21 08:48:51 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:48:51 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:48:51 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:48:51 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:48:51 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:48:51 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:48:51 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:48:51 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:48:51 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:48:51 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:48:51 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:48:51 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:48:51 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:48:51 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:48:51 --> Controller Class Initialized
+INFO - 2025-05-21 12:18:51 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:18:51 --> Final output sent to browser
+DEBUG - 2025-05-21 12:18:51 --> Total execution time: 0.1007
+INFO - 2025-05-21 08:53:20 --> Config Class Initialized
+INFO - 2025-05-21 08:53:20 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:53:20 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:53:20 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:53:20 --> URI Class Initialized
+INFO - 2025-05-21 08:53:20 --> Router Class Initialized
+INFO - 2025-05-21 08:53:20 --> Output Class Initialized
+INFO - 2025-05-21 08:53:20 --> Security Class Initialized
+DEBUG - 2025-05-21 08:53:20 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:53:20 --> Input Class Initialized
+INFO - 2025-05-21 08:53:20 --> Language Class Initialized
+INFO - 2025-05-21 08:53:20 --> Loader Class Initialized
+INFO - 2025-05-21 08:53:20 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:53:20 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:53:20 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:53:20 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:53:20 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:53:20 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:53:20 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:53:20 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:53:20 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:53:20 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:53:20 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:53:20 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:53:20 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:53:20 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:53:20 --> Controller Class Initialized
+INFO - 2025-05-21 12:23:20 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:23:20 --> members - para1: guest_members, para2: , para3: , para4: 
+INFO - 2025-05-21 12:23:20 --> Guest Members entry point of funcitons
+ERROR - 2025-05-21 12:23:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:23:20 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:23:20 --> Final output sent to browser
+DEBUG - 2025-05-21 12:23:20 --> Total execution time: 0.4119
+INFO - 2025-05-21 08:53:20 --> Config Class Initialized
+INFO - 2025-05-21 08:53:20 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:53:20 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:53:20 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:53:20 --> URI Class Initialized
+INFO - 2025-05-21 08:53:20 --> Router Class Initialized
+INFO - 2025-05-21 08:53:20 --> Output Class Initialized
+INFO - 2025-05-21 08:53:20 --> Security Class Initialized
+DEBUG - 2025-05-21 08:53:20 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:53:20 --> Input Class Initialized
+INFO - 2025-05-21 08:53:20 --> Language Class Initialized
+INFO - 2025-05-21 08:53:20 --> Loader Class Initialized
+INFO - 2025-05-21 08:53:20 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:53:20 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:53:20 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:53:20 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:53:20 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:53:20 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:53:20 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:53:20 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:53:20 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:53:20 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:53:20 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:53:20 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:53:20 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:53:20 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:53:20 --> Controller Class Initialized
+INFO - 2025-05-21 12:23:20 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:23:20 --> members - para1: guest_members, para2: list_data, para3: , para4: 
+INFO - 2025-05-21 12:23:20 --> Final output sent to browser
+DEBUG - 2025-05-21 12:23:20 --> Total execution time: 0.1555
+INFO - 2025-05-21 08:53:25 --> Config Class Initialized
+INFO - 2025-05-21 08:53:25 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:53:25 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:53:25 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:53:25 --> URI Class Initialized
+INFO - 2025-05-21 08:53:25 --> Router Class Initialized
+INFO - 2025-05-21 08:53:25 --> Output Class Initialized
+INFO - 2025-05-21 08:53:25 --> Security Class Initialized
+DEBUG - 2025-05-21 08:53:25 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:53:25 --> Input Class Initialized
+INFO - 2025-05-21 08:53:25 --> Language Class Initialized
+INFO - 2025-05-21 08:53:25 --> Loader Class Initialized
+INFO - 2025-05-21 08:53:25 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:53:25 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:53:25 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:53:25 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:53:25 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:53:25 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:53:25 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:53:25 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:53:25 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:53:25 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:53:25 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:53:25 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:53:25 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:53:25 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:53:25 --> Controller Class Initialized
+INFO - 2025-05-21 12:23:25 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:23:25 --> members - para1: guest_members, para2: view_member, para3: 44, para4: 
+ERROR - 2025-05-21 12:23:25 --> Could not find the language line "wife"
+ERROR - 2025-05-21 12:23:25 --> Severity: Warning --> Undefined array key "wife" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 785
+ERROR - 2025-05-21 12:23:25 --> Could not find the language line "children"
+ERROR - 2025-05-21 12:23:25 --> Severity: Warning --> Undefined array key "children" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 793
+ERROR - 2025-05-21 12:23:25 --> Could not find the language line "anniversary"
+ERROR - 2025-05-21 12:23:25 --> Severity: Warning --> Undefined array key "anniversary" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 844
+ERROR - 2025-05-21 12:23:25 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:25 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:25 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:23:26 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:23:26 --> Final output sent to browser
+DEBUG - 2025-05-21 12:23:26 --> Total execution time: 0.5265
+INFO - 2025-05-21 08:53:28 --> Config Class Initialized
+INFO - 2025-05-21 08:53:28 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:53:28 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:53:28 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:53:28 --> URI Class Initialized
+INFO - 2025-05-21 08:53:28 --> Router Class Initialized
+INFO - 2025-05-21 08:53:28 --> Output Class Initialized
+INFO - 2025-05-21 08:53:28 --> Security Class Initialized
+DEBUG - 2025-05-21 08:53:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:53:28 --> Input Class Initialized
+INFO - 2025-05-21 08:53:28 --> Language Class Initialized
+INFO - 2025-05-21 08:53:28 --> Loader Class Initialized
+INFO - 2025-05-21 08:53:28 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:53:28 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:53:28 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:53:28 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:53:28 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:53:28 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:53:28 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:53:28 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:53:28 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:53:28 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:53:28 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:53:28 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:53:28 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:53:28 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:53:28 --> Controller Class Initialized
+INFO - 2025-05-21 12:23:28 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:23:28 --> members - para1: ngb_members, para2: , para3: , para4: 
+ERROR - 2025-05-21 12:23:28 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:28 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:28 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:28 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:28 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:28 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:28 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:28 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:28 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:23:28 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:23:28 --> Final output sent to browser
+DEBUG - 2025-05-21 12:23:28 --> Total execution time: 0.4041
+INFO - 2025-05-21 08:53:28 --> Config Class Initialized
+INFO - 2025-05-21 08:53:28 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:53:28 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:53:28 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:53:28 --> URI Class Initialized
+INFO - 2025-05-21 08:53:28 --> Router Class Initialized
+INFO - 2025-05-21 08:53:28 --> Output Class Initialized
+INFO - 2025-05-21 08:53:28 --> Security Class Initialized
+DEBUG - 2025-05-21 08:53:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:53:28 --> Input Class Initialized
+INFO - 2025-05-21 08:53:28 --> Language Class Initialized
+INFO - 2025-05-21 08:53:28 --> Loader Class Initialized
+INFO - 2025-05-21 08:53:28 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:53:28 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:53:28 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:53:28 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:53:28 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:53:28 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:53:28 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:53:28 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:53:28 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:53:28 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:53:28 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:53:28 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:53:28 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:53:28 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:53:28 --> Controller Class Initialized
+INFO - 2025-05-21 12:23:28 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:23:28 --> members - para1: ngb_members, para2: list_data, para3: , para4: 
+INFO - 2025-05-21 12:23:28 --> Final output sent to browser
+DEBUG - 2025-05-21 12:23:28 --> Total execution time: 0.1181
+INFO - 2025-05-21 08:53:29 --> Config Class Initialized
+INFO - 2025-05-21 08:53:29 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:53:29 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:53:29 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:53:29 --> URI Class Initialized
+INFO - 2025-05-21 08:53:29 --> Router Class Initialized
+INFO - 2025-05-21 08:53:29 --> Output Class Initialized
+INFO - 2025-05-21 08:53:29 --> Security Class Initialized
+DEBUG - 2025-05-21 08:53:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:53:29 --> Input Class Initialized
+INFO - 2025-05-21 08:53:29 --> Language Class Initialized
+INFO - 2025-05-21 08:53:29 --> Loader Class Initialized
+INFO - 2025-05-21 08:53:29 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:53:29 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:53:29 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:53:29 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:53:29 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:53:29 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:53:29 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:53:29 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:53:29 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:53:29 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:53:29 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:53:29 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:53:29 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:53:29 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:53:29 --> Controller Class Initialized
+INFO - 2025-05-21 12:23:30 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:23:30 --> members - para1: ngb_members, para2: view_member, para3: 48, para4: 
+ERROR - 2025-05-21 12:23:30 --> Could not find the language line "wife"
+ERROR - 2025-05-21 12:23:30 --> Severity: Warning --> Undefined array key "wife" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 785
+ERROR - 2025-05-21 12:23:30 --> Could not find the language line "children"
+ERROR - 2025-05-21 12:23:30 --> Severity: Warning --> Undefined array key "children" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 793
+ERROR - 2025-05-21 12:23:30 --> Could not find the language line "anniversary"
+ERROR - 2025-05-21 12:23:30 --> Severity: Warning --> Undefined array key "anniversary" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 844
+ERROR - 2025-05-21 12:23:30 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:30 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:30 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:30 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:30 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:30 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:30 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:30 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:30 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:23:30 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:23:30 --> Final output sent to browser
+DEBUG - 2025-05-21 12:23:30 --> Total execution time: 0.5323
+INFO - 2025-05-21 08:53:32 --> Config Class Initialized
+INFO - 2025-05-21 08:53:32 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:53:32 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:53:32 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:53:32 --> URI Class Initialized
+INFO - 2025-05-21 08:53:32 --> Router Class Initialized
+INFO - 2025-05-21 08:53:32 --> Output Class Initialized
+INFO - 2025-05-21 08:53:32 --> Security Class Initialized
+DEBUG - 2025-05-21 08:53:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:53:32 --> Input Class Initialized
+INFO - 2025-05-21 08:53:32 --> Language Class Initialized
+INFO - 2025-05-21 08:53:32 --> Loader Class Initialized
+INFO - 2025-05-21 08:53:32 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:53:32 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:53:32 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:53:32 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:53:32 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:53:32 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:53:32 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:53:32 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:53:32 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:53:32 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:53:32 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:53:32 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:53:32 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:53:32 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:53:32 --> Controller Class Initialized
+INFO - 2025-05-21 12:23:32 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:23:32 --> members - para1: national_members, para2: , para3: , para4: 
+INFO - 2025-05-21 12:23:32 --> National Members entry point of funcitons
+ERROR - 2025-05-21 12:23:32 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:32 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:32 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:32 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:32 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:32 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:32 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:32 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:32 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:23:32 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:23:32 --> Final output sent to browser
+DEBUG - 2025-05-21 12:23:32 --> Total execution time: 0.4235
+INFO - 2025-05-21 08:53:32 --> Config Class Initialized
+INFO - 2025-05-21 08:53:32 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:53:32 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:53:32 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:53:32 --> URI Class Initialized
+INFO - 2025-05-21 08:53:32 --> Router Class Initialized
+INFO - 2025-05-21 08:53:32 --> Output Class Initialized
+INFO - 2025-05-21 08:53:32 --> Security Class Initialized
+DEBUG - 2025-05-21 08:53:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:53:32 --> Input Class Initialized
+INFO - 2025-05-21 08:53:32 --> Language Class Initialized
+INFO - 2025-05-21 08:53:32 --> Loader Class Initialized
+INFO - 2025-05-21 08:53:32 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:53:32 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:53:32 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:53:32 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:53:32 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:53:32 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:53:32 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:53:32 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:53:32 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:53:32 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:53:32 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:53:32 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:53:32 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:53:32 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:53:32 --> Controller Class Initialized
+INFO - 2025-05-21 12:23:32 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:23:32 --> members - para1: national_members, para2: list_data, para3: , para4: 
+INFO - 2025-05-21 12:23:32 --> Final output sent to browser
+DEBUG - 2025-05-21 12:23:32 --> Total execution time: 0.1347
+INFO - 2025-05-21 08:53:34 --> Config Class Initialized
+INFO - 2025-05-21 08:53:34 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:53:34 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:53:34 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:53:34 --> URI Class Initialized
+INFO - 2025-05-21 08:53:34 --> Router Class Initialized
+INFO - 2025-05-21 08:53:34 --> Output Class Initialized
+INFO - 2025-05-21 08:53:34 --> Security Class Initialized
+DEBUG - 2025-05-21 08:53:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:53:34 --> Input Class Initialized
+INFO - 2025-05-21 08:53:34 --> Language Class Initialized
+INFO - 2025-05-21 08:53:34 --> Loader Class Initialized
+INFO - 2025-05-21 08:53:34 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:53:34 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:53:34 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:53:34 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:53:34 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:53:34 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:53:34 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:53:34 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:53:34 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:53:34 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:53:34 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:53:34 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:53:34 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:53:34 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:53:34 --> Controller Class Initialized
+INFO - 2025-05-21 12:23:34 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:23:34 --> members - para1: national_members, para2: view_member, para3: 47, para4: 
+ERROR - 2025-05-21 12:23:34 --> Could not find the language line "wife"
+ERROR - 2025-05-21 12:23:34 --> Severity: Warning --> Undefined array key "wife" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 785
+ERROR - 2025-05-21 12:23:34 --> Could not find the language line "children"
+ERROR - 2025-05-21 12:23:34 --> Severity: Warning --> Undefined array key "children" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 793
+ERROR - 2025-05-21 12:23:34 --> Could not find the language line "anniversary"
+ERROR - 2025-05-21 12:23:34 --> Severity: Warning --> Undefined array key "anniversary" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 844
+ERROR - 2025-05-21 12:23:34 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:34 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:34 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:34 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:34 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:34 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:34 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:34 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:23:34 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:23:34 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:23:34 --> Final output sent to browser
+DEBUG - 2025-05-21 12:23:34 --> Total execution time: 0.5031
+INFO - 2025-05-21 08:55:08 --> Config Class Initialized
+INFO - 2025-05-21 08:55:08 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:55:08 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:55:08 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:55:08 --> URI Class Initialized
+INFO - 2025-05-21 08:55:08 --> Router Class Initialized
+INFO - 2025-05-21 08:55:08 --> Output Class Initialized
+INFO - 2025-05-21 08:55:08 --> Security Class Initialized
+DEBUG - 2025-05-21 08:55:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:55:08 --> Input Class Initialized
+INFO - 2025-05-21 08:55:08 --> Language Class Initialized
+INFO - 2025-05-21 08:55:08 --> Loader Class Initialized
+INFO - 2025-05-21 08:55:08 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:55:08 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:55:08 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:55:08 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:55:08 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:55:08 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:55:08 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:55:08 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:55:08 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:55:08 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:55:08 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:55:08 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:55:08 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:55:08 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:55:08 --> Controller Class Initialized
+INFO - 2025-05-21 12:25:08 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:25:08 --> members - para1: guest_members, para2: , para3: , para4: 
+INFO - 2025-05-21 12:25:08 --> Guest Members entry point of funcitons
+ERROR - 2025-05-21 12:25:08 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:08 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:08 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:08 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:08 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:08 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:08 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:08 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:08 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:25:08 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:25:08 --> Final output sent to browser
+DEBUG - 2025-05-21 12:25:08 --> Total execution time: 0.3958
+INFO - 2025-05-21 08:55:08 --> Config Class Initialized
+INFO - 2025-05-21 08:55:08 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:55:08 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:55:08 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:55:08 --> URI Class Initialized
+INFO - 2025-05-21 08:55:08 --> Router Class Initialized
+INFO - 2025-05-21 08:55:08 --> Output Class Initialized
+INFO - 2025-05-21 08:55:08 --> Security Class Initialized
+DEBUG - 2025-05-21 08:55:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:55:08 --> Input Class Initialized
+INFO - 2025-05-21 08:55:08 --> Language Class Initialized
+INFO - 2025-05-21 08:55:08 --> Loader Class Initialized
+INFO - 2025-05-21 08:55:08 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:55:08 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:55:08 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:55:08 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:55:08 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:55:08 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:55:08 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:55:08 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:55:08 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:55:08 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:55:08 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:55:08 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:55:08 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:55:08 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:55:08 --> Controller Class Initialized
+INFO - 2025-05-21 12:25:08 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:25:08 --> members - para1: guest_members, para2: list_data, para3: , para4: 
+INFO - 2025-05-21 12:25:08 --> Final output sent to browser
+DEBUG - 2025-05-21 12:25:08 --> Total execution time: 0.1225
+INFO - 2025-05-21 08:55:10 --> Config Class Initialized
+INFO - 2025-05-21 08:55:10 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:55:10 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:55:10 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:55:10 --> URI Class Initialized
+INFO - 2025-05-21 08:55:10 --> Router Class Initialized
+INFO - 2025-05-21 08:55:10 --> Output Class Initialized
+INFO - 2025-05-21 08:55:10 --> Security Class Initialized
+DEBUG - 2025-05-21 08:55:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:55:10 --> Input Class Initialized
+INFO - 2025-05-21 08:55:10 --> Language Class Initialized
+INFO - 2025-05-21 08:55:10 --> Loader Class Initialized
+INFO - 2025-05-21 08:55:10 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:55:10 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:55:10 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:55:10 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:55:10 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:55:10 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:55:10 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:55:10 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:55:10 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:55:10 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:55:10 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:55:10 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:55:10 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:55:10 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:55:10 --> Controller Class Initialized
+INFO - 2025-05-21 12:25:10 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:25:10 --> members - para1: guest_members, para2: edit_member, para3: 44, para4: 
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $get_guest_member_by_id C:\xampp\htdocs\1pc\application\views\back\members\edit_member.php 10
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> foreach() argument must be of type array|object, null given C:\xampp\htdocs\1pc\application\views\back\members\edit_member.php 18
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_member.php 49
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "member_id" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_member.php 49
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 2
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "member_id" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 2
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $image C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 12
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 12
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 12
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 14
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "first_name" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 14
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 14
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "last_name" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 14
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $education_and_career C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 16
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 16
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 16
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $present_address C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 19
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 19
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 19
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $present_address C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 19
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 19
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 19
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 24
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 30
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "member_id" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 30
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 32
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "is_blocked" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 32
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 39
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "is_blocked" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 39
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 39
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "member_id" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 39
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 46
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "follower" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 46
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 52
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "is_closed" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 52
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 56
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "is_closed" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 56
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 77
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $percent C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 32
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 36
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "member_id" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 36
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 38
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "percentage" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 38
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 50
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "member_profile_id" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 50
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 52
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "enquiry_time" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 52
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 71
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "introduction" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 71
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 87
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "first_name" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 87
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 96
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "last_name" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 96
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 113
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "gender" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 113
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 124
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "email" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 124
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 125
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "email" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 125
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 137
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "date_of_birth" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 137
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $basic_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 151
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 151
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 151
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $basic_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 165
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 165
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 165
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $basic_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 173
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 173
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 173
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 199
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "mobile" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 199
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 200
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "mobile" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 200
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $image C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 227
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 227
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 227
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $present_address C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 256
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 256
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 256
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $present_address C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 331
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 331
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 331
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $education_and_career C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 356
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 356
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 356
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $education_and_career C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 365
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 365
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 365
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $education_and_career C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 376
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 376
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 376
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $language C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 515
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 515
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 515
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $language C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 531
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 531
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 531
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $language C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 549
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 549
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 549
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $language C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 565
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 565
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 565
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 592
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 592
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 592
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 601
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 601
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 601
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 612
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 612
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 612
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 621
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 621
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 621
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 632
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 632
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 632
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 641
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 641
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 641
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 652
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 652
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 652
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 661
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 661
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 661
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 672
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 672
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 672
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 681
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 681
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 681
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $residency_information C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 764
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 764
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 764
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $residency_information C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 780
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 780
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 780
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $residency_information C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 799
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 799
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 799
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $residency_information C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 815
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 815
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 815
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $residency_information C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 829
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 829
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 829
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $spiritual_and_social_background C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 860
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 860
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 860
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $spiritual_and_social_background C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 936
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 936
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 936
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $spiritual_and_social_background C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 948
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 948
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 948
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $spiritual_and_social_background C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 976
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 976
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 976
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $life_style C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1036
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1036
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1036
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $life_style C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1050
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1050
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1050
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $life_style C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1070
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1070
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1070
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $life_style C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1081
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1081
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1081
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $permanent_address C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1180
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1180
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1180
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $permanent_address C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1255
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1255
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1255
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $family_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1280
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1280
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1280
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $family_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1289
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1289
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1289
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $family_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1301
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1301
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1301
+ERROR - 2025-05-21 12:25:10 --> Could not find the language line "children"
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $family_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1320
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1320
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1320
+ERROR - 2025-05-21 12:25:10 --> Could not find the language line "wife"
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $family_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1339
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1339
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1339
+ERROR - 2025-05-21 12:25:10 --> Could not find the language line "anniversary"
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $additional_personal_details C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1367
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1367
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1367
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $additional_personal_details C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1378
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1378
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1378
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $additional_personal_details C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1387
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1387
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1387
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $additional_personal_details C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1399
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1399
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1399
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $additional_personal_details C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1408
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1408
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1408
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_member.php 444
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "member_id" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_member.php 444
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:10 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:25:10 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:25:10 --> Final output sent to browser
+DEBUG - 2025-05-21 12:25:10 --> Total execution time: 0.7133
+INFO - 2025-05-21 08:55:11 --> Config Class Initialized
+INFO - 2025-05-21 08:55:11 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:55:11 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:55:11 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:55:11 --> URI Class Initialized
+INFO - 2025-05-21 08:55:11 --> Router Class Initialized
+INFO - 2025-05-21 08:55:11 --> Output Class Initialized
+INFO - 2025-05-21 08:55:11 --> Security Class Initialized
+DEBUG - 2025-05-21 08:55:11 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:55:11 --> Input Class Initialized
+INFO - 2025-05-21 08:55:11 --> Language Class Initialized
+INFO - 2025-05-21 08:55:11 --> Loader Class Initialized
+INFO - 2025-05-21 08:55:11 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:55:11 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:55:11 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:55:11 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:55:11 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:55:11 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:55:11 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:55:11 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:55:11 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:55:11 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:55:11 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:55:11 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:55:11 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:55:11 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:55:11 --> Controller Class Initialized
+INFO - 2025-05-21 12:25:11 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:25:11 --> Final output sent to browser
+DEBUG - 2025-05-21 12:25:11 --> Total execution time: 0.1063
+INFO - 2025-05-21 08:55:15 --> Config Class Initialized
+INFO - 2025-05-21 08:55:15 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:55:15 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:55:15 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:55:15 --> URI Class Initialized
+INFO - 2025-05-21 08:55:15 --> Router Class Initialized
+INFO - 2025-05-21 08:55:15 --> Output Class Initialized
+INFO - 2025-05-21 08:55:15 --> Security Class Initialized
+DEBUG - 2025-05-21 08:55:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:55:15 --> Input Class Initialized
+INFO - 2025-05-21 08:55:15 --> Language Class Initialized
+INFO - 2025-05-21 08:55:15 --> Loader Class Initialized
+INFO - 2025-05-21 08:55:15 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:55:15 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:55:15 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:55:15 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:55:15 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:55:15 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:55:15 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:55:15 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:55:15 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:55:15 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:55:15 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:55:15 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:55:15 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:55:15 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:55:15 --> Controller Class Initialized
+INFO - 2025-05-21 12:25:15 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:25:15 --> members - para1: ngb_members, para2: , para3: , para4: 
+ERROR - 2025-05-21 12:25:15 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:15 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:15 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:15 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:15 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:15 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:15 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:15 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:15 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:25:15 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:25:15 --> Final output sent to browser
+DEBUG - 2025-05-21 12:25:15 --> Total execution time: 0.4050
+INFO - 2025-05-21 08:55:15 --> Config Class Initialized
+INFO - 2025-05-21 08:55:15 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:55:15 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:55:15 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:55:15 --> URI Class Initialized
+INFO - 2025-05-21 08:55:15 --> Router Class Initialized
+INFO - 2025-05-21 08:55:15 --> Output Class Initialized
+INFO - 2025-05-21 08:55:15 --> Security Class Initialized
+DEBUG - 2025-05-21 08:55:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:55:15 --> Input Class Initialized
+INFO - 2025-05-21 08:55:15 --> Language Class Initialized
+INFO - 2025-05-21 08:55:15 --> Loader Class Initialized
+INFO - 2025-05-21 08:55:15 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:55:15 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:55:15 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:55:15 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:55:15 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:55:15 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:55:15 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:55:15 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:55:15 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:55:15 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:55:15 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:55:15 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:55:15 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:55:15 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:55:15 --> Controller Class Initialized
+INFO - 2025-05-21 12:25:15 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:25:15 --> members - para1: ngb_members, para2: list_data, para3: , para4: 
+INFO - 2025-05-21 12:25:15 --> Final output sent to browser
+DEBUG - 2025-05-21 12:25:15 --> Total execution time: 0.1141
+INFO - 2025-05-21 08:55:16 --> Config Class Initialized
+INFO - 2025-05-21 08:55:16 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:55:16 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:55:16 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:55:16 --> URI Class Initialized
+INFO - 2025-05-21 08:55:16 --> Router Class Initialized
+INFO - 2025-05-21 08:55:16 --> Output Class Initialized
+INFO - 2025-05-21 08:55:16 --> Security Class Initialized
+DEBUG - 2025-05-21 08:55:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:55:16 --> Input Class Initialized
+INFO - 2025-05-21 08:55:16 --> Language Class Initialized
+INFO - 2025-05-21 08:55:16 --> Loader Class Initialized
+INFO - 2025-05-21 08:55:16 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:55:16 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:55:16 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:55:16 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:55:16 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:55:16 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:55:16 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:55:16 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:55:16 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:55:16 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:55:16 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:55:16 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:55:16 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:55:16 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:55:16 --> Controller Class Initialized
+INFO - 2025-05-21 12:25:16 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:25:16 --> members - para1: ngb_members, para2: edit_member, para3: 48, para4: 
+ERROR - 2025-05-21 12:25:16 --> Severity: Warning --> Undefined variable $percent C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 32
+ERROR - 2025-05-21 12:25:16 --> Could not find the language line "children"
+ERROR - 2025-05-21 12:25:16 --> Severity: Warning --> Undefined array key "children" C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1320
+ERROR - 2025-05-21 12:25:16 --> Could not find the language line "wife"
+ERROR - 2025-05-21 12:25:16 --> Severity: Warning --> Undefined array key "wife" C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1339
+ERROR - 2025-05-21 12:25:16 --> Could not find the language line "anniversary"
+ERROR - 2025-05-21 12:25:16 --> Severity: Warning --> Undefined array key "anniversary" C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1367
+ERROR - 2025-05-21 12:25:16 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:16 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:16 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:16 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:16 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:16 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:17 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:17 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:17 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:25:17 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:25:17 --> Final output sent to browser
+DEBUG - 2025-05-21 12:25:17 --> Total execution time: 0.5295
+INFO - 2025-05-21 08:55:17 --> Config Class Initialized
+INFO - 2025-05-21 08:55:17 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:55:17 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:55:17 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:55:17 --> URI Class Initialized
+INFO - 2025-05-21 08:55:17 --> Router Class Initialized
+INFO - 2025-05-21 08:55:17 --> Output Class Initialized
+INFO - 2025-05-21 08:55:17 --> Security Class Initialized
+DEBUG - 2025-05-21 08:55:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:55:17 --> Input Class Initialized
+INFO - 2025-05-21 08:55:17 --> Language Class Initialized
+INFO - 2025-05-21 08:55:17 --> Loader Class Initialized
+INFO - 2025-05-21 08:55:17 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:55:17 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:55:17 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:55:17 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:55:17 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:55:17 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:55:17 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:55:17 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:55:17 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:55:17 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:55:17 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:55:17 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:55:17 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:55:17 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:55:17 --> Controller Class Initialized
+INFO - 2025-05-21 12:25:17 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:25:17 --> Final output sent to browser
+DEBUG - 2025-05-21 12:25:17 --> Total execution time: 0.1726
+INFO - 2025-05-21 08:55:20 --> Config Class Initialized
+INFO - 2025-05-21 08:55:20 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:55:20 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:55:20 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:55:20 --> URI Class Initialized
+INFO - 2025-05-21 08:55:20 --> Router Class Initialized
+INFO - 2025-05-21 08:55:20 --> Output Class Initialized
+INFO - 2025-05-21 08:55:20 --> Security Class Initialized
+DEBUG - 2025-05-21 08:55:20 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:55:20 --> Input Class Initialized
+INFO - 2025-05-21 08:55:20 --> Language Class Initialized
+INFO - 2025-05-21 08:55:20 --> Loader Class Initialized
+INFO - 2025-05-21 08:55:20 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:55:20 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:55:20 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:55:20 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:55:20 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:55:20 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:55:20 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:55:20 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:55:20 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:55:20 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:55:20 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:55:20 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:55:20 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:55:20 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:55:20 --> Controller Class Initialized
+INFO - 2025-05-21 12:25:20 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:25:20 --> members - para1: national_members, para2: , para3: , para4: 
+INFO - 2025-05-21 12:25:20 --> National Members entry point of funcitons
+ERROR - 2025-05-21 12:25:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:25:20 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:25:20 --> Final output sent to browser
+DEBUG - 2025-05-21 12:25:20 --> Total execution time: 0.3907
+INFO - 2025-05-21 08:55:20 --> Config Class Initialized
+INFO - 2025-05-21 08:55:20 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:55:20 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:55:20 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:55:21 --> URI Class Initialized
+INFO - 2025-05-21 08:55:21 --> Router Class Initialized
+INFO - 2025-05-21 08:55:21 --> Output Class Initialized
+INFO - 2025-05-21 08:55:21 --> Security Class Initialized
+DEBUG - 2025-05-21 08:55:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:55:21 --> Input Class Initialized
+INFO - 2025-05-21 08:55:21 --> Language Class Initialized
+INFO - 2025-05-21 08:55:21 --> Loader Class Initialized
+INFO - 2025-05-21 08:55:21 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:55:21 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:55:21 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:55:21 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:55:21 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:55:21 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:55:21 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:55:21 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:55:21 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:55:21 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:55:21 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:55:21 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:55:21 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:55:21 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:55:21 --> Controller Class Initialized
+INFO - 2025-05-21 12:25:21 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:25:21 --> members - para1: national_members, para2: list_data, para3: , para4: 
+INFO - 2025-05-21 12:25:21 --> Final output sent to browser
+DEBUG - 2025-05-21 12:25:21 --> Total execution time: 0.1202
+INFO - 2025-05-21 08:55:22 --> Config Class Initialized
+INFO - 2025-05-21 08:55:22 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:55:22 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:55:22 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:55:22 --> URI Class Initialized
+INFO - 2025-05-21 08:55:22 --> Router Class Initialized
+INFO - 2025-05-21 08:55:22 --> Output Class Initialized
+INFO - 2025-05-21 08:55:22 --> Security Class Initialized
+DEBUG - 2025-05-21 08:55:22 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:55:22 --> Input Class Initialized
+INFO - 2025-05-21 08:55:22 --> Language Class Initialized
+INFO - 2025-05-21 08:55:22 --> Loader Class Initialized
+INFO - 2025-05-21 08:55:22 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:55:22 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:55:22 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:55:22 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:55:22 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:55:22 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:55:22 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:55:22 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:55:22 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:55:22 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:55:22 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:55:22 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:55:22 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:55:22 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:55:22 --> Controller Class Initialized
+INFO - 2025-05-21 12:25:22 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:25:22 --> members - para1: national_members, para2: edit_member, para3: 47, para4: 
+ERROR - 2025-05-21 12:25:22 --> Severity: Warning --> Undefined variable $percent C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 32
+ERROR - 2025-05-21 12:25:22 --> Could not find the language line "children"
+ERROR - 2025-05-21 12:25:22 --> Severity: Warning --> Undefined array key "children" C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1320
+ERROR - 2025-05-21 12:25:22 --> Could not find the language line "wife"
+ERROR - 2025-05-21 12:25:22 --> Severity: Warning --> Undefined array key "wife" C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1339
+ERROR - 2025-05-21 12:25:22 --> Could not find the language line "anniversary"
+ERROR - 2025-05-21 12:25:22 --> Severity: Warning --> Undefined array key "anniversary" C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1367
+ERROR - 2025-05-21 12:25:22 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:22 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:22 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:22 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:22 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:22 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:22 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:22 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:22 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:25:23 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:25:23 --> Final output sent to browser
+DEBUG - 2025-05-21 12:25:23 --> Total execution time: 0.5879
+INFO - 2025-05-21 08:55:23 --> Config Class Initialized
+INFO - 2025-05-21 08:55:23 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:55:23 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:55:23 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:55:23 --> URI Class Initialized
+INFO - 2025-05-21 08:55:23 --> Router Class Initialized
+INFO - 2025-05-21 08:55:23 --> Output Class Initialized
+INFO - 2025-05-21 08:55:23 --> Security Class Initialized
+DEBUG - 2025-05-21 08:55:23 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:55:23 --> Input Class Initialized
+INFO - 2025-05-21 08:55:23 --> Language Class Initialized
+INFO - 2025-05-21 08:55:23 --> Loader Class Initialized
+INFO - 2025-05-21 08:55:23 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:55:23 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:55:23 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:55:23 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:55:23 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:55:23 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:55:23 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:55:23 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:55:23 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:55:23 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:55:23 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:55:23 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:55:23 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:55:23 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:55:23 --> Controller Class Initialized
+INFO - 2025-05-21 12:25:23 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:25:23 --> Final output sent to browser
+DEBUG - 2025-05-21 12:25:23 --> Total execution time: 0.0946
+INFO - 2025-05-21 08:55:24 --> Config Class Initialized
+INFO - 2025-05-21 08:55:24 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:55:24 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:55:24 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:55:24 --> URI Class Initialized
+INFO - 2025-05-21 08:55:24 --> Router Class Initialized
+INFO - 2025-05-21 08:55:24 --> Output Class Initialized
+INFO - 2025-05-21 08:55:24 --> Security Class Initialized
+DEBUG - 2025-05-21 08:55:24 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:55:24 --> Input Class Initialized
+INFO - 2025-05-21 08:55:24 --> Language Class Initialized
+INFO - 2025-05-21 08:55:24 --> Loader Class Initialized
+INFO - 2025-05-21 08:55:24 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:55:24 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:55:24 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:55:24 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:55:24 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:55:24 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:55:24 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:55:24 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:55:24 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:55:24 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:55:24 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:55:24 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:55:24 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:55:24 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:55:24 --> Controller Class Initialized
+INFO - 2025-05-21 12:25:24 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:25:24 --> members - para1: guest_members, para2: , para3: , para4: 
+INFO - 2025-05-21 12:25:24 --> Guest Members entry point of funcitons
+ERROR - 2025-05-21 12:25:24 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:24 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:24 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:25 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:25 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:25 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:25 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:25 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:25 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:25:25 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:25:25 --> Final output sent to browser
+DEBUG - 2025-05-21 12:25:25 --> Total execution time: 0.4123
+INFO - 2025-05-21 08:55:25 --> Config Class Initialized
+INFO - 2025-05-21 08:55:25 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:55:25 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:55:25 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:55:25 --> URI Class Initialized
+INFO - 2025-05-21 08:55:25 --> Router Class Initialized
+INFO - 2025-05-21 08:55:25 --> Output Class Initialized
+INFO - 2025-05-21 08:55:25 --> Security Class Initialized
+DEBUG - 2025-05-21 08:55:25 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:55:25 --> Input Class Initialized
+INFO - 2025-05-21 08:55:25 --> Language Class Initialized
+INFO - 2025-05-21 08:55:25 --> Loader Class Initialized
+INFO - 2025-05-21 08:55:25 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:55:25 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:55:25 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:55:25 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:55:25 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:55:25 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:55:25 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:55:25 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:55:25 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:55:25 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:55:25 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:55:25 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:55:25 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:55:25 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:55:25 --> Controller Class Initialized
+INFO - 2025-05-21 12:25:25 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:25:25 --> members - para1: guest_members, para2: list_data, para3: , para4: 
+INFO - 2025-05-21 12:25:25 --> Final output sent to browser
+DEBUG - 2025-05-21 12:25:25 --> Total execution time: 0.1113
+INFO - 2025-05-21 08:55:26 --> Config Class Initialized
+INFO - 2025-05-21 08:55:26 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:55:26 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:55:26 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:55:26 --> URI Class Initialized
+INFO - 2025-05-21 08:55:26 --> Router Class Initialized
+INFO - 2025-05-21 08:55:26 --> Output Class Initialized
+INFO - 2025-05-21 08:55:26 --> Security Class Initialized
+DEBUG - 2025-05-21 08:55:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:55:26 --> Input Class Initialized
+INFO - 2025-05-21 08:55:26 --> Language Class Initialized
+INFO - 2025-05-21 08:55:26 --> Loader Class Initialized
+INFO - 2025-05-21 08:55:26 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:55:26 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:55:26 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:55:26 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:55:26 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:55:26 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:55:26 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:55:26 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:55:26 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:55:26 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:55:26 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:55:26 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:55:26 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:55:26 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:55:26 --> Controller Class Initialized
+INFO - 2025-05-21 12:25:26 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:25:26 --> members - para1: guest_members, para2: edit_member, para3: 44, para4: 
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $get_guest_member_by_id C:\xampp\htdocs\1pc\application\views\back\members\edit_member.php 10
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> foreach() argument must be of type array|object, null given C:\xampp\htdocs\1pc\application\views\back\members\edit_member.php 18
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_member.php 49
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "member_id" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_member.php 49
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 2
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "member_id" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 2
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $image C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 12
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 12
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 12
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 14
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "first_name" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 14
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 14
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "last_name" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 14
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $education_and_career C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 16
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 16
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 16
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $present_address C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 19
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 19
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 19
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $present_address C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 19
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 19
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 19
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 24
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 30
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "member_id" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 30
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 32
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "is_blocked" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 32
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 39
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "is_blocked" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 39
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 39
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "member_id" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 39
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 46
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "follower" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 46
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 52
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "is_closed" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 52
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 56
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "is_closed" on null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 56
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\left_panel.php 77
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $percent C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 32
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 36
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "member_id" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 36
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 38
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "percentage" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 38
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 50
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "member_profile_id" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 50
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 52
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "enquiry_time" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 52
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 71
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "introduction" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 71
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 87
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "first_name" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 87
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 96
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "last_name" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 96
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 113
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "gender" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 113
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 124
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "email" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 124
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 125
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "email" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 125
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 137
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "date_of_birth" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 137
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $basic_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 151
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 151
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 151
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $basic_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 165
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 165
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 165
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $basic_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 173
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 173
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 173
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 199
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "mobile" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 199
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 200
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "mobile" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 200
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $image C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 227
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 227
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 227
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $present_address C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 256
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 256
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 256
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $present_address C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 331
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 331
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 331
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $education_and_career C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 356
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 356
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 356
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $education_and_career C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 365
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 365
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 365
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $education_and_career C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 376
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 376
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 376
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $language C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 515
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 515
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 515
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $language C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 531
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 531
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 531
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $language C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 549
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 549
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 549
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $language C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 565
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 565
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 565
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 592
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 592
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 592
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 601
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 601
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 601
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 612
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 612
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 612
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 621
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 621
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 621
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 632
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 632
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 632
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 641
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 641
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 641
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 652
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 652
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 652
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 661
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 661
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 661
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 672
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 672
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 672
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $hobbies_and_interest C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 681
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 681
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 681
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $residency_information C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 764
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 764
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 764
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $residency_information C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 780
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 780
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 780
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $residency_information C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 799
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 799
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 799
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $residency_information C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 815
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 815
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 815
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $residency_information C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 829
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 829
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 829
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $spiritual_and_social_background C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 860
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 860
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 860
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $spiritual_and_social_background C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 936
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 936
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 936
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $spiritual_and_social_background C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 948
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 948
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 948
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $spiritual_and_social_background C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 976
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 976
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 976
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $life_style C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1036
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1036
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1036
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $life_style C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1050
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1050
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1050
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $life_style C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1070
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1070
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1070
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $life_style C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1081
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1081
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1081
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $permanent_address C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1180
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1180
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1180
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $permanent_address C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1255
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1255
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1255
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $family_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1280
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1280
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1280
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $family_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1289
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1289
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1289
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $family_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1301
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1301
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1301
+ERROR - 2025-05-21 12:25:26 --> Could not find the language line "children"
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $family_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1320
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1320
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1320
+ERROR - 2025-05-21 12:25:26 --> Could not find the language line "wife"
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $family_info C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1339
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1339
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1339
+ERROR - 2025-05-21 12:25:26 --> Could not find the language line "anniversary"
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $additional_personal_details C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1367
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1367
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1367
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $additional_personal_details C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1378
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1378
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1378
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $additional_personal_details C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1387
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1387
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1387
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $additional_personal_details C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1399
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1399
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1399
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $additional_personal_details C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1408
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1408
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1408
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Undefined variable $value C:\xampp\htdocs\1pc\application\views\back\members\edit_member.php 444
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "member_id" on null C:\xampp\htdocs\1pc\application\views\back\members\edit_member.php 444
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:26 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:27 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:25:27 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:25:27 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:25:27 --> Final output sent to browser
+DEBUG - 2025-05-21 12:25:27 --> Total execution time: 0.7251
+INFO - 2025-05-21 08:55:27 --> Config Class Initialized
+INFO - 2025-05-21 08:55:27 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:55:27 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:55:27 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:55:27 --> URI Class Initialized
+INFO - 2025-05-21 08:55:27 --> Router Class Initialized
+INFO - 2025-05-21 08:55:27 --> Output Class Initialized
+INFO - 2025-05-21 08:55:27 --> Security Class Initialized
+DEBUG - 2025-05-21 08:55:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:55:27 --> Input Class Initialized
+INFO - 2025-05-21 08:55:27 --> Language Class Initialized
+INFO - 2025-05-21 08:55:27 --> Loader Class Initialized
+INFO - 2025-05-21 08:55:27 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:55:27 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:55:27 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:55:27 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:55:27 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:55:27 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:55:27 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:55:27 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:55:27 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:55:27 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:55:27 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:55:27 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:55:27 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:55:27 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:55:27 --> Controller Class Initialized
+INFO - 2025-05-21 12:25:27 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:25:27 --> Final output sent to browser
+DEBUG - 2025-05-21 12:25:27 --> Total execution time: 0.0933
+INFO - 2025-05-21 08:56:11 --> Config Class Initialized
+INFO - 2025-05-21 08:56:11 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:56:11 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:56:11 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:56:11 --> URI Class Initialized
+INFO - 2025-05-21 08:56:11 --> Router Class Initialized
+INFO - 2025-05-21 08:56:11 --> Output Class Initialized
+INFO - 2025-05-21 08:56:11 --> Security Class Initialized
+DEBUG - 2025-05-21 08:56:11 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:56:11 --> Input Class Initialized
+INFO - 2025-05-21 08:56:11 --> Language Class Initialized
+INFO - 2025-05-21 08:56:11 --> Loader Class Initialized
+INFO - 2025-05-21 08:56:11 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:56:11 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:56:11 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:56:11 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:56:11 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:56:11 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:56:11 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:56:11 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:56:11 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:56:11 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:56:11 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:56:11 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:56:11 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:56:11 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:56:11 --> Controller Class Initialized
+INFO - 2025-05-21 12:26:11 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:26:11 --> members - para1: guest_members, para2: edit_member, para3: 44, para4: 
+ERROR - 2025-05-21 12:26:11 --> Severity: Warning --> Undefined variable $percent C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 32
+ERROR - 2025-05-21 12:26:11 --> Could not find the language line "children"
+ERROR - 2025-05-21 12:26:11 --> Severity: Warning --> Undefined array key "children" C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1320
+ERROR - 2025-05-21 12:26:11 --> Could not find the language line "wife"
+ERROR - 2025-05-21 12:26:11 --> Severity: Warning --> Undefined array key "wife" C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1339
+ERROR - 2025-05-21 12:26:11 --> Could not find the language line "anniversary"
+ERROR - 2025-05-21 12:26:11 --> Severity: Warning --> Undefined array key "anniversary" C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1367
+ERROR - 2025-05-21 12:26:12 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:26:12 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:26:12 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:26:12 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:26:12 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:26:12 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:26:12 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:26:12 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 12:26:12 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 12:26:12 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 12:26:12 --> Final output sent to browser
+DEBUG - 2025-05-21 12:26:12 --> Total execution time: 0.9246
+INFO - 2025-05-21 08:56:12 --> Config Class Initialized
+INFO - 2025-05-21 08:56:12 --> Hooks Class Initialized
+DEBUG - 2025-05-21 08:56:12 --> UTF-8 Support Enabled
+INFO - 2025-05-21 08:56:12 --> Utf8 Class Initialized
+INFO - 2025-05-21 08:56:12 --> URI Class Initialized
+INFO - 2025-05-21 08:56:12 --> Router Class Initialized
+INFO - 2025-05-21 08:56:12 --> Output Class Initialized
+INFO - 2025-05-21 08:56:12 --> Security Class Initialized
+DEBUG - 2025-05-21 08:56:12 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 08:56:12 --> Input Class Initialized
+INFO - 2025-05-21 08:56:12 --> Language Class Initialized
+INFO - 2025-05-21 08:56:12 --> Loader Class Initialized
+INFO - 2025-05-21 08:56:12 --> Helper loaded: url_helper
+INFO - 2025-05-21 08:56:12 --> Helper loaded: file_helper
+INFO - 2025-05-21 08:56:12 --> Helper loaded: form_helper
+INFO - 2025-05-21 08:56:12 --> Helper loaded: language_helper
+INFO - 2025-05-21 08:56:12 --> Helper loaded: html_helper
+INFO - 2025-05-21 08:56:12 --> Database Driver Class Initialized
+INFO - 2025-05-21 08:56:12 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 08:56:12 --> XML-RPC Class Initialized
+INFO - 2025-05-21 08:56:12 --> Form Validation Class Initialized
+INFO - 2025-05-21 08:56:12 --> Model "Crud_model" initialized
+INFO - 2025-05-21 08:56:12 --> Model "Email_model" initialized
+INFO - 2025-05-21 08:56:12 --> Model "Payment_model" initialized
+INFO - 2025-05-21 08:56:12 --> Model "Sms_model" initialized
+INFO - 2025-05-21 08:56:12 --> Model "Important_model" initialized
+INFO - 2025-05-21 08:56:12 --> Controller Class Initialized
+INFO - 2025-05-21 12:26:12 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 12:26:12 --> Final output sent to browser
+DEBUG - 2025-05-21 12:26:12 --> Total execution time: 0.1267

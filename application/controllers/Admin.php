@@ -1175,13 +1175,13 @@ class Admin extends CI_Controller
 					$page_data['folder'] = "members";
 					$page_data['file'] = "view_member.php";
 					$page_data['bottom'] = "members/members.php";
-					$page_data['get_national_members_by_id'] = $this->db->get_where("member", array("membership" => 3, "member_id" => $para3))->result();
+					$page_data['get_national_member_by_id'] = $this->db->get_where("member", array("membership" => 3, "member_id" => $para3))->result();
 				} elseif ($para2 == "edit_member") {
 					$page_data['top'] 		= "members/members.php";
 					$page_data['folder'] 	= "members";
 					$page_data['file']	 	= "edit_member.php";
 					$page_data['bottom'] 	= "members/members.php";
-					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 3, "member_id" => $para3))->result();
+					$page_data['get_national_member_by_id'] = $this->db->get_where("member", array("membership" => 3, "member_id" => $para3))->result();
 				} elseif ($para2 == "print_member") {
 					$this->load->library('pdf');
 					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 3, "member_id" => $para3))->result();
@@ -1242,13 +1242,13 @@ class Admin extends CI_Controller
 					$page_data['folder'] = "members";
 					$page_data['file'] = "view_member.php";
 					$page_data['bottom'] = "members/members.php";
-					$page_data['get_guest_members_by_id'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
+					$page_data['get_guest_member_by_id'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
 				} elseif ($para2 == "edit_member") {
 					$page_data['top'] 		= "members/members.php";
 					$page_data['folder'] 	= "members";
 					$page_data['file']	 	= "edit_member.php";
 					$page_data['bottom'] 	= "members/members.php";
-					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
+					$page_data['get_guest_member_by_id'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
 				} elseif ($para2 == "print_member") {
 					$this->load->library('pdf');
 					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
@@ -1308,13 +1308,13 @@ class Admin extends CI_Controller
 					$page_data['folder'] = "members";
 					$page_data['file'] = "view_member.php";
 					$page_data['bottom'] = "members/members.php";
-					$page_data['get_ngb_members_by_id'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para3))->result();
+					$page_data['get_ngb_member_by_id'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para3))->result();
 				} elseif ($para2 == "edit_member") {
 					$page_data['top'] 		= "members/members.php";
 					$page_data['folder'] 	= "members";
 					$page_data['file']	 	= "edit_member.php";
 					$page_data['bottom'] 	= "members/members.php";
-					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para3))->result();
+					$page_data['get_ngb_member_by_id'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para3))->result();
 				} elseif ($para2 == "print_member") {
 					$this->load->library('pdf');
 					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para3))->result();
