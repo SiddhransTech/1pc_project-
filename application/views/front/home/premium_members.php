@@ -153,16 +153,19 @@
         $('.swiper-slide .premium_heading').css('height', max_title);
     }
 
-    function goto_profile(id) {
+    // function goto_profile(id) {
     
-        if (isloggedin == "") {
-            $("#active_modal").modal("toggle");
-            $("#modal_header").html("<?=translate('please_login')?>");
-            $("#modal_body").html("<p class='text-center'><?=translate('please_login_to_view_full_profile_of_this_member')?></p>");
-            $("#modal_buttons").html("<button type='button' class='btn btn-danger btn-sm btn-shadow' data-dismiss='modal' style='width:25%'><?=translate('close')?></button> <a href='<?=base_url()?>home/login' class='btn btn-sm btn-base-1 btn-shadow' style='width:25%'><?=translate('login')?></a>");
-        }
-        else {
-            window.location.href = "<?=base_url()?>home/member_profile/"+id;
-        }
-    }
+    //     if (isloggedin == "") {
+    //         $("#active_modal").modal("toggle");
+    //         $("#modal_header").html("<?=translate('please_login')?>");
+    //         $("#modal_body").html("<p class='text-center'><?=translate('please_login_to_view_full_profile_of_this_member')?></p>");
+    //         $("#modal_buttons").html("<button type='button' class='btn btn-danger btn-sm btn-shadow' data-dismiss='modal' style='width:25%'><?=translate('close')?></button> <a href='<?=base_url()?>home/login' class='btn btn-sm btn-base-1 btn-shadow' style='width:25%'><?=translate('login')?></a>");
+    //     }
+    //     else {
+    //         window.location.href = "<?=base_url()?>home/member_profile/"+id;
+    //     }
+    
+     function goto_profile(id) {
+      window.location.href = "<?=base_url()?>home/member_profile/"+id; }
+      
 </script>

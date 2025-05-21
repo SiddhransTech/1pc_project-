@@ -12,31 +12,31 @@
                         <td class="td-label">
                             <span><?php echo translate('religion')?></span>
                         </td>
-                        <td>
-                            <?=$this->Crud_model->get_type_name_by_id('religion', $spiritual_and_social_background_data[0]['religion']);?>
-                        </td>
-                        <td class="td-label">
-                            <span><?php echo translate('caste_/_sect')?></span>
-                        </td>
-                        <td>
-                            <?php
-                                if($spiritual_and_social_background_data[0]['caste'] != null){
-                                    echo $this->db->get_where('caste',array('caste_id'=>$spiritual_and_social_background_data[0]['caste']))->row()->caste_name;
-                                }
-                             ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="td-label">
-                            <span><?php echo translate('sub-Caste')?></span>
-                        </td>
-                        <td>
-                            <?php
-                                if($spiritual_and_social_background_data[0]['sub_caste'] != null){
-                                    echo $this->db->get_where('sub_caste',array('sub_caste_id'=>$spiritual_and_social_background_data[0]['sub_caste']))->row()->sub_caste_name;
-                                }
-                            ?>
-                        </td>
+                    <!--    <td>-->
+                    <!--        <?=$this->Crud_model->get_type_name_by_id('religion', $spiritual_and_social_background_data[0]['religion']);?>-->
+                    <!--    </td>-->
+                    <!--    <td class="td-label">-->
+                    <!--        <span><?php echo translate('caste_/_sect')?></span>-->
+                    <!--    </td>-->
+                    <!--    <td>-->
+                    <!--        <?php-->
+                    <!--            if($spiritual_and_social_background_data[0]['caste'] != null){-->
+                    <!--                echo $this->db->get_where('caste',array('caste_id'=>$spiritual_and_social_background_data[0]['caste']))->row()->caste_name;-->
+                    <!--            }-->
+                    <!--         ?>-->
+                    <!--    </td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--    <td class="td-label">-->
+                    <!--        <span><?php echo translate('sub-Caste')?></span>-->
+                    <!--    </td>-->
+                    <!--    <td>-->
+                    <!--        <?php-->
+                    <!--            if($spiritual_and_social_background_data[0]['sub_caste'] != null){-->
+                    <!--                echo $this->db->get_where('sub_caste',array('sub_caste_id'=>$spiritual_and_social_background_data[0]['sub_caste']))->row()->sub_caste_name;-->
+                    <!--            }-->
+                    <!--        ?>-->
+                    <!--    </td>-->
                         <td class="td-label">
                             <span><?php echo translate('ethnicity')?></span>
                         </td>

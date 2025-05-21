@@ -39,6 +39,15 @@
 						elseif ($member_type == "Premium") {
 							$member = $get_premium_member_by_id;
 						}
+						elseif ($member_type == "Guest") {
+							$member = $get_guest_member_by_id;
+						}
+						elseif ($member_type == "Ngb") {
+							$member = $get_ngb_member_by_id;
+						}
+						elseif ($member_type == "National") {
+							$member = $get_national_member_by_id;
+						}
 					?>
 						<?php
 							foreach ($member as $value) {

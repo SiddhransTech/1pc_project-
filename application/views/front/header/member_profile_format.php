@@ -368,21 +368,21 @@
 
       <table style="width:100%" class="table">
           <tbody>
-              <tr class="tra">
-                  <td class="ha" style="width:45%;">Religion</td>
-                  <td class="da" style="width:55%;"></td>
+              <!--<tr class="tra">-->
+              <!--    <td class="ha" style="width:45%;">Religion</td>-->
+              <!--    <td class="da" style="width:55%;"></td>-->
 
-                  <td class="ha" style="width:45%;">Caste/Sect</td>
-                  <td class="da" style="width:55%;"></td>
-              </tr>                    
+              <!--    <td class="ha" style="width:45%;">Caste/Sect</td>-->
+              <!--    <td class="da" style="width:55%;"></td>-->
+              <!--</tr>                    -->
 
-              <tr class="tra">
-                  <td class="ha" style="width:45%;">Sub-Caste</td>
-                  <td class="da" style="width:55%;"></td>
+              <!--<tr class="tra">-->
+              <!--    <td class="ha" style="width:45%;">Sub-Caste</td>-->
+              <!--    <td class="da" style="width:55%;"></td>-->
 
-                  <td class="ha" style="width:45%;">Kula</td>
-                  <td class="da" style="width:55%;"></td>
-              </tr>
+              <!--    <td class="ha" style="width:45%;">Kula</td>-->
+              <!--    <td class="da" style="width:55%;"></td>-->
+              <!--</tr>-->
 
               <tr class="tra">
                   <td class="ha" style="width:45%;">Personal Value</td>
@@ -400,12 +400,12 @@
                   <td class="da" style="width:55%;"></td>	                        
               </tr>
 
-              <tr class="tra">
-                  <td class="ha" style="width:45%;">Dosha</td>
-                  <td class="da" style="width:55%;"></td>
+              <!--<tr class="tra">-->
+              <!--    <td class="ha" style="width:45%;">Dosha</td>-->
+              <!--    <td class="da" style="width:55%;"></td>-->
 
-                  <td colspan="2"></td>
-              </tr>
+              <!--    <td colspan="2"></td>-->
+              <!--</tr>-->
           </tbody>
       </table>
 

@@ -66,16 +66,16 @@ $db['default'] = array(
 	'dsn'	=> '',
 
 	// for local
-	// 'hostname' => 'localhost',
-	// 'username' => 'root',
-	// 'password' => '',
-	// 'database' => '1pc',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
+	'database' => '1pc',
 
 	// for production
-	'hostname' => 'localhost',
-	'username' => 'u824676608_1percentcharit',
-	'password' => 'Charity@123',
-	'database' => 'u824676608_1percentcharit',
+	// 'hostname' => 'localhost',
+	// 'username' => 'u824676608_1percentcharit',
+	// 'password' => 'Charity@123',
+	// 'database' => 'u824676608_1percentcharit',
 
 
 	'dbdriver' => 'mysqli',
