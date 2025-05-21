@@ -42,8 +42,8 @@
 						elseif ($member_type == "Guest") {
 							$member = $get_guest_members_by_id;
 						}
-						elseif ($member_type == "Premium") {
-							$member = $get_premium_member_by_id;
+						elseif ($member_type == "Ngb") {
+							$member = $get_ngb_members_by_id;
 						}
 						elseif ($member_type == "Premium") {
 							$member = $get_premium_member_by_id;
