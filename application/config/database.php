@@ -64,6 +64,7 @@ $query_builder = TRUE;
 
 $hostname = $_SERVER['HTTP_HOST']; // Get the current host
 
+
 if ($hostname == 'localhost' || $hostname == '127.0.0.1') {
     // Local environment
     $db['default'] = array(
@@ -111,3 +112,4 @@ if ($hostname == 'localhost' || $hostname == '127.0.0.1') {
         'save_queries' => TRUE
     );
 }
+
