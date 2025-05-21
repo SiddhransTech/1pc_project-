@@ -10528,3 +10528,247 @@ INFO - 2025-05-21 08:56:12 --> Controller Class Initialized
 INFO - 2025-05-21 12:26:12 --> Language file loaded: language/kannada/member_lang.php
 INFO - 2025-05-21 12:26:12 --> Final output sent to browser
 DEBUG - 2025-05-21 12:26:12 --> Total execution time: 0.1267
+INFO - 2025-05-21 10:39:19 --> Config Class Initialized
+INFO - 2025-05-21 10:39:19 --> Hooks Class Initialized
+DEBUG - 2025-05-21 10:39:19 --> UTF-8 Support Enabled
+INFO - 2025-05-21 10:39:19 --> Utf8 Class Initialized
+INFO - 2025-05-21 10:39:19 --> URI Class Initialized
+INFO - 2025-05-21 10:39:19 --> Router Class Initialized
+INFO - 2025-05-21 10:39:19 --> Output Class Initialized
+INFO - 2025-05-21 10:39:19 --> Security Class Initialized
+DEBUG - 2025-05-21 10:39:19 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 10:39:19 --> Input Class Initialized
+INFO - 2025-05-21 10:39:19 --> Language Class Initialized
+INFO - 2025-05-21 10:39:19 --> Loader Class Initialized
+INFO - 2025-05-21 10:39:19 --> Helper loaded: url_helper
+INFO - 2025-05-21 10:39:19 --> Helper loaded: file_helper
+INFO - 2025-05-21 10:39:19 --> Helper loaded: form_helper
+INFO - 2025-05-21 10:39:19 --> Helper loaded: language_helper
+INFO - 2025-05-21 10:39:19 --> Helper loaded: html_helper
+INFO - 2025-05-21 10:39:19 --> Database Driver Class Initialized
+INFO - 2025-05-21 10:39:19 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 10:39:19 --> XML-RPC Class Initialized
+INFO - 2025-05-21 10:39:19 --> Form Validation Class Initialized
+INFO - 2025-05-21 10:39:19 --> Model "Crud_model" initialized
+INFO - 2025-05-21 10:39:19 --> Model "Email_model" initialized
+INFO - 2025-05-21 10:39:19 --> Model "Payment_model" initialized
+INFO - 2025-05-21 10:39:19 --> Model "Sms_model" initialized
+INFO - 2025-05-21 10:39:19 --> Model "Important_model" initialized
+INFO - 2025-05-21 10:39:19 --> Controller Class Initialized
+INFO - 2025-05-21 14:09:19 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 14:09:19 --> members - para1: ngb_members, para2: , para3: , para4: 
+ERROR - 2025-05-21 14:09:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 14:09:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 14:09:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 14:09:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 14:09:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 14:09:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 14:09:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 14:09:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 14:09:20 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 14:09:20 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 14:09:20 --> Final output sent to browser
+DEBUG - 2025-05-21 14:09:20 --> Total execution time: 0.4059
+INFO - 2025-05-21 10:39:20 --> Config Class Initialized
+INFO - 2025-05-21 10:39:20 --> Hooks Class Initialized
+DEBUG - 2025-05-21 10:39:20 --> UTF-8 Support Enabled
+INFO - 2025-05-21 10:39:20 --> Utf8 Class Initialized
+INFO - 2025-05-21 10:39:20 --> URI Class Initialized
+INFO - 2025-05-21 10:39:20 --> Router Class Initialized
+INFO - 2025-05-21 10:39:20 --> Output Class Initialized
+INFO - 2025-05-21 10:39:20 --> Security Class Initialized
+DEBUG - 2025-05-21 10:39:20 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 10:39:20 --> Input Class Initialized
+INFO - 2025-05-21 10:39:20 --> Language Class Initialized
+INFO - 2025-05-21 10:39:20 --> Loader Class Initialized
+INFO - 2025-05-21 10:39:20 --> Helper loaded: url_helper
+INFO - 2025-05-21 10:39:20 --> Helper loaded: file_helper
+INFO - 2025-05-21 10:39:20 --> Helper loaded: form_helper
+INFO - 2025-05-21 10:39:20 --> Helper loaded: language_helper
+INFO - 2025-05-21 10:39:20 --> Helper loaded: html_helper
+INFO - 2025-05-21 10:39:20 --> Database Driver Class Initialized
+INFO - 2025-05-21 10:39:20 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 10:39:20 --> XML-RPC Class Initialized
+INFO - 2025-05-21 10:39:20 --> Form Validation Class Initialized
+INFO - 2025-05-21 10:39:20 --> Model "Crud_model" initialized
+INFO - 2025-05-21 10:39:20 --> Model "Email_model" initialized
+INFO - 2025-05-21 10:39:20 --> Model "Payment_model" initialized
+INFO - 2025-05-21 10:39:20 --> Model "Sms_model" initialized
+INFO - 2025-05-21 10:39:20 --> Model "Important_model" initialized
+INFO - 2025-05-21 10:39:20 --> Controller Class Initialized
+INFO - 2025-05-21 14:09:20 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 14:09:20 --> members - para1: ngb_members, para2: list_data, para3: , para4: 
+INFO - 2025-05-21 14:09:20 --> Final output sent to browser
+DEBUG - 2025-05-21 14:09:20 --> Total execution time: 0.1170
+INFO - 2025-05-21 10:39:55 --> Config Class Initialized
+INFO - 2025-05-21 10:39:55 --> Hooks Class Initialized
+DEBUG - 2025-05-21 10:39:55 --> UTF-8 Support Enabled
+INFO - 2025-05-21 10:39:55 --> Utf8 Class Initialized
+INFO - 2025-05-21 10:39:55 --> URI Class Initialized
+DEBUG - 2025-05-21 10:39:55 --> No URI present. Default controller set.
+INFO - 2025-05-21 10:39:55 --> Router Class Initialized
+INFO - 2025-05-21 10:39:55 --> Output Class Initialized
+DEBUG - 2025-05-21 10:39:55 --> Cache file has expired. File deleted.
+INFO - 2025-05-21 10:39:55 --> Security Class Initialized
+DEBUG - 2025-05-21 10:39:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 10:39:55 --> Input Class Initialized
+INFO - 2025-05-21 10:39:55 --> Language Class Initialized
+INFO - 2025-05-21 10:39:55 --> Loader Class Initialized
+INFO - 2025-05-21 10:39:55 --> Helper loaded: url_helper
+INFO - 2025-05-21 10:39:55 --> Helper loaded: file_helper
+INFO - 2025-05-21 10:39:55 --> Helper loaded: form_helper
+INFO - 2025-05-21 10:39:55 --> Helper loaded: language_helper
+INFO - 2025-05-21 10:39:55 --> Helper loaded: html_helper
+INFO - 2025-05-21 10:39:55 --> Database Driver Class Initialized
+INFO - 2025-05-21 10:39:55 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 10:39:55 --> XML-RPC Class Initialized
+INFO - 2025-05-21 10:39:55 --> Form Validation Class Initialized
+INFO - 2025-05-21 10:39:55 --> Model "Crud_model" initialized
+INFO - 2025-05-21 10:39:55 --> Model "Email_model" initialized
+INFO - 2025-05-21 10:39:55 --> Model "Payment_model" initialized
+INFO - 2025-05-21 10:39:55 --> Model "Sms_model" initialized
+INFO - 2025-05-21 10:39:55 --> Model "Important_model" initialized
+INFO - 2025-05-21 10:39:55 --> Controller Class Initialized
+INFO - 2025-05-21 14:09:55 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 14:09:56 --> File loaded: C:\xampp\htdocs\1pc\application\views\front/index.php
+DEBUG - 2025-05-21 14:09:56 --> Cache file written: C:\xampp\htdocs\1pc\application\cache/03745c89785e1b42925ff3c64e76a97a
+INFO - 2025-05-21 14:09:56 --> Final output sent to browser
+DEBUG - 2025-05-21 14:09:56 --> Total execution time: 0.8202
+INFO - 2025-05-21 10:39:56 --> Config Class Initialized
+INFO - 2025-05-21 10:39:56 --> Hooks Class Initialized
+DEBUG - 2025-05-21 10:39:56 --> UTF-8 Support Enabled
+INFO - 2025-05-21 10:39:56 --> Utf8 Class Initialized
+INFO - 2025-05-21 10:39:56 --> URI Class Initialized
+INFO - 2025-05-21 10:39:56 --> Router Class Initialized
+INFO - 2025-05-21 10:39:56 --> Output Class Initialized
+INFO - 2025-05-21 10:39:56 --> Security Class Initialized
+DEBUG - 2025-05-21 10:39:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 10:39:56 --> Input Class Initialized
+INFO - 2025-05-21 10:39:56 --> Language Class Initialized
+ERROR - 2025-05-21 10:39:56 --> 404 Page Not Found: Template/front
+INFO - 2025-05-21 10:39:56 --> Config Class Initialized
+INFO - 2025-05-21 10:39:56 --> Hooks Class Initialized
+DEBUG - 2025-05-21 10:39:56 --> UTF-8 Support Enabled
+INFO - 2025-05-21 10:39:56 --> Utf8 Class Initialized
+INFO - 2025-05-21 10:39:56 --> URI Class Initialized
+INFO - 2025-05-21 10:39:56 --> Router Class Initialized
+INFO - 2025-05-21 10:39:56 --> Output Class Initialized
+INFO - 2025-05-21 10:39:56 --> Security Class Initialized
+DEBUG - 2025-05-21 10:39:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 10:39:56 --> Input Class Initialized
+INFO - 2025-05-21 10:39:56 --> Language Class Initialized
+ERROR - 2025-05-21 10:39:56 --> 404 Page Not Found: Uploads/blog_image
+INFO - 2025-05-21 10:39:56 --> Config Class Initialized
+INFO - 2025-05-21 10:39:56 --> Hooks Class Initialized
+DEBUG - 2025-05-21 10:39:56 --> UTF-8 Support Enabled
+INFO - 2025-05-21 10:39:56 --> Utf8 Class Initialized
+INFO - 2025-05-21 10:39:56 --> URI Class Initialized
+INFO - 2025-05-21 10:39:56 --> Router Class Initialized
+INFO - 2025-05-21 10:39:56 --> Output Class Initialized
+INFO - 2025-05-21 10:39:56 --> Security Class Initialized
+DEBUG - 2025-05-21 10:39:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 10:39:56 --> Input Class Initialized
+INFO - 2025-05-21 10:39:56 --> Language Class Initialized
+INFO - 2025-05-21 10:39:56 --> Loader Class Initialized
+INFO - 2025-05-21 10:39:56 --> Helper loaded: url_helper
+INFO - 2025-05-21 10:39:56 --> Helper loaded: file_helper
+INFO - 2025-05-21 10:39:56 --> Helper loaded: form_helper
+INFO - 2025-05-21 10:39:56 --> Helper loaded: language_helper
+INFO - 2025-05-21 10:39:56 --> Helper loaded: html_helper
+INFO - 2025-05-21 10:39:56 --> Database Driver Class Initialized
+INFO - 2025-05-21 10:39:56 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 10:39:56 --> XML-RPC Class Initialized
+INFO - 2025-05-21 10:39:56 --> Form Validation Class Initialized
+INFO - 2025-05-21 10:39:56 --> Model "Crud_model" initialized
+INFO - 2025-05-21 10:39:56 --> Model "Email_model" initialized
+INFO - 2025-05-21 10:39:56 --> Model "Payment_model" initialized
+INFO - 2025-05-21 10:39:56 --> Model "Sms_model" initialized
+INFO - 2025-05-21 10:39:56 --> Model "Important_model" initialized
+INFO - 2025-05-21 10:39:56 --> Controller Class Initialized
+INFO - 2025-05-21 14:09:56 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 14:09:57 --> File loaded: C:\xampp\htdocs\1pc\application\views\front/header/top_bar_right.php
+INFO - 2025-05-21 14:09:57 --> Final output sent to browser
+DEBUG - 2025-05-21 14:09:57 --> Total execution time: 0.1495
+INFO - 2025-05-21 10:39:58 --> Config Class Initialized
+INFO - 2025-05-21 10:39:58 --> Hooks Class Initialized
+DEBUG - 2025-05-21 10:39:58 --> UTF-8 Support Enabled
+INFO - 2025-05-21 10:39:58 --> Utf8 Class Initialized
+INFO - 2025-05-21 10:39:58 --> URI Class Initialized
+INFO - 2025-05-21 10:39:58 --> Router Class Initialized
+INFO - 2025-05-21 10:39:58 --> Output Class Initialized
+INFO - 2025-05-21 10:39:58 --> Security Class Initialized
+DEBUG - 2025-05-21 10:39:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 10:39:58 --> Input Class Initialized
+INFO - 2025-05-21 10:39:58 --> Language Class Initialized
+INFO - 2025-05-21 10:39:58 --> Loader Class Initialized
+INFO - 2025-05-21 10:39:58 --> Helper loaded: url_helper
+INFO - 2025-05-21 10:39:58 --> Helper loaded: file_helper
+INFO - 2025-05-21 10:39:58 --> Helper loaded: form_helper
+INFO - 2025-05-21 10:39:58 --> Helper loaded: language_helper
+INFO - 2025-05-21 10:39:58 --> Helper loaded: html_helper
+INFO - 2025-05-21 10:39:58 --> Database Driver Class Initialized
+INFO - 2025-05-21 10:39:58 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 10:39:58 --> XML-RPC Class Initialized
+INFO - 2025-05-21 10:39:58 --> Form Validation Class Initialized
+INFO - 2025-05-21 10:39:58 --> Model "Crud_model" initialized
+INFO - 2025-05-21 10:39:58 --> Model "Email_model" initialized
+INFO - 2025-05-21 10:39:58 --> Model "Payment_model" initialized
+INFO - 2025-05-21 10:39:58 --> Model "Sms_model" initialized
+INFO - 2025-05-21 10:39:58 --> Model "Important_model" initialized
+INFO - 2025-05-21 10:39:58 --> Controller Class Initialized
+INFO - 2025-05-21 14:09:58 --> Language file loaded: language/kannada/member_lang.php
+ERROR - 2025-05-21 14:09:58 --> Severity: Warning --> Undefined variable $preloader_bg C:\xampp\htdocs\1pc\application\views\front\preloader.php 101
+ERROR - 2025-05-21 14:09:58 --> Severity: Warning --> Undefined variable $c_name C:\xampp\htdocs\1pc\application\views\front\header\header.php 142
+ERROR - 2025-05-21 14:09:58 --> Severity: Warning --> Undefined variable $symbol C:\xampp\htdocs\1pc\application\views\front\header\header.php 142
+ERROR - 2025-05-21 14:09:58 --> Severity: Warning --> Undefined array key "currency_settings_id" C:\xampp\htdocs\1pc\application\views\front\header\header.php 150
+ERROR - 2025-05-21 14:09:58 --> Severity: Warning --> Undefined variable $currency_id C:\xampp\htdocs\1pc\application\views\front\header\header.php 150
+ERROR - 2025-05-21 14:09:58 --> Severity: Warning --> Undefined array key "currency_settings_id" C:\xampp\htdocs\1pc\application\views\front\header\header.php 151
+ERROR - 2025-05-21 14:09:58 --> Severity: Warning --> Undefined array key "symbol" C:\xampp\htdocs\1pc\application\views\front\header\header.php 152
+ERROR - 2025-05-21 14:09:58 --> Severity: Warning --> Undefined array key "currency_settings_id" C:\xampp\htdocs\1pc\application\views\front\header\header.php 153
+ERROR - 2025-05-21 14:09:58 --> Severity: Warning --> Undefined variable $currency_id C:\xampp\htdocs\1pc\application\views\front\header\header.php 153
+INFO - 2025-05-21 14:09:58 --> File loaded: C:\xampp\htdocs\1pc\application\views\front/registration.php
+INFO - 2025-05-21 14:09:58 --> Final output sent to browser
+DEBUG - 2025-05-21 14:09:58 --> Total execution time: 0.1809
+INFO - 2025-05-21 10:39:58 --> Config Class Initialized
+INFO - 2025-05-21 10:39:58 --> Hooks Class Initialized
+DEBUG - 2025-05-21 10:39:58 --> UTF-8 Support Enabled
+INFO - 2025-05-21 10:39:58 --> Utf8 Class Initialized
+INFO - 2025-05-21 10:39:58 --> URI Class Initialized
+INFO - 2025-05-21 10:39:58 --> Router Class Initialized
+INFO - 2025-05-21 10:39:58 --> Output Class Initialized
+INFO - 2025-05-21 10:39:58 --> Security Class Initialized
+DEBUG - 2025-05-21 10:39:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 10:39:58 --> Input Class Initialized
+INFO - 2025-05-21 10:39:58 --> Language Class Initialized
+ERROR - 2025-05-21 10:39:58 --> 404 Page Not Found: Template/front
+INFO - 2025-05-21 10:39:59 --> Config Class Initialized
+INFO - 2025-05-21 10:39:59 --> Hooks Class Initialized
+DEBUG - 2025-05-21 10:39:59 --> UTF-8 Support Enabled
+INFO - 2025-05-21 10:39:59 --> Utf8 Class Initialized
+INFO - 2025-05-21 10:39:59 --> URI Class Initialized
+INFO - 2025-05-21 10:39:59 --> Router Class Initialized
+INFO - 2025-05-21 10:39:59 --> Output Class Initialized
+INFO - 2025-05-21 10:39:59 --> Security Class Initialized
+DEBUG - 2025-05-21 10:39:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 10:39:59 --> Input Class Initialized
+INFO - 2025-05-21 10:39:59 --> Language Class Initialized
+INFO - 2025-05-21 10:39:59 --> Loader Class Initialized
+INFO - 2025-05-21 10:39:59 --> Helper loaded: url_helper
+INFO - 2025-05-21 10:39:59 --> Helper loaded: file_helper
+INFO - 2025-05-21 10:39:59 --> Helper loaded: form_helper
+INFO - 2025-05-21 10:39:59 --> Helper loaded: language_helper
+INFO - 2025-05-21 10:39:59 --> Helper loaded: html_helper
+INFO - 2025-05-21 10:39:59 --> Database Driver Class Initialized
+INFO - 2025-05-21 10:39:59 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 10:39:59 --> XML-RPC Class Initialized
+INFO - 2025-05-21 10:39:59 --> Form Validation Class Initialized
+INFO - 2025-05-21 10:39:59 --> Model "Crud_model" initialized
+INFO - 2025-05-21 10:39:59 --> Model "Email_model" initialized
+INFO - 2025-05-21 10:39:59 --> Model "Payment_model" initialized
+INFO - 2025-05-21 10:39:59 --> Model "Sms_model" initialized
+INFO - 2025-05-21 10:39:59 --> Model "Important_model" initialized
+INFO - 2025-05-21 10:39:59 --> Controller Class Initialized
+INFO - 2025-05-21 14:09:59 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 14:09:59 --> File loaded: C:\xampp\htdocs\1pc\application\views\front/header/top_bar_right.php
+INFO - 2025-05-21 14:09:59 --> Final output sent to browser
+DEBUG - 2025-05-21 14:09:59 --> Total execution time: 0.1873
