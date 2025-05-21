@@ -771,11 +771,53 @@ $(document).ready(function() {
             { "data": "percentage" },
             { "data": "options" }
         ],
-        "drawCallback": function(settings) {
-            $('.add-tooltip').tooltip();
-        }
-    });
-}
+            "drawCallback": function(settings) {
+                $('.add-tooltip').tooltip();
+            }
+        });
+    }
+
+    if (type == "ngb_members") {
+        url = "<?php echo base_url('admin/members/ngb_members/list_data') ?>";
+        console.log("DataTable AJAX URL:", url);  // <-- log URL here
+
+        $('#members_table').DataTable({
+            "processing": true,
+            "serverSide": true,
+            "ajax": {
+                "url": url,
+                "dataType": "json",
+                "type": "POST",
+                "data": {
+                    '<?php echo $this->security->get_csrf_token_name(); ?>': '<?php echo $this->security->get_csrf_hash(); ?>'
+                },
+                "beforeSend": function() {
+                    console.log("AJAX request is about to be sent to:", url);  // <-- log before request
+                },
+                "dataSrc": function(json) {
+                    console.log("Response received:", json);  // <-- log response data
+                    return json.data;
+                }
+            },
+            "columns": [
+                { "data": "image" },
+                { "data": "member_id" },
+                { "data": "name" },
+                <?php $member_approval = $this->db->get_where('general_settings', array('type' => 'member_approval_by_admin'))->row()->value;
+                    if($member_approval == 'yes') { ?> 
+                { "data": "status" },
+                <?php } ?>
+                { "data": "member_since" },
+                { "data": "member_status" },
+                { "data": "address" },
+                { "data": "percentage" },
+                { "data": "options" }
+            ],
+            "drawCallback": function(settings) {
+                $('.add-tooltip').tooltip();
+            }
+        });
+    }
 
     if (type == "deleted_members") {
         url = "<?php echo base_url('admin/deleted_members/list_data') ?>";
