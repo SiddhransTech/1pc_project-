@@ -48,7 +48,55 @@ class Home extends CI_Controller {
         }
         setcookie('lang', $this->session->userdata('language'), time() + (86400), "/");
     }
+
+
+    //  get the areas  for the registration  forms 
+
+    public function form() {
+        log_message('info', 'Method form() invoked');
     
+        // Get all areas
+        $data['areas'] = $this->db->get('areas')->result();
+        log_message('info', 'Areas fetched: ' . print_r($data['areas'], true));
+    
+        // Get first area_id or some default
+        $first_area_id = !empty($data['areas']) ? $data['areas'][0]->id : 0;
+    
+        // Get legions related to the first area
+        if ($first_area_id) {
+            $this->db->where('area_id', $first_area_id);
+            $data['legions'] = $this->db->get('legions')->result();
+            log_message('info', 'Legions for first area fetched: ' . print_r($data['legions'], true));
+        } else {
+            $data['legions'] = [];
+            log_message('info', 'No area found. Legions set as empty array.');
+        }
+    
+        $this->load->view('front/registration', $data);
+    }
+    
+    
+    
+    public function get_legions() {
+        log_message('info', 'Method get_legions() invoked via AJAX');
+    
+        $area_id = $this->input->post('area_id');
+        log_message('info', 'Area ID received: ' . $area_id);
+    
+        if ($area_id) {
+            $this->db->where('area_id', $area_id);
+            $legions = $this->db->get('legions')->result();
+            log_message('info', 'Legions fetched for area_id ' . $area_id . ': ' . print_r($legions, true));
+    
+            echo json_encode($legions);
+        } else {
+            log_message('info', 'No area_id received. Returning empty array.');
+            echo json_encode([]);
+        }
+    }
+    
+    
+
     public function sendTestEmail()
     {
         ini_set('display_errors',1);
@@ -4294,8 +4342,33 @@ public function member_profile($para1 = "", $para2 = "")
         redirect(base_url().'home/', 'refresh');
     }
 
+
+
+    private function get_registration_form_data() {
+        $data['areas'] = $this->db->get('areas')->result();
+        $first_area_id = !empty($data['areas']) ? $data['areas'][0]->id : 0;
+        $data['first_area_id'] = $first_area_id;
+    
+        if ($first_area_id) {
+            $this->db->where('area_id', $first_area_id);
+            $data['legions'] = $this->db->get('legions')->result();
+        } else {
+            $data['legions'] = [];
+        }
+    
+        return $data;
+    }
+    
     function registration($para1="")
+
     {
+
+        $page_data = $this->get_registration_form_data(); // ✅ reuses the logic
+
+    
+        
+        log_message('info', 'Chethan ' );
+
         if ($this->member_permission() == TRUE) {
             redirect(base_url().'home/', 'refresh');
         }
@@ -4337,6 +4410,7 @@ public function member_profile($para1 = "", $para2 = "")
                 $this->form_validation->set_rules('mobile', 'Mobile Number', 'required');
                 $this->form_validation->set_rules('password', 'Password', 'required|matches[confirm_password]');
                 $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'required');
+             
 
                 if ($this->form_validation->run() == FALSE) {
                     if ($this->Crud_model->get_settings_value('third_party_settings', 'captcha_status', 'value') == 'ok') {
@@ -4580,7 +4654,7 @@ public function member_profile($para1 = "", $para2 = "")
                                 $data['last_name'] = $this->input->post('last_name');
                                 $data['gender'] = $this->input->post('gender');
                                 $data['email'] = $this->input->post('email');
-                                $data['enquiry_time'] = $this->input->post('enquiry_time');
+                                // $data['enquiry_time'] = $this->input->post('enquiry_time');
 
                                 if($member_email_verification == 'on'){
                                     $data['email_verification_code'] = $this->Important_model->generate_key('member','email_verification_code','');
@@ -4682,12 +4756,13 @@ public function member_profile($para1 = "", $para2 = "")
                                 $this->load->view('front/registration', $page_data);
                             }
                         } else {
+                            
                             $data['status']     = $this->input->post('approval_status');
                             $data['first_name'] = $this->input->post('first_name');
                             $data['last_name'] = $this->input->post('last_name');
                             $data['gender'] = $this->input->post('gender');
                             $data['email'] = $this->input->post('email');
-                            $data['enquiry_time'] = $this->input->post('enquiry_time');
+                            // $data['enquiry_time'] = $this->input->post('enquiry_time');
                             if($member_email_verification == 'on'){
                                 $data['email_verification_code'] = $this->Important_model->generate_key('member','email_verification_code','');
                                 $data['email_verification_status'] = '0';
@@ -4739,8 +4814,16 @@ public function member_profile($para1 = "", $para2 = "")
                             $data['privacy_status'] = $privacy_status;
                             $data['pic_privacy'] = $data_pic_privacy;
                             $data['report_profile'] = '[]';
+                            $data['area'] = $this->input->post('area');   // string value from form
+                            $data['legion'] = $this->input->post('legion'); // string value from form
                             
+                            log_message('info', 'Selected area: ' . $data['area']);
+                            log_message('info', 'Selected legion: ' . $data['legion']);
                             
+
+                            
+ 
+                                
 
                             $this->db->insert('member', $data);
                             $insert_id = $this->db->insert_id();
@@ -4783,6 +4866,7 @@ public function member_profile($para1 = "", $para2 = "")
                         }
                         $page_data['form_contents'] = $this->input->post();
                         $page_data['disallowed_char'] =  translate('disallowed_charecter').' " '.$char.' " '.translate('in_the_POST');
+                       
                         $page_data['page'] = "registration";
                         $this->load->view('front/registration', $page_data);
                     }
