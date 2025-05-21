@@ -235,8 +235,8 @@ AffTracker.generalClick( "index" );
 						                    <?php echo translate('national_members')?></a>
 						                    </li>
 						                     <li>
-						                    <a class="dropdown-item <?php if(!empty($nav_dropdown)){if($nav_dropdown == 'regional_members'){?>nav_active_dropdown<?php }}?>" href="<?=base_url()?>home/listing/premium_members">
-						                    <?php echo translate('regional_members')?></a>
+						                    <a class="dropdown-item <?php if(!empty($nav_dropdown)){if($nav_dropdown == 'legions_members'){?>nav_active_dropdown<?php }}?>" href="<?=base_url()?>home/listing/premium_members">
+						                    <?php echo translate('legions_members')?></a>
 						                    </li>
 						                     <li>
 						                    <a class="dropdown-item <?php if(!empty($nav_dropdown)){if($nav_dropdown == 'ngb_members'){?>nav_active_dropdown<?php }}?>" href="<?=base_url()?>home/listing/premium_members">

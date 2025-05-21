@@ -136,21 +136,21 @@ foreach ($get_all_members as $member):
                 <tr>
                     <td width="120" height="30" style="padding-left: 5px;" class="font-dark"><b><?php echo translate('age')?></b></td>
                     <td width="120" height="30" style="padding-left: 5px;" class="font-dark"><?php printf($diff->y); ?></td>
-                    <td width="120" height="30" style="padding-left: 5px;" class="font-dark"><b><?php echo translate('height')?></b></td>
-                    <td width="120" height="30" style="padding-left: 5px;" class="font-dark"><?=$member->height." ".translate('feet')?></td>
+                    <!--<td width="120" height="30" style="padding-left: 5px;" class="font-dark"><b><?php echo translate('height')?></b></td>-->
+                    <!--<td width="120" height="30" style="padding-left: 5px;" class="font-dark"><?=$member->height." ".translate('feet')?></td>-->
                 </tr>
-                <tr>
-                    <td width="120" height="30" style="padding-left: 5px;" class="font-dark"><b><?php echo translate('religion')?></b></td>
-                    <td width="120" height="30" style="padding-left: 5px;" class="font-dark"><?=$this->Crud_model->get_type_name_by_id('religion', $spiritual_and_social_background_data[0]['religion']);?></td>
-                    <td width="120" height="30" style="padding-left: 5px;"><b><?php echo translate('caste_/_sect')?></b></td>
-                    <td width="120" height="30" style="padding-left: 5px;" class="font-dark">
-                        <?php
+                <!--<tr>-->
+                <!--    <td width="120" height="30" style="padding-left: 5px;" class="font-dark"><b><?php echo translate('religion')?></b></td>-->
+                <!--    <td width="120" height="30" style="padding-left: 5px;" class="font-dark"><?=$this->Crud_model->get_type_name_by_id('religion', $spiritual_and_social_background_data[0]['religion']);?></td>-->
+                <!--    <td width="120" height="30" style="padding-left: 5px;"><b><?php echo translate('caste_/_sect')?></b></td>-->
+                <!--    <td width="120" height="30" style="padding-left: 5px;" class="font-dark">-->
+                       <?php
                             if($spiritual_and_social_background_data[0]['caste'] != null){
                                 echo $this->db->get_where('caste', array('caste_id'=>$spiritual_and_social_background_data[0]['caste']))->row()->caste_name;
                             }
-                        ?>
-                    </td>
-                </tr>
+                    ?>
+                <!--    </td>-->
+                <!--</tr>-->
                 <tr>
                     <td width="120" height="30" style="padding-left: 5px;" class="font-dark"><b><?php echo translate('mother_tongue')?></b></td>
                     <td width="120" height="30" style="padding-left: 5px;" class="font-dark"><?=$this->Crud_model->get_type_name_by_id('language', $language_data[0]['mother_tongue']);?></td>

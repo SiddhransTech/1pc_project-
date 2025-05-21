@@ -520,6 +520,16 @@ class Admin extends CI_Controller
 				} elseif ($para1 == "premium_members") {
 					$member_type = 2;
 				}
+				 elseif ($para1 == "national_members") {
+					$member_type = 3;
+				}
+				 elseif ($para1 == "ngb_members") {
+					$member_type = 4;
+				}
+				 elseif ($para1 == "guest_members") {
+					$member_type = 0;
+				}
+				
 
 				$totalData = $this->Crud_model->allmembers_count($member_type);
 
@@ -717,6 +727,15 @@ class Admin extends CI_Controller
 					$member_type = 1;
 				} elseif ($para1 == "premium_members") {
 					$member_type = 2;
+				}
+				elseif ($para1 == "guest_members") {
+					$member_type = 0;
+				}
+				elseif ($para1 == "ngb_members") {
+					$member_type = 4;
+				}
+				elseif ($para1 == "national_members") {
+					$member_type = 3;
 				}
 
 				$totalData = $this->Crud_model->star_allmembers_count($member_type, $limit, $start, $order, $dir,$nakshatra,$nakshatra_gender);
@@ -969,7 +988,210 @@ class Admin extends CI_Controller
 				$page_data['parameter'] = "premium_members";
 				$page_data['page_name'] = "premium_members";
 				$this->load->view('back/index', $page_data);
-			} elseif ($para1 == "add_member") {
+			} 
+			
+			elseif ($para1 == "national_members") {
+				if ($para2 == "") {
+
+					log_message("info","National Members entry point of funcitons");
+					$page_data['top'] = "members/index.php";
+					$page_data['folder'] = "members";
+					$page_data['file'] = "index.php";
+					$page_data['bottom'] = "members/index.php";
+					$page_data['get_premium_members'] = $this->db->get_where("member", array("membership" => 3))->result();
+					if ($this->session->flashdata('alert') == "edit") {
+						$page_data['success_alert'] = translate("you_have_successfully_edited_the_profile!");
+					} elseif ($this->session->flashdata('alert') == "upgrade") {
+						$page_data['success_alert'] = translate("you_have_successfully_upgraded_the_member_package!");
+					}
+				} elseif ($para2 == "view_member") {
+					$page_data['top'] = "members/members.php";
+					$page_data['folder'] = "members";
+					$page_data['file'] = "view_member.php";
+					$page_data['bottom'] = "members/members.php";
+					$page_data['get_national_member_by_id'] = $this->db->get_where("member", array("membership" => 3, "member_id" => $para3))->result();
+				} elseif ($para2 == "edit_member") {
+					$page_data['top'] 		= "members/members.php";
+					$page_data['folder'] 	= "members";
+					$page_data['file']	 	= "edit_member.php";
+					$page_data['bottom'] 	= "members/members.php";
+					$page_data['get_national_member_by_id'] = $this->db->get_where("member", array("membership" => 3, "member_id" => $para3))->result();
+				} elseif ($para2 == "print_member") {
+					$this->load->library('pdf');
+					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 3, "member_id" => $para3))->result();
+					$page_data['member_type'] = "National";
+					$page_data['parameter'] 	= "national_members";
+					$page_data['page_name'] 	= "national_members";
+					$this->load->view('back/members/print_member', $page_data);
+					$html = $this->output->get_output();
+					$dompdf = new pdf();
+					$dompdf->loadHtml($html);
+					$dompdf->set_option('isRemoteEnabled', TRUE);
+					$dompdf->render();
+					$fileName = $page_data['get_premium_member_by_id'][0]->first_name . " " . $page_data['get_premium_member_by_id'][0]->last_name . " " . "Member Details";
+					$dompdf->stream($fileName . ".pdf", array("Attachment" => 0));
+				}
+				elseif ($para2 == "starmatching") {
+					$page_data['top'] = "members/index.php";
+					$page_data['folder'] = "members";
+					$page_data['file'] = "premium_star_matching.php";
+					$page_data['bottom'] = "members/index.php";
+					$page_data['get_premium_members'] = $this->db->get_where("member", array("membership" => 3, "member_id" => $para3))->result();
+					foreach ($page_data['get_premium_members'] as $get_premium_members) {
+						$page_data['nakshatra'] = json_decode($get_premium_members->astronomic_information, true);
+		
+					}
+					
+					// $page_data['nakshatra'] = $page_data['nakshatra'][0]['moon_sign'];
+					if ($this->session->flashdata('alert') == "edit") {
+						$page_data['success_alert'] = translate("you_have_successfully_edited_the_profile!");
+					} elseif ($this->session->flashdata('alert') == "upgrade") {
+						$page_data['success_alert'] = translate("you_have_successfully_upgraded_the_member_package!");
+					}
+				}
+
+
+
+
+				$page_data['member_type'] = "National";
+				$page_data['parameter'] = "national_members";
+				$page_data['page_name'] = "national_members";
+				$this->load->view('back/index', $page_data);
+			}
+			elseif ($para1 == "guest_members") {
+				if ($para2 == "") {
+					log_message("info","Guest Members entry point of funcitons");
+					$page_data['top'] = "members/index.php";
+					$page_data['folder'] = "members";
+					$page_data['file'] = "index.php";
+					$page_data['bottom'] = "members/index.php";
+					$page_data['get_premium_members'] = $this->db->get_where("member", array("membership" => 0))->result();
+					if ($this->session->flashdata('alert') == "edit") {
+						$page_data['success_alert'] = translate("you_have_successfully_edited_the_profile!");
+					} elseif ($this->session->flashdata('alert') == "upgrade") {
+						$page_data['success_alert'] = translate("you_have_successfully_upgraded_the_member_package!");
+					}
+				} elseif ($para2 == "view_member") {
+					$page_data['top'] = "members/members.php";
+					$page_data['folder'] = "members";
+					$page_data['file'] = "view_member.php";
+					$page_data['bottom'] = "members/members.php";
+					$page_data['get_guest_member_by_id'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
+				} elseif ($para2 == "edit_member") {
+					$page_data['top'] 		= "members/members.php";
+					$page_data['folder'] 	= "members";
+					$page_data['file']	 	= "edit_member.php";
+					$page_data['bottom'] 	= "members/members.php";
+					$page_data['get_guest_member_by_id'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
+				} elseif ($para2 == "print_member") {
+					$this->load->library('pdf');
+					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
+					$page_data['member_type'] = "guest";
+					$page_data['parameter'] = "guest_members";
+					$page_data['page_name'] = "guest_members";
+					$this->load->view('back/members/print_member', $page_data);
+					$html = $this->output->get_output();
+					$dompdf = new pdf();
+					$dompdf->loadHtml($html);
+					$dompdf->set_option('isRemoteEnabled', TRUE);
+					$dompdf->render();
+					$fileName = $page_data['get_premium_member_by_id'][0]->first_name . " " . $page_data['get_premium_member_by_id'][0]->last_name . " " . "Member Details";
+					$dompdf->stream($fileName . ".pdf", array("Attachment" => 0));
+				}
+				elseif ($para2 == "starmatching") {
+					$page_data['top'] = "members/index.php";
+					$page_data['folder'] = "members";
+					$page_data['file'] = "premium_star_matching.php";
+					$page_data['bottom'] = "members/index.php";
+					$page_data['get_premium_members'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
+					foreach ($page_data['get_premium_members'] as $get_premium_members) {
+						$page_data['nakshatra'] = json_decode($get_premium_members->astronomic_information, true);
+		
+					}
+					
+					// $page_data['nakshatra'] = $page_data['nakshatra'][0]['moon_sign'];
+					if ($this->session->flashdata('alert') == "edit") {
+						$page_data['success_alert'] = translate("you_have_successfully_edited_the_profile!");
+					} elseif ($this->session->flashdata('alert') == "upgrade") {
+						$page_data['success_alert'] = translate("you_have_successfully_upgraded_the_member_package!");
+					}
+				}
+
+
+
+
+				$page_data['member_type'] = "Guest";
+				$page_data['parameter'] = "guest_members";
+				$page_data['page_name'] = "guest_members";
+				$this->load->view('back/index', $page_data);
+			}
+			elseif ($para1 == "ngb_members") {
+				if ($para2 == "") {
+					$page_data['top'] = "members/index.php";
+					$page_data['folder'] = "members";
+					$page_data['file'] = "index.php";
+					$page_data['bottom'] = "members/index.php";
+					$page_data['get_premium_members'] = $this->db->get_where("member", array("membership" => 4))->result();
+					if ($this->session->flashdata('alert') == "edit") {
+						$page_data['success_alert'] = translate("you_have_successfully_edited_the_profile!");
+					} elseif ($this->session->flashdata('alert') == "upgrade") {
+						$page_data['success_alert'] = translate("you_have_successfully_upgraded_the_member_package!");
+					}
+				} elseif ($para2 == "view_member") {
+					$page_data['top'] = "members/members.php";
+					$page_data['folder'] = "members";
+					$page_data['file'] = "view_member.php";
+					$page_data['bottom'] = "members/members.php";
+					$page_data['get_ngb_member_by_id'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para3))->result();
+				} elseif ($para2 == "edit_member") {
+					$page_data['top'] 		= "members/members.php";
+					$page_data['folder'] 	= "members";
+					$page_data['file']	 	= "edit_member.php";
+					$page_data['bottom'] 	= "members/members.php";
+					$page_data['get_ngb_member_by_id'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para3))->result();
+				} elseif ($para2 == "print_member") {
+					$this->load->library('pdf');
+					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para3))->result();
+					$page_data['member_type'] = "Ngb";
+					$page_data['parameter'] 	= "ngb_member";
+					$page_data['page_name'] 	= "ngb_member";
+					$this->load->view('back/members/print_member', $page_data);
+					$html = $this->output->get_output();
+					$dompdf = new pdf();
+					$dompdf->loadHtml($html);
+					$dompdf->set_option('isRemoteEnabled', TRUE);
+					$dompdf->render();
+					$fileName = $page_data['get_premium_member_by_id'][0]->first_name . " " . $page_data['get_premium_member_by_id'][0]->last_name . " " . "Member Details";
+					$dompdf->stream($fileName . ".pdf", array("Attachment" => 0));
+				}
+				elseif ($para2 == "starmatching") {
+					$page_data['top'] = "members/index.php";
+					$page_data['folder'] = "members";
+					$page_data['file'] = "premium_star_matching.php";
+					$page_data['bottom'] = "members/index.php";
+					$page_data['get_premium_members'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para3))->result();
+					foreach ($page_data['get_premium_members'] as $get_premium_members) {
+						$page_data['nakshatra'] = json_decode($get_premium_members->astronomic_information, true);
+		
+					}
+					
+					// $page_data['nakshatra'] = $page_data['nakshatra'][0]['moon_sign'];
+					if ($this->session->flashdata('alert') == "edit") {
+						$page_data['success_alert'] = translate("you_have_successfully_edited_the_profile!");
+					} elseif ($this->session->flashdata('alert') == "upgrade") {
+						$page_data['success_alert'] = translate("you_have_successfully_upgraded_the_member_package!");
+					}
+				}
+
+
+
+
+				$page_data['member_type'] = "Ngb";
+				$page_data['parameter'] = "ngb_members";
+				$page_data['page_name'] = "ngb_members";
+				$this->load->view('back/index', $page_data);
+			}
+			 elseif ($para1 == "add_member") {
 				if ($para2 == "") {
 					$page_data['top'] 		= "members/index.php";
 					$page_data['folder'] 	= "members";
@@ -1396,6 +1618,21 @@ class Admin extends CI_Controller
 						$page_data['member_type'] = "Free";
 						$page_data['parameter'] = "free_members";
 						$page_data['page_name'] = "free_members";
+					} elseif ($para3 == 'guest_members') {
+						$page_data['get_guest_member_by_id'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para2))->result();
+						$page_data['member_type'] = "Free";
+						$page_data['parameter'] = "guest_members";
+						$page_data['page_name'] = "guest_members";
+					} elseif ($para3 == 'national_members') {
+						$page_data['get_free_member_by_id'] = $this->db->get_where("member", array("membership" => 3, "member_id" => $para2))->result();
+						$page_data['member_type'] = "National";
+						$page_data['parameter'] = "national_members";
+						$page_data['page_name'] = "national_members";
+					} elseif ($para3 == 'ngb_members') {
+						$page_data['get_ngb_member_by_id'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para2))->result();
+						$page_data['member_type'] = "Ngb";
+						$page_data['parameter'] = "ngb_members";
+						$page_data['page_name'] = "ngb_members";
 					}
 
 					$this->load->view('back/index', $page_data);
