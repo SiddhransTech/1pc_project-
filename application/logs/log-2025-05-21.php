@@ -10772,3 +10772,569 @@ INFO - 2025-05-21 14:09:59 --> Language file loaded: language/kannada/member_lan
 INFO - 2025-05-21 14:09:59 --> File loaded: C:\xampp\htdocs\1pc\application\views\front/header/top_bar_right.php
 INFO - 2025-05-21 14:09:59 --> Final output sent to browser
 DEBUG - 2025-05-21 14:09:59 --> Total execution time: 0.1873
+INFO - 2025-05-21 11:50:42 --> Config Class Initialized
+INFO - 2025-05-21 11:50:42 --> Hooks Class Initialized
+DEBUG - 2025-05-21 11:50:42 --> UTF-8 Support Enabled
+INFO - 2025-05-21 11:50:42 --> Utf8 Class Initialized
+INFO - 2025-05-21 11:50:42 --> URI Class Initialized
+INFO - 2025-05-21 11:50:42 --> Router Class Initialized
+INFO - 2025-05-21 11:50:42 --> Output Class Initialized
+INFO - 2025-05-21 11:50:42 --> Security Class Initialized
+DEBUG - 2025-05-21 11:50:42 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 11:50:42 --> Input Class Initialized
+INFO - 2025-05-21 11:50:42 --> Language Class Initialized
+INFO - 2025-05-21 11:50:42 --> Loader Class Initialized
+INFO - 2025-05-21 11:50:42 --> Helper loaded: url_helper
+INFO - 2025-05-21 11:50:42 --> Helper loaded: file_helper
+INFO - 2025-05-21 11:50:42 --> Helper loaded: form_helper
+INFO - 2025-05-21 11:50:42 --> Helper loaded: language_helper
+INFO - 2025-05-21 11:50:42 --> Helper loaded: html_helper
+INFO - 2025-05-21 11:50:42 --> Database Driver Class Initialized
+INFO - 2025-05-21 11:50:42 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 11:50:42 --> XML-RPC Class Initialized
+INFO - 2025-05-21 11:50:42 --> Form Validation Class Initialized
+INFO - 2025-05-21 11:50:42 --> Model "Crud_model" initialized
+INFO - 2025-05-21 11:50:42 --> Model "Email_model" initialized
+INFO - 2025-05-21 11:50:42 --> Model "Payment_model" initialized
+INFO - 2025-05-21 11:50:42 --> Model "Sms_model" initialized
+INFO - 2025-05-21 11:50:42 --> Model "Important_model" initialized
+INFO - 2025-05-21 11:50:42 --> Controller Class Initialized
+INFO - 2025-05-21 15:20:42 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 15:20:42 --> members - para1: ngb_members, para2: , para3: , para4: 
+ERROR - 2025-05-21 15:20:42 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:42 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:42 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:42 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:42 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:42 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:42 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:43 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:43 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 15:20:43 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 15:20:43 --> Final output sent to browser
+DEBUG - 2025-05-21 15:20:43 --> Total execution time: 0.3962
+INFO - 2025-05-21 11:50:43 --> Config Class Initialized
+INFO - 2025-05-21 11:50:43 --> Hooks Class Initialized
+DEBUG - 2025-05-21 11:50:43 --> UTF-8 Support Enabled
+INFO - 2025-05-21 11:50:43 --> Utf8 Class Initialized
+INFO - 2025-05-21 11:50:43 --> URI Class Initialized
+INFO - 2025-05-21 11:50:43 --> Router Class Initialized
+INFO - 2025-05-21 11:50:43 --> Output Class Initialized
+INFO - 2025-05-21 11:50:43 --> Security Class Initialized
+DEBUG - 2025-05-21 11:50:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 11:50:43 --> Input Class Initialized
+INFO - 2025-05-21 11:50:43 --> Language Class Initialized
+INFO - 2025-05-21 11:50:43 --> Loader Class Initialized
+INFO - 2025-05-21 11:50:43 --> Helper loaded: url_helper
+INFO - 2025-05-21 11:50:43 --> Helper loaded: file_helper
+INFO - 2025-05-21 11:50:43 --> Helper loaded: form_helper
+INFO - 2025-05-21 11:50:43 --> Helper loaded: language_helper
+INFO - 2025-05-21 11:50:43 --> Helper loaded: html_helper
+INFO - 2025-05-21 11:50:43 --> Database Driver Class Initialized
+INFO - 2025-05-21 11:50:43 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 11:50:43 --> XML-RPC Class Initialized
+INFO - 2025-05-21 11:50:43 --> Form Validation Class Initialized
+INFO - 2025-05-21 11:50:43 --> Model "Crud_model" initialized
+INFO - 2025-05-21 11:50:43 --> Model "Email_model" initialized
+INFO - 2025-05-21 11:50:43 --> Model "Payment_model" initialized
+INFO - 2025-05-21 11:50:43 --> Model "Sms_model" initialized
+INFO - 2025-05-21 11:50:43 --> Model "Important_model" initialized
+INFO - 2025-05-21 11:50:43 --> Controller Class Initialized
+INFO - 2025-05-21 15:20:43 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 15:20:43 --> members - para1: ngb_members, para2: list_data, para3: , para4: 
+INFO - 2025-05-21 15:20:43 --> Final output sent to browser
+DEBUG - 2025-05-21 15:20:43 --> Total execution time: 0.1135
+INFO - 2025-05-21 11:50:45 --> Config Class Initialized
+INFO - 2025-05-21 11:50:45 --> Hooks Class Initialized
+DEBUG - 2025-05-21 11:50:45 --> UTF-8 Support Enabled
+INFO - 2025-05-21 11:50:45 --> Utf8 Class Initialized
+INFO - 2025-05-21 11:50:45 --> URI Class Initialized
+INFO - 2025-05-21 11:50:45 --> Router Class Initialized
+INFO - 2025-05-21 11:50:45 --> Output Class Initialized
+INFO - 2025-05-21 11:50:45 --> Security Class Initialized
+DEBUG - 2025-05-21 11:50:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 11:50:45 --> Input Class Initialized
+INFO - 2025-05-21 11:50:45 --> Language Class Initialized
+INFO - 2025-05-21 11:50:45 --> Loader Class Initialized
+INFO - 2025-05-21 11:50:45 --> Helper loaded: url_helper
+INFO - 2025-05-21 11:50:45 --> Helper loaded: file_helper
+INFO - 2025-05-21 11:50:45 --> Helper loaded: form_helper
+INFO - 2025-05-21 11:50:45 --> Helper loaded: language_helper
+INFO - 2025-05-21 11:50:45 --> Helper loaded: html_helper
+INFO - 2025-05-21 11:50:45 --> Database Driver Class Initialized
+INFO - 2025-05-21 11:50:45 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 11:50:45 --> XML-RPC Class Initialized
+INFO - 2025-05-21 11:50:45 --> Form Validation Class Initialized
+INFO - 2025-05-21 11:50:45 --> Model "Crud_model" initialized
+INFO - 2025-05-21 11:50:45 --> Model "Email_model" initialized
+INFO - 2025-05-21 11:50:45 --> Model "Payment_model" initialized
+INFO - 2025-05-21 11:50:45 --> Model "Sms_model" initialized
+INFO - 2025-05-21 11:50:45 --> Model "Important_model" initialized
+INFO - 2025-05-21 11:50:45 --> Controller Class Initialized
+INFO - 2025-05-21 15:20:45 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 15:20:45 --> members - para1: guest_members, para2: , para3: , para4: 
+INFO - 2025-05-21 15:20:45 --> Guest Members entry point of funcitons
+ERROR - 2025-05-21 15:20:45 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:45 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:45 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:45 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:45 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:45 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:45 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:45 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:45 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 15:20:45 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 15:20:45 --> Final output sent to browser
+DEBUG - 2025-05-21 15:20:45 --> Total execution time: 0.4074
+INFO - 2025-05-21 11:50:45 --> Config Class Initialized
+INFO - 2025-05-21 11:50:45 --> Hooks Class Initialized
+DEBUG - 2025-05-21 11:50:45 --> UTF-8 Support Enabled
+INFO - 2025-05-21 11:50:45 --> Utf8 Class Initialized
+INFO - 2025-05-21 11:50:45 --> URI Class Initialized
+INFO - 2025-05-21 11:50:45 --> Router Class Initialized
+INFO - 2025-05-21 11:50:45 --> Output Class Initialized
+INFO - 2025-05-21 11:50:45 --> Security Class Initialized
+DEBUG - 2025-05-21 11:50:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 11:50:45 --> Input Class Initialized
+INFO - 2025-05-21 11:50:45 --> Language Class Initialized
+INFO - 2025-05-21 11:50:45 --> Loader Class Initialized
+INFO - 2025-05-21 11:50:45 --> Helper loaded: url_helper
+INFO - 2025-05-21 11:50:45 --> Helper loaded: file_helper
+INFO - 2025-05-21 11:50:45 --> Helper loaded: form_helper
+INFO - 2025-05-21 11:50:45 --> Helper loaded: language_helper
+INFO - 2025-05-21 11:50:45 --> Helper loaded: html_helper
+INFO - 2025-05-21 11:50:45 --> Database Driver Class Initialized
+INFO - 2025-05-21 11:50:45 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 11:50:45 --> XML-RPC Class Initialized
+INFO - 2025-05-21 11:50:45 --> Form Validation Class Initialized
+INFO - 2025-05-21 11:50:45 --> Model "Crud_model" initialized
+INFO - 2025-05-21 11:50:45 --> Model "Email_model" initialized
+INFO - 2025-05-21 11:50:45 --> Model "Payment_model" initialized
+INFO - 2025-05-21 11:50:45 --> Model "Sms_model" initialized
+INFO - 2025-05-21 11:50:45 --> Model "Important_model" initialized
+INFO - 2025-05-21 11:50:45 --> Controller Class Initialized
+INFO - 2025-05-21 15:20:45 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 15:20:45 --> members - para1: guest_members, para2: list_data, para3: , para4: 
+INFO - 2025-05-21 15:20:45 --> Final output sent to browser
+DEBUG - 2025-05-21 15:20:45 --> Total execution time: 0.1303
+INFO - 2025-05-21 11:50:48 --> Config Class Initialized
+INFO - 2025-05-21 11:50:48 --> Hooks Class Initialized
+DEBUG - 2025-05-21 11:50:48 --> UTF-8 Support Enabled
+INFO - 2025-05-21 11:50:48 --> Utf8 Class Initialized
+INFO - 2025-05-21 11:50:48 --> URI Class Initialized
+INFO - 2025-05-21 11:50:48 --> Loader Class Initialized
+INFO - 2025-05-21 11:50:48 --> Helper loaded: url_helper
+INFO - 2025-05-21 11:50:48 --> Helper loaded: file_helper
+INFO - 2025-05-21 11:50:48 --> Helper loaded: form_helper
+INFO - 2025-05-21 11:50:48 --> Helper loaded: language_helper
+INFO - 2025-05-21 11:50:48 --> Helper loaded: html_helper
+INFO - 2025-05-21 11:50:48 --> Database Driver Class Initialized
+INFO - 2025-05-21 11:50:48 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 11:50:48 --> XML-RPC Class Initialized
+INFO - 2025-05-21 11:50:48 --> Form Validation Class Initialized
+INFO - 2025-05-21 11:50:48 --> Model "Crud_model" initialized
+INFO - 2025-05-21 11:50:48 --> Model "Email_model" initialized
+INFO - 2025-05-21 11:50:48 --> Model "Payment_model" initialized
+INFO - 2025-05-21 11:50:48 --> Model "Sms_model" initialized
+INFO - 2025-05-21 11:50:48 --> Model "Important_model" initialized
+INFO - 2025-05-21 11:50:48 --> Controller Class Initialized
+INFO - 2025-05-21 15:20:48 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 15:20:48 --> members - para1: guest_members, para2: edit_member, para3: 44, para4: 
+ERROR - 2025-05-21 15:20:48 --> Severity: Warning --> Undefined variable $percent C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 32
+ERROR - 2025-05-21 15:20:48 --> Could not find the language line "children"
+ERROR - 2025-05-21 15:20:48 --> Severity: Warning --> Undefined array key "children" C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1320
+ERROR - 2025-05-21 15:20:48 --> Could not find the language line "wife"
+ERROR - 2025-05-21 15:20:48 --> Severity: Warning --> Undefined array key "wife" C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1339
+ERROR - 2025-05-21 15:20:48 --> Could not find the language line "anniversary"
+ERROR - 2025-05-21 15:20:48 --> Severity: Warning --> Undefined array key "anniversary" C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1367
+ERROR - 2025-05-21 15:20:48 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:48 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:48 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:48 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:48 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:48 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:48 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:48 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:48 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 15:20:48 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 15:20:48 --> Final output sent to browser
+DEBUG - 2025-05-21 15:20:48 --> Total execution time: 0.5539
+INFO - 2025-05-21 11:50:48 --> Config Class Initialized
+INFO - 2025-05-21 11:50:48 --> Hooks Class Initialized
+DEBUG - 2025-05-21 11:50:48 --> UTF-8 Support Enabled
+INFO - 2025-05-21 11:50:48 --> Utf8 Class Initialized
+INFO - 2025-05-21 11:50:48 --> URI Class Initialized
+INFO - 2025-05-21 11:50:48 --> Router Class Initialized
+INFO - 2025-05-21 11:50:48 --> Output Class Initialized
+INFO - 2025-05-21 11:50:48 --> Security Class Initialized
+DEBUG - 2025-05-21 11:50:48 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 11:50:48 --> Input Class Initialized
+INFO - 2025-05-21 11:50:48 --> Language Class Initialized
+INFO - 2025-05-21 11:50:48 --> Loader Class Initialized
+INFO - 2025-05-21 11:50:48 --> Helper loaded: url_helper
+INFO - 2025-05-21 11:50:48 --> Helper loaded: file_helper
+INFO - 2025-05-21 11:50:48 --> Helper loaded: form_helper
+INFO - 2025-05-21 11:50:48 --> Helper loaded: language_helper
+INFO - 2025-05-21 11:50:48 --> Helper loaded: html_helper
+INFO - 2025-05-21 11:50:48 --> Database Driver Class Initialized
+INFO - 2025-05-21 11:50:48 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 11:50:48 --> XML-RPC Class Initialized
+INFO - 2025-05-21 11:50:48 --> Form Validation Class Initialized
+INFO - 2025-05-21 11:50:48 --> Model "Crud_model" initialized
+INFO - 2025-05-21 11:50:48 --> Model "Email_model" initialized
+INFO - 2025-05-21 11:50:48 --> Model "Payment_model" initialized
+INFO - 2025-05-21 11:50:48 --> Model "Sms_model" initialized
+INFO - 2025-05-21 11:50:48 --> Model "Important_model" initialized
+INFO - 2025-05-21 11:50:48 --> Controller Class Initialized
+INFO - 2025-05-21 15:20:49 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 15:20:49 --> Final output sent to browser
+DEBUG - 2025-05-21 15:20:49 --> Total execution time: 0.1053
+INFO - 2025-05-21 11:50:50 --> Config Class Initialized
+INFO - 2025-05-21 11:50:50 --> Hooks Class Initialized
+DEBUG - 2025-05-21 11:50:50 --> UTF-8 Support Enabled
+INFO - 2025-05-21 11:50:50 --> Utf8 Class Initialized
+INFO - 2025-05-21 11:50:50 --> URI Class Initialized
+INFO - 2025-05-21 11:50:50 --> Router Class Initialized
+INFO - 2025-05-21 11:50:50 --> Output Class Initialized
+INFO - 2025-05-21 11:50:50 --> Security Class Initialized
+DEBUG - 2025-05-21 11:50:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 11:50:50 --> Input Class Initialized
+INFO - 2025-05-21 11:50:50 --> Language Class Initialized
+INFO - 2025-05-21 11:50:50 --> Loader Class Initialized
+INFO - 2025-05-21 11:50:50 --> Helper loaded: url_helper
+INFO - 2025-05-21 11:50:50 --> Helper loaded: file_helper
+INFO - 2025-05-21 11:50:50 --> Helper loaded: form_helper
+INFO - 2025-05-21 11:50:50 --> Helper loaded: language_helper
+INFO - 2025-05-21 11:50:50 --> Helper loaded: html_helper
+INFO - 2025-05-21 11:50:50 --> Database Driver Class Initialized
+INFO - 2025-05-21 11:50:50 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 11:50:50 --> XML-RPC Class Initialized
+INFO - 2025-05-21 11:50:50 --> Form Validation Class Initialized
+INFO - 2025-05-21 11:50:50 --> Model "Crud_model" initialized
+INFO - 2025-05-21 11:50:50 --> Model "Email_model" initialized
+INFO - 2025-05-21 11:50:50 --> Model "Payment_model" initialized
+INFO - 2025-05-21 11:50:50 --> Model "Sms_model" initialized
+INFO - 2025-05-21 11:50:50 --> Model "Important_model" initialized
+INFO - 2025-05-21 11:50:50 --> Controller Class Initialized
+INFO - 2025-05-21 15:20:50 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 15:20:50 --> members - para1: ngb_members, para2: , para3: , para4: 
+ERROR - 2025-05-21 15:20:50 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:50 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:50 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:50 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:50 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:50 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:50 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:50 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:50 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 15:20:50 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 15:20:50 --> Final output sent to browser
+DEBUG - 2025-05-21 15:20:50 --> Total execution time: 0.3970
+INFO - 2025-05-21 11:50:50 --> Config Class Initialized
+INFO - 2025-05-21 11:50:50 --> Hooks Class Initialized
+DEBUG - 2025-05-21 11:50:50 --> UTF-8 Support Enabled
+INFO - 2025-05-21 11:50:50 --> Utf8 Class Initialized
+INFO - 2025-05-21 11:50:50 --> URI Class Initialized
+INFO - 2025-05-21 11:50:50 --> Router Class Initialized
+INFO - 2025-05-21 11:50:50 --> Output Class Initialized
+INFO - 2025-05-21 11:50:50 --> Security Class Initialized
+DEBUG - 2025-05-21 11:50:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 11:50:50 --> Input Class Initialized
+INFO - 2025-05-21 11:50:50 --> Language Class Initialized
+INFO - 2025-05-21 11:50:50 --> Loader Class Initialized
+INFO - 2025-05-21 11:50:50 --> Helper loaded: url_helper
+INFO - 2025-05-21 11:50:50 --> Helper loaded: file_helper
+INFO - 2025-05-21 11:50:50 --> Helper loaded: form_helper
+INFO - 2025-05-21 11:50:50 --> Helper loaded: language_helper
+INFO - 2025-05-21 11:50:50 --> Helper loaded: html_helper
+INFO - 2025-05-21 11:50:50 --> Database Driver Class Initialized
+INFO - 2025-05-21 11:50:50 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 11:50:50 --> XML-RPC Class Initialized
+INFO - 2025-05-21 11:50:50 --> Form Validation Class Initialized
+INFO - 2025-05-21 11:50:50 --> Model "Crud_model" initialized
+INFO - 2025-05-21 11:50:50 --> Model "Email_model" initialized
+INFO - 2025-05-21 11:50:50 --> Model "Payment_model" initialized
+INFO - 2025-05-21 11:50:50 --> Model "Sms_model" initialized
+INFO - 2025-05-21 11:50:50 --> Model "Important_model" initialized
+INFO - 2025-05-21 11:50:50 --> Controller Class Initialized
+INFO - 2025-05-21 15:20:50 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 15:20:50 --> members - para1: ngb_members, para2: list_data, para3: , para4: 
+INFO - 2025-05-21 15:20:50 --> Final output sent to browser
+DEBUG - 2025-05-21 15:20:50 --> Total execution time: 0.1380
+INFO - 2025-05-21 11:50:53 --> Config Class Initialized
+INFO - 2025-05-21 11:50:53 --> Hooks Class Initialized
+DEBUG - 2025-05-21 11:50:53 --> UTF-8 Support Enabled
+INFO - 2025-05-21 11:50:53 --> Utf8 Class Initialized
+INFO - 2025-05-21 11:50:53 --> URI Class Initialized
+INFO - 2025-05-21 11:50:53 --> Router Class Initialized
+INFO - 2025-05-21 11:50:53 --> Output Class Initialized
+INFO - 2025-05-21 11:50:53 --> Security Class Initialized
+DEBUG - 2025-05-21 11:50:53 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 11:50:53 --> Input Class Initialized
+INFO - 2025-05-21 11:50:53 --> Language Class Initialized
+INFO - 2025-05-21 11:50:53 --> Loader Class Initialized
+INFO - 2025-05-21 11:50:53 --> Helper loaded: url_helper
+INFO - 2025-05-21 11:50:53 --> Helper loaded: file_helper
+INFO - 2025-05-21 11:50:53 --> Helper loaded: form_helper
+INFO - 2025-05-21 11:50:53 --> Helper loaded: language_helper
+INFO - 2025-05-21 11:50:53 --> Helper loaded: html_helper
+INFO - 2025-05-21 11:50:53 --> Database Driver Class Initialized
+INFO - 2025-05-21 11:50:53 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 11:50:53 --> XML-RPC Class Initialized
+INFO - 2025-05-21 11:50:53 --> Form Validation Class Initialized
+INFO - 2025-05-21 11:50:53 --> Model "Crud_model" initialized
+INFO - 2025-05-21 11:50:53 --> Model "Email_model" initialized
+INFO - 2025-05-21 11:50:53 --> Model "Payment_model" initialized
+INFO - 2025-05-21 11:50:53 --> Model "Sms_model" initialized
+INFO - 2025-05-21 11:50:53 --> Model "Important_model" initialized
+INFO - 2025-05-21 11:50:53 --> Controller Class Initialized
+INFO - 2025-05-21 15:20:53 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 15:20:53 --> members - para1: ngb_members, para2: edit_member, para3: 48, para4: 
+ERROR - 2025-05-21 15:20:53 --> Severity: Warning --> Undefined variable $percent C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 32
+ERROR - 2025-05-21 15:20:53 --> Could not find the language line "children"
+ERROR - 2025-05-21 15:20:53 --> Could not find the language line "wife"
+ERROR - 2025-05-21 15:20:53 --> Could not find the language line "anniversary"
+ERROR - 2025-05-21 15:20:53 --> Severity: Warning --> Undefined array key "home_district" C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1378
+ERROR - 2025-05-21 15:20:53 --> Severity: Warning --> Undefined array key "family_residence" C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1387
+ERROR - 2025-05-21 15:20:53 --> Severity: Warning --> Undefined array key "fathers_occupation" C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1399
+ERROR - 2025-05-21 15:20:53 --> Severity: Warning --> Undefined array key "special_circumstances" C:\xampp\htdocs\1pc\application\views\back\members\edit_info.php 1408
+ERROR - 2025-05-21 15:20:53 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:53 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:53 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:53 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:53 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:53 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:53 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:53 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:53 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 15:20:53 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 15:20:53 --> Final output sent to browser
+DEBUG - 2025-05-21 15:20:53 --> Total execution time: 0.6179
+INFO - 2025-05-21 11:50:53 --> Config Class Initialized
+INFO - 2025-05-21 11:50:53 --> Hooks Class Initialized
+DEBUG - 2025-05-21 11:50:53 --> UTF-8 Support Enabled
+INFO - 2025-05-21 11:50:53 --> Utf8 Class Initialized
+INFO - 2025-05-21 11:50:53 --> URI Class Initialized
+INFO - 2025-05-21 11:50:53 --> Router Class Initialized
+INFO - 2025-05-21 11:50:53 --> Output Class Initialized
+INFO - 2025-05-21 11:50:53 --> Security Class Initialized
+DEBUG - 2025-05-21 11:50:53 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 11:50:53 --> Input Class Initialized
+INFO - 2025-05-21 11:50:53 --> Language Class Initialized
+INFO - 2025-05-21 11:50:53 --> Loader Class Initialized
+INFO - 2025-05-21 11:50:53 --> Helper loaded: url_helper
+INFO - 2025-05-21 11:50:53 --> Helper loaded: file_helper
+INFO - 2025-05-21 11:50:53 --> Helper loaded: form_helper
+INFO - 2025-05-21 11:50:53 --> Helper loaded: language_helper
+INFO - 2025-05-21 11:50:53 --> Helper loaded: html_helper
+INFO - 2025-05-21 11:50:53 --> Database Driver Class Initialized
+INFO - 2025-05-21 11:50:53 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 11:50:53 --> XML-RPC Class Initialized
+INFO - 2025-05-21 11:50:53 --> Form Validation Class Initialized
+INFO - 2025-05-21 11:50:53 --> Model "Crud_model" initialized
+INFO - 2025-05-21 11:50:53 --> Model "Email_model" initialized
+INFO - 2025-05-21 11:50:53 --> Model "Payment_model" initialized
+INFO - 2025-05-21 11:50:53 --> Model "Sms_model" initialized
+INFO - 2025-05-21 11:50:53 --> Model "Important_model" initialized
+INFO - 2025-05-21 11:50:53 --> Controller Class Initialized
+INFO - 2025-05-21 15:20:53 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 15:20:53 --> Final output sent to browser
+DEBUG - 2025-05-21 15:20:53 --> Total execution time: 0.0966
+INFO - 2025-05-21 11:50:57 --> Config Class Initialized
+INFO - 2025-05-21 11:50:57 --> Hooks Class Initialized
+DEBUG - 2025-05-21 11:50:57 --> UTF-8 Support Enabled
+INFO - 2025-05-21 11:50:57 --> Utf8 Class Initialized
+INFO - 2025-05-21 11:50:57 --> URI Class Initialized
+INFO - 2025-05-21 11:50:57 --> Router Class Initialized
+INFO - 2025-05-21 11:50:57 --> Output Class Initialized
+INFO - 2025-05-21 11:50:57 --> Security Class Initialized
+DEBUG - 2025-05-21 11:50:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 11:50:57 --> Input Class Initialized
+INFO - 2025-05-21 11:50:57 --> Language Class Initialized
+INFO - 2025-05-21 11:50:57 --> Loader Class Initialized
+INFO - 2025-05-21 11:50:57 --> Helper loaded: url_helper
+INFO - 2025-05-21 11:50:57 --> Helper loaded: file_helper
+INFO - 2025-05-21 11:50:57 --> Helper loaded: form_helper
+INFO - 2025-05-21 11:50:58 --> Helper loaded: language_helper
+INFO - 2025-05-21 11:50:58 --> Helper loaded: html_helper
+INFO - 2025-05-21 11:50:58 --> Database Driver Class Initialized
+INFO - 2025-05-21 11:50:58 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 11:50:58 --> XML-RPC Class Initialized
+INFO - 2025-05-21 11:50:58 --> Form Validation Class Initialized
+INFO - 2025-05-21 11:50:58 --> Model "Crud_model" initialized
+INFO - 2025-05-21 11:50:58 --> Model "Email_model" initialized
+INFO - 2025-05-21 11:50:58 --> Model "Payment_model" initialized
+INFO - 2025-05-21 11:50:58 --> Model "Sms_model" initialized
+INFO - 2025-05-21 11:50:58 --> Model "Important_model" initialized
+INFO - 2025-05-21 11:50:58 --> Controller Class Initialized
+INFO - 2025-05-21 15:20:58 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 15:20:58 --> members - para1: update_member, para2: 48, para3: ngb_members, para4: 
+INFO - 2025-05-21 15:20:58 --> Language file loaded: language/english/form_validation_lang.php
+INFO - 2025-05-21 11:50:58 --> Config Class Initialized
+INFO - 2025-05-21 11:50:58 --> Hooks Class Initialized
+DEBUG - 2025-05-21 11:50:58 --> UTF-8 Support Enabled
+INFO - 2025-05-21 11:50:58 --> Utf8 Class Initialized
+INFO - 2025-05-21 11:50:58 --> URI Class Initialized
+INFO - 2025-05-21 11:50:58 --> Router Class Initialized
+INFO - 2025-05-21 11:50:58 --> Output Class Initialized
+INFO - 2025-05-21 11:50:58 --> Security Class Initialized
+DEBUG - 2025-05-21 11:50:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 11:50:58 --> Input Class Initialized
+INFO - 2025-05-21 11:50:58 --> Language Class Initialized
+INFO - 2025-05-21 11:50:58 --> Loader Class Initialized
+INFO - 2025-05-21 11:50:58 --> Helper loaded: url_helper
+INFO - 2025-05-21 11:50:58 --> Helper loaded: file_helper
+INFO - 2025-05-21 11:50:58 --> Helper loaded: form_helper
+INFO - 2025-05-21 11:50:58 --> Helper loaded: language_helper
+INFO - 2025-05-21 11:50:58 --> Helper loaded: html_helper
+INFO - 2025-05-21 11:50:58 --> Database Driver Class Initialized
+INFO - 2025-05-21 11:50:58 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 11:50:58 --> XML-RPC Class Initialized
+INFO - 2025-05-21 11:50:58 --> Form Validation Class Initialized
+INFO - 2025-05-21 11:50:58 --> Model "Crud_model" initialized
+INFO - 2025-05-21 11:50:58 --> Model "Email_model" initialized
+INFO - 2025-05-21 11:50:58 --> Model "Payment_model" initialized
+INFO - 2025-05-21 11:50:58 --> Model "Sms_model" initialized
+INFO - 2025-05-21 11:50:58 --> Model "Important_model" initialized
+INFO - 2025-05-21 11:50:58 --> Controller Class Initialized
+INFO - 2025-05-21 15:20:58 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 15:20:58 --> members - para1: ngb_members, para2: , para3: , para4: 
+ERROR - 2025-05-21 15:20:58 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:58 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:58 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:58 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:58 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:58 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:58 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:58 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:20:58 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 15:20:58 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 15:20:58 --> Final output sent to browser
+DEBUG - 2025-05-21 15:20:58 --> Total execution time: 0.4113
+INFO - 2025-05-21 11:50:58 --> Config Class Initialized
+INFO - 2025-05-21 11:50:58 --> Hooks Class Initialized
+DEBUG - 2025-05-21 11:50:58 --> UTF-8 Support Enabled
+INFO - 2025-05-21 11:50:58 --> Utf8 Class Initialized
+INFO - 2025-05-21 11:50:58 --> URI Class Initialized
+INFO - 2025-05-21 11:50:58 --> Router Class Initialized
+INFO - 2025-05-21 11:50:58 --> Output Class Initialized
+INFO - 2025-05-21 11:50:58 --> Security Class Initialized
+DEBUG - 2025-05-21 11:50:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 11:50:58 --> Input Class Initialized
+INFO - 2025-05-21 11:50:58 --> Language Class Initialized
+INFO - 2025-05-21 11:50:58 --> Loader Class Initialized
+INFO - 2025-05-21 11:50:58 --> Helper loaded: url_helper
+INFO - 2025-05-21 11:50:58 --> Helper loaded: file_helper
+INFO - 2025-05-21 11:50:58 --> Helper loaded: form_helper
+INFO - 2025-05-21 11:50:58 --> Helper loaded: language_helper
+INFO - 2025-05-21 11:50:58 --> Helper loaded: html_helper
+INFO - 2025-05-21 11:50:58 --> Database Driver Class Initialized
+INFO - 2025-05-21 11:50:58 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 11:50:58 --> XML-RPC Class Initialized
+INFO - 2025-05-21 11:50:58 --> Form Validation Class Initialized
+INFO - 2025-05-21 11:50:58 --> Model "Crud_model" initialized
+INFO - 2025-05-21 11:50:58 --> Model "Email_model" initialized
+INFO - 2025-05-21 11:50:58 --> Model "Payment_model" initialized
+INFO - 2025-05-21 11:50:58 --> Model "Sms_model" initialized
+INFO - 2025-05-21 11:50:58 --> Model "Important_model" initialized
+INFO - 2025-05-21 11:50:58 --> Controller Class Initialized
+INFO - 2025-05-21 15:20:58 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 15:20:58 --> members - para1: ngb_members, para2: list_data, para3: , para4: 
+INFO - 2025-05-21 15:20:58 --> Final output sent to browser
+DEBUG - 2025-05-21 15:20:58 --> Total execution time: 0.1100
+INFO - 2025-05-21 11:51:01 --> Config Class Initialized
+INFO - 2025-05-21 11:51:01 --> Hooks Class Initialized
+DEBUG - 2025-05-21 11:51:01 --> UTF-8 Support Enabled
+INFO - 2025-05-21 11:51:01 --> Utf8 Class Initialized
+INFO - 2025-05-21 11:51:01 --> URI Class Initialized
+INFO - 2025-05-21 11:51:01 --> Router Class Initialized
+INFO - 2025-05-21 11:51:01 --> Output Class Initialized
+INFO - 2025-05-21 11:51:01 --> Security Class Initialized
+DEBUG - 2025-05-21 11:51:01 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 11:51:01 --> Input Class Initialized
+INFO - 2025-05-21 11:51:01 --> Language Class Initialized
+INFO - 2025-05-21 11:51:01 --> Loader Class Initialized
+INFO - 2025-05-21 11:51:01 --> Helper loaded: url_helper
+INFO - 2025-05-21 11:51:01 --> Helper loaded: file_helper
+INFO - 2025-05-21 11:51:01 --> Helper loaded: form_helper
+INFO - 2025-05-21 11:51:01 --> Helper loaded: language_helper
+INFO - 2025-05-21 11:51:01 --> Helper loaded: html_helper
+INFO - 2025-05-21 11:51:01 --> Database Driver Class Initialized
+INFO - 2025-05-21 11:51:01 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 11:51:01 --> XML-RPC Class Initialized
+INFO - 2025-05-21 11:51:01 --> Form Validation Class Initialized
+INFO - 2025-05-21 11:51:01 --> Model "Crud_model" initialized
+INFO - 2025-05-21 11:51:01 --> Model "Email_model" initialized
+INFO - 2025-05-21 11:51:01 --> Model "Payment_model" initialized
+INFO - 2025-05-21 11:51:01 --> Model "Sms_model" initialized
+INFO - 2025-05-21 11:51:01 --> Model "Important_model" initialized
+INFO - 2025-05-21 11:51:01 --> Controller Class Initialized
+INFO - 2025-05-21 15:21:01 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 15:21:01 --> members - para1: ngb_members, para2: view_member, para3: 48, para4: 
+ERROR - 2025-05-21 15:21:01 --> Could not find the language line "wife"
+ERROR - 2025-05-21 15:21:01 --> Could not find the language line "children"
+ERROR - 2025-05-21 15:21:01 --> Severity: Warning --> Undefined array key "home_district" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 816
+ERROR - 2025-05-21 15:21:01 --> Severity: Warning --> Undefined array key "family_residence" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 822
+ERROR - 2025-05-21 15:21:01 --> Severity: Warning --> Undefined array key "fathers_occupation" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 830
+ERROR - 2025-05-21 15:21:01 --> Severity: Warning --> Undefined array key "special_circumstances" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 836
+ERROR - 2025-05-21 15:21:01 --> Could not find the language line "anniversary"
+ERROR - 2025-05-21 15:21:01 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:21:01 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:21:01 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:21:01 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:21:01 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:21:01 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:21:01 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:21:01 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:21:01 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 15:21:01 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 15:21:01 --> Final output sent to browser
+DEBUG - 2025-05-21 15:21:01 --> Total execution time: 0.5173
+INFO - 2025-05-21 11:52:28 --> Config Class Initialized
+INFO - 2025-05-21 11:52:28 --> Hooks Class Initialized
+DEBUG - 2025-05-21 11:52:28 --> UTF-8 Support Enabled
+INFO - 2025-05-21 11:52:28 --> Utf8 Class Initialized
+INFO - 2025-05-21 11:52:28 --> URI Class Initialized
+INFO - 2025-05-21 11:52:28 --> Router Class Initialized
+INFO - 2025-05-21 11:52:28 --> Output Class Initialized
+INFO - 2025-05-21 11:52:28 --> Security Class Initialized
+DEBUG - 2025-05-21 11:52:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-21 11:52:28 --> Input Class Initialized
+INFO - 2025-05-21 11:52:28 --> Language Class Initialized
+INFO - 2025-05-21 11:52:28 --> Loader Class Initialized
+INFO - 2025-05-21 11:52:28 --> Helper loaded: url_helper
+INFO - 2025-05-21 11:52:28 --> Helper loaded: file_helper
+INFO - 2025-05-21 11:52:28 --> Helper loaded: form_helper
+INFO - 2025-05-21 11:52:28 --> Helper loaded: language_helper
+INFO - 2025-05-21 11:52:28 --> Helper loaded: html_helper
+INFO - 2025-05-21 11:52:28 --> Database Driver Class Initialized
+INFO - 2025-05-21 11:52:28 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-21 11:52:28 --> XML-RPC Class Initialized
+INFO - 2025-05-21 11:52:28 --> Form Validation Class Initialized
+INFO - 2025-05-21 11:52:28 --> Model "Crud_model" initialized
+INFO - 2025-05-21 11:52:28 --> Model "Email_model" initialized
+INFO - 2025-05-21 11:52:28 --> Model "Payment_model" initialized
+INFO - 2025-05-21 11:52:28 --> Model "Sms_model" initialized
+INFO - 2025-05-21 11:52:28 --> Model "Important_model" initialized
+INFO - 2025-05-21 11:52:28 --> Controller Class Initialized
+INFO - 2025-05-21 15:22:28 --> Language file loaded: language/kannada/member_lang.php
+INFO - 2025-05-21 15:22:28 --> members - para1: ngb_members, para2: view_member, para3: 48, para4: 
+ERROR - 2025-05-21 15:22:29 --> Could not find the language line "wife"
+ERROR - 2025-05-21 15:22:29 --> Could not find the language line "children"
+ERROR - 2025-05-21 15:22:29 --> Severity: Warning --> Undefined array key "home_district" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 816
+ERROR - 2025-05-21 15:22:29 --> Severity: Warning --> Undefined array key "family_residence" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 822
+ERROR - 2025-05-21 15:22:29 --> Severity: Warning --> Undefined array key "fathers_occupation" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 830
+ERROR - 2025-05-21 15:22:29 --> Severity: Warning --> Undefined array key "special_circumstances" C:\xampp\htdocs\1pc\application\views\back\members\member_info.php 836
+ERROR - 2025-05-21 15:22:29 --> Could not find the language line "anniversary"
+ERROR - 2025-05-21 15:22:29 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:22:29 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:22:29 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:22:29 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:22:29 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:22:29 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:22:29 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:22:29 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+ERROR - 2025-05-21 15:22:29 --> Severity: Warning --> Attempt to read property "permission_id" on null C:\xampp\htdocs\1pc\application\models\Crud_model.php 752
+INFO - 2025-05-21 15:22:29 --> File loaded: C:\xampp\htdocs\1pc\application\views\back/index.php
+INFO - 2025-05-21 15:22:29 --> Final output sent to browser
+DEBUG - 2025-05-21 15:22:29 --> Total execution time: 0.5155
