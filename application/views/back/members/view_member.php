@@ -46,7 +46,7 @@
 							$member = $get_ngb_member_by_id;
 						}
 						elseif ($member_type == "National") {
-							$member = $get_national_member_by_id;
+							$member = $get_national_members_by_id;
 						}
 					?>
 						<?php
