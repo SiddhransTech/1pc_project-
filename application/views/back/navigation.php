@@ -20,7 +20,7 @@
 										||$page_name=="premium_members"
 										||$page_name=="national_members"
 										||$page_name=="ngb_members"
-										||$page_name=="guest"
+										||$page_name=="guest_members"
 											|| $page_name == "deleted_member"
 												|| $page_name=="add_member"
 													|| $page_name=="bulk_member_add"
@@ -37,9 +37,9 @@
 									<li <?php if($page_name=="free_members"){ ?> class="active-link" <?php } ?>>
 										<a href="<?=base_url()?>admin/members/free_members"><i class="fa fa-user-o"></i><?php echo translate('visitors')?></a>
 									</li>
-								<?php } if ($this->Crud_model->admin_permission('guest')){ ?>
-									<li <?php if($page_name=="guest"){ ?> class="active-link" <?php } ?>>
-										<a href="<?=base_url()?>admin/members/guest"><i class="fa fa-user-o"></i><?php echo translate('Guests')?></a>
+								<?php } if ($this->Crud_model->admin_permission('guest_members')){ ?>
+									<li <?php if($page_name=="guest_members"){ ?> class="active-link" <?php } ?>>
+										<a href="<?=base_url()?>admin/members/guest_members"><i class="fa fa-user-o"></i><?php echo translate('Guests')?></a>
 									</li>
 								<?php } if ($this->Crud_model->admin_permission('ngb_members')){ ?>
 									<li <?php if($page_name=="ngb_members"){ ?> class="active-link" <?php } ?>>
