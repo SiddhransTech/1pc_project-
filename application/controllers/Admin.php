@@ -1242,7 +1242,7 @@ class Admin extends CI_Controller
 					$page_data['folder'] = "members";
 					$page_data['file'] = "view_member.php";
 					$page_data['bottom'] = "members/members.php";
-					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
+					$page_data['get_guest_members_by_id'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
 				} elseif ($para2 == "edit_member") {
 					$page_data['top'] 		= "members/members.php";
 					$page_data['folder'] 	= "members";
@@ -1286,7 +1286,7 @@ class Admin extends CI_Controller
 
 
 
-				$page_data['member_type'] = "guest";
+				$page_data['member_type'] = "Guest";
 				$page_data['parameter'] = "guest_members";
 				$page_data['page_name'] = "guest_members";
 				$this->load->view('back/index', $page_data);
