@@ -4294,8 +4294,50 @@ public function member_profile($para1 = "", $para2 = "")
         redirect(base_url().'home/', 'refresh');
     }
 
+
+
+    private function get_registration_form_data() {
+        $data['areas'] = $this->db->get('areas')->result();
+        $first_area_id = !empty($data['areas']) ? $data['areas'][0]->id : 0;
+        $data['first_area_id'] = $first_area_id;
+    
+        if ($first_area_id) {
+            $this->db->where('area_id', $first_area_id);
+            $data['legions'] = $this->db->get('legions')->result();
+        } else {
+            $data['legions'] = [];
+        }
+    
+        // 🔥 Log the $data array
+        log_message('debug', 'Registration Form Data: ' . print_r($data, true));
+    
+        return $data;
+    }
+    
+    
+    public function get_legions() {
+        log_message('info', 'Method get_legions() invoked via AJAX');
+    
+        $area_id = $this->input->post('area_id');
+        log_message('info', 'Area ID received: ' . $area_id);
+    
+        if ($area_id) {
+            $this->db->where('area_id', $area_id);
+            $legions = $this->db->get('legions')->result();
+            log_message('info', 'Legions fetched for area_id ' . $area_id . ': ' . print_r($legions, true));
+    
+            echo json_encode($legions);
+        } else {
+            log_message('info', 'No area_id received. Returning empty array.');
+            echo json_encode([]);
+        }
+    }
+  
     function registration($para1="")
     {
+
+        $page_data = $this->get_registration_form_data();
+        
         if ($this->member_permission() == TRUE) {
             redirect(base_url().'home/', 'refresh');
         }
@@ -4580,7 +4622,7 @@ public function member_profile($para1 = "", $para2 = "")
                                 $data['last_name'] = $this->input->post('last_name');
                                 $data['gender'] = $this->input->post('gender');
                                 $data['email'] = $this->input->post('email');
-                                $data['enquiry_time'] = $this->input->post('enquiry_time');
+                                // $data['enquiry_time'] = $this->input->post('enquiry_time');
 
                                 if($member_email_verification == 'on'){
                                     $data['email_verification_code'] = $this->Important_model->generate_key('member','email_verification_code','');
@@ -4678,7 +4720,7 @@ public function member_profile($para1 = "", $para2 = "")
                                 $page_data['page'] = "registration";
                                 $page_data['form_contents'] = $this->input->post();
                                 $page_data['captcha_incorrect'] = TRUE;
-
+ 
                                 $this->load->view('front/registration', $page_data);
                             }
                         } else {
@@ -4687,7 +4729,7 @@ public function member_profile($para1 = "", $para2 = "")
                             $data['last_name'] = $this->input->post('last_name');
                             $data['gender'] = $this->input->post('gender');
                             $data['email'] = $this->input->post('email');
-                            $data['enquiry_time'] = $this->input->post('enquiry_time');
+                            // $data['enquiry_time'] = $this->input->post('enquiry_time');
                             if($member_email_verification == 'on'){
                                 $data['email_verification_code'] = $this->Important_model->generate_key('member','email_verification_code','');
                                 $data['email_verification_status'] = '0';
@@ -4739,6 +4781,8 @@ public function member_profile($para1 = "", $para2 = "")
                             $data['privacy_status'] = $privacy_status;
                             $data['pic_privacy'] = $data_pic_privacy;
                             $data['report_profile'] = '[]';
+                            $data['area'] = $this->input->post('area');     // area name from form
+                            $data['legion'] = $this->input->post('legion'); // legion name from form
                             
                             
 
