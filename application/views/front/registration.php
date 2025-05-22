@@ -190,25 +190,73 @@
                   </div>
                     
                   <div class="row">
-					<div class="col-md-12">
-						<div class="form-group">
-							<label class="control-label font_light"><?php echo translate('preferrable_time_to_call_you')?></label><br>
-							
-							   <input type="radio" name="enquiry_time" id="morning" value="morning" required style="height:10px;">
-							<label class="control-label font_light"><?php echo ' 9 AM to 12 PM';?></label>&nbsp;&nbsp;
-							
-							   <input type="radio" name="enquiry_time" id="afternoon" value="afternoon" style="height:10px;">
-							<label class="control-label font_light"><?php echo ' 12 PM to 4 PM'?></label>&nbsp;&nbsp;
-							
-							   <input type="radio" name="enquiry_time" id="evening" value="evening" style="height:10px;">
-							<label class="control-label font_light"><?php echo ' 4 PM to 7 PM'?></label>&nbsp;&nbsp;
-							
-							   <input type="radio" name="enquiry_time" id="evening" value="anytime" style="height:10px;">
-							<label class="control-label font_light"><?php echo 'Any Time [9 AM to 7 PM] '?></label>
-						</div>
-					</div>
-				</div> 
-                  
+<!-- Area Dropdown -->
+<div class="col-md-6">
+    <div class="form-group">
+        <label class="control-label font_light"><?php echo translate('area')?></label>
+       <!-- Area Dropdown -->
+<select class="form-control form-control-sm" name="area" id="area" required>
+    <option value="">-- Select Area --</option>
+    <?php foreach($areas as $area): ?>
+        <option value="<?php echo $area->name; ?>" data-id="<?php echo $area->id; ?>">
+            <?php echo $area->name; ?>
+        </option>
+    <?php endforeach; ?>
+</select>
+
+    </div>
+</div>
+
+<!-- Legion Dropdown -->
+<div class="col-md-6">
+    <div class="form-group">
+        <label class="control-label font_light"><?php echo translate('legion')?></label>
+        <select class="form-control form-control-sm" name="legion" id="legion" required>
+            <option value="">-- Select Legion --</option>
+        </select>
+    </div>
+</div>
+
+
+</div>
+<script>
+$(document).ready(function(){
+    $('#area').on('change', function() {
+        var areaName = $(this).val();  // submitted value
+        var areaId = $('#area option:selected').data('id');  // used for fetching legions
+
+        console.log("Selected Area Name:", areaName, "Area ID:", areaId);
+
+        if(areaId) {
+            $.ajax({
+                url: '<?php echo base_url('home/get_legions'); ?>',
+                method: 'POST',
+                data: { area_id: areaId },
+                dataType: 'json',
+                success: function(response) {
+                    $('#legion').empty().append('<option value="">-- Select Legion --</option>');
+
+                    if(response.length > 0) {
+                        $.each(response, function(index, legion) {
+                            $('#legion').append('<option value="'+ legion.name +'">'+ legion.name +'</option>');
+                        });
+                    } else {
+                        $('#legion').append('<option value="">-- No legions available --</option>');
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error fetching legions:", error);
+                    $('#legion').empty().append('<option value="">-- Error loading legions --</option>');
+                }
+            });
+        } else {
+            $('#legion').empty().append('<option value="">-- Select Legion --</option>');
+        }
+    });
+});
+</script>
+
+
                   
 
                   <div class="row">
