@@ -231,15 +231,15 @@ AffTracker.generalClick( "index" );
 						                    <?php echo translate('all_members')?></a>
 						                    </li>
 						                    <li>
-						                    <a class="dropdown-item <?php if(!empty($nav_dropdown)){if($nav_dropdown == 'national_members'){?>nav_active_dropdown<?php }}?>" href="<?=base_url()?>home/listing/premium_members">
+						                    <a class="dropdown-item <?php if(!empty($nav_dropdown)){if($nav_dropdown == 'national_members'){?>nav_active_dropdown<?php }}?>" href="<?=base_url()?>home/listing/national_members">
 						                    <?php echo translate('national_members')?></a>
 						                    </li>
 						                     <li>
-						                    <a class="dropdown-item <?php if(!empty($nav_dropdown)){if($nav_dropdown == 'legions_members'){?>nav_active_dropdown<?php }}?>" href="<?=base_url()?>home/listing/free_members">
+						                    <a class="dropdown-item <?php if(!empty($nav_dropdown)){if($nav_dropdown == 'legions_members'){?>nav_active_dropdown<?php }}?>" href="<?=base_url()?>home/listing/premium_members">
 						                    <?php echo translate('legions_members')?></a>
 						                    </li>
 						                     <li>
-						                    <a class="dropdown-item <?php if(!empty($nav_dropdown)){if($nav_dropdown == 'ngb_members'){?>nav_active_dropdown<?php }}?>" href="<?=base_url()?>home/listing/premium_members">
+						                    <a class="dropdown-item <?php if(!empty($nav_dropdown)){if($nav_dropdown == 'ngb_members'){?>nav_active_dropdown<?php }}?>" href="<?=base_url()?>home/listing/ngb_members">
 						                    <?php echo translate('ngb_members')?></a>
 						                    </li>
 						                    <li>
@@ -247,7 +247,7 @@ AffTracker.generalClick( "index" );
 						                    <?php echo translate('visitors')?></a>
 						                    </li>
 						                    <li>
-						                    <a class="dropdown-item <?php if(!empty($nav_dropdown)){if($nav_dropdown == 'guests'){?>nav_active_dropdown<?php }}?>" href="<?=base_url()?>home/listing/free_members">
+						                    <a class="dropdown-item <?php if(!empty($nav_dropdown)){if($nav_dropdown == 'guests'){?>nav_active_dropdown<?php }}?>" href="<?=base_url()?>home/listing/guest_members">
 						                    <?php echo translate('guests')?></a>
 						                    </li>
 						                </ul>

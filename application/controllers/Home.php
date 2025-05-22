@@ -140,6 +140,7 @@ class Home extends CI_Controller {
             }
             else {
                 return TRUE;
+
             }
         } else {
             return FALSE;
@@ -148,6 +149,9 @@ class Home extends CI_Controller {
 
     function listing($para1="",$para2="")
     {
+
+        log_message("info", "Listing page loaded. Parameter 1: {$para1}, Parameter 2: {$para2}");
+
         if ($para1=="") {
             $page_data['title'] = "Listing Page || ".$this->system_title;
             $page_data['top'] = "listing.php";
@@ -209,6 +213,72 @@ class Home extends CI_Controller {
             $page_data['search_member_type'] = "all";
             $page_data['member'] = "Premium";
             $page_data['page_url'] = "home/listing/premium_members";
+            recache();
+            $this->load->view('front/index', $page_data);
+        }
+        elseif ($para1=="ngb_members") {
+            $page_data['title'] = "NGB Members || ".$this->system_title;
+            $page_data['top'] = "listing.php";
+            $page_data['page'] = "listing";
+            $page_data['bottom'] = "listing.php";
+            $page_data['member_type'] = "ngb_members";
+            $page_data['nav_dropdown'] = "ngb_members";
+            $page_data['home_search'] = "false";
+
+            $page_data['home_gender'] = "";
+            $page_data['home_religion'] = "";
+            $page_data['home_caste'] = "";
+            $page_data['home_sub_caste'] = "";
+            $page_data['home_language'] = "";
+            $page_data['min_height'] = "";
+            $page_data['max_height'] = "";
+            $page_data['search_member_type'] = "all";
+            $page_data['member'] = "Ngb";
+            $page_data['page_url'] = "home/listing/ngb_members";
+            recache();
+            $this->load->view('front/index', $page_data);
+        }
+        elseif ($para1=="national_members") {
+            $page_data['title'] = "National Members || ".$this->system_title;
+            $page_data['top'] = "listing.php";
+            $page_data['page'] = "listing";
+            $page_data['bottom'] = "listing.php";
+            $page_data['member_type'] = "national_members";
+            $page_data['nav_dropdown'] = "national_members";
+            $page_data['home_search'] = "false";
+
+            $page_data['home_gender'] = "";
+            $page_data['home_religion'] = "";
+            $page_data['home_caste'] = "";
+            $page_data['home_sub_caste'] = "";
+            $page_data['home_language'] = "";
+            $page_data['min_height'] = "";
+            $page_data['max_height'] = "";
+            $page_data['search_member_type'] = "all";
+            $page_data['member'] = "National";
+            $page_data['page_url'] = "home/listing/national_members";
+            recache();
+            $this->load->view('front/index', $page_data);
+        }
+        elseif ($para1=="guest_members") {
+            $page_data['title'] = "Guest Members || ".$this->system_title;
+            $page_data['top'] = "listing.php";
+            $page_data['page'] = "listing";
+            $page_data['bottom'] = "listing.php";
+            $page_data['member_type'] = "free_members";
+            $page_data['nav_dropdown'] = "guest_members";
+            $page_data['home_search'] = "false";
+
+            $page_data['home_gender'] = "";
+            $page_data['home_religion'] = "";
+            $page_data['home_caste'] = "";
+            $page_data['home_sub_caste'] = "";
+            $page_data['home_language'] = "";
+            $page_data['min_height'] = "";
+            $page_data['max_height'] = "";
+            $page_data['search_member_type'] = "all";
+            $page_data['member'] = "Guest";
+            $page_data['page_url'] = "home/listing/guest_members";
             recache();
             $this->load->view('front/index', $page_data);
         }
@@ -426,6 +496,8 @@ public function member_profile($para1 = "", $para2 = "")
 
     function ajax_member_list($para1="",$para2="")
     {
+
+        log_message("info", "Ajax member list loaded. Parameter 1: {$para1}, Parameter 2: {$para2}");
         $this->load->library('Ajax_pagination');
         $member_approval = $this->db->get_where('general_settings', array('type' => 'member_approval_by_admin'))->row()->value;
         if (!empty($this->session->userdata['member_id']))
@@ -730,6 +802,15 @@ public function member_profile($para1 = "", $para2 = "")
                 }
                 elseif ($search_member_type == "premium_members") {
                     $by_members_type = $this->db->select('member_id')->get_where('member',array('membership' => 2))->result();
+                }
+                elseif ($search_member_type == "guest_members") {
+                    $by_members_type = $this->db->select('member_id')->get_where('member',array('membership' => 0))->result();
+                }
+                elseif ($search_member_type == "national_members") {
+                    $by_members_type = $this->db->select('member_id')->get_where('member',array('membership' => 3))->result();
+                }
+                elseif ($search_member_type == "ngb_members") {
+                    $by_members_type = $this->db->select('member_id')->get_where('member',array('membership' => 4))->result();
                 }
                 elseif ($search_member_type == "all") {
                     $by_members_type = $all_id;
@@ -1122,6 +1203,27 @@ public function member_profile($para1 = "", $para2 = "")
                     $this->db->where('gender', $member_gender);
                     $by_members_type = $this->db->select('member_id')->get_where('member', $array_data)->result();
                 }
+                elseif ($search_member_type == "guest_members") {
+                    $array_data = array('membership' => 0);
+                    $array_data = status($member_approval, $array_data);
+                    $this->db->order_by('member_id','desc');
+                    $this->db->where('gender', $member_gender);
+                    $by_members_type = $this->db->select('member_id')->get_where('member', $array_data)->result();
+                }
+                elseif ($search_member_type == "national_members") {
+                    $array_data = array('membership' => 3);
+                    $array_data = status($member_approval, $array_data);
+                    $this->db->order_by('member_id','desc');
+                    $this->db->where('gender', $member_gender);
+                    $by_members_type = $this->db->select('member_id')->get_where('member', $array_data)->result();
+                }
+                elseif ($search_member_type == "ngb_members") {
+                    $array_data = array('membership' => 4);
+                    $array_data = status($member_approval, $array_data);
+                    $this->db->order_by('member_id','desc');
+                    $this->db->where('gender', $member_gender);
+                    $by_members_type = $this->db->select('member_id')->get_where('member', $array_data)->result();
+                }
                 elseif ($search_member_type == "all") {
                     $by_members_type = $all_id;
                 }
@@ -1261,6 +1363,8 @@ public function member_profile($para1 = "", $para2 = "")
 
     function accept_interest($member_id)
     {
+
+        // log_message('debug', $member_id);
         if ($this->member_permission() == FALSE) {
             redirect(base_url().'home/login', 'refresh');
         }
