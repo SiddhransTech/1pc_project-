@@ -191,9 +191,10 @@
                     
                   <div class="row">
 <!-- Area Dropdown -->
-<div class="col-md-6">
-    <div class="form-group">
-        <label class="control-label font_light"><?php echo translate('area')?></label>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label font_light"><?php echo translate('area')?></label>
+              <!-- Area Dropdown -->
        <!-- Area Dropdown -->
 <select class="form-control form-control-sm" name="area" id="area" required>
     <option value="">-- Select Area --</option>
@@ -203,17 +204,23 @@
         </option>
     <?php endforeach; ?>
 </select>
+<!-- Hidden input to store selected area_id -->
+<input type="hidden" name="area_id" id="area_id">
 
-    </div>
-</div>
+
+            </div>
+        </div>
 
 <!-- Legion Dropdown -->
 <div class="col-md-6">
     <div class="form-group">
         <label class="control-label font_light"><?php echo translate('legion')?></label>
-        <select class="form-control form-control-sm" name="legion" id="legion" required>
-            <option value="">-- Select Legion --</option>
-        </select>
+      <select class="form-control form-control-sm" name="legion" id="legion" required>
+    <option value="">-- Select Legion --</option>
+</select>
+<!-- Hidden input to store selected legion_id -->
+<input type="hidden" name="legion_id" id="legion_id">
+
     </div>
 </div>
 
@@ -222,10 +229,9 @@
 <script>
 $(document).ready(function(){
     $('#area').on('change', function() {
-        var areaName = $(this).val();  // submitted value
-        var areaId = $('#area option:selected').data('id');  // used for fetching legions
-
-        console.log("Selected Area Name:", areaName, "Area ID:", areaId);
+        const areaName = $(this).val();
+        const areaId = $('#area option:selected').data('id');
+        $('#area_id').val(areaId); // set hidden field
 
         if(areaId) {
             $.ajax({
@@ -238,22 +244,25 @@ $(document).ready(function(){
 
                     if(response.length > 0) {
                         $.each(response, function(index, legion) {
-                            $('#legion').append('<option value="'+ legion.name +'">'+ legion.name +'</option>');
+                            $('#legion').append(
+                                '<option value="'+ legion.name +'" data-id="'+ legion.id +'">'+ legion.name +'</option>'
+                            );
                         });
                     } else {
                         $('#legion').append('<option value="">-- No legions available --</option>');
                     }
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error fetching legions:", error);
-                    $('#legion').empty().append('<option value="">-- Error loading legions --</option>');
                 }
             });
-        } else {
-            $('#legion').empty().append('<option value="">-- Select Legion --</option>');
         }
     });
+
+    // Capture legion_id when user selects a legion
+    $('#legion').on('change', function() {
+        const legionId = $('#legion option:selected').data('id');
+        $('#legion_id').val(legionId); // set hidden field
+    });
 });
+
 </script>
 
 

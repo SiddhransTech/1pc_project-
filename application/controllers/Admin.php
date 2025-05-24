@@ -114,6 +114,121 @@ class Admin extends CI_Controller
 		}
 	}
 
+	public function add_area() {
+		$this->load->model('Crud_model');
+	
+		$area_name = $this->input->post('area_name');  // missing semicolon fixed
+	
+		if (empty($area_name)) {
+			$response = [
+				'success' => false,
+				'message' => 'Area name is required.'  // message fixed to reflect area_name
+			];
+			log_message('error', 'Add Area validation failed: ' . json_encode($response));
+			echo json_encode($response);
+			return;
+		}
+	
+		$data = ['name' => $area_name];
+	
+		$insert_id = $this->Crud_model->insert_area($data);
+	
+		if ($insert_id) {
+			$response = [
+				'success' => true,
+				'message' => 'Area added successfully.',
+				'area_name' => $area_name,
+				'area_id' => $insert_id
+			];
+			log_message('info', 'Add Area success response: ' . json_encode($response));
+			echo json_encode($response);
+		} else {
+			$response = [
+				'success' => false,
+				'message' => 'Failed to add area.'
+			];
+			log_message('error', 'Add Area failed to insert: ' . json_encode($response));
+			echo json_encode($response);
+		}
+	}
+	
+
+public function add_legion() {
+    // Load model
+    $this->load->model('Crud_model');
+
+    // Get POST data
+    $legion_name = $this->input->post('legion_name');
+    $area_id = $this->input->post('area_id');
+
+    // Log the received data
+    log_message('info', 'Add Legion request received with data: legion_name=' . $legion_name . ', area_id=' . $area_id);
+
+    // Simple validation
+    if (empty($legion_name) || empty($area_id)) {
+        $response = [
+            'success' => false,
+            'message' => 'Legion name and area ID are required.'
+        ];
+        log_message('error', 'Add Legion validation failed: ' . json_encode($response));
+        echo json_encode($response);
+        return;
+    }
+
+    // Prepare data
+    $data = [
+        'name' => $legion_name,
+        'area_id' => $area_id
+    ];
+
+    // Insert via model and check result
+    $insert_id = $this->Crud_model->insert_legion($data);
+
+    if ($insert_id) {
+        $response = [
+            'success' => true,
+            'message' => 'Legion added successfully.',
+            'legion_name' => $legion_name,
+            'area_id' => $area_id
+        ];
+        log_message('info', 'Add Legion success response: ' . json_encode($response));
+        echo json_encode($response);
+    } else {
+        $response = [
+            'success' => false,
+            'message' => 'Failed to add legion.'
+        ];
+        log_message('error', 'Add Legion failed to insert: ' . json_encode($response));
+        echo json_encode($response);
+    }
+}
+
+	
+
+	public function area_legion() {
+		// Check permission
+		if ($this->admin_permission() == FALSE) {
+			redirect(base_url() . 'admin/login', 'refresh');
+		}
+	
+		// Load the model
+		$this->load->model('Crud_model');
+	
+		// Fetch the data here
+		$page_data['areas'] = $this->Crud_model->get_areas_with_legions();
+	
+		// Prepare other page data
+		$page_data['title'] = "Area & Legions || " . $this->system_title;
+		$page_data['page_name'] = "area_legion";
+		$page_data['top'] = "dashboard.php";
+		$page_data['folder'] = "area_legion"; 
+		$page_data['file'] = "index.php";    
+		$page_data['bottom'] = "dashboard.php";
+	
+		// Now pass the $page_data array with areas data to your view
+		$this->load->view('back/index', $page_data);
+	}
+	
 
 	function admin_permission()
 	{
