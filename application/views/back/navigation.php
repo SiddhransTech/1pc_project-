@@ -13,7 +13,16 @@
 							<i class="fa fa-home"></i>
 							<span class="menu-title"><?php echo translate('dashboard')?></span>
 						</a>
-					</li><?php
+					</li>
+					<li <?php if($page_name == "area_legion"){ ?> class="active-link" <?php } ?>>
+  <a href="<?= base_url() ?>admin/area_legion">
+    <i class="fa fa-globe"></i>
+    <span class="menu-title"><?php echo translate('area_&_legions'); ?></span>
+  </a>
+</li>
+
+
+					<?php
 					if ($this->Crud_model->admin_permission('members'))
 					{ ?>
 						<li <?php if( $page_name=="free_members"

@@ -15,6 +15,82 @@ class Crud_model extends CI_Model
         $this->output->set_header('Pragma: no-cache');
     }
 
+
+
+
+    ////////////  GET THE  AREA  AND THE LEGION //////
+    public function get_areas_with_legions()
+    {
+        $this->db->select('areas.id as area_id, areas.name as area_name, legions.id as legion_id, legions.name as legion_name');
+        $this->db->from('areas');
+        $this->db->join('legions', 'legions.area_id = areas.id', 'left');
+        $query = $this->db->get();
+        $result = $query->result();
+    
+        log_message('debug', 'DB query result count: ' . count($result));
+    
+        $areas = [];
+    
+        foreach ($result as $row) {
+            log_message('debug', 'Processing row: area_id=' . $row->area_id . ', legion_id=' . $row->legion_id);
+    
+            $area_id = $row->area_id;
+            if (!isset($areas[$area_id])) {
+                $areas[$area_id] = [
+                    'id' => $area_id,
+                    'name' => $row->area_name,
+                    'legions' => []
+                ];
+                log_message('debug', "New area added: ID {$area_id}, Name {$row->area_name}");
+            }
+    
+            if ($row->legion_id) {
+                $areas[$area_id]['legions'][] = [
+                    'id' => $row->legion_id,
+                    'name' => $row->legion_name
+                ];
+                log_message('debug', "Added legion to area {$area_id}: Legion ID {$row->legion_id}, Name {$row->legion_name}");
+            }
+        }
+    
+        log_message('debug', 'Final areas array: ' . print_r($areas, true));
+    
+        return array_values($areas); // Reset keys to numeric
+    }
+    
+
+    /////// INSETST LEGION //////
+    public function insert_legion($data) {
+
+          log_message('debug', 'insert_legion methos invoked ' , print_r($data, true ));
+
+        if (!isset($data['name']) || !isset($data['area_id'])) {
+            return false; // simple validation
+        }
+
+        return $this->db->insert('legions', $data);
+        // return  $data;
+    }
+
+    public function insert_area($data) {
+        log_message('debug', 'insert_area method invoked with data: ' . print_r($data, true));
+    
+        if (!isset($data['name'])) {
+            return false; // simple validation: area must have a name
+        }
+    
+        // Insert area data into 'areas' table
+        $insert = $this->db->insert('areas', $data);
+    
+        if ($insert) {
+            // Return inserted ID if needed
+            return $this->db->insert_id();
+        } else {
+            return false;
+        }
+    }
+    
+
     /////////GET NAME BY TABLE NAME AND ID/////////////
     function get_type_name_by_id($type, $type_id = '', $field = 'name')
     {
