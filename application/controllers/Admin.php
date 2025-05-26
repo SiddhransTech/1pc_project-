@@ -1344,6 +1344,7 @@ public function delete_area()
 					$page_data['bottom'] 	= "members/members.php";
 					$page_data['get_free_member_by_id'] = $this->db->get_where("member", array("membership" => 1, "member_id" => $para3))->result();
 				} elseif ($para2 == "edit_member") {
+					$page_data['areas'] = $this->Crud_model->get_all_areas();
 					$page_data['top'] 		= "members/members.php";
 					$page_data['folder'] 	= "members";
 					$page_data['file']	 	= "edit_member.php";
@@ -1410,6 +1411,7 @@ public function delete_area()
 					$page_data['bottom'] = "members/members.php";
 					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 2, "member_id" => $para3))->result();
 				} elseif ($para2 == "edit_member") {
+					$page_data['areas'] = $this->Crud_model->get_all_areas();
 					$page_data['top'] 		= "members/members.php";
 					$page_data['folder'] 	= "members";
 					$page_data['file']	 	= "edit_member.php";
@@ -1479,6 +1481,7 @@ public function delete_area()
 					$page_data['bottom'] = "members/members.php";
 					$page_data['get_national_member_by_id'] = $this->db->get_where("member", array("membership" => 3, "member_id" => $para3))->result();
 				} elseif ($para2 == "edit_member") {
+					$page_data['areas'] = $this->Crud_model->get_all_areas();
 					$page_data['top'] 		= "members/members.php";
 					$page_data['folder'] 	= "members";
 					$page_data['file']	 	= "edit_member.php";
@@ -1546,6 +1549,7 @@ public function delete_area()
 					$page_data['bottom'] = "members/members.php";
 					$page_data['get_guest_member_by_id'] = $this->db->get_where("member", array("membership" => 0, "member_id" => $para3))->result();
 				} elseif ($para2 == "edit_member") {
+					$page_data['areas'] = $this->Crud_model->get_all_areas();
 					$page_data['top'] 		= "members/members.php";
 					$page_data['folder'] 	= "members";
 					$page_data['file']	 	= "edit_member.php";
@@ -1612,6 +1616,7 @@ public function delete_area()
 					$page_data['bottom'] = "members/members.php";
 					$page_data['get_ngb_member_by_id'] = $this->db->get_where("member", array("membership" => 4, "member_id" => $para3))->result();
 				} elseif ($para2 == "edit_member") {
+					$page_data['areas'] = $this->Crud_model->get_all_areas();
 					$page_data['top'] 		= "members/members.php";
 					$page_data['folder'] 	= "members";
 					$page_data['file']	 	= "edit_member.php";
@@ -2030,7 +2035,8 @@ public function delete_area()
 						redirect(base_url() . 'admin/members/add_member', 'refresh');
 					}
 				}
-			} elseif ($para1 == "update_member") {
+			} 
+			elseif ($para1 == "update_member") {
 				$this->form_validation->set_rules('introduction', 'Introduction', 'required');
 
 				$this->form_validation->set_rules('first_name', 'First Name', 'required');
@@ -2066,7 +2072,7 @@ public function delete_area()
 				}
 
 				if ($this->db->get_where('frontend_settings', array('type' => 'spiritual_and_social_background'))->row()->value == "yes") {
-					$this->form_validation->set_rules('religion', 'Religion', 'required');
+					// $this->form_validation->set_rules('religion', 'Religion', 'required');
 				}
 
 				if ($this->db->get_where('frontend_settings', array('type' => 'permanent_address'))->row()->value == "yes") {
@@ -2077,6 +2083,7 @@ public function delete_area()
 				if ($this->form_validation->run() == FALSE) {
 					$page_data['top'] 		= "members/index.php";
 					$page_data['folder'] 	= "members";
+					$page_data['areas'] = $this->Crud_model->get_all_areas();
 					$page_data['file']	 	= "edit_member.php";
 					$page_data['bottom'] 	= "members/index.php";
 					$page_data['page_name'] = "edit_member";
@@ -2337,7 +2344,9 @@ public function delete_area()
 						redirect(base_url() . 'admin/members/' . $para3, 'refresh');
 					}
 				}
-			} elseif ($para1 == "upgrade_member_package") {
+			
+			} 
+			elseif ($para1 == "upgrade_member_package") {
 				$up_member_id = $this->input->post('up_member_id');
 				$plan_id = $this->input->post('plan');
 				$member_type = $this->input->post('member_type');
