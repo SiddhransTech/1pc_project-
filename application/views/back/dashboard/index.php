@@ -22,11 +22,7 @@
 					<!-- <h1 class="page-header text-overflow"></h1> -->	
 					<h3 class="panel-title text-overflow" style="font-size: 22px !important;"><?=translate('dashboard')?></h3>				
 				</div>
-				<div class="col-md-6">
-
-					<a class="pull-right btn btn-warning btn-large ea" href="<?=base_url()?>admin/download_member_profile_format" style="margin: 8px 30px 0px 0px;" target="_blank"><i class="fa fa-download"></i> Download</a>
-					<span class="pull-right blink_text" style=" margin: 15px 10px 0px 0px; font-size: 15px; color: #f9430d; font-family: 'FontAwesome';">Click To Download Application Form</span>				
-				</div>				
+							
 			</div>			
 		</div>
 		<!--End page title-->
@@ -39,7 +35,7 @@
 			<div class="col-sm-12">
 				<div class="row">
 					<div class="col-md-12">
-						<h5 class="text-overflow"><?=translate('member_informations')?></h5>
+						<h5 class="text-overflow"><?=translate('national_member_informations')?></h5>
 						<div class="row">
 							<div class="col-md-3 col-lg-3">
 								<div class="panel">
@@ -78,7 +74,7 @@
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('mahamandli_members')?>
+												<?=translate('national_members')?>
 											</p><br>
 											<p style="display: flex;align-items: center;margin-top: -8px;font-weight: bold;"><span>Pending Members:<?=$prepending?></span>  
     										<span>Approved Members:<?=$preapproved?></span></p>
@@ -139,7 +135,7 @@
 
 				<div class="row">
 					<div class="col-md-12">
-						<h5 class="text-overflow"><?=translate('Free_member_informations')?></h5>
+						<h5 class="text-overflow"><?=translate('legion_member_informations')?></h5>
 						<div class="row">
 							
 							<div class="col-md-3 col-lg-3">
@@ -155,7 +151,7 @@
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('total_free_members')?>
+												<?=translate('total_legion_members')?>
 											</p><br>
 												<p style="display: flex;align-items: center;margin-top: -8px;font-weight: bold;"><span>Pending Members:<?=$pending?></span>  
     										<span>Approved Members:<?=$approved?></span></p>
@@ -177,7 +173,7 @@
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('total_free_member_female')?>
+												<?=translate('total_legion_member_female')?>
 											</p><br>
 												<p style="display: flex;align-items: center;margin-top: -8px;font-weight: bold;"><span>Pending Female Members:<?=$pending_free_member_bride?></span>  
     										<span>Approved Female Members:<?=$approved_free_member_bride?></span></p>
@@ -199,7 +195,7 @@
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('total_free_member_male')?>
+												<?=translate('total_legion_member_male')?>
 											</p><br>
 												<p style="display: flex;align-items: center;margin-top: -8px;font-weight: bold;"><span>Pending Male Members:<?=$pending_free_member_groom?></span> 
     										<span>Approved Male Members:<?=$approved_free_member_groom?></span></p>
@@ -240,7 +236,7 @@
 
 				<div class="row">
 					<div class="col-md-12">
-						<h5 class="text-overflow"><?=translate('mahamandli_member_informations')?></h5>
+						<h5 class="text-overflow"><?=translate('NGB_member_informations')?></h5>
 						<div class="row">
 							
 							<div class="col-md-3 col-lg-3">
@@ -256,7 +252,7 @@
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('total_mahamandli_members')?>
+												<?=translate('total_NGB_members')?>
 											</p><br>
 												<p style="display: flex;align-items: center;margin-top: -8px;font-weight: bold;"><span>Pending Members:<?=$prepending?></span>  
     										<span>Approved Members:<?=$preapproved?></span></p>
@@ -278,7 +274,7 @@
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('total_mahamandli_member_female')?>
+												<?=translate('total_NGB_member_female')?>
 											</p><br>
 												<p style="display: flex;align-items: center;margin-top: -8px;font-weight: bold;"><span>Pending Female Members:<?=$pending_premium_member_bride?></span>  
     										<span>Approved Female Members:<?=$approved_premium_member_bride?></span></p>
@@ -300,7 +296,7 @@
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('total_mahamandli_member_male')?>
+												<?=translate('total_NGB_member_male')?>
 											</p><br>
 												<p style="display: flex;align-items: center;margin-top: -8px;font-weight: bold;"><span>Pending Male Members:<?=$pending_premium_member_groom?></span>  
     										<span>Approved Male Members:<?=$approved_premium_member_groom?></span></p>
@@ -571,7 +567,7 @@ $application_data = $this->db->select('*')->from('marriage_application_form')->w
       
 			<div class="row">
 					<div class="col-md-12">
-						<h5 class="text-overflow"><?=translate('stories_informations')?></h5>
+						<h5 class="text-overflow"><?=translate('SCI informations')?></h5>
 						<div class="row">
 							<div class="col-md-4 col-lg-4">
 								<div class="panel">
@@ -587,7 +583,7 @@ $application_data = $this->db->select('*')->from('marriage_application_form')->w
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('total_stories')?>
+												<?=translate('total_SCI')?>
 											</p>
 										</div>
 									</div>
@@ -607,7 +603,7 @@ $application_data = $this->db->select('*')->from('marriage_application_form')->w
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('approved_stories')?>
+												<?=translate('approved_SCI')?>
 											</p>
 										</div>
 									</div>
@@ -627,7 +623,7 @@ $application_data = $this->db->select('*')->from('marriage_application_form')->w
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('pending_stories')?>
+												<?=translate('pending_SCI')?>
 											</p>
 										</div>
 									</div>
