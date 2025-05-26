@@ -58,8 +58,7 @@
 									<li <?php if($page_name=="national_members"){ ?> class="active-link" <?php } ?>>
 										<a href="<?=base_url()?>admin/members/national_members"><i class="fa fa-user-o"></i><?php echo translate('National Members')?></a>
 									</li>
-									
-								<?php } if ($this->Crud_model->admin_permission('premium_members')){?>
+									 <?php } if ($this->Crud_model->admin_permission('premium_members')){?>	
 									<li <?php if($page_name=="premium_members"){ ?> class="active-link" <?php } ?>>
 										<a href="<?=base_url()?>admin/members/premium_members"><i class="fa fa-user-o"></i><?php echo translate('Legion Members')?></a>
 									</li>
@@ -135,10 +134,10 @@
 					<!--	</a>-->
 					<!--</li>-->
 					
-					<li <?php if($page_name=="guruji_photo"){ ?> class="active-link" <?php } ?>>
+					<li <?php if($page_name=="SCI_photo"){ ?> class="active-link" <?php } ?>>
 						<a href="<?=base_url()?>admin/guruji_photos">
 							<i class="fa fa-picture-o"></i>
-							<span class="menu-title"><?php echo translate('guruji_photos')?></span>
+							<span class="menu-title"><?php echo translate('SCI_photo')?></span>
 						</a>
 					</li>
 					

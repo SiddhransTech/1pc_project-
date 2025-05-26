@@ -5,12 +5,12 @@
 <div id="content-container">
 	<div id="page-head">
 		<div id="page-title">
-			<h1 class="page-header text-overflow"><?php echo translate('guruji_photos')?></h1>
+			<h1 class="page-header text-overflow"><?php echo translate('SCI_photos')?></h1>
 		</div>
 		<ol class="breadcrumb">
 			<li><a href="<?=base_url()?>admin"><?php echo translate('home')?></a></li>
-			<li class="active"><a href="#"><?php echo translate('guruji_photos')?></a></li>
-			<a href="<?php echo base_url();?>admin/guruji_photos/add_guruji_photos" style="float:right;color:white;margin-top: -25px;" class="btn btn-danger btn-sm z-depth-2-bottom" style="width: 100%"><?php echo translate('add_guruji_photos')?>
+			<!-- <li class="active"><a href="#"><?php echo translate('guruji_photos')?></a></li> -->
+			<a href="<?php echo base_url();?>admin/guruji_photos/add_guruji_photos" style="float:right;color:white;margin-top: -25px;" class="btn btn-danger btn-sm z-depth-2-bottom" style="width: 100%"><?php echo translate('add_SCI_photos')?>
 			</a>
 		</ol>
 	</div>
@@ -29,7 +29,7 @@
 	            </div>
 			<?php endif ?>
 			<div class="panel-heading">
-				<h3 class="panel-title"><?php echo translate('guruji_photos_list')?></h3>
+				<h3 class="panel-title"><?php echo translate('SCI_photo_list')?></h3>
 			</div>
 			<div class="panel-body">
 				<table id="stories_table" class="table table-striped table-bordered" cellspacing="0" width="100%">

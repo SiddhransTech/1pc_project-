@@ -1352,7 +1352,7 @@ public function delete_area()
 				} elseif ($para2 == "print_member") {
 					$this->load->library('pdf');
 					$page_data['get_free_member_by_id'] = $this->db->get_where("member", array("membership" => 1, "member_id" => $para3))->result();
-					$page_data['member_type'] = "Free";
+					$page_data['member_type'] = "Visitors";
 					$page_data['parameter'] 	= "free_members";
 					$page_data['page_name'] 	= "free_members";
 					$this->load->view('back/members/print_member', $page_data);
@@ -1385,7 +1385,7 @@ public function delete_area()
 
 
 
-				$page_data['member_type'] = "Free";
+				$page_data['member_type'] = "Visitors";
 				$page_data['parameter'] 	= "free_members";
 				$page_data['page_name'] 	= "free_members";
 				$this->load->view('back/index', $page_data);
@@ -1418,7 +1418,7 @@ public function delete_area()
 				} elseif ($para2 == "print_member") {
 					$this->load->library('pdf');
 					$page_data['get_premium_member_by_id'] = $this->db->get_where("member", array("membership" => 2, "member_id" => $para3))->result();
-					$page_data['member_type'] = "Premium";
+					$page_data['member_type'] = "Legions";
 					$page_data['parameter'] 	= "premium_members";
 					$page_data['page_name'] 	= "premium_members";
 					$this->load->view('back/members/print_member', $page_data);
@@ -1452,7 +1452,7 @@ public function delete_area()
 
 
 
-				$page_data['member_type'] = "Premium";
+				$page_data['member_type'] = "Legions";
 				$page_data['parameter'] = "premium_members";
 				$page_data['page_name'] = "premium_members";
 				$this->load->view('back/index', $page_data);
@@ -1666,6 +1666,7 @@ public function delete_area()
 					$page_data['file']	 	= "add_member.php";
 					$page_data['bottom'] 	= "members/index.php";
 					$page_data['page_name'] = "add_member";
+					$page_data['areas'] = $this->Crud_model->get_all_areas();
 					if ($this->session->flashdata('alert') == "add") {
 						$page_data['success_alert'] = translate("you_have_successfully_added_a_member!!");
 					} elseif ($this->session->flashdata('alert') == "add_fail") {
@@ -1997,6 +1998,12 @@ public function delete_area()
 						$data['privacy_status'] = $privacy_status;
 						$data['pic_privacy'] = $data_pic_privacy;
 						$data['report_profile'] = '[]';
+						$data['area'] = $this->input->post('area');             // Area name (from hidden input)
+						$data['area_id'] = $this->input->post('area_id');       // Area ID (from <select> value)
+
+						$data['legion'] = $this->input->post('legion');         // Legion name (from hidden input)
+						$data['legion_id'] = $this->input->post('legion_id');   // Legion ID (from <select> value)
+
 
 						$this->db->insert('member', $data);
 						$insert_id = $this->db->insert_id();
