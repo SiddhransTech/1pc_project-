@@ -4948,7 +4948,7 @@ public function member_profile($para1 = "", $para2 = "")
                             $data['interested_by'] = '[]';
                             $data['follower'] = 0;
                             $data['notifications'] = '[]';
-                            $data['membership'] = 1;
+                            $data['membership'] = 2;
                             $data['profile_status'] = 1;
                             $data['is_closed'] = 'no';
                             $data['member_since'] = date("Y-m-d H:i:s");
