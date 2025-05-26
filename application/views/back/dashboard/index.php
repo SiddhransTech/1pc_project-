@@ -96,7 +96,7 @@
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('free_members')?>
+												<?=translate('legion_members')?>
 											</p><br>
 											<p style="display:flex;align-items: center;margin-top: -8px;font-weight: bold;"><span>Pending Members:<?=$pending?></span>  
     										<span>Approved Members:<?=$approved?></span></p>
@@ -236,7 +236,7 @@
 
 				<div class="row">
 					<div class="col-md-12">
-						<h5 class="text-overflow"><?=translate('NGB_member_informations')?></h5>
+						<h5 class="text-overflow"><?=translate('SCI_member_informations')?></h5>
 						<div class="row">
 							
 							<div class="col-md-3 col-lg-3">
@@ -252,7 +252,7 @@
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('total_NGB_members')?>
+												<?=translate('total_SCI_members')?>
 											</p><br>
 												<p style="display: flex;align-items: center;margin-top: -8px;font-weight: bold;"><span>Pending Members:<?=$prepending?></span>  
     										<span>Approved Members:<?=$preapproved?></span></p>
@@ -274,7 +274,7 @@
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('total_NGB_member_female')?>
+												<?=translate('total_SCI_member_female')?>
 											</p><br>
 												<p style="display: flex;align-items: center;margin-top: -8px;font-weight: bold;"><span>Pending Female Members:<?=$pending_premium_member_bride?></span>  
     										<span>Approved Female Members:<?=$approved_premium_member_bride?></span></p>
@@ -296,7 +296,7 @@
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('total_NGB_member_male')?>
+												<?=translate('total_SCI_member_male')?>
 											</p><br>
 												<p style="display: flex;align-items: center;margin-top: -8px;font-weight: bold;"><span>Pending Male Members:<?=$pending_premium_member_groom?></span>  
     										<span>Approved Male Members:<?=$approved_premium_member_groom?></span></p>
@@ -567,7 +567,7 @@ $application_data = $this->db->select('*')->from('marriage_application_form')->w
       
 			<div class="row">
 					<div class="col-md-12">
-						<h5 class="text-overflow"><?=translate('SCI informations')?></h5>
+						<h5 class="text-overflow"><?=translate('Projects informations')?></h5>
 						<div class="row">
 							<div class="col-md-4 col-lg-4">
 								<div class="panel">
@@ -583,7 +583,7 @@ $application_data = $this->db->select('*')->from('marriage_application_form')->w
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('total_SCI')?>
+												<?=translate('total_projects')?>
 											</p>
 										</div>
 									</div>
@@ -603,7 +603,7 @@ $application_data = $this->db->select('*')->from('marriage_application_form')->w
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('approved_SCI')?>
+												<?=translate('approved_Projects')?>
 											</p>
 										</div>
 									</div>
@@ -623,7 +623,7 @@ $application_data = $this->db->select('*')->from('marriage_application_form')->w
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('pending_SCI')?>
+												<?=translate('pending_projects')?>
 											</p>
 										</div>
 									</div>
