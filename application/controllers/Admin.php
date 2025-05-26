@@ -114,6 +114,23 @@ class Admin extends CI_Controller
 		}
 	}
 
+	public function get_legions_of_area($area_id = null) {
+		$this->load->model('Crud_model'); // Load model if not autoloaded
+	
+		if ($area_id === null) {
+			// Get area_id from URI segment or GET parameter if not passed
+			$area_id = $this->input->get('area_id') ?? $this->uri->segment(3);
+		}
+	
+		$legions = $this->Crud_model->get_legions_by_area($area_id);
+	
+		// Log legions as JSON string to avoid "array to string" warning
+		log_message('info', 'Fetched legions: ' . json_encode($legions));
+	
+		// Return JSON response
+		echo json_encode($legions);
+	}
+	
 	public function add_area() {
 		$this->load->model('Crud_model');
 	
@@ -203,7 +220,86 @@ public function add_legion() {
     }
 }
 
+public function delete_legion()
+{
+    log_message('info', 'Delete legion method invoked');
+
+    $json = file_get_contents('php://input');
+    $data = json_decode($json, true);
+
+    $legion_id = $data['legion_id'] ?? null;
+
+    if (!$legion_id) {
+        echo json_encode(['success' => false, 'message' => 'Missing legion ID']);
+        return;
+    }
+
+    // ✅ Check if legion is being used in `member` table
+    $inUse = $this->db->get_where('member', ['legion_id' => $legion_id])->num_rows();
+
+    if ($inUse > 0) {
+        echo json_encode([
+            'success' => false,
+            'message' => 'Cannot delete: This legion is assigned to one or more members.'
+        ]);
+        return;
+    }
+
+    // ✅ Proceed to delete from `legions` table
+    $this->db->where('id', $legion_id);
+    $deleted = $this->db->delete('legions');
+
+    if ($deleted) {
+        echo json_encode(['success' => true]);
+    } else {
+        echo json_encode([
+            'success' => false,
+            'message' => 'Delete failed. Please try again.'
+        ]);
+    }
+}
+
+
 	
+public function delete_area()
+{
+    log_message('info', 'Delete area method invoked');
+
+    $json = file_get_contents('php://input');
+    $data = json_decode($json, true);
+
+    $area_id = $data['area_id'] ?? null;
+
+    if (!$area_id) {
+        echo json_encode(['success' => false, 'message' => 'Missing area ID']);
+        return;
+    }
+
+    // ✅ Check if the area is being used in `legions` table
+    $inUse = $this->db->get_where('legions', ['area_id' => $area_id])->num_rows();
+
+    if ($inUse > 0) {
+        echo json_encode([
+            'success' => false,
+            'message' => 'Cannot delete: This area has assigned legions.'
+        ]);
+        return;
+    }
+
+    // ✅ Proceed with deletion
+    $this->db->where('id', $area_id); // assuming `id` is primary key in `area` table
+    $deleted = $this->db->delete('areas'); // use actual table name
+
+    if ($deleted) {
+        echo json_encode(['success' => true]);
+    } else {
+        echo json_encode([
+            'success' => false,
+            'message' => 'Delete failed. Please try again.'
+        ]);
+    }
+}
+
 
 	public function area_legion() {
 		// Check permission
@@ -242,6 +338,8 @@ public function add_legion() {
 
 	function admins($para1 = '', $para2 = '')
 	{
+		$user_data = $this->session->userdata('user_data');
+		log_message('info', 'User session data: ' . json_encode($user_data));
 		if ($this->admin_permission() == FALSE) {
 			redirect(base_url() . 'admin/login', 'refresh');
 		} else {
@@ -272,6 +370,11 @@ public function add_legion() {
 				$page_data['page_name'] = "admin";
 				$this->load->view('back/index', $page_data);
 			} elseif ($para1 == "add_admin") {
+				// $areas = $this->Crud_model->get_all_areas(); // Replace with your actual model name
+				// log_message('debug', 'Fetched Areas: ' . print_r($areas, true));
+
+				$page_data['areas'] = $this->Crud_model->get_all_areas();
+				
 				$page_data['top'] 		= "members/index.php";
 				$page_data['folder'] 	= "admin";
 				$page_data['file']	 	= "add_admin.php";
@@ -298,47 +401,128 @@ public function add_legion() {
 				}
 
 				$this->load->view('back/index', $page_data);
-			} elseif ($para1 == "do_add") {
+			} 
+			
+			// elseif ($para1 == "do_add") {
+			// 	$this->form_validation->set_rules('name', 'Name', 'required');
+			// 	$this->form_validation->set_rules('email', 'Email', 'required');
+			// 	$this->form_validation->set_rules('phone', 'Phone No.', 'required');
+			// 	$this->form_validation->set_rules('role', 'role', 'required');
+
+
+			// 	if ($this->form_validation->run() == FALSE) {
+			// 		$page_data['top'] 		= "members/index.php";
+			// 		$page_data['folder'] 	= "admin";
+			// 		$page_data['file']	 	= "add_admin.php";
+			// 		$page_data['bottom'] 	= "members/index.php";
+			// 		$page_data['page_name'] = "admin";
+
+			// 		$page_data['form_contents'] = $this->input->post();
+
+			// 		$page_data['danger_alert'] = translate("failed_to_add_the_data!");
+
+			// 		$this->load->view('back/index', $page_data);
+			// 	} else {
+			// 		$data['name'] = $this->input->post('name');
+			// 		$data['email'] = $this->input->post('email');
+			// 		$data['phone'] = $this->input->post('phone');
+			// 		$data['address'] = $this->input->post('address');
+			// 		$password = substr(hash('sha512', rand()), 0, 12);
+			// 		$data['password'] = sha1($password);
+			// 		$data['role'] = $this->input->post('role');
+			// 		$data['timestamp'] = time();
+			// 		$result = $this->db->insert('admin', $data);
+
+			// 		$this->Email_model->member_staff_account_opening_by_admin('admin', $data['email'], $password);
+
+			// 		recache();
+			// 		if ($result) {
+			// 			$this->session->set_flashdata('alert', 'add');
+			// 			redirect(base_url() . 'admin/admins', 'refresh');
+			// 		} else {
+			// 			$this->session->set_flashdata('alert', 'failed_add');
+			// 			redirect(base_url() . 'admin/admins', 'refresh');
+			// 		}
+			// 	}
+			elseif ($para1 == "do_add") {
 				$this->form_validation->set_rules('name', 'Name', 'required');
-				$this->form_validation->set_rules('email', 'Email', 'required');
+				$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
 				$this->form_validation->set_rules('phone', 'Phone No.', 'required');
-				$this->form_validation->set_rules('role', 'role', 'required');
+				$this->form_validation->set_rules('role', 'Role', 'required');
+				$this->form_validation->set_rules('area', 'Area', 'required');
+				$this->form_validation->set_rules('legion_id', 'Legion', 'required');
+				$this->form_validation->set_rules('password', 'Password', 'required|min_length[6]');
+                $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'required|matches[password]');
 
-
+			
 				if ($this->form_validation->run() == FALSE) {
-					$page_data['top'] 		= "members/index.php";
-					$page_data['folder'] 	= "admin";
-					$page_data['file']	 	= "add_admin.php";
-					$page_data['bottom'] 	= "members/index.php";
+					// handle validation failure - load form with errors
+					$page_data['top']       = "members/index.php";
+					$page_data['folder']    = "admin";
+					$page_data['file']      = "add_admin.php";
+					$page_data['bottom']    = "members/index.php";
 					$page_data['page_name'] = "admin";
-
-					$page_data['form_contents'] = $this->input->post();
-
+			        $page_data['form_contents'] = $this->input->post();
+                    $page_data['areas'] = $this->Crud_model->get_all_areas(); // populate dropdown
+                	$page_data['form_contents'] = $this->input->post();
 					$page_data['danger_alert'] = translate("failed_to_add_the_data!");
-
+			
 					$this->load->view('back/index', $page_data);
 				} else {
-					$data['name'] = $this->input->post('name');
-					$data['email'] = $this->input->post('email');
-					$data['phone'] = $this->input->post('phone');
-					$data['address'] = $this->input->post('address');
-					$password = substr(hash('sha512', rand()), 0, 12);
-					$data['password'] = sha1($password);
-					$data['role'] = $this->input->post('role');
+					// Prepare admin data
+					$data['name']      = $this->input->post('name');
+					$data['email']     = $this->input->post('email');
+					$data['phone']     = $this->input->post('phone');
+					$data['address']   = $this->input->post('address');
+					$data['role']      = $this->input->post('role');
+					$password = $this->input->post('password');
+					$data['password']  = sha1($password);
 					$data['timestamp'] = time();
-					$result = $this->db->insert('admin', $data);
-
-					$this->Email_model->member_staff_account_opening_by_admin('admin', $data['email'], $password);
-
-					recache();
-					if ($result) {
+			
+					// Insert admin record
+					$this->db->insert('admin', $data);
+					$admin_id = $this->db->insert_id();
+			
+					if ($admin_id) {
+						// Define static arrays of role IDs
+						$areaRoleArray   = [3, 4, 5,6]; // Replace with real area role IDs
+						$legionRoleArray = [2, 7,8,9];    // Replace with real legion role IDs
+					
+						$role_id = (int)$this->input->post('role');
+					
+						// Insert into admin_area if role is allowed
+						if (in_array($role_id, $areaRoleArray)) {
+							$area_data = [
+								'admin_id' => $admin_id,
+								'area_id'  => $this->input->post('area')
+							];
+							$this->db->insert('admin_area', $area_data);
+						}
+					
+						// Insert into admin_legion if role is allowed
+						if (in_array($role_id, $legionRoleArray)) {
+							$legion_data = [
+								'admin_id'  => $admin_id,
+								'legion_id' => $this->input->post('legion_id')
+							];
+							$this->db->insert('admin_legion', $legion_data);
+						}
+					
+						// Send email with password
+						$this->Email_model->member_staff_account_opening_by_admin('admin', $data['email'], $password);
+					
+						recache();
+					
 						$this->session->set_flashdata('alert', 'add');
 						redirect(base_url() . 'admin/admins', 'refresh');
 					} else {
 						$this->session->set_flashdata('alert', 'failed_add');
 						redirect(base_url() . 'admin/admins', 'refresh');
 					}
+					
 				}
+			
+			
 			} elseif ($para1 == "update") {
 				$this->form_validation->set_rules('name', 'Name', 'required');
 				$this->form_validation->set_rules('email', 'Email', 'required');
@@ -632,6 +816,7 @@ public function add_legion() {
 						);
 					}
 				}
+				
 				elseif ($para1 == "national_members") {
 					if ($member_approval == 'yes') {
 						$columns = array(
@@ -1204,7 +1389,9 @@ public function add_legion() {
 				$page_data['parameter'] 	= "free_members";
 				$page_data['page_name'] 	= "free_members";
 				$this->load->view('back/index', $page_data);
-			} elseif ($para1 == "premium_members") {
+			} 
+			elseif ($para1 == "premium_members") {
+				
 				if ($para2 == "") {
 					$page_data['top'] = "members/index.php";
 					$page_data['folder'] = "members";
@@ -1793,11 +1980,12 @@ public function add_legion() {
 						$data['follower'] = 0;
 						$data['notifications'] = '[]';
 						$plan = $this->input->post('plan');
-						if ($plan == 1) {
-							$data['membership'] = 1;
-						} else {
-							$data['membership'] = 2;
-						}
+						// if ($plan == 1) {
+						// 	$data['membership'] = 1;
+						// } else {
+						// 	$data['membership'] = 2;
+						// }
+						$data['membership'] = 2;
 						$data['profile_status'] = 1;
 						$data['is_closed'] = 'no';
 						$data['member_since'] = date("Y-m-d H:i:s");
@@ -8065,6 +8253,7 @@ public function add_legion() {
 			if ($result) {
 				$data['admin_name'] = $result->email;
 				$data['admin_id'] = $result->admin_id;
+				$data['role_id'] = $result->role_id;
 
 				$this->session->set_userdata($data);
 

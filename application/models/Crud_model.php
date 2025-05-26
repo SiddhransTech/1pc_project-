@@ -16,7 +16,16 @@ class Crud_model extends CI_Model
     }
 
 
-
+    public function get_legions_by_area($area_id)
+    {
+        return $this->db->select('id, name')
+                        ->from('legions')
+                        ->where('area_id', $area_id)
+                        ->order_by('name', 'ASC')
+                        ->get()
+                        ->result_array();
+    }
+    
 
     ////////////  GET THE  AREA  AND THE LEGION //////
     public function get_areas_with_legions()
@@ -58,6 +67,19 @@ class Crud_model extends CI_Model
         return array_values($areas); // Reset keys to numeric
     }
     
+
+    // In Crud_model.php
+        public function get_all_areas()
+        {
+
+            
+            return $this->db->select('id, name')
+                            ->from('areas')
+                            ->order_by('name', 'ASC')
+                            ->get()
+                            ->result_array();
+        }
+
 
     /////// INSETST LEGION //////
     public function insert_legion($data) {
@@ -993,6 +1015,8 @@ class Crud_model extends CI_Model
         $this->db->where('password', $password);
         $query_result = $this->db->get();
         $result = $query_result->row();
+        // log_message('info', 'Login result: ' . json_encode($result));
+
         return $result;
     }
 
@@ -1116,57 +1140,195 @@ class Crud_model extends CI_Model
     //         return null;
     //     }
     // }
-    
-     function allmembers($membership,$limit,$start,$col,$dir)
-    {   
 
-        if(!empty($this->session->userdata('free_member_status_type')) && $membership == 1){
-            if($this->session->userdata('free_member_status_type') == 'groom'){
-                $this->db->where('gender',1);
-            }else if($this->session->userdata('free_member_status_type') == 'bride'){
-                $this->db->where('gender',2);
-            }
+    public function get_members_by_admin_scope($member_type, $limit, $start, $order, $dir, $admin_id)
+    {
 
-            if(!empty($this->session->userdata('free_filter_status')) && $membership == 1){
-                if($this->session->userdata('free_filter_status') == 'approved'){
-                    $this->db->where('status', 'approved');
-                }else if($this->session->userdata('free_filter_status') == 'pending'){
-                    $this->db->where('status', 'pending');
-                }            
-            }
 
-            if(!empty($this->session->userdata('free_member_profile_image')) && $membership == 1){
-                if($this->session->userdata('free_member_profile_image') == 'default'){
-                    $this->db->not_like('profile_image', '"profile_image":"male_default.jpg"');
-                    $this->db->not_like('profile_image', '"profile_image":"female_default.png"');
-                }           
-            }
-
-        }
-        else if(!empty($this->session->userdata('premium_member_status_type')) && $membership == 2){
-            if($this->session->userdata('premium_member_status_type') == 'groom'){
-                $this->db->where('gender',1);
-            }else if($this->session->userdata('premium_member_status_type') == 'bride'){
-                $this->db->where('gender',2);
-            }
-
-            if(!empty($this->session->userdata('premium_filter_status')) && $membership == 2){
-                if($this->session->userdata('premium_filter_status') == 'approved'){
-                    $this->db->where('status', 'approved');
-                }else if($this->session->userdata('premium_filter_status') == 'pending'){
-                    $this->db->where('status', 'pending');
-                }            
-            }
-
-            if(!empty($this->session->userdata('premium_member_profile_image')) && $membership == 2){
-                if($this->session->userdata('premium_member_profile_image') == 'default'){
-                    $this->db->not_like('profile_image', '"profile_image":"male_default.jpg"');
-                    $this->db->not_like('profile_image', '"profile_image":"female_default.png"');
-                }           
-            }
-        }
+        if ($admin_id != 1) {
+            $this->db->select('area_id');
+            $area_query = $this->db->get_where('admin_area', ['admin_id' => $admin_id]);
         
-        $query = $this->db->limit($limit,$start)->order_by($col,$dir)->get_where("member", array("membership" => $membership));
+            if ($area_query->num_rows() > 0) {
+                // Admin has assigned areas
+                $area_ids = array_column($area_query->result_array(), 'area_id');
+                $this->db->where_in('area_id', $area_ids);
+            } else {
+                // Step 2: Check admin_legions
+                $this->db->select('legion_id');
+                $legion_query = $this->db->get_where('admin_legion', ['admin_id' => $admin_id]);
+        
+                if ($legion_query->num_rows() > 0) {
+                    $legion_ids = array_column($legion_query->result_array(), 'legion_id');
+                    $this->db->where_in('legion_id', $legion_ids);
+                } else {
+                    // No area or legion found for this admin, return empty result
+                    log_message('info', "No areas or legions found for admin_id: {$admin_id}. Returning empty result.");
+                    return [];
+                }
+            }
+        
+        }
+        // // Step 1: Check admin_areas
+        // $this->db->select('area_id');
+        // $area_query = $this->db->get_where('admin_area', ['admin_id' => $admin_id]);
+    
+        // if ($area_query->num_rows() > 0) {
+        //     // Admin has assigned areas
+        //     $area_ids = array_column($area_query->result_array(), 'area_id');
+        //     $this->db->where_in('area_id', $area_ids);
+        // } else {
+        //     // Step 2: Check admin_legions
+        //     $this->db->select('legion_id');
+        //     $legion_query = $this->db->get_where('admin_legions', ['admin_id' => $admin_id]);
+    
+        //     if ($legion_query->num_rows() > 0) {
+        //         $legion_ids = array_column($legion_query->result_array(), 'legion_id');
+        //         $this->db->where_in('legion_id', $legion_ids);
+        //     } else {
+        //         // No area or legion found for this admin, return empty result
+        //         log_message('info', "No areas or legions found for admin_id: {$admin_id}. Returning empty result.");
+        //         return [];
+        //     }
+        // }
+    
+        // Step 3: Membership condition
+        $this->db->where('membership', $member_type);
+    
+        // ===== Apply session-based filters here =====
+    
+        if (!empty($this->session->userdata('free_member_status_type')) && $member_type == 1) {
+            if ($this->session->userdata('free_member_status_type') == 'groom') {
+                $this->db->where('gender', 1);
+            } else if ($this->session->userdata('free_member_status_type') == 'bride') {
+                $this->db->where('gender', 2);
+            }
+    
+            if (!empty($this->session->userdata('free_filter_status'))) {
+                if ($this->session->userdata('free_filter_status') == 'approved') {
+                    $this->db->where('status', 'approved');
+                } else if ($this->session->userdata('free_filter_status') == 'pending') {
+                    $this->db->where('status', 'pending');
+                }
+            }
+    
+            if (!empty($this->session->userdata('free_member_profile_image'))) {
+                if ($this->session->userdata('free_member_profile_image') == 'default') {
+                    $this->db->not_like('profile_image', 'male_default.jpg');
+                    $this->db->not_like('profile_image', 'female_default.png');
+                }
+            }
+    
+        } else if (!empty($this->session->userdata('premium_member_status_type')) && $member_type == 2) {
+            if ($this->session->userdata('premium_member_status_type') == 'groom') {
+                $this->db->where('gender', 1);
+            } else if ($this->session->userdata('premium_member_status_type') == 'bride') {
+                $this->db->where('gender', 2);
+            }
+    
+            if (!empty($this->session->userdata('premium_filter_status'))) {
+                if ($this->session->userdata('premium_filter_status') == 'approved') {
+                    $this->db->where('status', 'approved');
+                } else if ($this->session->userdata('premium_filter_status') == 'pending') {
+                    $this->db->where('status', 'pending');
+                }
+            }
+    
+            if (!empty($this->session->userdata('premium_member_profile_image'))) {
+                if ($this->session->userdata('premium_member_profile_image') == 'default') {
+                    $this->db->not_like('profile_image', 'male_default.jpg');
+                    $this->db->not_like('profile_image', 'female_default.png');
+                }
+            }
+        }
+    
+        // Step 4: Apply limit, offset, ordering
+        $this->db->limit($limit, $start);
+        $this->db->order_by($order, $dir);
+    
+        // Step 5: Execute query
+        $query = $this->db->get('member');
+    
+        $result = $query->result();
+    
+        // Step 6: Prepare log data (first 5 members, only selected fields)
+        $log_data = array_map(function ($member) {
+            return [
+                'member_id'   => $member->member_id,
+                'first_name'  => $member->first_name,
+                'last_name'   => $member->last_name,
+                'email'       => $member->email,
+                'gender'      => $member->gender,
+                'status'      => $member->status,
+                'membership'  => $member->membership,
+            ];
+        }, array_slice($result, 0, 5));
+        // log_message('info', 'Fetched members for admin_id ' . $admin_id . ': ' . json_encode($log_data));
+
+        log_message('info', 'Fetched members for admin_id ' . $admin_id . ': ' . json_encode($log_data));
+    
+        return $query;
+    }
+    
+    
+
+
+    function allmembers($membership, $limit, $start, $col, $dir)
+    {   
+        $admin_id = $this->session->userdata('admin_id');
+        log_message('info', 'Admin ID from session: ' . $admin_id);
+    
+        // $members =
+    
+        
+        // if(!empty($this->session->userdata('free_member_status_type')) && $membership == 1){
+        //     if($this->session->userdata('free_member_status_type') == 'groom'){
+        //         $this->db->where('gender',1);
+        //     }else if($this->session->userdata('free_member_status_type') == 'bride'){
+        //         $this->db->where('gender',2);
+        //     }
+
+        //     if(!empty($this->session->userdata('free_filter_status')) && $membership == 1){
+        //         if($this->session->userdata('free_filter_status') == 'approved'){
+        //             $this->db->where('status', 'approved');
+        //         }else if($this->session->userdata('free_filter_status') == 'pending'){
+        //             $this->db->where('status', 'pending');
+        //         }            
+        //     }
+
+        //     if(!empty($this->session->userdata('free_member_profile_image')) && $membership == 1){
+        //         if($this->session->userdata('free_member_profile_image') == 'default'){
+        //             $this->db->not_like('profile_image', '"profile_image":"male_default.jpg"');
+        //             $this->db->not_like('profile_image', '"profile_image":"female_default.png"');
+        //         }           
+        //     }
+
+        // }
+        // else if(!empty($this->session->userdata('premium_member_status_type')) && $membership == 2){
+        //     if($this->session->userdata('premium_member_status_type') == 'groom'){
+        //         $this->db->where('gender',1);
+        //     }else if($this->session->userdata('premium_member_status_type') == 'bride'){
+        //         $this->db->where('gender',2);
+        //     }
+
+        //     if(!empty($this->session->userdata('premium_filter_status')) && $membership == 2){
+        //         if($this->session->userdata('premium_filter_status') == 'approved'){
+        //             $this->db->where('status', 'approved');
+        //         }else if($this->session->userdata('premium_filter_status') == 'pending'){
+        //             $this->db->where('status', 'pending');
+        //         }            
+        //     }
+
+        //     if(!empty($this->session->userdata('premium_member_profile_image')) && $membership == 2){
+        //         if($this->session->userdata('premium_member_profile_image') == 'default'){
+        //             $this->db->not_like('profile_image', '"profile_image":"male_default.jpg"');
+        //             $this->db->not_like('profile_image', '"profile_image":"female_default.png"');
+        //         }           
+        //     }
+        // }
+        
+        // $query = $this->db->limit($limit,$start)->order_by($col,$dir)->get_where("member", array("membership" => $membership));
+        $query = $this->get_members_by_admin_scope($membership, $limit, $start, $col, $dir, $admin_id);
         if($query->num_rows()>0)
         {
             return $query->result();
@@ -1176,6 +1338,71 @@ class Crud_model extends CI_Model
             return null;
         }
     }
+    
+    // function allmembers($membership, $limit, $start, $col, $dir)
+    // {   
+    //     $admin_id = $this->session->userdata('admin_id');
+    //     log_message('info', 'Admin ID from session: ' . $admin_id);
+    
+    //     $members = $this->get_members_by_admin_scope($membership, $limit, $start, $col, $dir, $admin_id);
+    
+        
+    //     if(!empty($this->session->userdata('free_member_status_type')) && $membership == 1){
+    //         if($this->session->userdata('free_member_status_type') == 'groom'){
+    //             $this->db->where('gender',1);
+    //         }else if($this->session->userdata('free_member_status_type') == 'bride'){
+    //             $this->db->where('gender',2);
+    //         }
+
+    //         if(!empty($this->session->userdata('free_filter_status')) && $membership == 1){
+    //             if($this->session->userdata('free_filter_status') == 'approved'){
+    //                 $this->db->where('status', 'approved');
+    //             }else if($this->session->userdata('free_filter_status') == 'pending'){
+    //                 $this->db->where('status', 'pending');
+    //             }            
+    //         }
+
+    //         if(!empty($this->session->userdata('free_member_profile_image')) && $membership == 1){
+    //             if($this->session->userdata('free_member_profile_image') == 'default'){
+    //                 $this->db->not_like('profile_image', '"profile_image":"male_default.jpg"');
+    //                 $this->db->not_like('profile_image', '"profile_image":"female_default.png"');
+    //             }           
+    //         }
+
+    //     }
+    //     else if(!empty($this->session->userdata('premium_member_status_type')) && $membership == 2){
+    //         if($this->session->userdata('premium_member_status_type') == 'groom'){
+    //             $this->db->where('gender',1);
+    //         }else if($this->session->userdata('premium_member_status_type') == 'bride'){
+    //             $this->db->where('gender',2);
+    //         }
+
+    //         if(!empty($this->session->userdata('premium_filter_status')) && $membership == 2){
+    //             if($this->session->userdata('premium_filter_status') == 'approved'){
+    //                 $this->db->where('status', 'approved');
+    //             }else if($this->session->userdata('premium_filter_status') == 'pending'){
+    //                 $this->db->where('status', 'pending');
+    //             }            
+    //         }
+
+    //         if(!empty($this->session->userdata('premium_member_profile_image')) && $membership == 2){
+    //             if($this->session->userdata('premium_member_profile_image') == 'default'){
+    //                 $this->db->not_like('profile_image', '"profile_image":"male_default.jpg"');
+    //                 $this->db->not_like('profile_image', '"profile_image":"female_default.png"');
+    //             }           
+    //         }
+    //     }
+        
+    //     $query = $this->db->limit($limit,$start)->order_by($col,$dir)->get_where("member", array("membership" => $membership));
+    //     if($query->num_rows()>0)
+    //     {
+    //         return $query->result();
+    //     }
+    //     else
+    //     {
+    //         return null;
+    //     }
+    // }
     
  function members_search($membership,$limit,$start,$search,$col,$dir)
     {

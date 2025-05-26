@@ -71,6 +71,22 @@
 								
 							</div>
 						</div>
+						<!-- Password -->
+					<div class="form-group">
+						<label class="col-sm-3 control-label" for="password"><b><?= translate('password') ?> <span class="text-danger">*</span></b></label>
+						<div class="col-sm-8">
+							<input type="password" class="form-control" name="password" placeholder="<?= translate('password') ?>">
+						</div>
+					</div>
+
+					<!-- Confirm Password -->
+					<div class="form-group">
+						<label class="col-sm-3 control-label" for="confirm_password"><b><?= translate('confirm_password') ?> <span class="text-danger">*</span></b></label>
+						<div class="col-sm-8">
+							<input type="password" class="form-control" name="confirm_password" placeholder="<?= translate('confirm_password') ?>">
+						</div>
+					</div>
+
 						<div class="form-group">
 							<label class="col-sm-3 control-label" for="description"><b><?= translate('address')?> </span></b></label>
 							<div class="col-sm-8">
@@ -90,12 +106,42 @@
 									?>
 							</div>
 						</div>
-						
-						<div class="form-group">
-							<div class="col-sm-offset-3 col-sm-8 text-right">
-								<button type="submit" class="btn btn-primary btn-sm btn-labeled fa fa-save">Save</button>
-							</div>
-						</div>
+					
+						<?php $selected_area = !empty($form_contents['area']) ? $form_contents['area'] : ''; ?>
+
+<div class="form-group">
+    <label class="col-sm-3 control-label"><b>Area <span class="text-danger">*</span></b></label>
+    <div class="col-sm-8">
+        <select id="area" name="area" class="form-control" onchange="getLegions(this.value)">
+            <option value="">Select Area</option>
+            <?php foreach($areas as $area): ?>
+                <option value="<?= $area['id'] ?>" <?= ($area['id'] == $selected_area) ? 'selected' : '' ?>>
+                    <?= $area['name'] ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+</div>
+
+
+
+    <!-- Legion dropdown -->
+    <div class="form-group">
+        <label class="col-sm-3 control-label"><b>Legion <span class="text-danger">*</span></b></label>
+        <div class="col-sm-8">
+            <select id="legion" name="legion_id" class="form-control">
+                <option value="">Select Legion</option>
+                <!-- Legions will be loaded dynamically -->
+            </select>
+        </div>
+    </div>
+
+    <!-- Submit button -->
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-8 text-right">
+            <button type="submit" class="btn btn-primary btn-sm btn-labeled fa fa-save">Save</button>
+        </div>
+    </div>
 					</form>								
 		    </div>	
 		</div>
@@ -106,4 +152,27 @@
 	    $('#success_alert').fadeOut('fast');
 	    $('#danger_alert').fadeOut('fast');
 	}, 5000); // <-- time in milliseconds
+
+	function getLegions(areaId) {
+    if (areaId === '') {
+        document.getElementById('legion').innerHTML = '<option value="">Select Legion</option>';
+        return;
+    }
+
+    fetch("<?= base_url('admin/get_legions_of_area/') ?>" + areaId)
+        .then(response => response.json())
+        .then(data => {
+            console.log("Fetched legions:", data); // ✅ Logging fetched data
+
+            let options = '<option value="">Select Legion</option>';
+            data.forEach(function (legion) {
+                options += `<option value="${legion.id}">${legion.name}</option>`;
+            });
+            document.getElementById('legion').innerHTML = options;
+        })
+        .catch(error => {
+            console.error('Error fetching legions:', error);
+        });
+}
+
 </script>
