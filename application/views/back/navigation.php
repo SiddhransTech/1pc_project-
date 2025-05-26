@@ -270,7 +270,7 @@
 										<li <?php if($page_name=="religion"){ ?> class="active-link" <?php } ?>>
 											<a href="<?=base_url()?>admin/religion"><i class="fa fa-circle-o"></i><?php echo translate('religion')?></a>
 										</li>
-										<?php } if ($this->Crud_model->admin_permission('caste')){?>
+										<!-- <?php } if ($this->Crud_model->admin_permission('caste')){?>
 										<li <?php if($page_name=="caste"){ ?> class="active-link" <?php } ?>>
 											<a href="<?=base_url()?>admin/caste"><i class="fa fa-circle-o"></i><?php echo translate('caste')?></a>
 										</li>
@@ -278,7 +278,7 @@
 										<li <?php if($page_name=="sub_caste"){ ?> class="active-link" <?php } ?>>
 											<a href="<?=base_url()?>admin/sub_caste"><i class="fa fa-circle-o"></i><?php echo translate('sub_-Caste')?></a>
 										</li>
-									<?php } ?>
+									<?php } ?> -->
 									<?php
 			                if ($this->db->get_where('frontend_settings', array('type' => 'language'))->row()->value == "yes") {
 			                ?>

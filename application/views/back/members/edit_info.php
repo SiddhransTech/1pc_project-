@@ -32,8 +32,11 @@
           <h1><?php echo $percent; ?></h1>    
         </div>
       </div>
+
+      <?php $member_id = $this->uri->segment(5); ?>
+
           
-            <form id="input-progress" class="form-default" role="form" action="<?=base_url()?>admin/members/update_member/<?=$value->member_id?>/<?=$parameter?>" method="POST" enctype="multipart/form-data" onsubmit="return updatePercent();">
+            <form id="input-progress" class="form-default" role="form" action="<?=base_url()?>admin/members/update_member/<?=$member_id?>/<?=$parameter?>" method="POST" enctype="multipart/form-data" onsubmit="return updatePercent();">
 
         <input type="hidden" name="percentage" id="profile_percentage" value="<?php echo $value->percentage;?>">
         <input type="hidden" name="per" id="per">
@@ -64,7 +67,7 @@
 
                 <div class="panel panel-dark">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><?php echo translate('introduction')?> / <?=$this->lang->line('introduction'); ?></h3>
+                    <h3 class="panel-title"><?php echo translate('introduction')?> </h3>
                 </div>
               
                 <div class="panel-body">
@@ -74,7 +77,7 @@
 
                 <div class="panel panel-dark">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><?php echo translate('basic_information')?> / <?=$this->lang->line('basic_information'); ?></h3>
+                    <h3 class="panel-title"><?php echo translate('basic_information')?> </h3>
                 </div>
                 
               <div class="panel-body">
@@ -83,7 +86,7 @@
                 <div class="row">
                   <div class="col-md-6">
                       <div class="form-group has-feedback">
-                          <label for="first_name" class="text-uppercase c-gray-light"><?php echo translate('first_name')?> / <?=$this->lang->line('first_name'); ?><span class="text-danger">*</span></label>
+                          <label for="first_name" class="text-uppercase c-gray-light"><?php echo translate('first_name')?><span class="text-danger">*</span></label>
                           <input type="text" class="form-control no-resize" name="first_name" value="<?php if(!empty($form_contents)){echo $form_contents['first_name'];} else{echo $value->first_name;}?>">
                           <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                           <div class="help-block with-errors">
@@ -92,7 +95,7 @@
                   </div>
                   <div class="col-md-6">
                       <div class="form-group has-feedback">
-                          <label for="last_name" class="text-uppercase c-gray-light"><?php echo translate('last_name')?> / <?=$this->lang->line('last_name'); ?><span class="text-danger">*</span></label>
+                          <label for="last_name" class="text-uppercase c-gray-light"><?php echo translate('last_name')?> <span class="text-danger">*</span></label>
                           <input type="text" class="form-control no-resize" name="last_name" value="<?php if(!empty($form_contents)){echo $form_contents['last_name'];} else{echo $value->last_name;}?>">
                           <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                           <div class="help-block with-errors">
@@ -167,32 +170,7 @@
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="form-group has-feedback">
-                      <label for="area" class="text-uppercase c-gray-light"><?php echo translate('area')?> / <?=$this->lang->line('area'); ?></label>
-                      <input type="text" class="form-control no-resize" name="area" value="<?php if(!empty($form_contents)){echo $form_contents['area'];} else{echo $basic_info[0]['area'];}?>">
-                      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="row">
-                  <!--<div class="col-md-6">-->
-                  <!--  <div class="form-group has-feedback">-->
-                  <!--    <label for="on_behalf" class="text-uppercase c-gray-light"><?php //echo translate('on_behalf');?> / <?php //echo $this->lang->line('onbehalf'); ?><span class="text-danger">*</span></label>-->
-                    
-                  <!--      //if (!empty($form_contents)) {-->
-                  <!--          //echo $this->Crud_model->select_html('on_behalf', 'on_behalf', 'name', 'edit', 'form-control form-control-sm selectpicker', $form_contents['on_behalf'], '', '', '');-->
-                  <!--//  } -->
-                     <!--//else { -->
-                  <!--          echo $this->Crud_model->select_html('on_behalf', 'on_behalf', 'name', 'edit', 'form-control form-control-sm selectpicker', $basic_info[0]['on_behalf'], '', '', '');-->
-                     <!--//} -->
-                     
-                  <!--    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>-->
-                  <!--    <div class="help-block with-errors"></div>-->
-                  <!--  </div>-->
-                  <!--</div>-->
                   <div class="col-md-6">
                     <div class="form-group has-feedback">
                         <label for="mobile" class="text-uppercase c-gray-light"><?php echo translate('mobile')?> / <?=$this->lang->line('mobile'); ?><span class="text-danger">*</span></label>
@@ -202,7 +180,54 @@
                         <div class="help-block with-errors"></div>
                     </div>
                   </div>
+            
+                  
+                  <div class="col-md-12">
+
+      <div class="row">
+    <!-- Area Field -->
+    <div class="col-md-6">
+      <div class="form-group has-feedback">
+        <label for="area" class="text-uppercase c-gray-light">
+          <?php echo translate('area') ?>  
+        </label>
+        <select id="area" name="area_id" class="form-control" onchange="getLegions(this.value); setAreaName(this);">
+          <option value="">Select Area</option>
+          <?php foreach($areas as $area): ?>
+            <option value="<?= $area['id'] ?>" <?= ($area['id'] == $selected_area) ? 'selected' : '' ?>>
+              <?= $area['name'] ?>
+            </option>
+          <?php endforeach; ?>
+        </select>
+        <input type="hidden" name="area" id="area_name" value="<?= isset($selected_area_name) ? $selected_area_name : '' ?>">
+        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+        <div class="help-block with-errors"></div>
+      </div>
+    </div>
+
+    <!-- Legion Field -->
+    <div class="col-md-6">
+      <div class="form-group has-feedback">
+        <label for="legion" class="text-uppercase c-gray-light">
+          <?php echo translate('legion') ?> 
+        </label>
+        <select id="legion" name="legion_id" class="form-control" onchange="setLegionName(this);">
+          <option value="">Select Legion</option>
+          <!-- Options will be populated via AJAX -->
+        </select>
+        <input type="hidden" name="legion" id="legion_name" value="<?= isset($selected_legion_name) ? $selected_legion_name : '' ?>">
+        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+        <div class="help-block with-errors"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
                 </div>
+
+             
 
                 <div class="row">
                   <div class="form-group">
@@ -372,9 +397,9 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group has-feedback">
-                            <label for="annual_income" class="text-uppercase c-gray-light"><?php echo translate('annual_income')?> / <?=$this->lang->line('annual_income'); ?></label>
+                            <!-- <label for="annual_income" class="text-uppercase c-gray-light"><?php echo translate('annual_income')?> / <?=$this->lang->line('annual_income'); ?></label>
                             <input type="text" class="form-control no-resize" name="annual_income" value="<?php if(!empty($form_contents)){echo $form_contents['annual_income'];} else{echo $education_and_career[0]['annual_income'];}?>">
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span> -->
                             <div class="help-block with-errors">
                             </div>
                         </div>
@@ -825,9 +850,9 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group has-feedback">
-                            <label for="immigration_status" class="text-uppercase c-gray-light"><?php echo translate('immigration_status')?> / <?=$this->lang->line('immigration_status'); ?></label>
+                            <!-- <label for="immigration_status" class="text-uppercase c-gray-light"><?php echo translate('immigration_status')?> / <?=$this->lang->line('immigration_status'); ?></label>
                             <input type="text" class="form-control no-resize" name="immigration_status" value="<?php if(!empty($form_contents)){echo $form_contents['immigration_status'];} else{echo $residency_information[0]['immigration_status'];}?>">
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span> -->
                             <div class="help-block with-errors">
                             </div>
                         </div>
@@ -842,16 +867,16 @@
               if ($this->db->get_where('frontend_settings', array('type' => 'spiritual_and_social_background'))->row()->value == "yes") {
             ?>
                 <div class="panel panel-dark">
-                <div class="panel-heading">
+                <!-- <div class="panel-heading">
                     <h3 class="panel-title"><?php echo translate('spiritual_&_social_background')?> / <?=$this->lang->line('spiritual_social_background'); ?></h3>
-                </div>
+                </div> -->
                 <div class="panel-body">
                   <div class='clearfix'></div>
 
-                <div class="row">
+        <div class="row">
                     <div class="col-md-6">
                         <div class="form-group has-feedback">
-                            <label for="religion" class="text-uppercase c-gray-light"><?php echo translate('religion')?> / <?=$this->lang->line('religion'); ?><span class="text-danger">*</span></label>
+                            <!-- <label for="religion" class="text-uppercase c-gray-light"><?php echo translate('religion')?> / <?=$this->lang->line('religion'); ?><span class="text-danger">*</span></label>
                             <?php
                                 if (!empty($form_contents)) {
                                     echo $this->Crud_model->select_html('religion', 'religion', 'name', 'edit', 'form-control form-control-sm selectpicker present_religion_f_edit', $form_contents['religion'], '', '', '');
@@ -860,14 +885,14 @@
                                     echo $this->Crud_model->select_html('religion', 'religion', 'name', 'edit', 'form-control form-control-sm selectpicker present_religion_f_edit', $spiritual_and_social_background[0]['religion'], '', '', '');
                                 }
                             ?>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span> -->
                             <div class="help-block with-errors">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group has-feedback">
-                            <label for="caste" class="text-uppercase c-gray-light"><?php echo translate('caste_/_sect')?> / <?=$this->lang->line('caste_sect'); ?></label>
+                            <!-- <label for="caste" class="text-uppercase c-gray-light"><?php echo translate('caste_/_sect')?> / <?=$this->lang->line('caste_sect'); ?></label>
                             <?php
                                 if (!empty($spiritual_and_social_background[0]['religion'])) {
                                     if (!empty($spiritual_and_social_background[0]['caste'])) {
@@ -891,14 +916,14 @@
                                 <?php
                                 }
                             ?>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span> -->
                             <div class="help-block with-errors">
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-md-6" id="">
                         <div class="form-group has-feedback">
                             <label for="sub_caste" class="text-uppercase c-gray-light"><?php echo translate('sub_caste')?> / <?=$this->lang->line('sub_caste'); ?></label>
@@ -930,16 +955,8 @@
                             </div>
                         </div>
                     </div>
-                    <!--<div class="col-md-6">-->
-                    <!--    <div class="form-group has-feedback">-->
-                    <!--        <label for="ethnicity" class="text-uppercase c-gray-light"><?php echo translate('Kula')?> / <?=$this->lang->line('kula'); ?></label>-->
-                    <!--        <input type="text" class="form-control no-resize" name="ethnicity" value="<?php if(!empty($form_contents)){echo $form_contents['ethnicity'];} else{echo $spiritual_and_social_background[0]['ethnicity'];}?>">-->
-                    <!--        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>-->
-                    <!--        <div class="help-block with-errors">-->
-                    <!--        </div>-->
-                    <!--    </div>-->
-                    <!--</div>-->
-                </div>
+                   
+                </div> -->
 
                 <!--<div class="row">-->
                 <!--    <div class="col-md-6">-->
@@ -1310,7 +1327,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group has-feedback">
                                             <label for="children" class="text-uppercase c-gray-light">
-                                                <?php echo translate('children') ?> / <?= $this->lang->line('children'); ?>
+                                                <?php echo translate('children') ?> 
                                             </label>
                                             <input type="text" class="form-control no-resize" name="children" 
                                                 value="<?php 
@@ -1329,7 +1346,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group has-feedback">
                                             <label for="wife" class="text-uppercase c-gray-light">
-                                                <?php echo translate('wife') ?> / <?= $this->lang->line('wife'); ?>
+                                                <?php echo translate('wife') ?> 
                                             </label>
                                             <input type="text" class="form-control no-resize" name="wife" 
                                                 value="<?php 
@@ -1725,7 +1742,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group has-feedback">
-                            <label for="partner_family_value" class="text-uppercase c-gray-light"><?php echo translate('family_value')?> / <?=$this->lang->line('family_value'); ?></label>
+                            <label for="partner_family_value" class="text-uppercase c-gray-light"><?php echo translate('family_value')?> </label>
                             <input type="text" class="form-control no-resize" name="partner_family_value" value="<?php if(!empty($form_contents)){echo $form_contents['partner_family_value'];} else{echo $partner_expectation[0]['partner_family_value'];}?>">
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             <div class="help-block with-errors">
@@ -1734,7 +1751,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group has-feedback">
-                            <label for="prefered_country" class="text-uppercase c-gray-light"><?php echo translate('preferred_country')?> / <?=$this->lang->line('preferred_country'); ?></label>
+                            <label for="prefered_country" class="text-uppercase c-gray-light"><?php echo translate('preferred_country')?></label>
                             <?php
                                 if (!empty($form_contents)) {
                                     echo $this->Crud_model->select_html('country', 'prefered_country', 'name', 'edit', 'form-control form-control-sm selectpicker', $form_contents['prefered_country'], '', '', '');
@@ -1753,7 +1770,7 @@
                 <div class="row">
                   <div class="col-md-6">
                       <div class="form-group has-feedback">
-                          <label for="prefered_state" class="text-uppercase c-gray-light"><?php echo translate('preferred_state')?> / <?=$this->lang->line('preferred_state'); ?></label>
+                          <label for="prefered_state" class="text-uppercase c-gray-light"><?php echo translate('preferred_state')?> </label>
                           <?php
                               if (!empty($partner_expectation[0]['prefered_country'])) {
                                   if (!empty($partner_expectation[0]['prefered_state'])) {
@@ -1784,7 +1801,7 @@
                   </div>
                   <div class="col-md-6">
                       <div class="form-group has-feedback">
-                          <label for="prefered_status" class="text-uppercase c-gray-light"><?php echo translate('preferred_status')?> / <?=$this->lang->line('preferred_status'); ?></label>
+                          <label for="prefered_status" class="text-uppercase c-gray-light"><?php echo translate('preferred_status')?> </label>
                           <input type="text" class="form-control no-resize" name="prefered_status" value="<?php if(!empty($form_contents)){echo $form_contents['prefered_status'];} else{echo $partner_expectation[0]['prefered_status'];}?>">
                           <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                           <div class="help-block with-errors">
@@ -1796,7 +1813,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group has-feedback">
-                            <label for="complexion" class="text-uppercase c-gray-light"><?php echo translate('complexion')?> / <?=$this->lang->line('complexion'); ?></label>
+                            <label for="complexion" class="text-uppercase c-gray-light"><?php echo translate('complexion')?> </label>
                             <input type="text" class="form-control no-resize" name="partner_complexion" value="<?php if(!empty($form_contents)){echo $form_contents['partner_complexion'];} else{echo $partner_expectation[0]['partner_complexion'];}?>">
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             <div class="help-block with-errors">
@@ -1823,6 +1840,42 @@
 
 
 <script>
+
+	function getLegions(areaId) {
+    if (areaId === '') {
+        document.getElementById('legion').innerHTML = '<option value="">Select Legion</option>';
+        return;
+    }
+
+    fetch("<?= base_url('admin/get_legions_of_area/') ?>" + areaId)
+        .then(response => response.json())
+        .then(data => {
+            console.log("Fetched legions:", data); // ✅ Logging fetched data
+
+            let options = '<option value="">Select Legion</option>';
+            data.forEach(function (legion) {
+                options += `<option value="${legion.id}">${legion.name}</option>`;
+            });
+            document.getElementById('legion').innerHTML = options;
+        })
+        .catch(error => {
+            console.error('Error fetching legions:', error);
+        });
+}
+
+function setAreaName(select) {
+    const areaName = select.options[select.selectedIndex].text;
+    document.getElementById('area_name').value = areaName;
+}
+
+function setLegionName(select) {
+    const legionName = select.options[select.selectedIndex].text;
+    document.getElementById('legion_name').value = legionName;
+}
+
+const memberId = <?= json_encode($member_id) ?>;
+console.log("Member ID from URI segment:", memberId);
+
 	// SCRIT FOR IMAGE UPLOAD
     function readURL_all(input) {
         if (input.files && input.files[0]) {
