@@ -1353,7 +1353,7 @@ public function delete_area()
 				} elseif ($para2 == "print_member") {
 					$this->load->library('pdf');
 					$page_data['get_free_member_by_id'] = $this->db->get_where("member", array("membership" => 1, "member_id" => $para3))->result();
-					$page_data['member_type'] = "Free";
+					$page_data['member_type'] = "Visitors";
 					$page_data['parameter'] 	= "free_members";
 					$page_data['page_name'] 	= "free_members";
 					$this->load->view('back/members/print_member', $page_data);
@@ -1386,7 +1386,7 @@ public function delete_area()
 
 
 
-				$page_data['member_type'] = "Free";
+				$page_data['member_type'] = "Visitors";
 				$page_data['parameter'] 	= "free_members";
 				$page_data['page_name'] 	= "free_members";
 				$this->load->view('back/index', $page_data);
