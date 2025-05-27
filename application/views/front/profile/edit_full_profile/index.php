@@ -914,8 +914,8 @@
                           <div class="row">
                               <div class="col-md-6">
                                   <div class="form-group has-feedback">
-                                      <label for="immigration_status" class="text-uppercase c-gray-light"><?php echo translate('immigration_status')?> / <?=$this->lang->line('immigration_status'); ?></label>
-                                      <input type="text" class="form-control no-resize" name="immigration_status" value="<?php if(!empty($form_contents)){echo $form_contents['immigration_status'];} else{echo $residency_information_data[0]['immigration_status'];}?>">
+                                      <!-- <label for="immigration_status" class="text-uppercase c-gray-light"><?php echo translate('immigration_status')?> / <?=$this->lang->line('immigration_status'); ?></label>
+                                      <input type="text" class="form-control no-resize" name="immigration_status" value="<?php if(!empty($form_contents)){echo $form_contents['immigration_status'];} else{echo $residency_information_data[0]['immigration_status'];}?>"> -->
                                       <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                       <div class="help-block with-errors">
                                       </div>
