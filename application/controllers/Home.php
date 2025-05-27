@@ -239,8 +239,8 @@ class Home extends CI_Controller {
             $page_data['top'] = "listing.php";
             $page_data['page'] = "listing";
             $page_data['bottom'] = "listing.php";
-            $page_data['member_type'] = "national_members";
-            $page_data['nav_dropdown'] = "national_members";
+            $page_data['member_type'] = "guest_members";
+            $page_data['nav_dropdown'] = "guest_members";
             $page_data['home_search'] = "false";
 
             $page_data['home_gender'] = "";
@@ -251,8 +251,8 @@ class Home extends CI_Controller {
             $page_data['min_height'] = "";
             $page_data['max_height'] = "";
             $page_data['search_member_type'] = "all";
-            $page_data['member'] = "national_members";
-            $page_data['page_url'] = "home/listing/national_members";
+            $page_data['member'] = "guest_members";
+            $page_data['page_url'] = "home/listing/guest_members";
             recache();
             $this->load->view('front/index', $page_data);
         }

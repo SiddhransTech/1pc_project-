@@ -243,11 +243,11 @@ AffTracker.generalClick( "index" );
 						                    <?php echo translate('ngb_members')?></a>
 						                    </li>
 						                    <li>
-						                    <a class="dropdown-item <?php if(!empty($nav_dropdown)){if($nav_dropdown == 'visitors'){?>nav_active_dropdown<?php }}?>" href="<?=base_url()?>home/listing/visitors">
+						                    <a class="dropdown-item <?php if(!empty($nav_dropdown)){if($nav_dropdown == 'visitors'){?>nav_active_dropdown<?php }}?>" href="<?=base_url()?>home/listing/free_members">
 						                    <?php echo translate('visitors')?></a>
 						                    </li>
 						                    <li>
-						                    <a class="dropdown-item <?php if(!empty($nav_dropdown)){if($nav_dropdown == 'guests'){?>nav_active_dropdown<?php }}?>" href="<?=base_url()?>home/listing/guests">
+						                    <a class="dropdown-item <?php if(!empty($nav_dropdown)){if($nav_dropdown == 'guests'){?>nav_active_dropdown<?php }}?>" href="<?=base_url()?>home/listing/guest_members">
 						                    <?php echo translate('guests')?></a>
 						                    </li>
 						                </ul>
