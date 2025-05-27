@@ -25,7 +25,7 @@
         <div class="card-title">
             <h3 class="heading heading-6 strong-500">
                 <b><?php 
-                    if ($story_exist) {
+                    if (false) {
                         echo translate('your_story');
                     }
                     else {
@@ -152,10 +152,10 @@
                         <label class="control-label"><?php echo translate('date')?> <span class="text-danger">*</span></label>
                         <input type="date" name="post_time" class="form-control" required>
                     </div>
-                    <div class="form-group has-feedback col-10 ml-auto mr-auto">
+                    <!-- <div class="form-group has-feedback col-10 ml-auto mr-auto">
                         <label class="control-label"><?php echo translate('partner_name')?> <span class="text-danger">*</span></label>
                         <input type="text" name="partner_name" class="form-control" required>
-                    </div>
+                    </div> -->
                     <div class="form-group has-feedback col-10 ml-auto mr-auto">
                         <div class="row">
                             <div class="col-sm-7 select_div" id="img_main">
