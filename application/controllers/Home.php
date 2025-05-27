@@ -213,7 +213,7 @@ class Home extends CI_Controller {
             $this->load->view('front/index', $page_data);
         }
         elseif ($para1=="national_members") {
-            $page_data['title'] = "Premium Members || ".$this->system_title;
+            $page_data['title'] = "National Members || ".$this->system_title;
             $page_data['top'] = "listing.php";
             $page_data['page'] = "listing";
             $page_data['bottom'] = "listing.php";
@@ -229,13 +229,13 @@ class Home extends CI_Controller {
             $page_data['min_height'] = "";
             $page_data['max_height'] = "";
             $page_data['search_member_type'] = "all";
-            $page_data['member'] = "national_members";
+            $page_data['member'] = "National";
             $page_data['page_url'] = "home/listing/national_members";
             recache();
             $this->load->view('front/index', $page_data);
         }
         elseif ($para1=="guest_members") {
-            $page_data['title'] = "Premium Members || ".$this->system_title;
+            $page_data['title'] = "Guest Members || ".$this->system_title;
             $page_data['top'] = "listing.php";
             $page_data['page'] = "listing";
             $page_data['bottom'] = "listing.php";
@@ -251,18 +251,18 @@ class Home extends CI_Controller {
             $page_data['min_height'] = "";
             $page_data['max_height'] = "";
             $page_data['search_member_type'] = "all";
-            $page_data['member'] = "guest_members";
+            $page_data['member'] = "Guest";
             $page_data['page_url'] = "home/listing/guest_members";
             recache();
             $this->load->view('front/index', $page_data);
         }
         elseif ($para1=="ngb_members") {
-            $page_data['title'] = "Premium Members || ".$this->system_title;
+            $page_data['title'] = "NGB Members || ".$this->system_title;
             $page_data['top'] = "listing.php";
             $page_data['page'] = "listing";
             $page_data['bottom'] = "listing.php";
-            $page_data['member_type'] = "national_members";
-            $page_data['nav_dropdown'] = "national_members";
+            $page_data['member_type'] = "ngb_members";
+            $page_data['nav_dropdown'] = "ngb_members";
             $page_data['home_search'] = "false";
 
             $page_data['home_gender'] = "";
@@ -273,8 +273,8 @@ class Home extends CI_Controller {
             $page_data['min_height'] = "";
             $page_data['max_height'] = "";
             $page_data['search_member_type'] = "all";
-            $page_data['member'] = "national_members";
-            $page_data['page_url'] = "home/listing/national_members";
+            $page_data['member'] = "N_G_B";
+            $page_data['page_url'] = "home/listing/ngb_members";
             recache();
             $this->load->view('front/index', $page_data);
         }
@@ -294,7 +294,7 @@ class Home extends CI_Controller {
             $page_data['min_height'] = "";
             $page_data['max_height'] = "";
             $page_data['search_member_type'] = "all";
-            $page_data['member'] = "Free";
+            $page_data['member'] = "Visitors";
             $page_data['page_url'] = "home/listing/free_members";
             recache();
             $this->load->view('front/index', $page_data);
@@ -492,7 +492,7 @@ public function member_profile($para1 = "", $para2 = "")
 
     function ajax_member_list($para1="",$para2="")
     {
-        // log_message('debug', 'ajax_member_list called with para1: ' . $para1 . ', para2: ' . $para2);
+        log_message('debug', 'ajax_member_list called with para1: ' . $para1 . ', para2: ' . $para2);
     
         $this->load->library('Ajax_pagination');
         $member_approval = $this->db->get_where('general_settings', array('type' => 'member_approval_by_admin'))->row()->value;
@@ -960,6 +960,7 @@ public function member_profile($para1 = "", $para2 = "")
             }
         }
         elseif ($para2 == "guest_members") {
+            log_message("debug", "Guest members listing called");
             if ($this->member_permission() == FALSE) {
                 $array_data = array('membership' => 0, 'is_blocked' => 'no','is_closed' => 'no', 'email_verification_status'=> 1);
                 $array_data = status($member_approval, $array_data);
@@ -1067,7 +1068,8 @@ public function member_profile($para1 = "", $para2 = "")
                 }
             }
         }
-        elseif ($para2 == "nbg_members") {
+        elseif ($para2 == "ngb_members") {
+            log_message("debug", "nbg members listing called");
             if ($this->member_permission() == FALSE) {
                 $array_data = array('membership' => 4, 'is_blocked' => 'no','is_closed' => 'no', 'email_verification_status'=> 1);
                 $array_data = status($member_approval, $array_data);

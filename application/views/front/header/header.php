@@ -227,8 +227,8 @@ AffTracker.generalClick( "index" );
 						                <ul class="dropdown-menu" style="border: 1px solid #f1f1f1 !important;">
 						                    <li class="dropdown dropdown-submenu">
 						                    <li>
-						                    <a class="dropdown-item <?php if(!empty($nav_dropdown)){if($nav_dropdown == 'all_members'){?>nav_active_dropdown<?php }}?>" href="<?=base_url()?>home/listing">
-						                    <?php echo translate('all_members')?></a>
+						                    <!-- <a class="dropdown-item <?php if(!empty($nav_dropdown)){if($nav_dropdown == 'all_members'){?>nav_active_dropdown<?php }}?>" href="<?=base_url()?>home/listing">
+						                    <?php echo translate('all_members')?></a> -->
 						                    </li>
 						                    <li>
 						                    <a class="dropdown-item <?php if(!empty($nav_dropdown)){if($nav_dropdown == 'national_members'){?>nav_active_dropdown<?php }}?>" href="<?=base_url()?>home/listing/national_members">
