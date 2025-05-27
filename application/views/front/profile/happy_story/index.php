@@ -25,7 +25,7 @@
         <div class="card-title">
             <h3 class="heading heading-6 strong-500">
                 <b><?php 
-                    if (false) {
+                    if ($story_exist) {
                         echo translate('your_story');
                     }
                     else {
