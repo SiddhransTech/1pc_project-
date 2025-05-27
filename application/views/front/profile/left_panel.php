@@ -93,16 +93,16 @@
 	                    <span class="stats-count"><?= $package_info[0]['payment_type'] ?></span>
 	                    <span class="stats-label text-uppercase"><?php echo translate('payment_gateway') ?></span>
 	                </div>
-	                <div class="stats-entry">
+	                <!-- <div class="stats-entry">
 	                    <span class="stats-count"><?= $get_member[0]->express_interest ?></span>
 	                    <span class="stats-label text-uppercase"><?php echo translate('remaining_interest') ?></span>
-	                </div>
+	                </div> -->
 	            </div>
 	            <div class="profile-stats clearfix mt-2">
-	                <div class="stats-entry">
+	                <!-- <div class="stats-entry">
 	                    <span class="stats-count"><?= $get_member[0]->direct_messages ?></span>
 	                    <span class="stats-label text-uppercase"><?php echo translate('remaining_message') ?></span>
-	                </div>
+	                </div> -->
 	                <div class="stats-entry">
 	                    <span class="stats-count"><?= $get_member[0]->photo_gallery ?></span>
 	                    <span class="stats-label text-uppercase"><?php echo translate('photo_gallery') ?></span>
@@ -150,7 +150,7 @@
 
 	            <?php if ($member_data['membership'] == '2') : ?>
 	                <div class="profile-connect">
-	                    <h2 class="heading heading-5 strong-400"><?php echo translate('Birth_kundali_and_Video') ?></h2>
+	                    <h2 class="heading heading-5 strong-400"><?php echo translate('Project_image_and_Video') ?></h2>
 	                </div>
 	                <div class="row">
 	                    <div class="col-md-6">

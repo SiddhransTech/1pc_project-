@@ -35,7 +35,7 @@
 			<div class="col-sm-12">
 				<div class="row">
 					<div class="col-md-12">
-						<h5 class="text-overflow"><?=translate('national_member_informations')?></h5>
+						<h5 class="text-overflow"><?=translate('SCI_member_informations')?></h5>
 						<div class="row">
 							<div class="col-md-3 col-lg-3">
 								<div class="panel">
@@ -236,7 +236,7 @@
 
 				<div class="row">
 					<div class="col-md-12">
-						<h5 class="text-overflow"><?=translate('SCI_member_informations')?></h5>
+						<h5 class="text-overflow"><?=translate('national_member_informations')?></h5>
 						<div class="row">
 							
 							<div class="col-md-3 col-lg-3">
@@ -252,7 +252,7 @@
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('total_SCI_members')?>
+												<?=translate('total_national_members')?>
 											</p><br>
 												<p style="display: flex;align-items: center;margin-top: -8px;font-weight: bold;"><span>Pending Members:<?=$prepending?></span>  
     										<span>Approved Members:<?=$preapproved?></span></p>
@@ -274,7 +274,7 @@
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('total_SCI_member_female')?>
+												<?=translate('total_national_member_female')?>
 											</p><br>
 												<p style="display: flex;align-items: center;margin-top: -8px;font-weight: bold;"><span>Pending Female Members:<?=$pending_premium_member_bride?></span>  
     										<span>Approved Female Members:<?=$approved_premium_member_bride?></span></p>
@@ -296,7 +296,7 @@
 												</p>
 											</div>
 											<p class="text-sm text-bold text-uppercase">
-												<?=translate('total_SCI_member_male')?>
+												<?=translate('total_national_member_male')?>
 											</p><br>
 												<p style="display: flex;align-items: center;margin-top: -8px;font-weight: bold;"><span>Pending Male Members:<?=$pending_premium_member_groom?></span>  
     										<span>Approved Male Members:<?=$approved_premium_member_groom?></span></p>
