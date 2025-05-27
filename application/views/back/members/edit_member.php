@@ -1,9 +1,9 @@
 <?php 
 	$members = array();
-	if ($member_type == "Free") {
+	if ($member_type == "Visitors") {
 		$member = $get_free_member_by_id;
 	}
-	elseif ($member_type == "Premium") {
+	elseif ($member_type == "Legions") {
 		$member = $get_premium_member_by_id;
 	}
 	elseif ($member_type == "Guest") {
