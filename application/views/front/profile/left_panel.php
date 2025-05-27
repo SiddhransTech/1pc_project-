@@ -116,7 +116,7 @@
 	                    <b style="font-size: 12px"><?php echo translate('gallery') ?></b>
 	                </a>
 	                <a class="btn btn-styled btn-sm btn-white z-depth-2-bottom mb-3 happy_story l_nav" onclick="profile_load('happy_story','alt-sm')">
-	                    <b style="font-size: 12px"><?php echo translate('happy_story') ?></b>
+	                    <b style="font-size: 12px"><?php echo translate('Project') ?></b>
 	                </a>
 	                <a class="btn btn-styled btn-sm btn-white z-depth-2-bottom mb-3 my_packages l_nav" onclick="profile_load('my_packages','alt-sm')">
 	                    <b style="font-size: 12px"><?php echo translate('My_package') ?></b>
@@ -167,7 +167,7 @@
 	                    <div class="modal-content">
 	                        <!--Modal header-->
 	                        <div class="modal-header">
-	                            <h7 class="modal-title"><?php echo translate('Upload Birth Kundali') ?></h7>
+	                            <h7 class="modal-title"><?php echo translate('Upload Project Photos') ?></h7>
 	                            <button type="button" class="close" data-dismiss="modal" style="color:red">&times;</button>
 
 
@@ -189,7 +189,7 @@
 	                        <!--Modal header-->
 	                        <div class="modal-header">
 
-	                            <h7 class="modal-title"><?php echo translate('Upload Video') ?></h7>
+	                            <h7 class="modal-title"><?php echo translate('Upload Project Video') ?></h7>
 	                            <button type="button" class="close" data-dismiss="modal" style="color:red">&times;</button>
 	                        </div>
 	                        <!--Modal body-->
