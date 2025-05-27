@@ -950,7 +950,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <!-- <div class="col-md-6">
                                 <div class="form-group has-feedback">
                                     <label for="caste" class="text-uppercase c-gray-light"><?php echo translate('caste_/_sect')?> / <?=$this->lang->line('caste_sect'); ?></label>
                                     <?php
@@ -980,10 +980,10 @@
                                     <div class="help-block with-errors">
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                           </div>
 
-                          <div class="row">
+                          <!-- <div class="row">
                               <div class="col-md-6" id="">
                                   <div class="form-group has-feedback">
                                       <label for="sub_caste" class="text-uppercase c-gray-light"><?php echo translate('sub_caste')?> / <?=$this->lang->line('sub_caste'); ?></label>
@@ -1024,7 +1024,7 @@
                                       </div>
                                   </div>
                               </div>
-                          </div>
+                          </div> -->
 
                           <div class="row">
                               <div class="col-md-6">
@@ -1080,17 +1080,18 @@
                             </div>
                           </div>
 
-                          <div class="row">
+                          <!-- <div class="row">
                               <div class="col-md-6">
                                   <div class="form-group has-feedback">
                                       <label for="u_manglik" class="text-uppercase c-gray-light"><?php echo translate('dosha')?> / <?=$this->lang->line('dosha'); ?></label>
 
-                                     <!--  <select name="u_manglik" class="form-control form-control-sm selectpicker" data-placeholder="Choose a manglik" tabindex="2" data-hide-disabled="true">
+                                      // comment this select section
+                                     <select name="u_manglik" class="form-control form-control-sm selectpicker" data-placeholder="Choose a manglik" tabindex="2" data-hide-disabled="true">
                                           <option value="">Choose one</option>
                                           <option value="1" <?php //if($u_manglik==1){ echo 'selected';} ?>>Yes</option>
                                           <option value="2" <?php //if($u_manglik==2){ echo 'selected';} ?>>No</option>
                                           <option value="3" <?php //if($u_manglik==3){ echo 'selected';} ?>>I don't know</option>
-                                      </select> -->
+                                      </select> 
                                      <?php
                                           echo $this->Crud_model->select_html('decision', 'u_manglik', 'name', 'edit', 'form-control form-control-sm selectpicker', $spiritual_and_social_background_data[0]['u_manglik'], '', '', '');
                                       ?> 
@@ -1098,7 +1099,7 @@
                                       <div class="help-block with-errors"></div>
                                   </div>
                               </div>
-                          </div>
+                          </div>    -->
                         </div>
                       </div>
                       <?php } ?>

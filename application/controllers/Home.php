@@ -1878,6 +1878,7 @@ public function member_profile($para1 = "", $para2 = "")
             redirect(base_url().'home/login', 'refresh');
         }
         if ($para1 == "" || $para1 == "nav") {
+            // log_message('debug', 'Profile Page Accessed');
             $page_data['title'] = "Profile || ".$this->system_title;
             $page_data['top'] = "profile.php";
             $page_data['page'] = "profile/edit_full_profile";
