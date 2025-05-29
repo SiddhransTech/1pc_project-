@@ -69,7 +69,7 @@
                             <?php if (!empty($this->session->userdata['member_id'])) { ?>
                                 <div class="col-lg-2 col-md-2 col-sm-6 col-6 ml-auto">
                                     <div class="form-group has-feedback">
-                                        <label class="text-uppercase text-white">I'm Looking For A</label>
+                                        <!-- <label class="text-uppercase text-white">I'm Looking For A</label>
                                         <select name="gender" onChange="(this.value,this)" class="form-control form-control-sm selectpicker"   data-placeholder="Choose a gender" tabindex="2" data-hide-disabled="true" >
                                             <?php $member_gender = $this->db->get_where('member',array('member_id'=>$this->session->userdata['member_id']))->row()->gender; ?>
                                             <?php if($member_gender == '2') { ?>
@@ -77,7 +77,7 @@
                                             <?php } elseif ($member_gender == '1') { ?>
                                                 <option value="2" >Female</option>
                                             <?php } ?>
-                                        </select>
+                                        </select> -->
                                         <span class="help-block with-errors"></span>
                                     </div>
                                 </div>

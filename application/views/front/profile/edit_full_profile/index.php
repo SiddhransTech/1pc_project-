@@ -244,39 +244,44 @@
                                         </div>
                                     </div>
                                 </div>
-                              <div class="form-group row  ml-3">
+                              <!-- <div class="form-group row  ml-3">
                             <div class="col-md-6">
                                 <label>Area:</label>
                                 <p><?php echo isset($member->area) ? htmlspecialchars($member->area) : 'N/A'; ?></p>
                             </div>
+                            
                             <div class="col-md-6">
                                 <label>legion:</label>
                                 <p><?php echo isset($member->legion) ? htmlspecialchars($member->legion) : 'N/A'; ?></p>
                             </div>
                         </div>
-
-
                                     </div>
                                 </div>
-                            </div>
+                             -->
+                                <!-- <div class="row"> -->
+    <div class="col-md-6">
+        <div class="form-group has-feedback">
+            <label for="area" class="text-uppercase c-gray-light">Area:</label>
+            <input type="text" class="form-control no-resize" name="area" id="area" value="<?php echo isset($member->area) ? htmlspecialchars($member->area) : 'N/A'; ?>" readonly>
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block with-errors"></div>
+        </div>
+    </div>
+   </div>
+    </div>
 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group has-feedback">
-                                        <!-- <label for="on_behalf" class="text-uppercase c-gray-light"><?php echo translate('on_behalf')?> / <?=$this->lang->line('onbehalf'); ?><span class="text-danger">*</span></label>
-                                        <?php
-                                            if (!empty($form_contents)) {
-                                                echo $this->Crud_model->select_html('on_behalf', 'on_behalf', 'name', 'edit', 'form-control form-control-sm on_behalf selectpicker', $form_contents['on_behalf'], '', '', '');
-                                            }
-                                            else {
-                                                echo $this->Crud_model->select_html('on_behalf', 'on_behalf', 'name', 'edit', 'form-control form-control-sm on_behalf selectpicker', $basic_info_data[0]['on_behalf'], '', '', '');
-                                            }
-                                        ?>
-                                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                        <div class="help-block with-errors">
-                                        </div> -->
-                                    </div>
-                                </div>
+
+   <!-- <div class="row">
+    <div class="col-md-6">
+        <div class="form-group has-feedback">
+            <label for="legion" class="text-uppercase c-gray-light">Legion:</label>
+            <input type="text" class="form-control no-resize" name="legion" id="legion" value="<?php echo isset($member->legion) ? htmlspecialchars($member->legion) : 'N/A'; ?>" readonly>
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block with-errors"></div>
+        </div>
+    </div>
+</div>
+
                                 <div class="col-md-6">
                                     <div class="form-group has-feedback">
                                         <label for="mobile"  class="text-uppercase c-gray-light"><?php echo translate('mobile')?> / <?=$this->lang->line('mobile'); ?><span class="text-danger">*</span></label>
@@ -288,8 +293,30 @@
                                 </div>
                             </div>
 
-                        </div>
-                      </div>
+                        </div> -->
+                        <div class="row">
+    <div class="col-md-6">
+        <div class="form-group has-feedback">
+            <label for="legion" class="text-uppercase c-gray-light">Legion:</label>
+            <input type="text" class="form-control no-resize" name="legion" id="legion" value="<?php echo isset($member->legion) ? htmlspecialchars($member->legion) : 'N/A'; ?>" readonly>
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block with-errors"></div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group has-feedback">
+            <label for="mobile" class="text-uppercase c-gray-light">
+                <?php echo translate('mobile')?> / <?=$this->lang->line('mobile'); ?>
+                <span class="text-danger">*</span>
+            </label>
+            <input type="hidden" name="old_mobile" value="<?=$get_member[0]->mobile?>">
+            <input type="tel" class="form-control no-resize" id="mobile1" name="mobile" value="<?=$get_member[0]->mobile?>">
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block with-errors"></div>
+        </div>
+    </div>
+</div>
 
                       <?php
                         if ($this->db->get_where('frontend_settings', array('type' => 'present_address'))->row()->value == "yes") {
