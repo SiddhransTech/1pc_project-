@@ -37,9 +37,9 @@
         </b>
     </h3>
 
-    <button type="button" class="btn btn-styled btn-base-1 btn-shadow" onclick="openModal()">
+    <!-- <button type="button" class="btn btn-styled btn-base-1 btn-shadow" onclick="openModal()">
         Add Project
-    </button>
+    </button> -->
 </div>
 
   
@@ -66,7 +66,7 @@
                 <?php 
                     $images = json_decode($value->image, true);
                 ?>
-                <section class="swiper-js-container background-image-holder" data-holder-type="fullscreen" data-holder-offset=".navbar" style="height: 420px;">
+                <section class="swiper-js-container background-image-holder" data-holder-type="fullscreen" data-holder-offset=".navbar" style="height: 250px;">
                     <div class="swiper-container swiper-container-horizontal swiper-container-fade" data-swiper-autoplay="true" data-swiper-effect="fade" data-swiper-items="1" data-swiper-space-between="0" data-swiper-sm-items="1" data-swiper-sm-space-between="0" data-swiper-xs-items="1" data-swiper-xs-space-between="0">
                         <div class="swiper-wrapper" style="transition-duration: 0ms;">
                             <!-- Slide -->
@@ -136,33 +136,33 @@
         </div>
 
         <!-- FIXED MODAL IMPLEMENTATION -->
-        <div id="myModal" class="custom-modal">
+        <!-- <div id="myModal" class="custom-modal">
             <div class="custom-modal-content">
                 <span class="custom-close" onclick="closeModal()">&times;</span>
                 <h2 style="text-align:center;margin-bottom:20px;">Add Project</h2>
 
                 <form class="form-default" id="happy_story_form" method="post" action="<?=base_url()?>home/stories/add" role="form" enctype="multipart/form-data">
-                    
+                     -->
                     <!-- Title Field -->
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label class="control-label"><?php echo translate('story_title')?> <span class="text-danger">*</span></label>
                         <input type="text" name="title" class="form-control" required>
-                    </div>
+                    </div> -->
 
                     <!-- Description Field -->
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label class="control-label"><?php echo translate('story_details')?> <span class="text-danger">*</span></label>
                         <textarea class="form-control" name="description" rows="4" required></textarea>
-                    </div>
+                    </div> -->
 
                     <!-- Date Field -->
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label class="control-label"><?php echo translate('date')?> <span class="text-danger">*</span></label>
                         <input type="date" name="post_time" class="form-control" required>
-                    </div>
+                    </div> -->
 
                     <!-- Image Upload Section -->
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label class="control-label"><?php echo translate('upload_image')?> <span class="text-danger">*</span></label>
                         <div class="image-upload-container">
                             <div class="image-preview-section">
@@ -173,10 +173,10 @@
                                     </label>
                                     <input type="file" id="image_main" name="image[]" class="form-control imgInp" style="display: none" required accept="image/*">
                                 </div>
-                            </div>
+                            </div> -->
                             
                             <!-- Additional Image Section -->
-                            <div class="additional-image-section">
+                            <!-- <div class="additional-image-section">
                                 <button type="button" id="add_image_btn" class="btn btn-styled btn-sm btn-base-2" disabled>
                                     <?php echo translate('add_another_image')?>
                                 </button>
@@ -195,10 +195,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Video Upload Section -->
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label class="control-label"><?php echo translate('upload_video')?></label>
                         <button type="button" id="add_video_btn" class="btn btn-styled btn-sm btn-base-2">
                             <?php echo translate('upload_video')?>
@@ -210,10 +210,10 @@
                                 <option selected disabled><?php echo translate('choose_an_option'); ?></option>
                                 <option value="upload"><?php echo translate('upload_video') ?></option>
                                 <option value="share"><?php echo translate('share_link'); ?></option>
-                            </select>
+                            </select> -->
                             
                             <!-- Video Upload Option -->
-                            <div id="video_upload" style="display:none; margin-top: 10px;">
+                            <!-- <div id="video_upload" style="display:none; margin-top: 10px;">
                                 <label class="btn btn-styled btn-sm btn-base-2" for="videoInp">
                                     <?=translate('select_a_video')?>
                                 </label>
@@ -227,10 +227,10 @@
                                     <video controls id="upload_story_video" width="100%" style="max-width: 400px;">
                                     </video>
                                 </div>
-                            </div>
+                            </div> -->
                             
                             <!-- Video Share Link Option -->
-                            <div id="video_share" style="display:none; margin-top: 10px;">
+                            <!-- <div id="video_share" style="display:none; margin-top: 10px;">
                                 <label class="control-label"><?php echo translate('sharing_site')?></label>
                                 <select class="form-control site" name="site">
                                     <option selected disabled><?php echo translate('choose_an_option'); ?></option>
@@ -245,10 +245,10 @@
                                 <input type="hidden" value="" id="vl" name="vl" />
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Submit Buttons -->
-                    <div class="form-group text-center" style="margin-top: 30px;">
+                    <!-- <div class="form-group text-center" style="margin-top: 30px;">
                         <button type="button" class="btn btn-sm btn-base-1 z-depth-2-bottom" onclick="confirm_post_story()" style="margin-right: 10px;">
                             <?php echo translate('apply')?>
                         </button>
@@ -261,7 +261,7 @@
                     </div>
                 </form>
             </div>
-        </div>
+        </div> -->
 
     <?php } ?>
 
