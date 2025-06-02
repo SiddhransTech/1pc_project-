@@ -14,12 +14,18 @@
 							<span class="menu-title"><?php echo translate('dashboard')?></span>
 						</a>
 					</li>
-					<li <?php if($page_name == "area_legion"){ ?> class="active-link" <?php } ?>>
-  <a href="<?= base_url() ?>admin/area_legion">
-    <i class="fa fa-globe"></i>
-    <span class="menu-title"><?php echo translate('area_&_legions'); ?></span>
-  </a>
-</li>
+					
+
+					<?php
+					if ($this->Crud_model->admin_permission('area_legion')) { ?>
+					<li <?php if($page_name=="area_legion"){ ?> class="active-link" <?php } ?>>
+						<a href="<?=base_url()?>admin/area_legion">
+							<i class="fa fa-globe"></i>
+							<span class="menu-title"><?php echo translate('area_&_legions')?></span>
+						</a>
+					</li>
+					<?php } ?>
+					
 
 
 					<?php
@@ -85,6 +91,7 @@
 							</ul>
 						</li>
 					<?php } ?>
+
 					<?php
 					if ($this->Crud_model->admin_permission('premium_plans')){
                             ?>
@@ -94,6 +101,7 @@
 							<span class="menu-title"><?php echo translate('membership_fees')?></span>
 						</a>
 					</li>
+
 					<?php }
 						if ($this->Crud_model->admin_permission('channel_partner')){
                             ?>
