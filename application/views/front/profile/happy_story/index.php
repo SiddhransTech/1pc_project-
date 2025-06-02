@@ -1,3 +1,4 @@
+
 <?php 
     if ($this->db->get_where("member",array("member_id" => $this->session->userdata('member_id')))->row()->membership == 1) 
     {
@@ -22,31 +23,58 @@
         <?php
             $story_exist = $this->db->get_where("happy_story",array("posted_by" => $this->session->userdata('member_id')))->result();
         ?>
-        <div class="card-title">
+        <!-- <div class="card-title">
             <h3 class="heading heading-6 strong-500">
                 <b><?php 
                     if ($story_exist) {
                         echo translate('your_story');
                     }
                     else {
-                        echo translate('upload_your_story');      
+                        echo translate('Projects');      
                     }
                 ?></b>
             </h3>
             <?php
+            
             if ($story_exist) {
                 if ($this->db->get_where("happy_story",array("posted_by" => $this->session->userdata('member_id')))->row()->approval_status == "1") {
             ?>
-                    <span class="badge badge-md badge-pill bg-success"><?=translate('approved')?></span>
+            
+                 
             <?php
                 }
                 else{
+                   
             ?>
                     <span class="badge badge-md badge-pill bg-danger"><?=translate('not_approved')?></span>
             <?php
                 }
             }
-            ?>
+            ?> -->
+            <div class="card-title">
+    <div class="d-flex justify-content-between align-items-center">
+        <h3 class="heading heading-6 strong-500 mb-0">
+            <b>
+                <?php 
+                    if ($story_exist) {
+                        echo translate('your_projects');
+                    } else {
+                        echo translate('Projects');      
+                    }
+                ?>
+            </b>
+        </h3>
+        <!-- <a href="<?= base_url('') ?>" class="btn btn-sm btn-base-1 btn-shadow">
+            <?= translate('add_project') ?>
+        </a>
+         -->
+        <!-- <a href="javascript:void(0)" onclick="openModal()" class="btn btn-sm btn-base-1 btn-shadow">
+    <?= translate('add_project') ?>
+</a> -->
+
+
+    </div>
+</div>
         </div>
         <div class="card-body">
             <?php
@@ -139,7 +167,11 @@
             }
             else {
             ?>
-                <form class="form-default col-12" id="happy_story_form" method="post" action="<?=base_url()?>home/stories/add" role="form" enctype="multipart/form-data">
+            <button onclick="openProjectModal()" class="btn btn-success">Add New Project</button>
+            <div id="addProjectModal" class="custom-modal">
+            <div class="custom-modal-content">
+            <span class="custom-close" onclick="closeModal()">&times;</span>
+                <!-- <form class="form-default col-12" id="happy_story_form" method="post" action="<?=base_url()?>home/stories" role="form" enctype="multipart/form-data"> -->
                     <div class="form-group has-feedback col-10 ml-auto mr-auto">
                         <label class="control-label"><?php echo translate('story_title')?> <span class="text-danger">*</span></label>
                         <input type="text" name="title" class="form-control" required>
@@ -241,6 +273,8 @@
             <?php
             }
             ?>
+            </div>
+</div>
         </div>
     <?php
     }
@@ -404,4 +438,22 @@
         var inputNode = document.querySelector('.videoInp');
         inputNode.addEventListener('change', playSelectedFile, false);
     })();
+</script>
+<script>
+function openProjectModal() {
+    document.getElementById("addProjectModal").style.display = "block";
+}
+
+function closeProjectModal() {
+    document.getElementById("addProjectModal").style.display = "none";
+    document.getElementById("happy_story_form").reset();
+}
+
+// Optional: close on background click
+window.onclick = function(event) {
+    const modal = document.getElementById("addProjectModal");
+    if (event.target === modal) {
+        closeProjectModal();
+    }
+};
 </script>

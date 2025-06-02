@@ -10,9 +10,9 @@
             <th>
                 <?php echo translate('age')?>
             </th>
-            <th>
+            <!-- <th>
                 <?php echo translate('religion')?>
-            </th>
+            </th> -->
             <th>
                 <?php echo translate('location')?>
             </th>
@@ -90,9 +90,9 @@
                     <td>
                         <?=(date('Y') - date('Y', $member->date_of_birth))?>
                     </td>
-                    <td>
+                    <!-- <td>
                         <?=$this->Crud_model->get_type_name_by_id('religion', $spiritual_and_social_background[0]['religion']);?>
-                    </td>
+                    </td> -->
                     <td>
                         <?php if($present_address[0]['country']){ echo $this->Crud_model->get_type_name_by_id('state', $present_address[0]['state']).', '.$this->Crud_model->get_type_name_by_id('country', $present_address[0]['country']);}?>
                     </td>
