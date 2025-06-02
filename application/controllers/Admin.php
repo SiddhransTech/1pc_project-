@@ -3537,58 +3537,84 @@ public function delete_area()
 	}
 	public function add_story_details()
 	{
- 		$data=array();
+		$data = array();
 		$data['title'] = $this->input->post('story_name');
-        $data['date'] = date('Y-m-d',strtotime($this->input->post('dated')));
-        $data['member_name'] = $this->input->post('member_name');
-        $data['posted_by'] = $this->input->post('member_name');
-        $data['partner_name'] = $this->input->post('partner_name');
+		$data['date'] = date('Y-m-d', strtotime($this->input->post('dated')));
+		$data['member_name'] = $this->input->post('member_name');
+		$data['posted_by'] = $this->input->post('member_name');
+		$data['partner_name'] = $this->input->post('partner_name');
+	
 		error_reporting(E_ALL);
-        ini_set('display_errors',1);
+		ini_set('display_errors', 1);
+	
 		$config = $this->set_upload_happy_story_image();
 		$this->load->library('upload');
 		$this->upload->initialize($config);
-
-		if ($_FILES['story_photo']['name'] !== '') {
-						$id = uniqid();
-						$path = $_FILES['story_photo']['name'];
-						$ext = '.' . pathinfo($path, PATHINFO_EXTENSION);
-						if ($ext == ".jpg" || $ext == ".JPG" || $ext == ".jpeg" || $ext == ".JPEG" || $ext == ".png" || $ext == ".PNG") {
-							$this->Crud_model->file_up("story_photo", "happy_story", $id, '', '', $ext);
-							$images[] = array('image' => 'happy_story_' . $id . $ext, 'thumb' => 'happy_story_' . $id . '_thumb' . $ext);
-							$data['image'] = json_encode($images);
-						} else {
-							$this->session->set_flashdata('alert', 'failed_image');
-							redirect(base_url() . 'admin/stories', 'refresh');
-						}
-					}
- 
-
-/*
-
-
+	
 		if (!empty($_FILES['story_photo']['name'])) {
-			if (!$this->upload->do_upload('story_photo')) {
-				$error = $this->upload->display_errors();
-				
-				redirect('admin/stories');
+			$id = uniqid();
+			$path = $_FILES['story_photo']['name'];
+			$ext = '.' . pathinfo($path, PATHINFO_EXTENSION);
+			$allowed_ext = [".jpg", ".jpeg", ".png", ".JPG", ".JPEG", ".PNG"];
+	
+			if (in_array($ext, $allowed_ext)) {
+				// Save original image
+				$image_name = 'happy_story_' . $id . $ext;
+				$config['file_name'] = $image_name;
+	
+				if (!$this->upload->do_upload('story_photo')) {
+					$this->session->set_flashdata('alert', 'failed_upload');
+					redirect(base_url('admin/stories'), 'refresh');
+				}
+	
+				// Get upload data
+				$upload_data = $this->upload->data();
+				$source_image = $upload_data['full_path'];
+	
+				// Now generate the thumbnail
+				$thumb_name = 'happy_story_' . $id . '_thumb' . $ext;
+				$thumb_path = $upload_data['file_path'] . $thumb_name;
+	
+				$this->load->library('image_lib');
+	
+				$thumb_config = array(
+					'image_library' => 'gd2',
+					'source_image'  => $source_image,
+					'new_image'     => $thumb_path,
+					'maintain_ratio'=> TRUE,
+					'width'         => 200,
+					'height'        => 200
+				);
+	
+				$this->image_lib->initialize($thumb_config);
+	
+				if (!$this->image_lib->resize()) {
+					log_message('error', 'Thumbnail creation failed: ' . $this->image_lib->display_errors());
+					$this->image_lib->clear();
+				}
+	
+				$images[] = array(
+					'image' => $image_name,
+					'thumb' => $thumb_name
+				);
+				$data['image'] = json_encode($images);
 			} else {
-				$data['image'] = $this->upload->data('file_name');
+				$this->session->set_flashdata('alert', 'invalid_image_type');
+				redirect(base_url('admin/stories'), 'refresh');
 			}
-		}*/
-       // print_r($data);exit;
+		}
+	
+		// Insert into DB
 		$this->db->insert('happy_story', $data);
 		$result = $this->db->affected_rows();
 		if ($result == true) {
 			$this->session->set_flashdata('success', 'added successfully');
-			redirect('admin/stories');
 		} else {
 			$this->session->set_flashdata('failed', 'Failed');
-			redirect('admin/stories');
 		}
-        
+		redirect('admin/stories');
 	}
-
+	
 	function send_sms($para1 = "", $para2 = "")
 	{
 		if ($this->admin_permission() == FALSE) {
