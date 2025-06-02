@@ -1,3 +1,4 @@
+
 <?php 
     if ($this->db->get_where("member",array("member_id" => $this->session->userdata('member_id')))->row()->membership == 1) 
     {
@@ -665,4 +666,22 @@ function preview(v_link) {
     
     $(document).on('change', '.videoInp', playSelectedFile);
 })();
+</script>
+<script>
+function openProjectModal() {
+    document.getElementById("addProjectModal").style.display = "block";
+}
+
+function closeProjectModal() {
+    document.getElementById("addProjectModal").style.display = "none";
+    document.getElementById("happy_story_form").reset();
+}
+
+// Optional: close on background click
+window.onclick = function(event) {
+    const modal = document.getElementById("addProjectModal");
+    if (event.target === modal) {
+        closeProjectModal();
+    }
+};
 </script>

@@ -10,7 +10,8 @@
 </div>
 <div class="card-body py-5">
 	<p class="text-center">
-		<b><?php echo translate('to_colse_your_account_we_want_some_informations._please_answer_the_question_below') ?></b>
+		<b><?php echo translate('Thank you for choosing Senior Chamber International. We truly appreciate the time you have spent with us.
+If you wish to proceed with closing your account, please confirm your decision below.') ?></b>
 	</p>
 	<?php
         $story_exist = $this->db->get_where("happy_story",array("posted_by" => $this->session->userdata('member_id')))->num_rows();
@@ -56,7 +57,7 @@
 <?php } ?>
 	<div id="confirm_view">
 		<p class="text-center">
-			<?php echo translate('do_you_realy_want_to_close_your_account?');?>
+			<?php echo translate('Are you sure you want to permanently close your account with Senior Chamber International?');?>
 		</p>
 		<form class="form-default text-center" data-toggle="validator" role="form">
 	        <div class="filter-radio">

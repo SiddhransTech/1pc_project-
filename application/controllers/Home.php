@@ -2911,85 +2911,124 @@ public function member_profile($para1 = "", $para2 = "")
             redirect(base_url().'home/login', 'refresh');
         }
 
-        if ($para1 == "add") {
-            if(!demo()){
-                $member_id = $this->session->userdata('member_id');
-                $photo_gallery_amount = $this->db->get_where('member', array('member_id' => $member_id))->row()->photo_gallery;
-                if ($photo_gallery_amount > 0) {
-                    $get_gallery = $this->db->get_where('member', array('member_id' => $member_id))->row()->gallery;
-                    $gallery_data = json_decode($get_gallery, true);
-                    //print_r($gallery_data);
-                    $max_index = 0;
-                    $new_index = 0;
-                    if (!empty($gallery_data)) {
-                        foreach ($gallery_data as $gallery_val) {
-                            if($gallery_val['index'] > $max_index) {
-                                $max_index = $gallery_val['index'];
-                            }
-                        }
-                        $new_index = $max_index + 1;
+if ($para1 == "add") {
+    log_message('info', '== Gallery Add Invoked ==');
+
+    $member_id = $this->session->userdata('member_id');
+    log_message('info', 'Member ID: ' . $member_id);
+
+    if (!demo()) {
+        log_message('info', 'Not in demo mode: proceeding');
+
+        $member_data = $this->db->get_where('member', array('member_id' => $member_id))->row();
+        $photo_gallery_amount = $member_data->photo_gallery;
+        $get_gallery = $member_data->gallery;
+
+        log_message('info', 'Photo gallery remaining: ' . var_export($photo_gallery_amount, true));
+
+        // Treat null as unlimited uploads
+        $allow_upload = ($photo_gallery_amount === NULL || $photo_gallery_amount > 0);
+
+        if ($allow_upload) {
+            log_message('info', 'Photo gallery slot available or unlimited (NULL)');
+
+            $gallery_data = json_decode($get_gallery, true);
+            log_message('info', 'Current gallery data: ' . print_r($gallery_data, true));
+
+            $max_index = 0;
+            $new_index = 0;
+
+            if (!empty($gallery_data)) {
+                foreach ($gallery_data as $gallery_val) {
+                    if ($gallery_val['index'] > $max_index) {
+                        $max_index = $gallery_val['index'];
                     }
-
-                    if ($_FILES['image']['name'] !== '') {
-                        $path = $_FILES['image']['name'];
-                        $ext = '.' . pathinfo($path, PATHINFO_EXTENSION);
-                        if ($ext==".jpg" || $ext==".JPG" || $ext==".jpeg" || $ext==".JPEG" || $ext==".png" || $ext==".PNG") {
-                            move_uploaded_file($_FILES['image']['tmp_name'], 'uploads/gallery_image/gallery_'.$member_id.'_'.$new_index.$ext);
-
-                            $file_name = 'gallery_'.$member_id.'_'.$new_index.$ext;
-
-                            if (!empty($gallery_data)) {
-                                $gallery_data[] = array( 'index'    =>  $new_index,
-                                                        'title'     =>  $this->input->post('title'),
-                                                        'image'     =>  $file_name
-                                                );
-                                // print_r($gallery_data);
-                                $data['gallery'] = json_encode($gallery_data);
-                                // echo 'in if';
-                            } else {
-                                $gallery[] = array( 'index'     =>  $new_index,
-                                                'title'     =>  $this->input->post('title'),
-                                                'image'     =>  $file_name
-                                        );
-                                $data['gallery'] = json_encode($gallery);
-                                // print_r($data['gallery']);
-                                // echo '<br>in else';
-                            }
-
-                            $this->db->where('member_id', $member_id);
-                            $result = $this->db->update('member', $data);
-                            recache();
-
-                            // $this->session->set_flashdata('alert', 'edit_image');
-                        }
-                        else {
-                            $this->session->set_flashdata('alert', 'failed');
-                        }
-                    }
-
-                    if ($result) {
-                        $data1['photo_gallery'] = $photo_gallery_amount - 1;
-                        $this->db->where('member_id', $member_id);
-                        $this->db->update('member', $data1);
-                        recache();
-
-                        $this->session->set_flashdata('alert', 'add');
-                    }
-                    else {
-                        $this->session->set_flashdata('alert', 'failed_add');
-                    }
-                    $this->session->set_flashdata('alert', 'add_gallery');
-                    redirect(base_url().'home/profile', 'refresh');
-                } else {
-                    redirect(base_url().'home/profile', 'refresh');
                 }
+                $new_index = $max_index + 1;
             }
-            else {
-                $this->session->set_flashdata('alert', 'add_gallery');
-                redirect(base_url().'home/profile', 'refresh');
+            log_message('info', 'Calculated new index: ' . $new_index);
+
+            log_message('info', '$_FILES: ' . print_r($_FILES, true));
+
+            if (isset($_FILES['image']) && $_FILES['image']['name'] !== '') {
+                log_message('info', 'File uploaded with name: ' . $_FILES['image']['name']);
+
+                $path = $_FILES['image']['name'];
+                $ext = '.' . pathinfo($path, PATHINFO_EXTENSION);
+                $ext_lower = strtolower($ext);
+                log_message('info', 'Extracted extension: ' . $ext_lower);
+
+                if (in_array($ext_lower, ['.jpg', '.jpeg', '.png'])) {
+                    $file_name = 'gallery_' . $member_id . '_' . $new_index . $ext_lower;
+                    $upload_path = 'uploads/gallery_image/' . $file_name;
+
+                    if (move_uploaded_file($_FILES['image']['tmp_name'], $upload_path)) {
+                        log_message('info', 'Image uploaded successfully to: ' . $upload_path);
+                    } else {
+                        log_message('error', 'Failed to move uploaded file to: ' . $upload_path);
+                    }
+
+                    if (!empty($gallery_data)) {
+                        $gallery_data[] = array(
+                            'index' => $new_index,
+                            'title' => $this->input->post('title'),
+                            'image' => $file_name
+                        );
+                        $data['gallery'] = json_encode($gallery_data);
+                        log_message('info', 'Updated gallery data (appended): ' . $data['gallery']);
+                    } else {
+                        $gallery[] = array(
+                            'index' => $new_index,
+                            'title' => $this->input->post('title'),
+                            'image' => $file_name
+                        );
+                        $data['gallery'] = json_encode($gallery);
+                        log_message('info', 'Initialized gallery data: ' . $data['gallery']);
+                    }
+
+                    $this->db->where('member_id', $member_id);
+                    $result = $this->db->update('member', $data);
+                    recache();
+                    log_message('info', 'Gallery DB update ' . ($result ? 'successful' : 'failed') . ' for member_id: ' . $member_id);
+                } else {
+                    $this->session->set_flashdata('alert', 'failed');
+                    log_message('error', 'Invalid image extension: ' . $ext);
+                }
+            } else {
+                log_message('error', 'No file uploaded or file name empty');
             }
 
+            if (isset($result) && $result) {
+                // Only decrement if it’s not NULL
+                if ($photo_gallery_amount !== NULL) {
+                    $data1['photo_gallery'] = $photo_gallery_amount - 1;
+                    $this->db->where('member_id', $member_id);
+                    $this->db->update('member', $data1);
+                    log_message('info', 'Decremented photo_gallery count for member_id: ' . $member_id);
+                    recache();
+                }
+                $this->session->set_flashdata('alert', 'add');
+            } else {
+                $this->session->set_flashdata('alert', 'failed_add');
+                log_message('error', 'Image not added to DB or failed update');
+            }
+
+            $this->session->set_flashdata('alert', 'add_gallery');
+            redirect(base_url() . 'home/profile', 'refresh');
+        } else {
+            log_message('info', 'No photo gallery slots left for member_id: ' . $member_id);
+            redirect(base_url() . 'home/profile', 'refresh');
         }
+    } else {
+        log_message('info', 'Gallery add skipped due to demo mode.');
+        $this->session->set_flashdata('alert', 'add_gallery');
+        redirect(base_url() . 'home/profile', 'refresh');
+    }
+}
+
+
+
+
     }
 
     function delete_gallery_img($index) {

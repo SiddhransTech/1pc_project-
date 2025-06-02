@@ -150,16 +150,16 @@
 
 	            <?php if ($member_data['membership'] == '2') : ?>
 	                <div class="profile-connect">
-	                    <h2 class="heading heading-5 strong-400"><?php echo translate('Project_image_and_Video') ?></h2>
+	                    <!-- <h2 class="heading heading-5 strong-400"><?php echo translate('Project_image_and_Video') ?></h2> -->
 	                </div>
-	                <div class="row">
+	                <!-- <div class="row">
 	                    <div class="col-md-6">
 	                        <a href="#" id="demo-dt-delete-btn" data-target='#kundali_modal' data-toggle='modal' class="btn btn-primary btn-md add-tooltip float-right" data-toggle="tooltip" data-placement="top" title="Kundali" onclick='view_kundali(<?php echo $member_data['member_id']; ?>)'><i class="fa fa-bullseye"></i></a>
 	                    </div>
 	                    <div class="col-md-6">
 	                        <a href="#" id="demo-dt-delete-btn" data-target='#video_modal' data-toggle='modal' class="btn btn-success btn-md add-tooltip float-left" data-toggle="tooltip" data-placement="top" title="Video" onclick='view_video(<?php echo $member_data['member_id']; ?>)'><i class="fa fa-play-circle-o"></i></a>
 	                    </div>
-	                </div>
+	                </div> -->
 	            <?php endif; ?>
 
 	            <div class="modal fade" id="kundali_modal" role="dialog" tabindex="-1" aria-labelledby="kundali_modal" aria-hidden="true">
