@@ -244,13 +244,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group has-feedback">
-                                        <label for="area" class="text-uppercase c-gray-light"><?php echo translate('area')?> / <?=$this->lang->line('area'); ?></label>
-                                        <input type="text" class="form-control no-resize" name="area" value="<?php if(!empty($form_contents)){echo $form_contents['area'];} else{echo $basic_info_data[0]['area'];}?>">
-                                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                        <div class="help-block with-errors">
-                                        </div>
+                              <div class="form-group row  ml-3">
+                            <div class="col-md-6">
+                                <label>Area:</label>
+                                <p><?php echo isset($member->area) ? htmlspecialchars($member->area) : 'N/A'; ?></p>
+                            </div>
+                            <div class="col-md-6">
+                                <label>legion:</label>
+                                <p><?php echo isset($member->legion) ? htmlspecialchars($member->legion) : 'N/A'; ?></p>
+                            </div>
+                        </div>
+
+
                                     </div>
                                 </div>
                             </div>
@@ -258,7 +263,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group has-feedback">
-                                        <label for="on_behalf" class="text-uppercase c-gray-light"><?php echo translate('on_behalf')?> / <?=$this->lang->line('onbehalf'); ?><span class="text-danger">*</span></label>
+                                        <!-- <label for="on_behalf" class="text-uppercase c-gray-light"><?php echo translate('on_behalf')?> / <?=$this->lang->line('onbehalf'); ?><span class="text-danger">*</span></label>
                                         <?php
                                             if (!empty($form_contents)) {
                                                 echo $this->Crud_model->select_html('on_behalf', 'on_behalf', 'name', 'edit', 'form-control form-control-sm on_behalf selectpicker', $form_contents['on_behalf'], '', '', '');
@@ -269,7 +274,7 @@
                                         ?>
                                         <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                         <div class="help-block with-errors">
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -428,14 +433,14 @@
                             </div>
                             
                             <div class="row">
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <div class="form-group has-feedback">
                                         <label for="annual_income" class="text-uppercase c-gray-light"><?php echo translate('annual_income')?> / <?=$this->lang->line('annual_income'); ?></label>
                                         <input type="text" class="form-control no-resize" name="annual_income" value="<?php if(!empty($form_contents)){echo $form_contents['annual_income'];} else{echo $education_and_career_data[0]['annual_income'];}?>">
                                         <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                         <div class="help-block with-errors">
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
 
@@ -909,8 +914,8 @@
                           <div class="row">
                               <div class="col-md-6">
                                   <div class="form-group has-feedback">
-                                      <label for="immigration_status" class="text-uppercase c-gray-light"><?php echo translate('immigration_status')?> / <?=$this->lang->line('immigration_status'); ?></label>
-                                      <input type="text" class="form-control no-resize" name="immigration_status" value="<?php if(!empty($form_contents)){echo $form_contents['immigration_status'];} else{echo $residency_information_data[0]['immigration_status'];}?>">
+                                      <!-- <label for="immigration_status" class="text-uppercase c-gray-light"><?php echo translate('immigration_status')?> / <?=$this->lang->line('immigration_status'); ?></label>
+                                      <input type="text" class="form-control no-resize" name="immigration_status" value="<?php if(!empty($form_contents)){echo $form_contents['immigration_status'];} else{echo $residency_information_data[0]['immigration_status'];}?>"> -->
                                       <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                       <div class="help-block with-errors">
                                       </div>
@@ -922,187 +927,7 @@
                       </div>
                       <?php } ?>
 
-                      <?php
-                        if ($this->db->get_where('frontend_settings', array('type' => 'spiritual_and_social_background'))->row()->value == "yes") {
-                      ?>
-                      <div class="feature feature--boxed-border feature--bg-1 pt-3 pb-0 pl-3 pr-3 mb-3 border_top2x">
-                        <div id="edit_spiritual_and_social_background">
-                          <div class="card-inner-title-wrapper  pt-0">
-                              <h3 class="card-inner-title pull-left">
-                              <?php echo translate('spiritual_and_social_background')?> / <?=$this->lang->line('spiritual_social_background'); ?> </h3>
-                          </div>
-                          <div class='clearfix'></div>
-                            
-                          <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group has-feedback">
-                                    <label for="religion" class="text-uppercase c-gray-light"><?php echo translate('religion')?> / <?=$this->lang->line('religion'); ?><span class="text-danger">*</span></label>
-                                    <?php
-                                        if (!empty($form_contents)) {
-                                            echo $this->Crud_model->select_html('religion', 'religion', 'name', 'edit', 'form-control form-control-sm selectpicker present_religion_f_edit', $form_contents['religion'], '', '', '');
-                                        }
-                                        else {
-                                            echo $this->Crud_model->select_html('religion', 'religion', 'name', 'edit', 'form-control form-control-sm selectpicker present_religion_f_edit', $spiritual_and_social_background_data[0]['religion'], '', '', '');
-                                        }
-                                    ?>
-                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                    <div class="help-block with-errors">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="col-md-6">
-                                <div class="form-group has-feedback">
-                                    <label for="caste" class="text-uppercase c-gray-light"><?php echo translate('caste_/_sect')?> / <?=$this->lang->line('caste_sect'); ?></label>
-                                    <?php
-                                        if (!empty($spiritual_and_social_background_data[0]['religion'])) {
-                                            if (!empty($spiritual_and_social_background_data[0]['caste'])) {
-                                                echo $this->Crud_model->select_html('caste', 'caste', 'caste_name', 'edit', 'form-control form-control-sm selectpicker present_caste_f_edit', $spiritual_and_social_background_data[0]['caste'], 'religion_id', $spiritual_and_social_background_data[0]['religion'], '');
-                                            } else {
-                                                echo $this->Crud_model->select_html('caste', 'caste', 'caste_name', 'edit', 'form-control form-control-sm selectpicker present_caste_f_edit', '', 'religion_id', $spiritual_and_social_background_data[0]['religion'], '');
-                                            }
-                                        }
-                                        elseif (!empty($form_contents['religion'])){
-                                            if (!empty($form_contents['caste'])) {
-                                                echo $this->Crud_model->select_html('caste', 'caste', 'caste_name', 'edit', 'form-control form-control-sm selectpicker present_caste_f_edit', $form_contents['caste'], 'religion_id', $form_contents['religion'], '');
-                                            } else {
-                                                echo $this->Crud_model->select_html('caste', 'caste', 'caste_name', 'edit', 'form-control form-control-sm selectpicker present_caste_f_edit', '', 'religion_id', $form_contents['religion'], '');
-                                            }
-                                        }
-                                        else {
-                                        ?>
-                                            <select class="form-control form-control-sm selectpicker present_caste_f_edit" name="caste">
-                                                <option value=""><?php echo translate('choose_a_religion_first')?></option>
-                                            </select>
-                                        <?php
-                                        }
-                                    ?>
-                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                    <div class="help-block with-errors">
-                                    </div>
-                                </div>
-                            </div> -->
-                          </div>
-
-                          <!-- <div class="row">
-                              <div class="col-md-6" id="">
-                                  <div class="form-group has-feedback">
-                                      <label for="sub_caste" class="text-uppercase c-gray-light"><?php echo translate('sub_caste')?> / <?=$this->lang->line('sub_caste'); ?></label>
-                                      <?php
-                                          if (!empty($spiritual_and_social_background_data[0]['caste'])) {
-                                              if (!empty($spiritual_and_social_background_data[0]['sub_caste'])) {
-                                                  echo $this->Crud_model->select_html('sub_caste', 'sub_caste', 'sub_caste_name', 'edit', 'form-control form-control-sm selectpicker present_sub_caste_f_edit', $spiritual_and_social_background_data[0]['sub_caste'], 'caste_id', $spiritual_and_social_background_data[0]['caste'], '');
-                                              } else {
-                                                  echo $this->Crud_model->select_html('sub_caste', 'sub_caste', 'sub_caste_name', 'edit', 'form-control form-control-sm selectpicker present_sub_caste_f_edit', '', 'caste_id', $spiritual_and_social_background_data[0]['caste'], '');
-                                              }
-                                          }
-                                          elseif (!empty($form_contents['caste'])){
-                                              if (!empty($form_contents['sub_caste'])) {
-                                                  echo $this->Crud_model->select_html('sub_caste', 'sub_caste', 'sub_caste_name', 'edit', 'form-control form-control-sm selectpicker present_sub_caste_f_edit', $form_contents['sub_caste'], 'caste_id', $form_contents['caste'], '');
-                                              } else {
-                                                  echo $this->Crud_model->select_html('sub_caste', 'sub_caste', 'sub_caste_name', 'edit', 'form-control form-control-sm selectpicker present_sub_caste_f_edit', '', 'caste_id', $form_contents['caste'], '');
-                                              }
-                                          }
-                                          else {
-                                          ?>
-                                              <select class="form-control form-control-sm selectpicker present_sub_caste_f_edit" name="sub_caste">
-                                                  <option value=""><?php echo translate('choose_a_caste_first')?></option>
-                                              </select>
-                                          <?php
-                                          }
-                                      ?>
-                                      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                      <div class="help-block with-errors">
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="form-group has-feedback">
-                                      <label for="ethnicity" class="text-uppercase c-gray-light"><?php echo translate('kula')?> / <?=$this->lang->line('kula'); ?></label>
-                                      <input type="text" class="form-control no-resize" name="ethnicity" value="<?php if(!empty($form_contents)){echo $form_contents['ethnicity'];} else{echo $spiritual_and_social_background_data[0]['ethnicity'];}?>">
-                                      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                      <div class="help-block with-errors">
-                                      </div>
-                                  </div>
-                              </div>
-                          </div> -->
-
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="form-group has-feedback">
-                                      <label for="personal_value" class="text-uppercase c-gray-light"><?php echo translate('personal_value')?> / <?=$this->lang->line('personal_value'); ?></label>
-                                      <input type="text" class="form-control no-resize" name="personal_value" value="<?php if(!empty($form_contents)){echo $form_contents['personal_value'];} else{echo $spiritual_and_social_background_data[0]['personal_value'];}?>" pattern="[a-zA-Z, ]{2,60}" title="Enter Alphabets Only">
-                                      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                      <div class="help-block with-errors">
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="form-group has-feedback">
-                                      <label for="family_value" class="text-uppercase c-gray-light"><?php echo translate('family_value')?> / <?=$this->lang->line('family_value'); ?></label>
-                                      <?php
-                                          if (!empty($form_contents)) {
-                                              echo $this->Crud_model->select_html('family_value', 'family_value', 'name', 'edit', 'form-control form-control-sm selectpicker present_family_value_f_edit', $form_contents['family_value'], '', '', '');
-                                          }
-                                          else {
-                                              echo $this->Crud_model->select_html('family_value', 'family_value', 'name', 'edit', 'form-control form-control-sm selectpicker present_family_value_f_edit', $spiritual_and_social_background_data[0]['family_value'], '', '', '');
-                                          }
-                                      ?>
-                                      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                      <div class="help-block with-errors">
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-
-                          <div class="row">
-                            <div class="col-md-6">
-                              <div class="form-group has-feedback">
-                                  <label for="community_value" class="text-uppercase c-gray-light"><?php echo translate('community_value')?> / <?=$this->lang->line('community_value'); ?></label>
-                                  <input type="text" class="form-control no-resize" name="community_value" value="<?php if(!empty($form_contents)){echo $form_contents['community_value'];} else{echo $spiritual_and_social_background_data[0]['community_value'];}?>">
-                                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                  <div class="help-block with-errors"></div>
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="form-group has-feedback">
-                                <label for="family_status" class="text-uppercase c-gray-light"><?php echo translate('family_status')?> / <?=$this->lang->line('family_status'); ?></label>
-                                <?php
-                                    if (!empty($form_contents)) {
-                                        echo $this->Crud_model->select_html('family_status', 'family_status', 'name', 'edit', 'form-control form-control-sm selectpicker present_family_status_f_edit', $form_contents['family_status'], '', '', '');
-                                    }
-                                    else {
-                                        echo $this->Crud_model->select_html('family_status', 'family_status', 'name', 'edit', 'form-control form-control-sm selectpicker present_family_status_f_edit', $spiritual_and_social_background_data[0]['family_status'], '', '', '');
-                                    }
-                                ?>
-                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                <div class="help-block with-errors"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <!-- <div class="row">
-                              <div class="col-md-6">
-                                  <div class="form-group has-feedback">
-                                      <label for="u_manglik" class="text-uppercase c-gray-light"><?php echo translate('dosha')?> / <?=$this->lang->line('dosha'); ?></label>
-
-                                      // comment this select section
-                                     <select name="u_manglik" class="form-control form-control-sm selectpicker" data-placeholder="Choose a manglik" tabindex="2" data-hide-disabled="true">
-                                          <option value="">Choose one</option>
-                                          <option value="1" <?php //if($u_manglik==1){ echo 'selected';} ?>>Yes</option>
-                                          <option value="2" <?php //if($u_manglik==2){ echo 'selected';} ?>>No</option>
-                                          <option value="3" <?php //if($u_manglik==3){ echo 'selected';} ?>>I don't know</option>
-                                      </select> 
-                                     <?php
-                                          echo $this->Crud_model->select_html('decision', 'u_manglik', 'name', 'edit', 'form-control form-control-sm selectpicker', $spiritual_and_social_background_data[0]['u_manglik'], '', '', '');
-                                      ?> 
-                                      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                      <div class="help-block with-errors"></div>
-                                  </div>
-                              </div>
-                          </div>    -->
-                        </div>
-                      </div>
-                      <?php } ?>
+                     
 
 
                       <?php
@@ -1388,7 +1213,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group has-feedback">
                                         <label for="brother_sister" class="text-uppercase c-gray-light"><?php echo translate('brother_/_sister')?> / <?=$this->lang->line('brother_sister'); ?></label>
@@ -1398,7 +1223,47 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+                            <div class="row">
+    <!-- Sister Field -->
+    <div class="col-md-6">
+        <div class="form-group has-feedback">
+            <label for="sister" class="text-uppercase c-gray-light">
+                <?php echo translate('sister')?>
+            </label>
+            <input type="text" class="form-control no-resize" name="sister" 
+                value="<?php 
+                    if (!empty($form_contents)) {
+                        echo $form_contents['sister'];
+                    } else {
+                        echo $family_info_data[0]['sister'];
+                    } 
+                ?>">
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block with-errors"></div>
+        </div>
+    </div>
+
+    <!-- Wife Field -->
+    <div class="col-md-6">
+        <div class="form-group has-feedback">
+            <label for="wife" class="text-uppercase c-gray-light">
+                <?php echo translate('wife')?> 
+            </label>
+            <input type="text" class="form-control no-resize" name="wife" 
+                value="<?php 
+                    if (!empty($form_contents)) {
+                        echo $form_contents['wife'];
+                    } else {
+                        echo $family_info_data[0]['wife'];
+                    } 
+                ?>">
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block with-errors"></div>
+        </div>
+    </div>
+</div>
+
                         </div>
                       </div>
                       <?php } ?>
@@ -1415,7 +1280,7 @@
                             </div>
                             <div class='clearfix'>
                             </div>
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group has-feedback">
                                         <label for="home_district" class="text-uppercase c-gray-light"><?php echo translate('home_district')?> / <?=$this->lang->line('home_district'); ?></label>
@@ -1434,18 +1299,27 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="form-group has-feedback">
-                                        <label for="fathers_occupation" class="text-uppercase c-gray-light"><?php echo translate("father's_occupation")?> / <?=$this->lang->line('father_occupation'); ?></label>
-                                        <input type="text" class="form-control no-resize" name="fathers_occupation" value="<?php if(!empty($form_contents)){echo $form_contents['fathers_occupation'];} else{echo $additional_personal_details_data[0]['fathers_occupation'];}?>">
-                                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                        <div class="help-block with-errors">
-                                        </div>
-                                    </div>
+                                   <div class="form-group has-feedback">
+    <label for="anniversary" class="text-uppercase c-gray-light">
+        <?php echo translate("anniversary") ?> / <?= $this->lang->line('anniversary'); ?>
+    </label>
+    <input type="date" class="form-control no-resize" name="anniversary"
+        value="<?php 
+            if (!empty($form_contents)) {
+                echo $form_contents['anniversary'];
+            } else {
+                echo $additional_personal_details_data[0]['anniversary'];
+            } 
+        ?>">
+    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+    <div class="help-block with-errors"></div>
+</div>
+
                                 </div>
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <div class="form-group has-feedback">
                                         <label for="special_circumstances" class="text-uppercase c-gray-light"><?php echo translate('special_circumstances')?> / <?=$this->lang->line('special_circumstances'); ?></label>
                                         <input type="text" class="form-control no-resize" name="special_circumstances" value="<?php if(!empty($form_contents)){echo $form_contents['special_circumstances'];} else{echo $additional_personal_details_data[0]['special_circumstances'];}?>">
@@ -1453,7 +1327,7 @@
                                         <div class="help-block with-errors">
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                       </div>
