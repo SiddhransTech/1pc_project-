@@ -1,43 +1,3 @@
-<style>
-.custom-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-}
-
-.custom-modal-content {
-    background-color: #fff;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 95%;
-    max-width: 800px;
-    position: relative;
-    max-height: 90vh;
-    overflow-y: auto;
-}
-
-.custom-close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #888;
-}
-
-.custom-close:hover {
-    color: #000;
-}
-</style>
 <?php 
     if ($this->db->get_where("member",array("member_id" => $this->session->userdata('member_id')))->row()->membership == 1) 
     {
@@ -62,58 +22,31 @@
         <?php
             $story_exist = $this->db->get_where("happy_story",array("posted_by" => $this->session->userdata('member_id')))->result();
         ?>
-        <!-- <div class="card-title">
+        <div class="card-title">
             <h3 class="heading heading-6 strong-500">
                 <b><?php 
                     if ($story_exist) {
                         echo translate('your_story');
                     }
                     else {
-                        echo translate('Projects');      
+                        echo translate('upload_your_story');      
                     }
                 ?></b>
             </h3>
             <?php
-            
             if ($story_exist) {
                 if ($this->db->get_where("happy_story",array("posted_by" => $this->session->userdata('member_id')))->row()->approval_status == "1") {
             ?>
-            
                     <span class="badge badge-md badge-pill bg-success"><?=translate('approved')?></span>
             <?php
                 }
                 else{
-                   
             ?>
                     <span class="badge badge-md badge-pill bg-danger"><?=translate('not_approved')?></span>
             <?php
                 }
             }
-            ?> -->
-            <div class="card-title">
-    <div class="d-flex justify-content-between align-items-center">
-        <h3 class="heading heading-6 strong-500 mb-0">
-            <b>
-                <?php 
-                    if ($story_exist) {
-                        echo translate('your_projects');
-                    } else {
-                        echo translate('Projects');      
-                    }
-                ?>
-            </b>
-        </h3>
-        <!-- <a href="<?= base_url('') ?>" class="btn btn-sm btn-base-1 btn-shadow">
-            <?= translate('add_project') ?>
-        </a>
-         -->
-        <!-- <a href="javascript:void(0)" onclick="openModal()" class="btn btn-sm btn-base-1 btn-shadow">
-    <?= translate('add_project') ?>
-</a> -->
-
-
-    </div>
-</div>
+            ?>
         </div>
         <div class="card-body">
             <?php
@@ -206,11 +139,7 @@
             }
             else {
             ?>
-            <button onclick="openProjectModal()" class="btn btn-success">Add New Project</button>
-            <div id="addProjectModal" class="custom-modal">
-            <div class="custom-modal-content">
-            <span class="custom-close" onclick="closeModal()">&times;</span>
-                <!-- <form class="form-default col-12" id="happy_story_form" method="post" action="<?=base_url()?>home/stories" role="form" enctype="multipart/form-data"> -->
+                <form class="form-default col-12" id="happy_story_form" method="post" action="<?=base_url()?>home/stories/add" role="form" enctype="multipart/form-data">
                     <div class="form-group has-feedback col-10 ml-auto mr-auto">
                         <label class="control-label"><?php echo translate('story_title')?> <span class="text-danger">*</span></label>
                         <input type="text" name="title" class="form-control" required>
@@ -312,12 +241,12 @@
             <?php
             }
             ?>
-            </div>
-</div>
         </div>
     <?php
     }
     ?>
+
+
 <script>
     $(document).ready(function(){
         //$('.swiper-container').swiper();
@@ -330,6 +259,24 @@
         $('.card-body').append("<div class='text-center pt-5 pb-5 mt-5 mb-5' id='payment_loader'><i class='fa fa-refresh fa-5x fa-spin'></i><p class='mt-4'>Please Wait. Uploading your Video...</p></div>");
     });
 
+    $('#modal_add_video_btn').click(function () {
+        $('#modal_video_section').show(); // Show the video section
+        $('#modal_video_section select[name="upload_method"]').prop('disabled', false); // Enable method selector
+    });
+
+    // Handle method switch between upload or share
+    window.modal_video_sector = function (value) {
+        if (value === 'upload') {
+            $('#modal_video_upload').show();
+            $('#modal_video_share').hide();
+        } else if (value === 'share') {
+            $('#modal_video_upload').hide();
+            $('#modal_video_share').show();
+        } else {
+            $('#modal_video_upload').hide();
+            $('#modal_video_share').hide();
+        }
+    };
     var isloggedin = "<?=$this->session->userdata('member_id')?>";
 
     function confirm_post_story() {
@@ -477,22 +424,4 @@
         var inputNode = document.querySelector('.videoInp');
         inputNode.addEventListener('change', playSelectedFile, false);
     })();
-</script>
-<script>
-function openProjectModal() {
-    document.getElementById("addProjectModal").style.display = "block";
-}
-
-function closeProjectModal() {
-    document.getElementById("addProjectModal").style.display = "none";
-    document.getElementById("happy_story_form").reset();
-}
-
-// Optional: close on background click
-window.onclick = function(event) {
-    const modal = document.getElementById("addProjectModal");
-    if (event.target === modal) {
-        closeProjectModal();
-    }
-};
 </script>
