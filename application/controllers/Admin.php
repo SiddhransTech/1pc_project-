@@ -3427,14 +3427,40 @@ public function delete_area()
 							$story_image = "<img src='" . base_url() . "uploads/happy_story_image/default_image.jpg' class='img-sm'>";
 						}
 						$story_image = "<img src='" . base_url() . "uploads/happy_story_image/" . $image[0]['thumb'] . "' class='img-sm'>";
-						if ($row->approval_status == 1) {
-							$approve_button = "<button data-target='#approval_modal' data-toggle='modal' class='btn btn-dark btn-xs add-tooltip' data-toggle='tooltip' data-placement='top' title='" . translate('unpublish') . "'onclick='approval(" . $row->approval_status . ", " . $row->happy_story_id . ")'><i class='fa fa-close'></i></button>
-							";
-						} elseif ($row->approval_status == 0) {
-							$approve_button = "<button data-target='#approval_modal' data-toggle='modal' class='btn btn-success btn-xs add-tooltip' data-toggle='tooltip' data-placement='top' title='" . translate('approve') . "'onclick='approval(" . $row->approval_status . ", " . $row->happy_story_id . ")'><i class='fa fa-check'></i></button>
-							";
-						}
+						// if ($row->approval_status == 1) {
+						// 	$approve_button = "<button data-target='#approval_modal' data-toggle='modal' class='btn btn-dark btn-xs add-tooltip' data-toggle='tooltip' data-placement='top' title='" . translate('unpublish') . "'onclick='approval(" . $row->approval_status . ", " . $row->happy_story_id . ")'><i class='fa fa-close'></i></button>
+						// 	";
+						// } elseif ($row->approval_status == 0) {
+						// 	$approve_button = "<button data-target='#approval_modal' data-toggle='modal' class='btn btn-success btn-xs add-tooltip' data-toggle='tooltip' data-placement='top' title='" . translate('approve') . "'onclick='approval(" . $row->approval_status . ", " . $row->happy_story_id . ")'><i class='fa fa-check'></i></button>
+						// 	";
+						// }
 
+				// Log all session data for debugging
+$role_id = $this->session->userdata('role_id');
+log_message('debug', 'Role ID from session: ' . $role_id);
+
+$national_role_ids = [3, 4, 5, 6]; // Only these can approve/unpublish
+$is_national_role = in_array((int)$role_id, $national_role_ids);
+log_message('debug', 'Is national role? ' . ($is_national_role ? 'Yes' : 'No'));
+
+$approve_button = '';
+if ($is_national_role) {
+    if ($row->approval_status == 1) {
+        $approve_button = "
+            <button data-target='#approval_modal' data-toggle='modal' class='btn btn-dark btn-xs add-tooltip'
+                    title='" . translate('unpublish') . "'
+                    onclick='approval(1, {$row->happy_story_id})'>
+                <i class='fa fa-close'></i>
+            </button>";
+    } elseif ($row->approval_status == 0) {
+        $approve_button = "
+            <button data-target='#approval_modal' data-toggle='modal' class='btn btn-success btn-xs add-tooltip'
+                    title='" . translate('approve') . "'
+                    onclick='approval(0, {$row->happy_story_id})'>
+                <i class='fa fa-check'></i>
+            </button>";
+    }
+}
 
 						$nestedData['image'] = $story_image;
 						$nestedData['title'] = $row->title;
@@ -8269,7 +8295,8 @@ public function delete_area()
 			if ($result) {
 				$data['admin_name'] = $result->email;
 				$data['admin_id'] = $result->admin_id;
-				$data['role_id'] = $result->role_id;
+				$data['role_id'] = $result->role;
+				
 
 				$this->session->set_userdata($data);
 

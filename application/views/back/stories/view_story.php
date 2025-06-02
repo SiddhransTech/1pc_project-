@@ -5,7 +5,7 @@
 		<!--Page Title-->
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 		<div id="page-title">
-			<h1 class="page-header text-overflow"><?php echo translate('Events')?></h1>
+			<h1 class="page-header text-overflow"><?php echo translate('Project')?></h1>
 
 		</div>
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -15,7 +15,7 @@
 		<ol class="breadcrumb">
 			<li><a href="#"><?php echo translate('home')?></a></li>
 			<li><a href="#"><?php echo translate('stories')?></a></li>
-			<li class="active"><a href="#"><?php echo translate('event_details')?></a></li>
+			<li class="active"><a href="#"><?php echo translate('project_details')?></a></li>
 		</ol>
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 		<!--End breadcrumb-->
@@ -31,7 +31,7 @@
 		?>
 		<div class="panel">
 			<div class="panel-heading">
-				<h3 class="panel-title"><?php echo translate('event_details')?></h3>
+				<h3 class="panel-title"><?php echo translate('project_details')?></h3>
 			</div>
 			<div class="panel-body">
 				<div class="col-sm-12">
@@ -150,7 +150,7 @@
             </div>
            	<!--Modal body-->
             <div class="modal-body">
-            	<p><?php echo translate('are_you_sure_you_want_to')?> "<b id="type_name"></b>" <?php echo translate('this_event?')?>?</p>
+            	<p><?php echo translate('are_you_sure_you_want_to')?> "<b id="type_name"></b>" <?php echo translate('this_project?')?>?</p>
             	<div class="text-right">
             		<input type="hidden" id="story_id" name="story_id" value="">
             		<button data-dismiss="modal" class="btn btn-default btn-sm" type="button" id="modal_close"><?php echo translate('close')?></button>

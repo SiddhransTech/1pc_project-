@@ -156,7 +156,7 @@
 					<li <?php if($page_name=="stories"){ ?> class="active-link" <?php } ?>>
 						<a href="<?=base_url()?>admin/stories">
 							<i class="fa fa-picture-o"></i>
-							<span class="menu-title"><?php echo translate('latest_events')?></span>
+							<span class="menu-title"><?php echo translate('Projects')?></span>
 						</a>
 					</li>
 					<?php } if ($this->Crud_model->admin_permission('earnings')){ ?>

@@ -9,7 +9,7 @@
 		<!--Page Title-->
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 		<div id="page-title">
-			<h1 class="page-header text-overflow"><?php echo translate('latest_events')?></h1>
+			<h1 class="page-header text-overflow"><?php echo translate('Projects')?></h1>
 
 		</div>
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -18,7 +18,7 @@
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 		<ol class="breadcrumb">
 			<li><a href="<?=base_url()?>admin"><?php echo translate('home')?></a></li>
-			<li class="active"><a href="#"><?php echo translate('latest_events')?></a></li>
+			<li class="active"><a href="#"><?php echo translate('Projects')?></a></li>
 		</ol>
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 		<!--End breadcrumb-->
@@ -42,10 +42,10 @@
 	            </div>
 			<?php endif ?>
 			<div class="panel-heading">
-				<h3 class="panel-title"><?php echo translate('event_list')?></h3>
+				<h3 class="panel-title"><?php echo translate('Projects_list')?></h3>
 			</div>
 			<div class="text-right" style="margin-right: 30px">
-				<a href="<?=base_url()?>admin/stories/add_story" id="demo-dt-view-btn" class="btn btn-primary add-tooltip"><i class="fa fa-plus"></i> <?php echo translate('add_new_event')?></a>
+				<a href="<?=base_url()?>admin/stories/add_story" id="demo-dt-view-btn" class="btn btn-primary add-tooltip"><i class="fa fa-plus"></i> <?php echo translate('add_new_project')?></a>
 			</div>
 			<div class="panel-body">
 				<table id="stories_table" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -61,7 +61,7 @@
 							<?php echo translate('date')?>
 						</th>
 						<th>
-							<?php echo translate('event_name')?>
+							<?php echo translate('Project_description')?>
 						</th>
 						<!--<th>-->
 						<!--	<?php echo translate('member_name')?>-->
@@ -124,11 +124,12 @@
             </div>
            	<!--Modal body-->
             <div class="modal-body">
-            	<p><?php echo translate('are_you_sure_you_want_to')?> "<b id="type_name"></b>" <?php echo translate('this_event?')?>?</p>
+            	<p><?php echo translate('are_you_sure_you_want_to')?> "<b id="type_name"></b>" <?php echo translate('this_project')?>?</p>
             	<div class="text-right">
             		<input type="hidden" id="story_id" name="story_id" value="">
             		<button data-dismiss="modal" class="btn btn-default btn-sm" type="button" id="modal_close"><?php echo translate('close')?></button>
                 	<button class="btn btn-primary btn-sm" id="approval_status" value=""><?php echo translate('confirm')?></button>
+					 
             	</div>
             </div>
         </div>
