@@ -1,11 +1,11 @@
 <div id="content-container">
     <div id="page-head">
         <div id="page-title">
-            <h1 class="page-header text-overflow"><?php echo translate('add_story')?></h1>
+            <h1 class="page-header text-overflow"><?php echo translate('Add_project')?></h1>
         </div>
         <ol class="breadcrumb">
             <li><a href="<?=base_url()?>admin"><?php echo translate('home')?></a></li>
-            <li class="active"><?php echo translate('add_story')?></li>
+            <li class="active"><?php echo translate('add_project')?></li>
         </ol>
     </div>
 

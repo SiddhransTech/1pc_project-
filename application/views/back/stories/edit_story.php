@@ -10,11 +10,11 @@
    ?><div id="content-container">
     <div id="page-head">
         <div id="page-title">
-            <h1 class="page-header text-overflow"><?php echo translate('edit_latest_events')?></h1>
+            <h1 class="page-header text-overflow"><?php echo translate('edit_project')?></h1>
         </div>
         <ol class="breadcrumb">
             <li><a href="<?=base_url()?>admin"><?php echo translate('home')?></a></li>
-            <li class="active"><a href="#"><?php echo translate('latest_events')?></a></li>
+            <li class="active"><a href="#"><?php echo translate('Project')?></a></li>
         </ol>
     </div>
 
@@ -27,7 +27,7 @@
                         <div class="row">
                             <div class="col-md-10 col-lg-offset-1">
                                 <div id="page-content">
-                                <h3>Edit Event</h3>
+                                <h3>Edit Project</h3>
                                     <div class="panel">
                                         <form class="form-horizontal" id="package_form" method="POST"
                                             action="<?=base_url()?>admin/stories/update_story/<?php echo $get_story['happy_story_id']; ?>"
@@ -91,8 +91,23 @@
                                                             </div>
                                                         </div>
                                                     </div>
-
                                                     <div class="col-md-10 col-lg-offset-1">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-2 control-label" for="description"><b><?php echo translate('description')?></b></label>
+                                                        <div class="col-sm-8">
+                                                            <textarea class="form-control" name="description" id="description" rows="5" required><?php 
+                                                                if (!empty($form_contents)) {
+                                                                    echo $form_contents['description'];
+                                                                } else {
+                                                                    echo $get_story['description'];
+                                                                }
+                                                            ?></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                    <!-- <div class="col-md-10 col-lg-offset-1">
                                                         <div class="form-group">
                                                             <label class="col-sm-2 control-label"
                                                                 for="demo-hor-name"><b><?php echo translate('event_name')?></b><span
@@ -108,7 +123,7 @@
                                                 ?>                             </div>
                                                             
                                                         </div>
-                                                    </div>
+                                                    </div> -->
 
                                                 <!--    <div class="col-md-10 col-lg-offset-1">-->
                                                 <!--        <div class="form-group">-->
