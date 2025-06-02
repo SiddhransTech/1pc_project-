@@ -14,7 +14,7 @@
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 		<ol class="breadcrumb">
 			<li><a href="#"><?php echo translate('home')?></a></li>
-			<li><a href="#"><?php echo translate('stories')?></a></li>
+			<li><a href="#"><?php echo translate('project')?></a></li>
 			<li class="active"><a href="#"><?php echo translate('project_details')?></a></li>
 		</ol>
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->

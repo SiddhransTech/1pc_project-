@@ -61,7 +61,7 @@
 							<?php echo translate('date')?>
 						</th>
 						<th>
-							<?php echo translate('Project_description')?>
+							<?php echo translate('description')?>
 						</th>
 						<!--<th>-->
 						<!--	<?php echo translate('member_name')?>-->
@@ -182,8 +182,9 @@
 				{ "data": "image" },
 				{ "data": "title" },
 				{ "data": "date" },
-				{ "data": "partner_name" },
+				// { "data": "partner_name" },
 				// { "data": "member_name" },
+				{ "data": "description" },
 				{ "data": "options" },
 			],
 			"drawCallback": function( settings ) {

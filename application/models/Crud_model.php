@@ -1901,7 +1901,16 @@ class Crud_model extends CI_Model
 
     function allstories($table,$limit,$start,$col,$dir)
     {
-        $this->db->select(''.$table.'.'.$table.'_id, '.$table.'.title, '.$table.'.image, '.$table.'.approval_status, '.$table.'.post_time,'. $table.'.partner_name, member.first_name AS member_name', FALSE);
+        // $this->db->select(''.$table.'.'.$table.'_id, '.$table.'.title, '.$table.'.image, '.$table.'.approval_status, '.$table.'.post_time,'. $table.'.partner_name, member.first_name AS member_name', $table . '.description' , FALSE);
+        $this->db->select('' . $table . '.' . $table . '_id, ' . 
+                 $table . '.title, ' . 
+                 $table . '.image, ' . 
+                 $table . '.approval_status, ' . 
+                 $table . '.post_time, ' . 
+                 $table . '.partner_name, ' . 
+                 $table . '.description, ' .  
+                 'member.first_name AS member_name', FALSE);
+
         $this->db->from($table);
         $this->db->join('member', 'member.member_id = '.$table.'.posted_by', 'left');
         $this->db->limit($limit,$start)->order_by($col,$dir);

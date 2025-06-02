@@ -3320,8 +3320,9 @@ public function delete_area()
 				}elseif ($para1 == "update_story") {  
 					$this->form_validation->set_rules('story_name', 'Story Name', 'required');
 					$this->form_validation->set_rules('dated', 'Dated', 'required');
-					$this->form_validation->set_rules('member_name', 'Member Name', 'required');
-					$this->form_validation->set_rules('partner_name', 'Partner Name', 'required');
+					// $this->form_validation->set_rules('member_name', 'Member Name', 'required');
+					// $this->form_validation->set_rules('partner_name', 'Partner Name', 'required');
+					$this->form_validation->set_rules('description', 'Description', 'required');
 
 				 if ($this->form_validation->run() == FALSE) {
 						$page_data['top'] 		= "stories/index.php";
@@ -3337,7 +3338,7 @@ public function delete_area()
 				        $data['date'] = date('Y-m-d',strtotime($this->input->post('dated')));
 				        $data['member_name'] = $this->input->post('member_name');
 				        $data['partner_name'] = $this->input->post('partner_name');
- 				         
+						$data['description'] = $this->input->post('description'); 				         
 				        //print_r($_FILES);exit;
 						$config = $this->set_upload_happy_story_image();
 						$this->load->library('upload');
@@ -3419,7 +3420,7 @@ public function delete_area()
 				if (!empty($rows)) {
 					// if ($dir == 'asc') { $i = $start + 1; } elseif ($dir == 'desc') { $i = $totalFiltered - $start; }
 					foreach ($rows as $row) {
-//print_r($row); 
+				//print_r($row); 
 						$image = json_decode($row->image, true);//print_r($image);exit;
  						if (file_exists('uploads/happy_story_image/' . $image[0]['thumb'])) {
 							$story_image = "<img src='" . base_url() . "uploads/happy_story_image/" . $image[0]['thumb'] . "' class='img-sm'>";
@@ -3435,38 +3436,43 @@ public function delete_area()
 						// 	";
 						// }
 
-				// Log all session data for debugging
-$role_id = $this->session->userdata('role_id');
-log_message('debug', 'Role ID from session: ' . $role_id);
+						// Log all session data for debugging
+						$role_id = $this->session->userdata('role_id');
+						// log_message('debug', 'Role ID from session: ' . $role_id);
 
-$national_role_ids = [3, 4, 5, 6]; // Only these can approve/unpublish
-$is_national_role = in_array((int)$role_id, $national_role_ids);
-log_message('debug', 'Is national role? ' . ($is_national_role ? 'Yes' : 'No'));
+						$national_role_ids = [1, 3, 4, 5, 6]; // Only these can approve/unpublish
+						$is_national_role = in_array((int)$role_id, $national_role_ids);
+						// log_message('debug', 'Is national role? ' . ($is_national_role ? 'Yes' : 'No'));
 
-$approve_button = '';
-if ($is_national_role) {
-    if ($row->approval_status == 1) {
-        $approve_button = "
-            <button data-target='#approval_modal' data-toggle='modal' class='btn btn-dark btn-xs add-tooltip'
-                    title='" . translate('unpublish') . "'
-                    onclick='approval(1, {$row->happy_story_id})'>
-                <i class='fa fa-close'></i>
-            </button>";
-    } elseif ($row->approval_status == 0) {
-        $approve_button = "
-            <button data-target='#approval_modal' data-toggle='modal' class='btn btn-success btn-xs add-tooltip'
-                    title='" . translate('approve') . "'
-                    onclick='approval(0, {$row->happy_story_id})'>
-                <i class='fa fa-check'></i>
-            </button>";
-    }
-}
+						$approve_button = '';
+						if ($is_national_role) {
+							if ($row->approval_status == 1) {
+								$approve_button = "
+									<button data-target='#approval_modal' data-toggle='modal' class='btn btn-dark btn-xs add-tooltip'
+											title='" . translate('unpublish') . "'
+											onclick='approval(1, {$row->happy_story_id})'>
+										<i class='fa fa-close'></i>
+									</button>";
+							} elseif ($row->approval_status == 0) {
+								$approve_button = "
+									<button data-target='#approval_modal' data-toggle='modal' class='btn btn-success btn-xs add-tooltip'
+											title='" . translate('approve') . "'
+											onclick='approval(0, {$row->happy_story_id})'>
+										<i class='fa fa-check'></i>
+									</button>";
+							}
+						}
+
+						
+						// log_message('debug', 'Row data: ' . json_encode($row));
 
 						$nestedData['image'] = $story_image;
 						$nestedData['title'] = $row->title;
 						$nestedData['date'] = date('d/m/Y H:i:s A', strtotime($row->date));
 						//$nestedData['member_name'] = $this->Crud_model->get_membername_by_id('member',$row->member_name);
 						$nestedData['member_name'] = $row->member_name;
+						$nestedData['description'] = $row->description;
+						log_message('debug', 'Story Description: ' . $row->description);
 						$nestedData['partner_name'] = $this->Crud_model->get_membername_by_id('member',$row->partner_name);
 						$nestedData['options'] = $approve_button . "<a href='" . base_url() . "admin/stories/view_story/" . $row->happy_story_id . "' id='demo-dt-view-btn' class='btn btn-primary btn-xs add-tooltip' data-toggle='tooltip' data-placement='top' title='" . translate('view') . "' ><i class='fa fa-eye'></i></a><a href='" . base_url() . "admin/stories/edit_story/" . $row->happy_story_id . "' id='demo-dt-edit-btn' class='btn btn-primary btn-xs add-tooltip' data-toggle='tooltip' data-placement='top' title='" . translate('edit') . "' ><i class='fa fa-edit'></i></a><button data-target='#delete_modal' data-toggle='modal' class='btn btn-danger btn-xs add-tooltip' data-toggle='tooltip' data-placement='top' title='" . translate('delete') . "' onclick='delete_story(" . $row->happy_story_id . ")'><i class='fa fa-trash'></i></button>";
 
@@ -3569,7 +3575,8 @@ if ($is_national_role) {
 		$data['member_name'] = $this->input->post('member_name');
 		$data['posted_by'] = $this->input->post('member_name');
 		$data['partner_name'] = $this->input->post('partner_name');
-	
+		$data['description'] = $this->input->post('description');
+
 		error_reporting(E_ALL);
 		ini_set('display_errors', 1);
 	
