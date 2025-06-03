@@ -3569,7 +3569,7 @@ if ($is_national_role) {
 		$data['member_name'] = $this->input->post('member_name');
 		$data['posted_by'] = $this->input->post('member_name');
 		$data['partner_name'] = $this->input->post('partner_name');
-	
+	    $data['description'] = $this->input->post('description');  // ✅ Added this line
 		error_reporting(E_ALL);
 		ini_set('display_errors', 1);
 	
