@@ -3422,7 +3422,6 @@ public function delete_area()
 					if (!empty($rows)) {
 						foreach ($rows as $row) {
 							// Format activity_photo as an img tag
-							log_message('debug', 'Happy Story ID: ' . $row->happy_story_id . ' | activity_photo: ' . ($row->activity_photo ?: 'NULL'));
 							$story_image = $row->activity_photo && file_exists('Uploads/happy_story_image/' . $row->activity_photo) ?
 								"<img src='" . base_url('Uploads/happy_story_image/' . $row->activity_photo) . "' class='img-sm' height='30' width='30' alt='story image'>" :
 								"<img src='" . base_url('Uploads/happy_story_image/default_image.jpg') . "' class='img-sm' height='30' width='30' alt='default image'>";
@@ -3528,9 +3527,9 @@ public function delete_area()
 				$page_data['page_name'] = "stories";
 			
 				// Get admin_id from session
-				// $admin_id = $this->session->userdata('admin_id');
+				$admin_id = $this->session->userdata('admin_id');
 				$admin_name = $this->session->userdata('name');
-				$admin_id = 26;
+				// $admin_id = 26;
 				// Fetch legion data for autofill based on session admin_id
 				$legion_info = $this->Crud_model->get_legion_and_area_by_admin($admin_id);
 
@@ -3674,18 +3673,18 @@ public function delete_area()
 	{
 		try {
 			// Load necessary libraries
-			log_message('debug', '[add_story_details] Loading libraries...');
+			// log_message('debug', '[add_story_details] Loading libraries...');
 			$this->load->library('form_validation');
 			$this->load->library('upload');
 	
 			// Get admin_id and role_id from session
 			$admin_id = $this->session->userdata('admin_id');
 			$role_id = $this->session->userdata('role_id');
-			log_message('debug', "[add_story_details] Session admin_id: $admin_id, role_id: $role_id");
+			// log_message('debug', "[add_story_details] Session admin_id: $admin_id, role_id: $role_id");
 	
 			// Check if role_id exists and is either 2 (President) or 8 (Secretary)
 			if (!$role_id || !in_array($role_id, [2, 8])) {
-				log_message('debug', '[add_story_details] Unauthorized or missing role_id: ' . ($role_id ?: 'null') . " for admin_id: " . ($admin_id ?: 'null'));
+				// log_message('debug', '[add_story_details] Unauthorized or missing role_id: ' . ($role_id ?: 'null') . " for admin_id: " . ($admin_id ?: 'null'));
 				$this->session->set_flashdata('failed', 'Only Presidents and Secretaries can add stories.');
 				redirect(base_url('admin/stories'), 'refresh');
 				return; // Stop execution if role_id is invalid or missing
@@ -3812,7 +3811,7 @@ public function delete_area()
 			} else {
 				log_message('debug', '[add_story_details] No press_coverage file uploaded.');
 			}
-	
+			$admin_name = $this->session->userdata('name');
 			// Prepare story data for happy_story table
 			$story_data = [
 				'legion_id' => $legion_id,  // Use legion_id fetched from DB, NOT from form
@@ -3824,7 +3823,7 @@ public function delete_area()
 				'press_coverage' => $press_coverage,
 				'partner_name' => NULL, // Not provided by form
 				'posted_by' => $admin_id, // Use admin_id from session
-				'member_name' => NULL, // Not provided by form
+				'member_name' => $admin_name, // Not provided by form
 				'approval_status' => 0 // Default approval status
 				// post_time handled by DB default timestamp
 			];
