@@ -3541,9 +3541,25 @@ public function delete_area()
 				$page_data['file'] = "add_story.php";
 				$page_data['bottom'] = "stories/index.php";
 				$page_data['page_name'] = "stories";
-	
+			
+				// Get admin_id from session
+				// $admin_id = $this->session->userdata('admin_id');
+				$admin_name = $this->session->userdata('name');
+				$admin_id = 26;
+				// Fetch legion data for autofill based on session admin_id
+				$legion_info = $this->Crud_model->get_legion_and_area_by_admin($admin_id);
+
+				if (!$legion_info['status']) {
+					$this->session->set_flashdata('failed', $legion_info['message']);
+					redirect('admin/stories');
+				}
+				
+				$page_data['legion'] = $legion_info;
+				$page_data['legion']['admin_name'] = $admin_name;
+			
 				$this->load->view('back/index', $page_data);
-			} 
+			}
+			
 			else if ($para1 == "edit_story") {
 				$page_data['top'] = "stories/index.php";
 				$page_data['folder'] = "stories";
@@ -3669,124 +3685,192 @@ public function delete_area()
 	// 	}
 	// 	redirect('admin/stories');
 	// }
-
-	public function add_story_details()
+	public function add_story_details() 
 	{
-		$data = array();
-		$data['title'] = $this->input->post('story_name');
-		$data['date'] = date('Y-m-d', strtotime($this->input->post('dated')));
-		$data['member_name'] = $this->input->post('member_name');
-		$data['posted_by'] = $this->input->post('member_name');
-		$data['partner_name'] = $this->input->post('partner_name');
-		$data['description'] = $this->input->post('description');
+		try {
+			// Load necessary libraries
+			log_message('debug', '[add_story_details] Loading libraries...');
+			$this->load->library('form_validation');
+			$this->load->library('upload');
 	
-		// Get admin_id and role_id from session
-		$admin_id = $this->session->userdata('admin_id');
-		$role_id = $this->session->userdata('role_id');
+			// Get admin_id and role_id from session
+			$admin_id = 26;
+			$role_id = $this->session->userdata('role_id');
+			log_message('debug', "[add_story_details] Session admin_id: $admin_id, role_id: $role_id");
 	
-		// Check if role_id exists and is either 2 (President) or 8 (Secretary)
-		if (!$role_id || !in_array($role_id, [2, 8])) {
-			log_message('debug', 'Unauthorized or missing role_id: ' . ($role_id ?: 'null') . ' for admin_id: ' . ($admin_id ?: 'null'));
-			$this->session->set_flashdata('failed', 'Only Presidents and Secretaries can add stories.');
-			redirect(base_url('admin/stories'), 'refresh');
-			return; // Stop execution if role_id is invalid or missing
-		}
+			// Check if role_id exists and is either 2 (President) or 8 (Secretary)
+			if (!$role_id || !in_array($role_id, [2, 8])) {
+				log_message('debug', '[add_story_details] Unauthorized or missing role_id: ' . ($role_id ?: 'null') . " for admin_id: " . ($admin_id ?: 'null'));
+				$this->session->set_flashdata('failed', 'Only Presidents and Secretaries can add stories.');
+				redirect(base_url('admin/stories'), 'refresh');
+				return; // Stop execution if role_id is invalid or missing
+			}
 	
-		// Fetch legion_id from admin_legion table
-		$this->db->select('legion_id');
-		$this->db->from('admin_legion');
-		$this->db->where('admin_id', $admin_id);
-		$query = $this->db->get();
+			// Fetch legion_id from admin_legion table
+			log_message('debug', "[add_story_details] Fetching legion_id for admin_id: $admin_id");
+			$this->db->select('legion_id');
+			$this->db->from('admin_legion');
+			$this->db->where('admin_id', $admin_id);
+			$query = $this->db->get();
 	
-		if ($query->num_rows() > 0) {
-			$result = $query->row();
-			$legion_id = $result->legion_id;
+			if ($query->num_rows() > 0) {
+				$result = $query->row();
+				$legion_id = $result->legion_id;
+				log_message('debug', "[add_story_details] Fetched legion_id: $legion_id");
+			} else {
+				log_message('error', '[add_story_details] No legion_id found for admin_id: ' . $admin_id);
+				$this->session->set_flashdata('failed', 'Legion ID not found for this admin.');
+				redirect('admin/stories/add_story');
+				return;
+			}
 	
-			// Log the legion_id value
-			log_message('debug', 'Fetched legion_id: ' . $legion_id);
+			// Form validation rules    
+			log_message('debug', '[add_story_details] Setting form validation rules...');
+			$this->form_validation->set_rules('legion_id', 'Legion ID', 'required|numeric');
+			$this->form_validation->set_rules('program_name', 'Program Name', 'required');
+			$this->form_validation->set_rules('program_area', 'Program Area', 'required');
+			$this->form_validation->set_rules('date', 'Date', 'required');
+			$this->form_validation->set_rules('program_details', 'Program Details', 'required');
 	
-			// Add legion_id to insert data
-			$data['legion_id'] = $legion_id;
-		} else {
-			log_message('debug', 'No legion_id found for admin_id: ' . ($admin_id ?: 'null'));
-			$this->session->set_flashdata('failed', 'You are not a legion member or have not been assigned any legions.');
-			redirect(base_url('admin/stories'), 'refresh');
-			return; // Stop execution if no legion_id is found
-		}
+			if ($this->form_validation->run() == FALSE) {
+				$errors = validation_errors();
+				log_message('debug', "[add_story_details] Form validation failed: $errors");
+				$this->session->set_flashdata('failed', $errors);
+				redirect('admin/stories/add_story');
+				return;
+			}
+			log_message('debug', '[add_story_details] Form validation passed.');
 	
-		error_reporting(E_ALL);
-		ini_set('display_errors', 1);
+			// Upload directory relative to project root
+			$upload_path = FCPATH . 'uploads/happy_story_image/';
+			log_message('debug', "[add_story_details] Upload path set to: $upload_path");
 	
-		$config = $this->set_upload_happy_story_image();
-		$this->load->library('upload');
-		$this->upload->initialize($config);
+			// Create directory if not exists
+			if (!is_dir($upload_path)) {
+				mkdir($upload_path, 0755, true);
+				log_message('debug', "[add_story_details] Created upload directory: $upload_path");
+			}
 	
-		if (!empty($_FILES['story_photo']['name'])) {
-			$id = uniqid();
-			$path = $_FILES['story_photo']['name'];
-			$ext = '.' . pathinfo($path, PATHINFO_EXTENSION);
-			$allowed_ext = [".jpg", ".jpeg", ".png", ".JPG", ".JPEG", ".PNG"];
+			// File upload configuration
+			$config = [
+				'upload_path' => $upload_path,
+				'allowed_types' => 'jpg|jpeg|png|pdf',
+				'max_size' => 10240, // 10MB max
+				'file_ext_tolower' => TRUE
+			];
+			log_message('debug', '[add_story_details] Upload config initialized.');
 	
-			if (in_array($ext, $allowed_ext)) {
-				// Save original image
-				$image_name = 'happy_story_' . $id . $ext;
-				$config['file_name'] = $image_name;
+			// Activity Photo Upload
+			$this->upload->initialize($config);
+			log_message('debug', '[add_story_details] Starting activity_photo upload...');
+			if (!$this->upload->do_upload('activity_photo')) {
+				$error_msg = $this->upload->display_errors();
+				log_message('error', "[add_story_details] Activity Photo upload failed: $error_msg");
+				$this->session->set_flashdata('failed', $error_msg);
+				redirect('admin/stories/add_story');
+				return;
+			}
+			$activity_photo = $this->upload->data('file_name');
+			$activity_photo_size = $this->upload->data('file_size'); // Size in KB
+			$activity_photo_ext = strtolower($this->upload->data('file_ext'));
+			log_message('debug', "[add_story_details] Activity Photo uploaded: $activity_photo (Size: {$activity_photo_size}KB, Ext: $activity_photo_ext)");
 	
-				if (!$this->upload->do_upload('story_photo')) {
-					$this->session->set_flashdata('alert', 'failed_upload');
-					redirect(base_url('admin/stories'), 'refresh');
+			// Validate Activity Photo size limits
+			if ($activity_photo_size < 10 || ($activity_photo_size > 5120 && $activity_photo_ext != '.pdf')) {
+				$error_msg = 'Activity Photo size must be between 10KB and 5MB.';
+				log_message('error', "[add_story_details] $error_msg");
+				unlink($upload_path . $activity_photo);
+				$this->session->set_flashdata('failed', $error_msg);
+				redirect('admin/stories/add_story');
+				return;
+			}
+	
+			// Press Coverage Upload (Optional)
+			$press_coverage = NULL;
+			if (!empty($_FILES['press_coverage']['name'])) {
+				log_message('debug', '[add_story_details] Starting press_coverage upload...');
+				$this->upload->initialize($config);
+				if (!$this->upload->do_upload('press_coverage')) {
+					$error_msg = $this->upload->display_errors();
+					log_message('error', "[add_story_details] Press Coverage upload failed: $error_msg");
+					unlink($upload_path . $activity_photo);
+					$this->session->set_flashdata('failed', $error_msg);
+					redirect('admin/stories/add_story');
+					return;
+				}
+				$press_coverage = $this->upload->data('file_name');
+				$press_coverage_size = $this->upload->data('file_size');
+				$press_coverage_ext = strtolower($this->upload->data('file_ext'));
+				log_message('debug', "[add_story_details] Press Coverage uploaded: $press_coverage (Size: {$press_coverage_size}KB, Ext: $press_coverage_ext)");
+	
+				if ($press_coverage_size < 10 
+					|| ($press_coverage_size > 10240 && $press_coverage_ext == '.pdf') 
+					|| ($press_coverage_size > 5120 && $press_coverage_ext != '.pdf')) {
+					$error_msg = 'Press Coverage size must be between 10KB and 5MB for images or 50KB and 10MB for PDFs.';
+					log_message('error', "[add_story_details] $error_msg");
+					unlink($upload_path . $activity_photo);
+					unlink($upload_path . $press_coverage);
+					$this->session->set_flashdata('failed', $error_msg);
+					redirect('admin/stories/add_story');
 					return;
 				}
 	
-				// Get upload data
-				$upload_data = $this->upload->data();
-				$source_image = $upload_data['full_path'];
-	
-				// Now generate the thumbnail
-				$thumb_name = 'happy_story_' . $id . '_thumb' . $ext;
-				$thumb_path = $upload_data['file_path'] . $thumb_name;
-	
-				$this->load->library('image_lib');
-	
-				$thumb_config = array(
-					'image_library' => 'gd2',
-					'source_image'  => $source_image,
-					'new_image'     => $thumb_path,
-					'maintain_ratio' => TRUE,
-					'width'         => 200,
-					'height'        => 200
-				);
-	
-				$this->image_lib->initialize($thumb_config);
-	
-				if (!$this->image_lib->resize()) {
-					log_message('error', 'Thumbnail creation failed: ' . $this->image_lib->display_errors());
-					$this->image_lib->clear();
+				if ($press_coverage_ext == '.pdf' && $press_coverage_size < 50) {
+					$error_msg = 'Press Coverage PDF size must be at least 50KB.';
+					log_message('error', "[add_story_details] $error_msg");
+					unlink($upload_path . $activity_photo);
+					unlink($upload_path . $press_coverage);
+					$this->session->set_flashdata('failed', $error_msg);
+					redirect('admin/stories/add_story');
+					return;
 				}
-	
-				$images[] = array(
-					'image' => $image_name,
-					'thumb' => $thumb_name
-				);
-				$data['image'] = json_encode($images);
 			} else {
-				$this->session->set_flashdata('alert', 'invalid_image_type');
-				redirect(base_url('admin/stories'), 'refresh');
+				log_message('debug', '[add_story_details] No press_coverage file uploaded.');
+			}
+	
+			// Prepare story data for happy_story table
+			$story_data = [
+				'legion_id' => $legion_id,  // Use legion_id fetched from DB, NOT from form
+				'date' => $this->input->post('date'),
+				'title' => $this->input->post('program_name'),
+				'description' => $this->input->post('program_details'),
+				'image' => '', // Not provided by form, set to empty string
+				'activity_photo' => $activity_photo,
+				'press_coverage' => $press_coverage,
+				'partner_name' => NULL, // Not provided by form
+				'posted_by' => $admin_id, // Use admin_id from session
+				'member_name' => NULL, // Not provided by form
+				'approval_status' => 0 // Default approval status
+				// post_time handled by DB default timestamp
+			];
+			log_message('debug', '[add_story_details] Prepared story data for insertion.');
+	
+			// Insert into DB
+			log_message('debug', '[add_story_details] Inserting story data into database...');
+			if ($this->db->insert('happy_story', $story_data)) {
+				log_message('info', '[add_story_details] Story added successfully.');
+				$this->session->set_flashdata('success', 'Story added successfully!');
+				redirect('admin/stories');
+				return;
+			} else {
+				$error_msg = 'Failed to add story to database.';
+				log_message('error', "[add_story_details] $error_msg");
+				unlink($upload_path . $activity_photo);
+				if ($press_coverage) {
+					unlink($upload_path . $press_coverage);
+				}
+				$this->session->set_flashdata('failed', $error_msg);
+				redirect('admin/stories');
 				return;
 			}
-		}
 	
-		// Insert into DB
-		$this->db->insert('happy_story', $data);
-		$result = $this->db->affected_rows();
-	
-		if ($result) {
-			$this->session->set_flashdata('success', 'Story added successfully');
-		} else {
-			$this->session->set_flashdata('failed', 'Failed to add story');
+		} catch (Exception $e) {
+			log_message('error', "[add_story_details] Exception: " . $e->getMessage());
+			$this->session->set_flashdata('failed', 'An unexpected error occurred. Please try again.');
+			redirect('admin/stories/add_story');
 		}
-		redirect(base_url('admin/stories'), 'refresh');
 	}
+	
 	
 	function send_sms($para1 = "", $para2 = "")
 	{
@@ -8469,6 +8553,7 @@ public function delete_area()
 				$data['admin_name'] = $result->email;
 				$data['admin_id'] = $result->admin_id;
 				$data['role_id'] = $result->role;
+				$data['name'] = $result->name;
 				
 
 				$this->session->set_userdata($data);
