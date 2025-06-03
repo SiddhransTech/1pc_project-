@@ -92,7 +92,7 @@
 						</li>
 					<?php } ?>
 
-					<?php
+					 <!-- <?php
 					if ($this->Crud_model->admin_permission('premium_plans')){
                             ?>
 					<li <?php if($page_name=="packages"){ ?> class="active-link" <?php } ?>>
@@ -100,7 +100,29 @@
 							<i class="fa fa-book"></i>
 							<span class="menu-title"><?php echo translate('membership_fees')?></span>
 						</a>
+					</li> -->
+					<?php
+					if ($this->Crud_model->admin_permission('premium_plans')) { ?>
+					<li <?php if($page_name=="packages"){ ?> class="active-link" <?php } ?>>
+						<a href="<?=base_url()?>admin/packages">
+							<i class="fa fa-globe"></i>
+							<span class="menu-title"><?php echo translate('dues_payment')?></span>
+						</a>
 					</li>
+					<?php } ?>
+					<?php
+					if ($this->Crud_model->admin_permission('contribution')) { ?>
+					<li <?php if($page_name=="contribution"){ ?> class="active-link" <?php } ?>>
+						<a href="<?=base_url()?>admin/contribution">
+							<i class="fa fa-globe"></i>
+							<span class="menu-title"><?php echo translate('contribution')?></span>
+						</a>
+					</li>
+					<?php } ?>
+					
+					
+
+
 
 					<?php }
 						if ($this->Crud_model->admin_permission('channel_partner')){
