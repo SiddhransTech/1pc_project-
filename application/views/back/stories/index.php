@@ -44,9 +44,19 @@
 			<div class="panel-heading">
 				<h3 class="panel-title"><?php echo translate('Projects_list')?></h3>
 			</div>
-			<div class="text-right" style="margin-right: 30px">
-				<a href="<?=base_url()?>admin/stories/add_story" id="demo-dt-view-btn" class="btn btn-primary add-tooltip"><i class="fa fa-plus"></i> <?php echo translate('add_new_project')?></a>
-			</div>
+			<?php
+				$allowed_roles = [2,7,8,9,1]; // role IDs allowed to see this content
+				$current_user_role_id = $this->session->userdata('role_id'); // adjust this if your session key is different
+			?>
+
+			<?php if (in_array($current_user_role_id, $allowed_roles)): ?>
+				<div class="text-right" style="margin-right: 30px">
+					<a href="<?=base_url()?>admin/stories/add_story" id="demo-dt-view-btn" class="btn btn-primary add-tooltip">
+						<i class="fa fa-plus"></i> <?php echo translate('add_new_project')?>
+					</a>
+				</div>
+			<?php endif; ?>
+
 			<div class="panel-body">
 				<table id="stories_table" class="table table-striped table-bordered" cellspacing="0" width="100%">
 					<thead>

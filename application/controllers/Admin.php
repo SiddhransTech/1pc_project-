@@ -3567,6 +3567,109 @@ public function delete_area()
 		$config['overwrite']     = FALSE;
 		return $config;
 	}
+	// public function add_story_details()
+	// {
+	// 	$data = array();
+	// 	$data['title'] = $this->input->post('story_name');
+	// 	$data['date'] = date('Y-m-d', strtotime($this->input->post('dated')));
+	// 	$data['member_name'] = $this->input->post('member_name');
+	// 	$data['posted_by'] = $this->input->post('member_name');
+	// 	$data['partner_name'] = $this->input->post('partner_name');
+	// 	$data['description'] = $this->input->post('description');
+    //    // Get admin_id from session
+	// 	// $admin_id = $this->session->userdata('admin_id');
+	// 	$admin_id = 26
+	// 	// Fetch legion_id from admin_legion table
+	// 	$this->db->select('legion_id');
+	// 	$this->db->from('admin_legion');
+	// 	$this->db->where('admin_id', $admin_id);
+	// 	$query = $this->db->get();
+
+	// 	if ($query->num_rows() > 0) {
+	// 		$result = $query->row();
+	// 		$legion_id = $result->legion_id;
+
+	// 		// Log the legion_id value
+	// 		log_message('debug', 'Fetched legion_id: ' . $legion_id);
+
+	// 		// Add to insert data
+	// 		// $data['legion_id'] = $legion_id;
+	// 	} else {
+	// 		log_message('debug', 'No legion_id found for admin_id: ' . $admin_id);
+	// 	}
+
+	// 	error_reporting(E_ALL);
+	// 	ini_set('display_errors', 1);
+	
+	// 	$config = $this->set_upload_happy_story_image();
+	// 	$this->load->library('upload');
+	// 	$this->upload->initialize($config);
+	
+	// 	if (!empty($_FILES['story_photo']['name'])) {
+	// 		$id = uniqid();
+	// 		$path = $_FILES['story_photo']['name'];
+	// 		$ext = '.' . pathinfo($path, PATHINFO_EXTENSION);
+	// 		$allowed_ext = [".jpg", ".jpeg", ".png", ".JPG", ".JPEG", ".PNG"];
+	
+	// 		if (in_array($ext, $allowed_ext)) {
+	// 			// Save original image
+	// 			$image_name = 'happy_story_' . $id . $ext;
+	// 			$config['file_name'] = $image_name;
+	
+	// 			if (!$this->upload->do_upload('story_photo')) {
+	// 				$this->session->set_flashdata('alert', 'failed_upload');
+	// 				redirect(base_url('admin/stories'), 'refresh');
+	// 			}
+	
+	// 			// Get upload data
+	// 			$upload_data = $this->upload->data();
+	// 			$source_image = $upload_data['full_path'];
+	
+	// 			// Now generate the thumbnail
+	// 			$thumb_name = 'happy_story_' . $id . '_thumb' . $ext;
+	// 			$thumb_path = $upload_data['file_path'] . $thumb_name;
+	
+	// 			$this->load->library('image_lib');
+	
+	// 			$thumb_config = array(
+	// 				'image_library' => 'gd2',
+	// 				'source_image'  => $source_image,
+	// 				'new_image'     => $thumb_path,
+	// 				'maintain_ratio'=> TRUE,
+	// 				'width'         => 200,
+	// 				'height'        => 200
+	// 			);
+	
+	// 			$this->image_lib->initialize($thumb_config);
+	
+	// 			if (!$this->image_lib->resize()) {
+	// 				log_message('error', 'Thumbnail creation failed: ' . $this->image_lib->display_errors());
+	// 				$this->image_lib->clear();
+	// 			}
+	
+	// 			$images[] = array(
+	// 				'image' => $image_name,
+	// 				'thumb' => $thumb_name
+	// 			);
+	// 			$data['image'] = json_encode($images);
+	// 		} else {
+	// 			$this->session->set_flashdata('alert', 'invalid_image_type');
+	// 			redirect(base_url('admin/stories'), 'refresh');
+	// 		}
+	// 	}
+	
+	// 	// Insert into DB
+	// 	// $this->db->insert('happy_story', $data);
+	// 	// $result = $this->db->affected_rows();
+	// 	$result = true;
+	// 	if ($result == true) {
+	// 		$this->session->set_flashdata('success', 'added successfully');
+	// 	} else {
+	// 		$this->session->set_flashdata('failed', 'Failed');
+	// 	}
+	// 	redirect('admin/stories');
+	// }
+
 	public function add_story_details()
 	{
 		$data = array();
@@ -3576,7 +3679,41 @@ public function delete_area()
 		$data['posted_by'] = $this->input->post('member_name');
 		$data['partner_name'] = $this->input->post('partner_name');
 		$data['description'] = $this->input->post('description');
-
+	
+		// Get admin_id and role_id from session
+		$admin_id = $this->session->userdata('admin_id');
+		$role_id = $this->session->userdata('role_id');
+	
+		// Check if role_id exists and is either 2 (President) or 8 (Secretary)
+		if (!$role_id || !in_array($role_id, [2, 8])) {
+			log_message('debug', 'Unauthorized or missing role_id: ' . ($role_id ?: 'null') . ' for admin_id: ' . ($admin_id ?: 'null'));
+			$this->session->set_flashdata('failed', 'Only Presidents and Secretaries can add stories.');
+			redirect(base_url('admin/stories'), 'refresh');
+			return; // Stop execution if role_id is invalid or missing
+		}
+	
+		// Fetch legion_id from admin_legion table
+		$this->db->select('legion_id');
+		$this->db->from('admin_legion');
+		$this->db->where('admin_id', $admin_id);
+		$query = $this->db->get();
+	
+		if ($query->num_rows() > 0) {
+			$result = $query->row();
+			$legion_id = $result->legion_id;
+	
+			// Log the legion_id value
+			log_message('debug', 'Fetched legion_id: ' . $legion_id);
+	
+			// Add legion_id to insert data
+			$data['legion_id'] = $legion_id;
+		} else {
+			log_message('debug', 'No legion_id found for admin_id: ' . ($admin_id ?: 'null'));
+			$this->session->set_flashdata('failed', 'You are not a legion member or have not been assigned any legions.');
+			redirect(base_url('admin/stories'), 'refresh');
+			return; // Stop execution if no legion_id is found
+		}
+	
 		error_reporting(E_ALL);
 		ini_set('display_errors', 1);
 	
@@ -3598,6 +3735,7 @@ public function delete_area()
 				if (!$this->upload->do_upload('story_photo')) {
 					$this->session->set_flashdata('alert', 'failed_upload');
 					redirect(base_url('admin/stories'), 'refresh');
+					return;
 				}
 	
 				// Get upload data
@@ -3614,7 +3752,7 @@ public function delete_area()
 					'image_library' => 'gd2',
 					'source_image'  => $source_image,
 					'new_image'     => $thumb_path,
-					'maintain_ratio'=> TRUE,
+					'maintain_ratio' => TRUE,
 					'width'         => 200,
 					'height'        => 200
 				);
@@ -3634,18 +3772,20 @@ public function delete_area()
 			} else {
 				$this->session->set_flashdata('alert', 'invalid_image_type');
 				redirect(base_url('admin/stories'), 'refresh');
+				return;
 			}
 		}
 	
 		// Insert into DB
 		$this->db->insert('happy_story', $data);
 		$result = $this->db->affected_rows();
-		if ($result == true) {
-			$this->session->set_flashdata('success', 'added successfully');
+	
+		if ($result) {
+			$this->session->set_flashdata('success', 'Story added successfully');
 		} else {
-			$this->session->set_flashdata('failed', 'Failed');
+			$this->session->set_flashdata('failed', 'Failed to add story');
 		}
-		redirect('admin/stories');
+		redirect(base_url('admin/stories'), 'refresh');
 	}
 	
 	function send_sms($para1 = "", $para2 = "")
