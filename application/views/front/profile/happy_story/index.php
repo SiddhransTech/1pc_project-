@@ -1,6 +1,8 @@
 
 <?php 
-    if ($this->db->get_where("member",array("member_id" => $this->session->userdata('member_id')))->row()->membership == 1) 
+    // if ($this->db->get_where("member",array("member_id" => $this->session->userdata('member_id')))->row()->membership == 1) 
+    if (false) 
+    
     {
     ?>
         <div class="card-title">
@@ -20,39 +22,44 @@
     }
     else {
 ?>
-     <?php
-            $story_exist = $this->db->get_where("happy_story",array("posted_by" => $this->session->userdata('member_id')))->result();
-        ?>
-     <div class="card-head d-flex justify-content-between align-items-center">
-    <h3 class="heading heading-6 strong-500 mb-0">
-        <b>
-            <?php 
-                if ($story_exist) {
-                    echo translate('your_projects');
-                }
-                else {
-                    echo translate('upload_your_projects');      
-                }
-            ?>
-        </b>
-    </h3>
+     <!-- <?php
+            // $story_exist = $this->db->get_where("happy_story",array("posted_by" => $this->session->userdata('member_id')))->result();
+            $story_exist = $this->db->get_where("happy_story", array("legion_id" => $this->session->userdata('legion_id')))->result();
+        ?> -->
+ 
 
-    <!-- <button type="button" class="btn btn-styled btn-base-1 btn-shadow" onclick="openModal()">
-        Add Project
-    </button> -->
+<div class="card-head d-flex align-items-center">
+    <div style="width: 100%; text-align: center;">
+        <h3 class="heading heading-6 strong-500 mt-2">
+            <b>
+                <?php 
+                    if ($story_exist) {
+                        echo translate('your_legion_projects');
+                    } else {
+                        echo translate('no_legion_projects_yet_upload_now');
+                    }
+                ?>
+            </b>
+        </h3>
+    </div>
 </div>
 
-  
+
+
         <div class="card-body">
             <?php
-            $get_story = $this->db->get_where("happy_story", array("posted_by" => $this->session->userdata('member_id')))->result();
+            // $get_story = $this->db->get_where("happy_story", array("posted_by" => $this->session->userdata('member_id')))->result();
+            $get_story =  $this->db->get_where("happy_story", array("legion_id" => $this->session->userdata('legion_id')))->result();
+
             if ($story_exist) {
                 foreach ($get_story as $value) 
                 {
                 ?>
                 <div class="mb-4">
                     <?php 
-                        $is_approved = $this->db->get_where("happy_story",array("posted_by" => $this->session->userdata('member_id')))->row()->approval_status;
+                        // $is_approved = $this->db->get_where("happy_story",array("posted_by" => $this->session->userdata('member_id')))->row()->approval_status;
+                        $is_approved = $this->db->get_where("happy_story", array( "posted_by" => $this->session->userdata('member_id'),"legion_id" => $this->session->userdata('legion_id')))->row()->approval_status;
+
                     ?>
                     <a class="c-base-1" href="<?php if($is_approved == '1'){echo base_url()?>home/stories/story_detail/<?=$value->posted_by;}else{echo '#';}?>"><h3 class="heading heading-2 strong-400 text-normal">
                     <?=$value->title?>
@@ -265,206 +272,7 @@
 
     <?php } ?>
 
-<style>
-/* FIXED MODAL STYLES */
-.custom-modal {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* top aligned */
-    padding-top: 150px;
-    position: fixed;
-    z-index: 99999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.6);
-    overflow: auto;
-}
 
-.custom-modal-content {
-    background-color: #fff;
-    width: 90%;
-    max-width: 800px;
-    max-height: 80vh;
-    padding: 30px;
-    border-radius: 12px;
-    position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-.custom-close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 28px;
-    color: #888;
-    cursor: pointer;
-    font-weight: bold;
-    z-index: 1;
-}
-
-.custom-close:hover {
-    color: #000;
-}
-
-/* Form Styling */
-.custom-modal-content .form-group {
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-.custom-modal-content label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #333;
-}
-
-.custom-modal-content input,
-.custom-modal-content textarea,
-.custom-modal-content select {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-}
-
-.custom-modal-content textarea {
-    resize: vertical;
-    min-height: 80px;
-}
-
-/* Image Upload Styling */
-.image-upload-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.image-preview-section,
-.additional-image-section {
-    flex: 1;
-    min-width: 200px;
-}
-
-.image-preview {
-    width: 100%;
-    max-width: 250px;
-    height: 150px;
-    object-fit: cover;
-    border: 2px solid #e6e6e6;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.upload-controls {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-/* Button Styling */
-.btn {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-}
-
-.btn-base-1 {
-    background-color: #007bff;
-    color: white;
-}
-
-.btn-base-2 {
-    background-color: #28a745;
-    color: white;
-}
-
-.btn-danger {
-    background-color: #dc3545;
-    color: white;
-}
-
-.btn-secondary {
-    background-color: #6c757d;
-    color: white;
-}
-
-.btn:hover {
-    opacity: 0.9;
-}
-
-.btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-/* Video Section */
-#video_section {
-    margin-top: 15px;
-    padding: 15px;
-    background-color: #f8f9fa;
-    border-radius: 6px;
-}
-
-.video_limit_msg {
-    font-size: 12px;
-    color: #dc3545;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .custom-modal-content {
-        width: 95%;
-        max-height: 85vh;
-        padding: 20px;
-    }
-    
-    .image-upload-container {
-        flex-direction: column;
-    }
-    
-    .upload-controls {
-        justify-content: center;
-    }
-}
-
-@media (max-height: 600px) {
-    .custom-modal-content {
-        max-height: 90vh;
-        padding: 15px;
-    }
-}
-
-/* Custom Scrollbar for Modal Content */
-.custom-modal-content::-webkit-scrollbar {
-    width: 8px;
-}
-
-.custom-modal-content::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 4px;
-}
-
-.custom-modal-content::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
-    border-radius: 4px;
-}
-
-.custom-modal-content::-webkit-scrollbar-thumb:hover {
-    background: #a8a8a8;
-}
-</style>
 
 <script>
 // FIXED MODAL FUNCTIONS
