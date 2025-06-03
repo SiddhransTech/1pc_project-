@@ -68,13 +68,13 @@
                                                             <label class="col-sm-2 control-label"
                                                                 for="demo-hor-name"><b><?php echo translate('title')?></b><span
                                                                     class="text-danger">*</span></label>
-    <div class="col-sm-8">
-<input type="text" class="form-control" name="story_name" id="story_name" required="" value="<?php if(!empty($form_contents)){
-    echo $form_contents['story_name'];
-    } else{
-        echo $get_story['title'];
-    } ?>
-">
+                                                                    <div class="col-sm-8">
+                                                                <input type="text" class="form-control" name="story_name" id="story_name" required="" value="<?php if(!empty($form_contents)){
+                                                                    echo $form_contents['story_name'];
+                                                                    } else{
+                                                                        echo $get_story['title'];
+                                                                    } ?>
+                                                                ">
                                                             </div>
                                                         </div>
                                                     </div>
