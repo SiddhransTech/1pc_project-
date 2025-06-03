@@ -119,12 +119,3 @@
     </div>
 </div>
 
-<script>
-function fillLegionDetails() {
-    var select = document.getElementById('legion_id');
-    var selectedOption = select.options[select.selectedIndex];
-    document.getElementById('legion_name').value = selectedOption.getAttribute('data-legion-name') || '';
-    document.getElementById('president_name').value = selectedOption.getAttribute('data-president-name') || '';
-    document.getElementById('area').value = selectedOption.getAttribute('data-area') || '';
-}
-</script> 
