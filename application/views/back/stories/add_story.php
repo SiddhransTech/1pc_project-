@@ -24,36 +24,73 @@
             <div class="col-md-10 col-lg-offset-1">
                 <div id="page-content">
                     <div class="panel">
-                        <form class="form-horizontal" id="story_form" method="POST"
+                        <form class="form-horizontal" id="project_form" method="POST"
                               action="<?=base_url()?>admin/add_story_details" enctype="multipart/form-data">
                             <div class="panel-body" style="padding: 50px 20px;">
+                                
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label"><b><?php echo translate('image')?></b><span class="text-danger">*</span></label>
+                                    <label class="col-sm-2 control-label"><b>Legion Name</b><span class="text-danger">*</span></label>
                                     <div class="col-sm-8">
-                                        <input type="file" class="form-control" name="story_photo" required>
+                                        <input type="text" class="form-control" name="legion_name" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label"><b><?php echo translate('title')?></b><span class="text-danger">*</span></label>
+                                    <label class="col-sm-2 control-label"><b>President Name</b><span class="text-danger">*</span></label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="story_name" required>
+                                        <input type="text" class="form-control" name="president_name" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label"><b><?php echo translate('date')?></b><span class="text-danger">*</span></label>
+                                    <label class="col-sm-2 control-label"><b>Area</b><span class="text-danger">*</span></label>
                                     <div class="col-sm-8">
-                                        <input type="date" class="form-control" name="dated" required>
+                                        <input type="text" class="form-control" name="area" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label"><b><?php echo translate('description')?></b><span class="text-danger">*</span></label>
+                                    <label class="col-sm-2 control-label"><b>Program Name</b><span class="text-danger">*</span></label>
                                     <div class="col-sm-8">
-                                        <textarea class="form-control" name="description" rows="5" required></textarea>
+                                        <input type="text" class="form-control" name="program_name" required>
                                     </div>
                                 </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label"><b>Program Area</b><span class="text-danger">*</span></label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="program_area" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label"><b>Date</b><span class="text-danger">*</span></label>
+                                    <div class="col-sm-8">
+                                        <input type="date" class="form-control" name="date" value="<?= date('Y-m-d') ?>" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label"><b>Program Details</b><span class="text-danger">*</span></label>
+                                    <div class="col-sm-8">
+                                        <textarea class="form-control" name="program_details" rows="5" required></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label"><b>Activity Photo</b><span class="text-danger">*</span></label>
+                                    <div class="col-sm-8">
+                                        <input type="file" class="form-control" name="activity_photo" accept=".jpg,.jpeg,.png,.pdf" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label"><b>Press Coverage</b></label>
+                                    <div class="col-sm-8">
+                                        <input type="file" class="form-control" name="press_coverage" accept=".jpg,.jpeg,.png,.pdf">
+                                    </div>
+                                </div>
+
                             </div>
 
                             <div class="panel-footer text-center">
