@@ -4371,17 +4371,20 @@ if ($para1 == "add") {
                         //email verification check end
 
                         if($check == 'done'){
+                            //   log_message('debug', 'User fetched from DB with legion_id: ' . $result->legion_id);
                             if ($result->is_blocked == "no") {
                                 $data['login_state'] = 'yes';
                                 $data['member_id'] = $result->member_id;
                                 $data['member_name'] = $result->first_name;
                                 $data['member_email'] = $result->email;
-
+                                $data['legion_id'] = $result->legion_id;
+                            
                                 if ($remember_me == 'checked') {
                                     $this->session->set_userdata($data);
                                     setcookie('cookie_member_id', $this->session->userdata('member_id'), time() + (1296000), "/");
                                     setcookie('cookie_member_name', $this->session->userdata('member_name'), time() + (1296000), "/");
                                     setcookie('cookie_member_email', $this->session->userdata('member_email'), time() + (1296000), "/");
+                                     setcookie('cookie_legion_id', $this->session->userdata('legion_id'), time() + (1296000), "/"); //
                                 } else {
                                     $this->session->set_userdata($data);
                                 }
@@ -4428,12 +4431,14 @@ if ($para1 == "add") {
                             $data['member_id'] = $result->member_id;
                             $data['member_name'] = $result->first_name;
                             $data['member_email'] = $result->email;
+                             $data['legion_id'] = $result->legion_id;
 
                             if ($remember_me == 'checked') {
                                 $this->session->set_userdata($data);
                                 setcookie('cookie_member_id', $this->session->userdata('member_id'), time() + (1296000), "/");
                                 setcookie('cookie_member_name', $this->session->userdata('member_name'), time() + (1296000), "/");
                                 setcookie('cookie_member_email', $this->session->userdata('member_email'), time() + (1296000), "/");
+                                 setcookie('cookie_legion_id', $this->session->userdata('legion_id'), time() + (1296000), "/"); 
                             } else {
                                 $this->session->set_userdata($data);
                             }
