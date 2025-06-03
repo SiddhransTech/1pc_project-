@@ -5,7 +5,7 @@
 		<!--Page Title-->
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 		<div id="page-title">
-			<h1 class="page-header text-overflow"><?php echo translate('Events')?></h1>
+			<h1 class="page-header text-overflow"><?php echo translate('Project')?></h1>
 
 		</div>
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14,8 +14,8 @@
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 		<ol class="breadcrumb">
 			<li><a href="#"><?php echo translate('home')?></a></li>
-			<li><a href="#"><?php echo translate('stories')?></a></li>
-			<li class="active"><a href="#"><?php echo translate('event_details')?></a></li>
+			<li><a href="#"><?php echo translate('project')?></a></li>
+			<li class="active"><a href="#"><?php echo translate('project_details')?></a></li>
 		</ol>
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 		<!--End breadcrumb-->
@@ -31,7 +31,7 @@
 		?>
 		<div class="panel">
 			<div class="panel-heading">
-				<h3 class="panel-title"><?php echo translate('event_details')?></h3>
+				<h3 class="panel-title"><?php echo translate('project_details')?></h3>
 			</div>
 			<div class="panel-body">
 				<div class="col-sm-12">
@@ -51,9 +51,11 @@
 						</div>
 			            <!--Carousel-->
 			            <!--===================================================-->
-			            <?php 
-			            	$images = json_decode($value->image, true);
-			            ?>
+						<?php 
+					$images = json_decode($value->image, true);
+					echo "<script>console.log(" . json_encode($images) . ");</script>";
+				?>
+
 			            <div id="happy_story_carousel" class="carousel slide" data-ride="carousel">
 			                <!--Indicators-->
 			                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -73,7 +75,7 @@
 			                		$j = 0; 
 			                		foreach ($images as $image): ?>
 				                		<div class="item <?php if($j==0){echo 'active';}?>">
-					                    	<div class="happy_story_carousel" style="background-image: url(<?=base_url()?>uploads/happy_story_image/<?=$image['image']?>)"></div>
+					                    	<div class="happy_story_carousel" style="background-image: url(<?=base_url()?>uploads/happy_story_image/<?=$image['thumb']?>)"></div>
 					                    </div>
 			                		<?php
 			                		$j++; 
@@ -114,7 +116,7 @@
 			    </div>
 			</div>
 			<div class="panel-footer text-center">
-				<?php
+				<!-- <?php
 				if ($value->approval_status == 0) {
 				?>
 				<button class="btn btn-success btn-sm btn-labeled fa fa-check" type="button" data-target='#approval_modal' data-toggle='modal' onclick="approval(<?=$value->approval_status?>, <?=$value->happy_story_id?>)"><?php echo translate('approve')?></button>
@@ -125,7 +127,7 @@
 				<button class="btn btn-dark btn-sm btn-labeled fa fa-close" type="button" data-target='#approval_modal' data-toggle='modal' onclick="approval(<?=$value->approval_status?>, <?=$value->happy_story_id?>)"><?php echo translate('unpublish')?></button>
 				<?php
 				}
-				?>
+				?> -->
 				<a href="<?=base_url()?>admin/stories" class="btn btn-danger btn-sm btn-labeled fa fa-step-backward" type="submit"><?php echo translate('go_back')?></a>
 			</div>
 		</div>
@@ -150,7 +152,7 @@
             </div>
            	<!--Modal body-->
             <div class="modal-body">
-            	<p><?php echo translate('are_you_sure_you_want_to')?> "<b id="type_name"></b>" <?php echo translate('this_event?')?>?</p>
+            	<p><?php echo translate('are_you_sure_you_want_to')?> "<b id="type_name"></b>" <?php echo translate('this_project?')?>?</p>
             	<div class="text-right">
             		<input type="hidden" id="story_id" name="story_id" value="">
             		<button data-dismiss="modal" class="btn btn-default btn-sm" type="button" id="modal_close"><?php echo translate('close')?></button>
