@@ -1958,24 +1958,24 @@ class Crud_model extends CI_Model
         return $query->num_rows();
     }
 
-    function allstories($table,$limit,$start,$col,$dir)
+    function allstories($table, $limit, $start, $col, $dir)
     {
-        // $this->db->select(''.$table.'.'.$table.'_id, '.$table.'.title, '.$table.'.image, '.$table.'.approval_status, '.$table.'.post_time,'. $table.'.partner_name, member.first_name AS member_name', $table . '.description' , FALSE);
-        $this->db->select('' . $table . '.' . $table . '_id, ' . 
-                 $table . '.title, ' . 
-                 $table . '.image, ' . 
-                 $table . '.approval_status, ' . 
-                 $table . '.post_time, ' . 
-                 $table . '.partner_name, ' . 
-                 $table . '.description, ' .  
-                 'member.first_name AS member_name', FALSE);
-
+        $this->db->select(
+            $table . '.' . $table . '_id, ' . 
+            $table . '.title, ' . 
+            $table . '.activity_photo, ' .   // changed here from image to activity_photo
+            $table . '.approval_status, ' . 
+            $table . '.post_time, ' . 
+            $table . '.partner_name, ' . 
+            $table . '.description, ' .  
+            'member.first_name AS member_name', FALSE);
+    
         $this->db->from($table);
         $this->db->join('member', 'member.member_id = '.$table.'.posted_by', 'left');
-        $this->db->limit($limit,$start)->order_by($col,$dir);
+        $this->db->limit($limit, $start)->order_by($col, $dir);
         $query = $this->db->get();
-
-        if($query->num_rows()>0)
+    
+        if($query->num_rows() > 0)
         {
             return $query->result();
         }
@@ -1984,7 +1984,7 @@ class Crud_model extends CI_Model
             return null;
         }
     }
-
+    
     function story_search($table,$limit,$start,$search,$col,$dir)
     {
         $this->db->select(''.$table.'.'.$table.'_id, '.$table.'.title, '.$table.'.image, '.$table.'.approval_status, '.$table.'.post_time,'. $table.'.partner_name, member.first_name AS member_name', FALSE);
