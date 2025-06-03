@@ -51,9 +51,11 @@
 						</div>
 			            <!--Carousel-->
 			            <!--===================================================-->
-			            <?php 
-			            	$images = json_decode($value->image, true);
-			            ?>
+						<?php 
+					$images = json_decode($value->image, true);
+					echo "<script>console.log(" . json_encode($images) . ");</script>";
+				?>
+
 			            <div id="happy_story_carousel" class="carousel slide" data-ride="carousel">
 			                <!--Indicators-->
 			                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -73,7 +75,7 @@
 			                		$j = 0; 
 			                		foreach ($images as $image): ?>
 				                		<div class="item <?php if($j==0){echo 'active';}?>">
-					                    	<div class="happy_story_carousel" style="background-image: url(<?=base_url()?>uploads/happy_story_image/<?=$image['image']?>)"></div>
+					                    	<div class="happy_story_carousel" style="background-image: url(<?=base_url()?>uploads/happy_story_image/<?=$image['thumb']?>)"></div>
 					                    </div>
 			                		<?php
 			                		$j++; 
@@ -114,7 +116,7 @@
 			    </div>
 			</div>
 			<div class="panel-footer text-center">
-				<?php
+				<!-- <?php
 				if ($value->approval_status == 0) {
 				?>
 				<button class="btn btn-success btn-sm btn-labeled fa fa-check" type="button" data-target='#approval_modal' data-toggle='modal' onclick="approval(<?=$value->approval_status?>, <?=$value->happy_story_id?>)"><?php echo translate('approve')?></button>
@@ -125,7 +127,7 @@
 				<button class="btn btn-dark btn-sm btn-labeled fa fa-close" type="button" data-target='#approval_modal' data-toggle='modal' onclick="approval(<?=$value->approval_status?>, <?=$value->happy_story_id?>)"><?php echo translate('unpublish')?></button>
 				<?php
 				}
-				?>
+				?> -->
 				<a href="<?=base_url()?>admin/stories" class="btn btn-danger btn-sm btn-labeled fa fa-step-backward" type="submit"><?php echo translate('go_back')?></a>
 			</div>
 		</div>
