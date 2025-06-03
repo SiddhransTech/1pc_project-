@@ -152,7 +152,7 @@
 					
 					
 					<?php }
-					if ($this->Crud_model->admin_permission('project')){?>
+					if ($this->Crud_model->admin_permission('reporting')){?>
 					<li <?php if($page_name=="stories"){ ?> class="active-link" <?php } ?>>
 						<a href="<?=base_url()?>admin/stories">
 							<i class="fa fa-picture-o"></i>
