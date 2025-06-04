@@ -3673,25 +3673,21 @@ public function delete_area()
 	{
 		try {
 			// Load necessary libraries
-			// log_message('debug', '[add_story_details] Loading libraries...');
 			$this->load->library('form_validation');
 			$this->load->library('upload');
 	
 			// Get admin_id and role_id from session
 			$admin_id = $this->session->userdata('admin_id');
 			$role_id = $this->session->userdata('role_id');
-			// log_message('debug', "[add_story_details] Session admin_id: $admin_id, role_id: $role_id");
 	
 			// Check if role_id exists and is either 2 (President) or 8 (Secretary)
 			if (!$role_id || !in_array($role_id, [2, 8])) {
-				// log_message('debug', '[add_story_details] Unauthorized or missing role_id: ' . ($role_id ?: 'null') . " for admin_id: " . ($admin_id ?: 'null'));
-				$this->session->set_flashdata('failed', 'Only Presidents and Secretaries can add stories.');
+				$this->session->set_flashdata('failed', ['general' => 'Only Presidents and Secretaries can add stories.']);
 				redirect(base_url('admin/stories'), 'refresh');
-				return; // Stop execution if role_id is invalid or missing
+				return;
 			}
 	
 			// Fetch legion_id from admin_legion table
-			log_message('debug', "[add_story_details] Fetching legion_id for admin_id: $admin_id");
 			$this->db->select('legion_id');
 			$this->db->from('admin_legion');
 			$this->db->where('admin_id', $admin_id);
@@ -3700,39 +3696,40 @@ public function delete_area()
 			if ($query->num_rows() > 0) {
 				$result = $query->row();
 				$legion_id = $result->legion_id;
-				log_message('debug', "[add_story_details] Fetched legion_id: $legion_id");
 			} else {
-				log_message('error', '[add_story_details] No legion_id found for admin_id: ' . $admin_id);
-				$this->session->set_flashdata('failed', 'Legion ID not found for this admin.');
+				$this->session->set_flashdata('failed', ['general' => 'Legion ID not found for this admin.']);
 				redirect('admin/stories/add_story');
 				return;
 			}
 	
-			// Form validation rules    
-			log_message('debug', '[add_story_details] Setting form validation rules...');
-		
-			$this->form_validation->set_rules('program_name', 'Program Name', 'required');
-			$this->form_validation->set_rules('program_area', 'Program Area', 'required');
-			$this->form_validation->set_rules('date', 'Date', 'required');
-			$this->form_validation->set_rules('program_details', 'Program Details', 'required');
+			// Form validation rules
+			$this->form_validation->set_rules('program_name', 'Program Name', 'required', ['required' => 'Program Name is required.']);
+			$this->form_validation->set_rules('program_area', 'Program Area', 'required', ['required' => 'Program Area is required.']);
+			$this->form_validation->set_rules('date', 'Date', 'required', ['required' => 'Date is required.']);
+			$this->form_validation->set_rules('program_details', 'Program Details', 'required|min_length[10]', 
+				[
+					'required' => 'Program Details is required.',
+					'min_length' => 'Program Details must be at least 10 characters long.'
+				]);
+	
+			// Array to store errors
+			$errors = [];
 	
 			if ($this->form_validation->run() == FALSE) {
-				$errors = validation_errors();
-				log_message('debug', "[add_story_details] Form validation failed: $errors");
+				// Collect form validation errors
+				$errors['program_name'] = form_error('program_name');
+				$errors['program_area'] = form_error('program_area');
+				$errors['date'] = form_error('date');
+				$errors['program_details'] = form_error('program_details');
 				$this->session->set_flashdata('failed', $errors);
 				redirect('admin/stories/add_story');
 				return;
 			}
-			log_message('debug', '[add_story_details] Form validation passed.');
 	
-			// Upload directory relative to project root
-			$upload_path = FCPATH . 'uploads/happy_story_image/';
-			log_message('debug', "[add_story_details] Upload path set to: $upload_path");
-	
-			// Create directory if not exists
+			// Upload directory
+			$upload_path = FCPATH . 'Uploads/happy_story_image/';
 			if (!is_dir($upload_path)) {
 				mkdir($upload_path, 0755, true);
-				log_message('debug', "[add_story_details] Created upload directory: $upload_path");
 			}
 	
 			// File upload configuration
@@ -3742,29 +3739,24 @@ public function delete_area()
 				'max_size' => 10240, // 10MB max
 				'file_ext_tolower' => TRUE
 			];
-			log_message('debug', '[add_story_details] Upload config initialized.');
 	
 			// Activity Photo Upload
 			$this->upload->initialize($config);
-			log_message('debug', '[add_story_details] Starting activity_photo upload...');
 			if (!$this->upload->do_upload('activity_photo')) {
-				$error_msg = $this->upload->display_errors();
-				log_message('error', "[add_story_details] Activity Photo upload failed: $error_msg");
-				$this->session->set_flashdata('failed', $error_msg);
+				$errors['activity_photo'] = $this->upload->display_errors('', '');
+				$this->session->set_flashdata('failed', $errors);
 				redirect('admin/stories/add_story');
 				return;
 			}
 			$activity_photo = $this->upload->data('file_name');
-			$activity_photo_size = $this->upload->data('file_size'); // Size in KB
+			$activity_photo_size = $this->upload->data('file_size');
 			$activity_photo_ext = strtolower($this->upload->data('file_ext'));
-			log_message('debug', "[add_story_details] Activity Photo uploaded: $activity_photo (Size: {$activity_photo_size}KB, Ext: $activity_photo_ext)");
 	
 			// Validate Activity Photo size limits
 			if ($activity_photo_size < 10 || ($activity_photo_size > 5120 && $activity_photo_ext != '.pdf')) {
-				$error_msg = 'Activity Photo size must be between 10KB and 5MB.';
-				log_message('error', "[add_story_details] $error_msg");
+				$errors['activity_photo'] = 'Activity Photo size must be between 10KB and 5MB.';
 				unlink($upload_path . $activity_photo);
-				$this->session->set_flashdata('failed', $error_msg);
+				$this->session->set_flashdata('failed', $errors);
 				redirect('admin/stories/add_story');
 				return;
 			}
@@ -3772,89 +3764,84 @@ public function delete_area()
 			// Press Coverage Upload (Optional)
 			$press_coverage = NULL;
 			if (!empty($_FILES['press_coverage']['name'])) {
-				log_message('debug', '[add_story_details] Starting press_coverage upload...');
 				$this->upload->initialize($config);
 				if (!$this->upload->do_upload('press_coverage')) {
-					$error_msg = $this->upload->display_errors();
-					log_message('error', "[add_story_details] Press Coverage upload failed: $error_msg");
+					$errors['press_coverage'] = $this->upload->display_errors('', '');
 					unlink($upload_path . $activity_photo);
-					$this->session->set_flashdata('failed', $error_msg);
+					$this->session->set_flashdata('failed', $errors);
 					redirect('admin/stories/add_story');
 					return;
 				}
 				$press_coverage = $this->upload->data('file_name');
 				$press_coverage_size = $this->upload->data('file_size');
 				$press_coverage_ext = strtolower($this->upload->data('file_ext'));
-				log_message('debug', "[add_story_details] Press Coverage uploaded: $press_coverage (Size: {$press_coverage_size}KB, Ext: $press_coverage_ext)");
 	
 				if ($press_coverage_size < 10 
 					|| ($press_coverage_size > 10240 && $press_coverage_ext == '.pdf') 
 					|| ($press_coverage_size > 5120 && $press_coverage_ext != '.pdf')) {
-					$error_msg = 'Press Coverage size must be between 10KB and 5MB for images or 50KB and 10MB for PDFs.';
-					log_message('error', "[add_story_details] $error_msg");
+					$errors['press_coverage'] = 'Press Coverage size must be between 10KB and 5MB for images or 50KB and 10MB for PDFs.';
 					unlink($upload_path . $activity_photo);
 					unlink($upload_path . $press_coverage);
-					$this->session->set_flashdata('failed', $error_msg);
+					$this->session->set_flashdata('failed', $errors);
 					redirect('admin/stories/add_story');
 					return;
 				}
 	
 				if ($press_coverage_ext == '.pdf' && $press_coverage_size < 50) {
-					$error_msg = 'Press Coverage PDF size must be at least 50KB.';
-					log_message('error', "[add_story_details] $error_msg");
+					$errors['press_coverage'] = 'Press Coverage PDF size must be at least 50KB.';
 					unlink($upload_path . $activity_photo);
 					unlink($upload_path . $press_coverage);
-					$this->session->set_flashdata('failed', $error_msg);
+					$this->session->set_flashdata('failed', $errors);
 					redirect('admin/stories/add_story');
 					return;
 				}
-			} else {
-				log_message('debug', '[add_story_details] No press_coverage file uploaded.');
 			}
+	
 			$admin_name = $this->session->userdata('name');
-			// Prepare story data for happy_story table
+			log_message('info', 'Admin Name: ' . $admin_name);
+			
+			// Prepare story data
 			$story_data = [
-				'legion_id' => $legion_id,  // Use legion_id fetched from DB, NOT from form
+				'legion_id' => $legion_id,
 				'date' => $this->input->post('date'),
 				'title' => $this->input->post('program_name'),
 				'description' => $this->input->post('program_details'),
-				'image' => '', // Not provided by form, set to empty string
+				'image' => '',
 				'activity_photo' => $activity_photo,
 				'press_coverage' => $press_coverage,
-				'partner_name' => NULL, // Not provided by form
-				'posted_by' => $admin_id, // Use admin_id from session
-				'member_name' => $admin_name, // Not provided by form
-				'approval_status' => 0 // Default approval status
-				// post_time handled by DB default timestamp
+				'partner_name' => NULL,
+				'posted_by' => $admin_id,
+				'member_name' => $admin_name,
+				'legion_name' => $this->input->post('legion_name'),
+				'area_name' => $this->input->post('area'),
+				'program_area' => $this->input->post('program_area'),
+				'approval_status' => 0
 			];
-			log_message('debug', '[add_story_details] Prepared story data for insertion.');
+
+			log_message('info', '$story_data ' . $admin_name);
 	
-			// Insert into DB
-			log_message('debug', '[add_story_details] Inserting story data into database...');
+			// // Insert into DB
 			if ($this->db->insert('happy_story', $story_data)) {
-				log_message('info', '[add_story_details] Story added successfully.');
 				$this->session->set_flashdata('success', 'Story added successfully!');
 				redirect('admin/stories');
 				return;
 			} else {
-				$error_msg = 'Failed to add story to database.';
-				log_message('error', "[add_story_details] $error_msg");
+				$errors['general'] = 'Failed to add story to database.';
 				unlink($upload_path . $activity_photo);
 				if ($press_coverage) {
 					unlink($upload_path . $press_coverage);
 				}
-				$this->session->set_flashdata('failed', $error_msg);
+				$this->session->set_flashdata('failed', $errors);
 				redirect('admin/stories');
 				return;
 			}
 	
 		} catch (Exception $e) {
-			log_message('error', "[add_story_details] Exception: " . $e->getMessage());
-			$this->session->set_flashdata('failed', 'An unexpected error occurred. Please try again.');
+			$errors['general'] = 'An unexpected error occurred. Please try again.';
+			$this->session->set_flashdata('failed', $errors);
 			redirect('admin/stories/add_story');
 		}
 	}
-	
 	
 	function send_sms($para1 = "", $para2 = "")
 	{
