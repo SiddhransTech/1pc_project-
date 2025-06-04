@@ -5586,9 +5586,7 @@ public function delete_area()
 			} elseif ($para1 == "do_add") {
 				$data['name'] = $this->input->post('name');
 				$data['amount'] = $this->input->post('amount');
-				$data['express_interest'] = $this->input->post('express_interest');
-				$data['direct_messages'] = $this->input->post('direct_messages');
-				$data['photo_gallery'] = $this->input->post('photo_gallery');
+				
 
 				if (!empty($_POST['exp_int_status'])) {
 					$data['exp_int_status'] = 1;
@@ -8525,7 +8523,7 @@ public function delete_area()
 				$data['admin_id'] = $result->admin_id;
 				$data['role_id'] = $result->role;
 				$data['name'] = $result->name;
-				
+				$data['user_type'] = 1;
 
 				$this->session->set_userdata($data);
 
