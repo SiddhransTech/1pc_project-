@@ -15,6 +15,63 @@ class Crud_model extends CI_Model
         $this->output->set_header('Pragma: no-cache');
     }
 
+    
+
+
+
+    public function get_legion_and_area_by_admin($admin_id)
+    {
+        log_message('debug', 'Method invoked: get_legion_and_area_by_admin | Admin ID: ' . $admin_id);
+        $session_data = $this->session->userdata();
+        log_message('debug', 'Full Session Data: ' . print_r($session_data, true));
+        
+        
+        try {
+            // Check if admin_id exists in admin_legion table
+            $this->db->select('legion_id');
+            $this->db->from('admin_legion');
+            $this->db->where('admin_id', $admin_id);
+            $query = $this->db->get();
+    
+            if ($query->num_rows() === 0) {
+                $message = 'No legion assigned to this admin.';
+                log_message('debug', 'Admin ID ' . $admin_id . ' => ' . $message);
+                return ['status' => false, 'message' => $message];
+            }
+    
+            $legion_id = $query->row()->legion_id;
+            log_message('debug', 'Fetched legion_id: ' . $legion_id . ' for admin_id: ' . $admin_id);
+    
+            // Fetch legion and area details using joins
+            $this->db->select('legions.name AS legion_name, areas.name AS area_name');
+            $this->db->from('legions');
+            $this->db->join('areas', 'legions.area_id = areas.id', 'left');
+            $this->db->where('legions.id', $legion_id);
+            $legion_query = $this->db->get();
+    
+            if ($legion_query->num_rows() === 0) {
+                $message = 'Legion or area details not found.';
+                log_message('debug', 'Legion ID ' . $legion_id . ' => ' . $message);
+                return ['status' => false, 'message' => $message];
+            }
+    
+            $result = $legion_query->row();
+            log_message('debug', 'Legion Name: ' . $result->legion_name . ', Area Name: ' . $result->area_name);
+    
+            return [
+                'status' => true,
+                'legion_name' => $result->legion_name,
+                'area_name' => $result->area_name
+            ];
+        } catch (Exception $e) {
+            log_message('error', 'Exception in get_legion_and_area_by_admin: ' . $e->getMessage());
+            return [
+                'status' => false,
+                'message' => 'An unexpected error occurred while retrieving legion and area details.'
+            ];
+        }
+    }
+    
 
     public function get_legions_by_area($area_id)
     {
@@ -25,6 +82,8 @@ class Crud_model extends CI_Model
                         ->get()
                         ->result_array();
     }
+    
+
     
 
     ////////////  GET THE  AREA  AND THE LEGION //////
@@ -1899,24 +1958,24 @@ class Crud_model extends CI_Model
         return $query->num_rows();
     }
 
-    function allstories($table,$limit,$start,$col,$dir)
+    function allstories($table, $limit, $start, $col, $dir)
     {
-        // $this->db->select(''.$table.'.'.$table.'_id, '.$table.'.title, '.$table.'.image, '.$table.'.approval_status, '.$table.'.post_time,'. $table.'.partner_name, member.first_name AS member_name', $table . '.description' , FALSE);
-        $this->db->select('' . $table . '.' . $table . '_id, ' . 
-                 $table . '.title, ' . 
-                 $table . '.image, ' . 
-                 $table . '.approval_status, ' . 
-                 $table . '.post_time, ' . 
-                 $table . '.partner_name, ' . 
-                 $table . '.description, ' .  
-                 'member.first_name AS member_name', FALSE);
-
+        $this->db->select(
+            $table . '.' . $table . '_id, ' . 
+            $table . '.title, ' . 
+            $table . '.activity_photo, ' .   // changed here from image to activity_photo
+            $table . '.approval_status, ' . 
+            $table . '.post_time, ' . 
+            $table . '.partner_name, ' . 
+            $table . '.description, ' .  
+            'member.first_name AS member_name', FALSE);
+    
         $this->db->from($table);
         $this->db->join('member', 'member.member_id = '.$table.'.posted_by', 'left');
-        $this->db->limit($limit,$start)->order_by($col,$dir);
+        $this->db->limit($limit, $start)->order_by($col, $dir);
         $query = $this->db->get();
-
-        if($query->num_rows()>0)
+    
+        if($query->num_rows() > 0)
         {
             return $query->result();
         }
@@ -1925,7 +1984,7 @@ class Crud_model extends CI_Model
             return null;
         }
     }
-
+    
     function story_search($table,$limit,$start,$search,$col,$dir)
     {
         $this->db->select(''.$table.'.'.$table.'_id, '.$table.'.title, '.$table.'.image, '.$table.'.approval_status, '.$table.'.post_time,'. $table.'.partner_name, member.first_name AS member_name', FALSE);
