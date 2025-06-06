@@ -93,7 +93,7 @@ if ($hostname == 'localhost' || $hostname == '127.0.0.1') {
         'dsn'   => '',
         'hostname' => 'localhost',
         'username' => 'root',
-        'password' => '',
+        'password' => 'Charity@123',
         'database' => 'u824676608_1percentcharit',
         'dbdriver' => 'mysqli',
         'dbprefix' => '',
