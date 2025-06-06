@@ -23,29 +23,7 @@
                             <?php endif; ?>
 
                             <!-- Legion Selection -->
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label"><b>Legion</b><span class="text-danger">*</span></label>
-                                <div class="col-sm-8">
-                                    <select class="form-control" id="legion_id" name="legion_id" required onchange="fillLegionDetails()">
-                                        <option value="">Select Legion</option>
-                                        <?php
-                                        $legions = isset($legions) ? $legions : [ ['id' => $legion['id'], 'legion_name' => $legion['legion_name'], 'admin_name' => $legion['admin_name'], 'area_name' => $legion['area_name']] ];
-                                        foreach ($legions as $l):
-                                        ?>
-                                            <option value="<?= $l['id'] ?>" 
-                                                    data-legion-name="<?= htmlspecialchars($l['legion_name']) ?>" 
-                                                    data-president-name="<?= htmlspecialchars($l['admin_name']) ?>" 
-                                                    data-area="<?= htmlspecialchars($l['area_name']) ?>" 
-                                                    <?= $l['id'] == $legion['id'] ? 'selected' : '' ?>>
-                                                <?= $l['legion_name'] ?>
-                                            </option>
-                                        <?php endforeach; ?>
-                                    </select>
-                                    <?php if (isset($this->session->flashdata('failed')['legion_id'])): ?>
-                                        <span class="text-danger"><?= $this->session->flashdata('failed')['legion_id']; ?></span>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
+                           
 
                             <!-- President Name -->
                             <div class="form-group">
@@ -81,15 +59,18 @@
                             </div>
 
                             <!-- Date -->
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label"><b>Date</b><span class="text-danger">*</span></label>
-                                <div class="col-sm-8">
-                                    <input type="date" class="form-control" id="date" name="date" value="<?= date('Y-m-d') ?>" required>
-                                    <?php if (isset($this->session->flashdata('failed')['date'])): ?>
-                                        <span class="text-danger"><?= $this->session->flashdata('failed')['date']; ?></span>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"><b>Date</b><span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                        <input type="date" class="form-control" id="date" name="date" 
+                            value="<?= date('Y-m-d') ?>" 
+                            readonly 
+                            style="pointer-events: none;" required>
+                        <?php if (isset($this->session->flashdata('failed')['date'])): ?>
+                            <span class="text-danger"><?= $this->session->flashdata('failed')['date']; ?></span>
+                        <?php endif; ?>
+                    </div>
+                </div>
 
                             <!-- Program Name -->
                             <div class="form-group">

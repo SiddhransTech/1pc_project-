@@ -584,7 +584,7 @@
                     </li>
 				<?php  ?>
 				
-				<?php } if ($this->Crud_model->admin_permission('send_sms')){?>
+				<?php } if ($this->Crud_model->admin_permission('business_network_shortcut')){?>
 					<li <?php if($page_name=="my_bussiness"){ ?> class="active-link" <?php } ?>>
 						<a href="<?=base_url()?>admin/my_business">
 							<i class="fa fa-mobile"></i>
