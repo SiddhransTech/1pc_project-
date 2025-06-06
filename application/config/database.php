@@ -92,8 +92,8 @@ if ($hostname == 'localhost' || $hostname == '127.0.0.1') {
     $db['default'] = array(
         'dsn'   => '',
         'hostname' => 'localhost',
-        'username' => 'u824676608_1percentcharit',
-        'password' => 'Charity@123',
+        'username' => 'root',
+        'password' => '',
         'database' => 'u824676608_1percentcharit',
         'dbdriver' => 'mysqli',
         'dbprefix' => '',
