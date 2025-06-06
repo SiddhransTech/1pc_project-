@@ -93,16 +93,10 @@
 	                    <span class="stats-count"><?= $package_info[0]['payment_type'] ?></span>
 	                    <span class="stats-label text-uppercase"><?php echo translate('payment_gateway') ?></span>
 	                </div>
-	                <!-- <div class="stats-entry">
-	                    <span class="stats-count"><?= $get_member[0]->express_interest ?></span>
-	                    <span class="stats-label text-uppercase"><?php echo translate('remaining_interest') ?></span>
-	                </div> -->
+	                
 	            </div>
 	            <div class="profile-stats clearfix mt-2">
-	                <!-- <div class="stats-entry">
-	                    <span class="stats-count"><?= $get_member[0]->direct_messages ?></span>
-	                    <span class="stats-label text-uppercase"><?php echo translate('remaining_message') ?></span>
-	                </div> -->
+	               
 	                <div class="stats-entry">
 	                    <span class="stats-count"><?= $get_member[0]->photo_gallery ?></span>
 	                    <span class="stats-label text-uppercase"><?php echo translate('photo_gallery') ?></span>
@@ -120,6 +114,9 @@
 	                </a>
 	                <a class="btn btn-styled btn-sm btn-white z-depth-2-bottom mb-3 my_packages l_nav" onclick="profile_load('my_packages','alt-sm')">
 	                    <b style="font-size: 12px"><?php echo translate('My_package') ?></b>
+	                </a>
+					<a class="btn btn-styled btn-sm btn-white z-depth-2-bottom mb-3 my_packages l_nav"  href="<?=base_url()?>home/plans">
+	                    <b style="font-size: 12px"><?php echo translate('Contribution') ?></b>
 	                </a>
 	                <a class="btn btn-styled btn-sm btn-white z-depth-2-bottom mb-3 payments l_nav" onclick="profile_load('payments','alt-sm')">
 	                    <b style="font-size: 12px"><?php echo translate('payment_informations') ?></b>

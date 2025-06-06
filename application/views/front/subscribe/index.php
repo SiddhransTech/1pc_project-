@@ -70,7 +70,7 @@
                                 <h3 class="heading heading-5 strong-500"><?=$value->name?></h3>
                                 <h3 class="price-tag"><sup style="font-size: 36px;"></sup><?=currency($value->amount)?></h3>
                                 <ul class="pl-0 pr-0 mt-0">
-                                    <!-- <li class="package_items"><?php if($value->plan_id == 1){echo "Limited Profile Searching";}else{echo "Advanced Profile Searching";}?></li> -->
+                                    <li class="package_items"><?php if($value->plan_id == 1){echo "Limited Profile Searching";}else{echo "Advanced Profile Searching";}?></li>
                                     <li class="<?=$package_class?> package_items"><?php echo translate('express_interest:')?> <?=$value->express_interest?> <?php echo translate('times')?></li>
                                     <li class="<?=$package_class?> package_items"><?php echo translate('direct_messages:')?> <?=$value->direct_messages?> <?php echo translate('times')?></li>
                                     <li class="<?=$package_class?> package_items"><?php echo translate('photo_gallery:')?> <?=$value->photo_gallery?> <?php echo translate('images')?></li>
