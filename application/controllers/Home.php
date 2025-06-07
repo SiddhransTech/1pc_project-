@@ -2788,7 +2788,78 @@ public function member_profile($para1 = "", $para2 = "")
             $this->load->view('front/index', $page_data);
         }
     }
-
+    function contribution($para1 = "", $para2 = "")
+    {
+        if ($para1=="") {
+            $page_data['title']         = "Premium Plans || ".$this->system_title;
+            $page_data['top']           = "plans.php";
+            $page_data['page']          = "plans";
+            $page_data['bottom']        = "plans.php";
+            $page_data['page_url']      = "home/plans";
+            $page_data['all_plans']     = $this->db->get("plan")->result();
+            //echo '<pre>';print_r($page_data);exit;
+            if ($this->session->flashdata('alert') == "paypal_cancel") {
+                $page_data['danger_alert'] = translate("you_have_canceled_your_payment_via_paypal!");
+            }
+            elseif ($this->session->flashdata('alert') == "pum_fail") {
+                $page_data['danger_alert'] = translate("your_payment_via_payUMoney_has_been_failed!");
+            }
+            elseif ($this->session->flashdata('alert') == "stripe_failed") {
+                $page_data['danger_alert'] = translate("your_payment_via_stripe_has_been_failed!");
+            }
+            $this->load->view('front/index', $page_data);
+        }
+        elseif ($para1=="subscribe") {
+            if ($this->member_permission() == FALSE) {
+                redirect(base_url().'home/login', 'refresh');
+            }
+            if ($para2==1) {
+                redirect(base_url().'home/plans', 'refresh');
+            }
+            $page_data['title'] = "Premium Plans || ".$this->system_title;
+            $page_data['top'] = "plans.php";
+            $page_data['page'] = "subscribe";
+            $page_data['bottom'] = "plans.php";
+            $page_data['selected_plan'] = $this->db->get_where("plan", array("plan_id" => $para2))->result();
+            $this->load->view('front/index', $page_data);
+        }
+    }
+    // public function contribution($para1 = "", $para2 = "")
+    // {
+    //     if ($para1 == "") {
+    //         $page_data['title']         = "Contributions || " . $this->system_title;
+    //         $page_data['top']           = "contribution.php";
+    //         $page_data['page']          = "contribution";
+    //         $page_data['bottom']        = "contribution.php";
+    //         $page_data['page_url']      = "home/contribution";
+    //         $page_data['all_contributions'] = $this->db->get("contribution")->result();
+    
+    //         // Flash alerts
+    //         if ($this->session->flashdata('alert') == "paypal_cancel") {
+    //             $page_data['danger_alert'] = translate("you_have_canceled_your_payment_via_paypal!");
+    //         } elseif ($this->session->flashdata('alert') == "pum_fail") {
+    //             $page_data['danger_alert'] = translate("your_payment_via_payUMoney_has_been_failed!");
+    //         } elseif ($this->session->flashdata('alert') == "stripe_failed") {
+    //             $page_data['danger_alert'] = translate("your_payment_via_stripe_has_been_failed!");
+    //         }
+    
+    //         $this->load->view('front/index', $page_data);
+    //     }
+    //     elseif ($para1 == "view") {
+    //         if ($this->member_permission() == FALSE) {
+    //             redirect(base_url() . 'home/login', 'refresh');
+    //         }
+    
+    //         $page_data['title']             = "Contribution Details || " . $this->system_title;
+    //         $page_data['top']               = "contribution.php";
+    //         $page_data['page']              = "contribution_view";
+    //         $page_data['bottom']            = "contribution.php";
+    //         $page_data['selected_contribution'] = $this->db->get_where("contribution", array("contribution_id" => $para2))->result();
+    
+    //         $this->load->view('front/index', $page_data);
+    //     }
+    // }
+    
     function stories($para1="",$para2="", $para3="")
     {
         if ($para1=="") {
@@ -4378,6 +4449,7 @@ if ($para1 == "add") {
                                 $data['member_name'] = $result->first_name;
                                 $data['member_email'] = $result->email;
                                 $data['legion_id'] = $result->legion_id;
+                                $data['user_type'] = 0;
                             
                                 if ($remember_me == 'checked') {
                                     $this->session->set_userdata($data);
@@ -4431,8 +4503,8 @@ if ($para1 == "add") {
                             $data['member_id'] = $result->member_id;
                             $data['member_name'] = $result->first_name;
                             $data['member_email'] = $result->email;
-                             $data['legion_id'] = $result->legion_id;
-
+                            $data['legion_id'] = $result->legion_id;
+                            $data['user_type'] = 0;
                             if ($remember_me == 'checked') {
                                 $this->session->set_userdata($data);
                                 setcookie('cookie_member_id', $this->session->userdata('member_id'), time() + (1296000), "/");
