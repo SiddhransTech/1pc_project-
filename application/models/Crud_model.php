@@ -16,6 +16,31 @@ class Crud_model extends CI_Model
     }
 
     
+//     public function get_report_by_range($range)
+// {
+//     $this->db->select('*');
+//     $this->db->from('happy_story'); // your actual table name
+
+//     if ($range == 'this_month') {
+//         $this->db->where('MONTH(date)', date('m'));
+//         $this->db->where('YEAR(date)', date('Y'));
+//     } elseif ($range == 'last_month') {
+//         $last_month = date('m', strtotime('-1 month'));
+//         $last_year = date('Y', strtotime('-1 month'));
+//         $this->db->where('MONTH(date)', $last_month);
+//         $this->db->where('YEAR(date)', $last_year);
+//     }
+
+//     return $this->db->get()->result_array();
+// }
+
+public function get_report_by_range($start_date, $end_date)
+{
+    $this->db->where('date >=', $start_date);
+    $this->db->where('date <=', $end_date);
+    $query = $this->db->get('happy_story');
+    return $query->result();
+}
 
 
 
