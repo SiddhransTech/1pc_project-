@@ -58,6 +58,44 @@
 			<?php endif; ?>
 
 			<div class="panel-body">
+    <!-- Form to submit date range -->
+    <!-- <form method="post" action="<?= base_url('your_controller/get_projects_by_date') ?>"> -->
+		<form method="post" action="<?= base_url('admin/generate') ?>">
+        <div class="row mb-2" style="margin-bottom: 50px;">
+            <div class="col-md-2">
+                <label for="date_range"><?= translate('select_date_range') ?></label>
+                <select id="date_range" name="date_range" class="form-control" required>
+                    <option value=""><?= translate('choose_range') ?></option>
+                    <?php
+                    $year = date('Y');
+                    $next_year = $year + 1;
+                    $ranges = [
+                        ['start' => "$year-04-01", 'end' => "$year-05-31"],
+                        ['start' => "$year-06-01", 'end' => "$year-07-30"],
+                        ['start' => "$year-08-01", 'end' => "$year-09-30"],
+                        ['start' => "$year-10-01", 'end' => "$year-11-30"],
+                        ['start' => "$year-12-01", 'end' => "$next_year-02-20"],
+                    ];
+                    foreach ($ranges as $range) {
+                        $label = date('j M', strtotime($range['start'])) . ' - ' . date('j M', strtotime($range['end']));
+                        $value = $range['start'] . '|' . $range['end'];
+                        echo '<option value="' . $value . '">' . $label . '</option>';
+                    }
+                    ?>
+                </select>
+            </div>
+
+            <div class="col-md-3 d-flex align-items-end">
+                <button type="submit" class="btn btn-success" id="generate_pdf" style="display: none;">
+                    <i class="fa fa-file-pdf-o"></i> <?= translate('generate_pdf') ?>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
 				<table id="stories_table" class="table table-striped table-bordered" cellspacing="0" width="100%">
 					<thead>
 					<tr>
@@ -243,4 +281,44 @@
 			}
 		});
     })
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdown = document.getElementById("date_range");
+    const button = document.getElementById("generate_pdf");
+
+    dropdown.addEventListener("change", function () {
+        button.style.display = this.value !== "" ? "inline-block" : "none";
+    });
+
+      button.addEventListener("click", function (e) {
+        e.preventDefault(); // Prevent form default behavior
+
+        const selectedRange = dropdown.value;
+        if (selectedRange !== "") {
+            fetch("<?= base_url('admin/generate') ?>?range=" + selectedRange)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Failed to generate PDF");
+                    }
+                    return response.blob();
+                })
+                .then(blob => {
+                    // Create a download link for the blob
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement("a");
+                    a.href = url;
+                    a.download = "Report_<?= date('Ymd_His') ?>.pdf";
+                    document.body.appendChild(a);
+                    a.click();
+                    a.remove();
+                })
+                .catch(error => {
+                    console.error("PDF generation error:", error);
+                    alert("Failed to generate PDF.");
+                });
+        }
+    });
+});
 </script>

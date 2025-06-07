@@ -18218,4 +18218,89 @@ public function delete_area()
 	 }
           /*-------new End-----------*/
 
+public function get_projects_by_date()
+{
+    $range = $this->input->post('date_range');
+
+    if ($range) {
+        list($start_date, $end_date) = explode('|', $range);
+
+        // Fetch records where date is between selected range
+        $this->db->where('date >=', $start_date);
+        $this->db->where('date <=', $end_date);
+        $projects = $this->db->get('happy_story')->result();
+
+        // Load view and pass projects and date range
+        $this->load->library('pdf'); // assuming you use a PDF lib
+        $data['projects'] = $projects;
+        $data['start_date'] = $start_date;
+        $data['end_date'] = $end_date;
+
+        // Load view as HTML and convert to PDF
+        $html = $this->load->view('pdf/project_report', $data, true);
+        $this->pdf->create($html, 'project_report_' . date('YmdHis')); // see step 3 below
+    } else {
+        redirect('your_controller/form_page'); // fallback
+    }
+}
+
+public function generate_pdf() {
+    // Get posted date range
+    $date_range = $this->input->post('date_range');
+    if (!$date_range) {
+        show_error("Date range is required");
+        return;
+    }
+
+    list($start_date, $end_date) = explode('|', $date_range);
+
+    // Load model and fetch project data from happy_story table
+    $this->load->model('HappyStory_model');
+    $data['projects'] = $this->HappyStory_model->get_projects_by_date($start_date, $end_date);
+
+    // Load PDF library
+    $this->load->library('pdf');
+
+    // Load HTML content from view
+    $html = $this->load->view('pdf/project_report', $data, true);
+
+    // Create and render PDF
+    $this->pdf->create($html, 'project_report');  // 'project_report' is the output file name
+}
+// public function generate()
+//     {
+//         $range = $this->input->get('range'); // e.g., 'this_month', 'last_month'
+// 		// Log the value of $range to CodeIgniter log file
+//     log_message('debug', 'generate() called with range: ' . print_r($range, true));
+
+//         $data['report_data'] = $this->Crud_model->get_report_by_range($range);
+//         $data['title'] = "Report - " . ucfirst(str_replace('_', ' ', $range));
+
+//         $html = $this->load->view('pdf/report_template', $data, true);
+
+//         $this->pdf->create($html, 'Report_' . date('Ymd_His'));
+//     }
+public function generate()
+{
+    $this->load->library('pdf'); // Ensure the PDF library is loaded
+
+    $range = $this->input->get('range');
+    log_message('debug', 'generate() called with date_range: ' . $range);
+
+    list($start_date, $end_date) = explode('|', $range);
+    $data['report_data'] = $this->Crud_model->get_report_by_range($start_date, $end_date);
+    log_message('debug', 'Fetched ' . count($data['report_data']) . ' records for date range: ' . $start_date . ' to ' . $end_date);
+
+    // 🔽 Add this loop here to see actual row data in log
+    foreach ($data['report_data'] as $row) {
+        log_message('debug', 'Row: ' . json_encode($row));
+    }
+
+    $data['title'] = "Report - $start_date to $end_date";
+
+    $html = $this->load->view('pdf/report_template', $data, true);
+    $this->pdf->create($html, 'Report_' . date('Ymd_His'));
+}
+
+
 }
