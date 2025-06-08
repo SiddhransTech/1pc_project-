@@ -3751,48 +3751,115 @@ if ($para1 == "add") {
             // submit the fields to pum
             $this->pum->submit_pum_post();
         }
+        // else if ($this->input->post('payment_type') == 'instamojo') {
+        //   $member_id = $this->session->userdata('member_id');
+        //   $payment_type = $this->input->post('payment_type');
+        //   $plan_id = $this->input->post('plan_id');
+        //   $amount = $this->db->get_where('plan', array('plan_id' => $plan_id))->row()->amount;
+        //   $package_name = $this->db->get_where('plan', array('plan_id' => $plan_id))->row()->name;
+
+        //   $data['plan_id']            = $plan_id;
+        //   $data['member_id']          = $member_id;
+        //   $data['payment_type']       = 'Instamojo';
+        //   $data['payment_status']     = 'due';
+        //   $data['payment_details']    = 'none';
+        //   $exchange = exchange('usd');
+        //   $amount= $amount/$exchange;
+        //   $data['amount']             = $amount;
+        //   $data['purchase_datetime']  = time();
+
+        //   $this->db->insert('package_payment', $data);
+        //   $payment_id = $this->db->insert_id();
+        //   $data['payment_code'] = date('Ym', $data['purchase_datetime']) . $payment_id;
+        //   $this->session->set_userdata('payment_id', $payment_id);
+
+        //   $member_data = $this->db->get_where('member',array('member_id'=>$member_id))->row();
+
+        //   $instamojo_api_key = $this->Crud_model->get_settings_value('business_settings', 'instamojo_api_key', 'value');
+        //   $instamojo_auth_token = $this->Crud_model->get_settings_value('business_settings', 'instamojo_auth_token', 'value');
+        //   $instamojo_account_type = $this->Crud_model->get_settings_value('business_settings', 'instamojo_account_type', 'value');
+
+        //   if($instamojo_account_type == 'sandbox'){
+        //            // testing_url
+        //            $endPoint = 'https://test.instamojo.com/api/1.1/';
+        //        }
+        //    else{
+        //        // live_url
+        //        $endPoint = 'https://www.instamojo.com/api/1.1/';
+        //    }
+
+        //    $api = new \Instamojo\Instamojo(
+        //         $instamojo_api_key,
+        //         $instamojo_auth_token,
+        //         $endPoint
+        //       );
+        //     try {
+        //         $response = $api->paymentRequestCreate(array(
+        //             "purpose" => 'Package Payment',
+        //             "amount" => $data['amount'],
+        //             "buyer_name" => $member_data->first_name,
+        //             "send_email" => true,
+        //             "email" => $member_data->email,
+        //             "phone" => $member_data->mobile,
+        //             "redirect_url" => base_url().'home/instamojo_success'
+        //             ));
+
+        //             return redirect($response['longurl']);
+
+        //     }catch (Exception $e) {
+        //         print('Error: ' . $e->getMessage());
+        //     }
+        // }
+
         else if ($this->input->post('payment_type') == 'instamojo') {
-          $member_id = $this->session->userdata('member_id');
-          $payment_type = $this->input->post('payment_type');
-          $plan_id = $this->input->post('plan_id');
-          $amount = $this->db->get_where('plan', array('plan_id' => $plan_id))->row()->amount;
-          $package_name = $this->db->get_where('plan', array('plan_id' => $plan_id))->row()->name;
-
-          $data['plan_id']            = $plan_id;
-          $data['member_id']          = $member_id;
-          $data['payment_type']       = 'Instamojo';
-          $data['payment_status']     = 'due';
-          $data['payment_details']    = 'none';
-          $exchange = exchange('usd');
-          $amount= $amount/$exchange;
-          $data['amount']             = $amount;
-          $data['purchase_datetime']  = time();
-
-          $this->db->insert('package_payment', $data);
-          $payment_id = $this->db->insert_id();
-          $data['payment_code'] = date('Ym', $data['purchase_datetime']) . $payment_id;
-          $this->session->set_userdata('payment_id', $payment_id);
-
-          $member_data = $this->db->get_where('member',array('member_id'=>$member_id))->row();
-
-          $instamojo_api_key = $this->Crud_model->get_settings_value('business_settings', 'instamojo_api_key', 'value');
-          $instamojo_auth_token = $this->Crud_model->get_settings_value('business_settings', 'instamojo_auth_token', 'value');
-          $instamojo_account_type = $this->Crud_model->get_settings_value('business_settings', 'instamojo_account_type', 'value');
-
-          if($instamojo_account_type == 'sandbox'){
-                   // testing_url
-                   $endPoint = 'https://test.instamojo.com/api/1.1/';
-               }
-           else{
-               // live_url
-               $endPoint = 'https://www.instamojo.com/api/1.1/';
-           }
-
-           $api = new \Instamojo\Instamojo(
+            $member_id = $this->session->userdata('member_id');
+            $payment_type = $this->input->post('payment_type');
+            $plan_id = $this->input->post('plan_id');
+        
+            log_message('info', 'Instamojo Payment Initiated. Member ID: ' . $member_id . ', Plan ID: ' . $plan_id);
+        
+            $plan = $this->db->get_where('plan', array('plan_id' => $plan_id))->row();
+            $amount = $plan->amount;
+            $package_name = $plan->name;
+        
+            $data['plan_id'] = $plan_id;
+            $data['member_id'] = $member_id;
+            $data['payment_type'] = 'Instamojo';
+            $data['payment_status'] = 'due';
+            $data['payment_details'] = 'none';
+        
+            $exchange = exchange('usd');
+            $amount_in_usd = $amount / $exchange;
+            $data['amount'] = $amount_in_usd;
+            $data['purchase_datetime'] = time();
+        
+            log_message('info', 'Prepared payment data: ' . json_encode($data));
+        
+            $this->db->insert('package_payment', $data);
+            $payment_id = $this->db->insert_id();
+        
+            log_message('info', 'Inserted package_payment. Payment ID: ' . $payment_id);
+        
+            $data['payment_code'] = date('Ym', $data['purchase_datetime']) . $payment_id;
+            $this->session->set_userdata('payment_id', $payment_id);
+        
+            $member_data = $this->db->get_where('member', array('member_id' => $member_id))->row();
+            log_message('info', 'Member Data: ' . json_encode($member_data));
+        
+            $instamojo_api_key = $this->Crud_model->get_settings_value('business_settings', 'instamojo_api_key', 'value');
+            $instamojo_auth_token = $this->Crud_model->get_settings_value('business_settings', 'instamojo_auth_token', 'value');
+            $instamojo_account_type = $this->Crud_model->get_settings_value('business_settings', 'instamojo_account_type', 'value');
+        
+            $endPoint = ($instamojo_account_type == 'sandbox') ? 'https://test.instamojo.com/api/1.1/' : 'https://www.instamojo.com/api/1.1/';
+        
+            log_message('info', 'Instamojo endpoint: ' . $endPoint);
+        
+            $api = new \Instamojo\Instamojo(
                 $instamojo_api_key,
                 $instamojo_auth_token,
                 $endPoint
-              );
+            );
+        
             try {
                 $response = $api->paymentRequestCreate(array(
                     "purpose" => 'Package Payment',
@@ -3801,15 +3868,18 @@ if ($para1 == "add") {
                     "send_email" => true,
                     "email" => $member_data->email,
                     "phone" => $member_data->mobile,
-                    "redirect_url" => base_url().'home/instamojo_success'
-                    ));
-
-                    return redirect($response['longurl']);
-
-            }catch (Exception $e) {
-                print('Error: ' . $e->getMessage());
+                    // "redirect_url" => base_url() . 'home/instamojo_success'
+                ));
+        
+                log_message('info', 'Instamojo Payment Request Response: ' . json_encode($response));
+                return redirect($response['longurl']);
+        
+            } catch (Exception $e) {
+                log_message('error', 'Instamojo Error: ' . $e->getMessage());
+                echo 'Error: ' . $e->getMessage();
             }
         }
+        
         else if ($this->input->post('payment_type') == 'custom_payment_method_1') {
 
             $member_id  = $this->session->userdata('member_id');
