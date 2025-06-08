@@ -3868,7 +3868,7 @@ if ($para1 == "add") {
                     "send_email" => true,
                     "email" => $member_data->email,
                     "phone" => $member_data->mobile,
-                    // "redirect_url" => base_url() . 'home/instamojo_success'
+                    "redirect_url" => base_url() . 'home/instamojo_success'
                 ));
         
                 log_message('info', 'Instamojo Payment Request Response: ' . json_encode($response));
