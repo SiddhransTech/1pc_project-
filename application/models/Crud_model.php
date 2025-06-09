@@ -2000,6 +2000,7 @@ public function update_story($id, $data)
         $this->db->select(
             $table . '.' . $table . '_id, ' . 
             $table . '.title, ' . 
+            $table . '.date, ' .  // ✅ Added date here
             $table . '.activity_photo, ' .   // changed here from image to activity_photo
             $table . '.approval_status, ' . 
             $table . '.post_time, ' . 

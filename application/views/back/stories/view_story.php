@@ -94,7 +94,7 @@
                     
                     <div class="col-md-4">
                         <!-- Posted By Information -->
-                        <div class="panel panel-bordered">
+                        <!-- <div class="panel panel-bordered">
                             <div class="panel-heading">
                                 <h3 class="panel-title"><?php echo translate('posted_by')?></h3>
                             </div>
@@ -116,7 +116,7 @@
                                
                             </div>
                         </div>
-                        
+                         -->
 						
                         <!-- Activity Photo -->
                         <?php if(!empty($value->activity_photo)): ?>
