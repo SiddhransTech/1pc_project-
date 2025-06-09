@@ -60,10 +60,10 @@
                                             <th><?php echo translate('date')?></th>
                                             <td><?=date('d/m/Y', strtotime($value->date))?></td>
                                         </tr>
-                                        <tr>
+                                        <!-- <tr>
                                             <th><?php echo translate('posted_on')?></th>
                                             <td><?=date('d/m/Y H:i:s A', strtotime($value->post_time))?></td>
-                                        </tr>
+                                        </tr> -->
                                         <tr>
                                             <th><?php echo translate('program_area')?></th>
                                             <td><?=$value->program_area?></td>

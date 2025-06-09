@@ -3338,7 +3338,10 @@ public function delete_area()
 				        $data['date'] = date('Y-m-d',strtotime($this->input->post('dated')));
 				        $data['member_name'] = $this->input->post('member_name');
 				        $data['partner_name'] = $this->input->post('partner_name');
-						$data['description'] = $this->input->post('description'); 				         
+						$data['description'] = $this->input->post('description'); 	
+						$data['program_area'] = $this->input->post('program_area');
+						$data['legion_name'] = $this->input->post('legion_name');
+						$data['area_name'] = $this->input->post('area_name');			         
 				        //print_r($_FILES);exit;
 						$config = $this->set_upload_happy_story_image();
 						$this->load->library('upload');
@@ -18286,6 +18289,75 @@ public function generate()
     $html = $this->load->view('pdf/report_template', $data, true);
     $this->pdf->create($html, 'Report_' . date('Ymd_His'));
 }
+public function update_story($id)
+{
+    // Load model if not already loaded
+    $this->load->model('Crud_model');
+
+    // Collect the POST data safely
+    $data = array(
+        'title'         => $this->input->post('story_name', true),
+        'date'          => $this->input->post('dated', true),
+        'description'   => $this->input->post('description', true),
+        'program_area'  => $this->input->post('program_area', true),
+        // legion_name and area_name are readonly, so no update needed from user input
+    );
+
+    // Handle file uploads for photos (if any)
+    if (!empty($_FILES['activity_photo']['name'])) {
+        $upload = $this->do_upload('activity_photo');
+        if ($upload['status'] === 'success') {
+            $data['activity_photo'] = $upload['file_name'];
+        } else {
+            $this->session->set_flashdata('error', $upload['error']);
+            redirect('admin/stories/edit_story/' . $id);
+            return;
+        }
+    }
+
+    if (!empty($_FILES['press_coverage']['name'])) {
+        $upload = $this->do_upload('press_coverage');
+        if ($upload['status'] === 'success') {
+            $data['press_coverage'] = $upload['file_name'];
+        } else {
+            $this->session->set_flashdata('error', $upload['error']);
+            redirect('admin/stories/edit_story/' . $id);
+            return;
+        }
+    }
+
+    // Log the data array before updating
+    log_message('debug', 'Update data: ' . print_r($data, true));
+
+    // Update database
+    $update = $this->Crud_model->update_story($id, $data);
+
+    if ($update) {
+        $this->session->set_flashdata('success', 'Project updated successfully!');
+    } else {
+        $this->session->set_flashdata('error', 'Failed to update the project.');
+    }
+
+    redirect('admin/stories');
+}
+
+// File upload helper function
+private function do_upload($field_name)
+{
+    $config['upload_path'] = './uploads/happy_story_image/';
+    $config['allowed_types'] = 'gif|jpg|png|jpeg';
+    $config['max_size'] = 2048; // 2MB max
+    $config['encrypt_name'] = TRUE;
+
+    $this->load->library('upload', $config);
+
+    if (!$this->upload->do_upload($field_name)) {
+        return ['status' => 'error', 'error' => $this->upload->display_errors()];
+    } else {
+        return ['status' => 'success', 'file_name' => $this->upload->data('file_name')];
+    }
+}
+
 
 
 }
