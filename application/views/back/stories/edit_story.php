@@ -31,7 +31,7 @@ function convertDateFormat($date) {
                             <h3 class="text-center" style="margin-bottom: 30px;">Edit Project Details</h3>
                             
                             <!-- Main Image -->
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label class="col-sm-2 control-label text-uppercase" for="profile_image">
                                     <b><?php echo translate('main_image')?></b>
                                 </label>
@@ -49,7 +49,7 @@ function convertDateFormat($date) {
                                         <input type="hidden" id="story_photo_is_edit" name="is_edit" value="0">
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             
                             <!-- Activity Photo -->
                             <div class="form-group">
@@ -94,7 +94,7 @@ function convertDateFormat($date) {
                             <!-- Title -->
                             <div class="form-group">
                                 <label class="col-sm-2 control-label" for="story_name">
-                                    <b><?php echo translate('title')?></b><span class="text-danger">*</span>
+                                    <b><?php echo translate('program name')?></b><span class="text-danger">*</span>
                                 </label>
                                 <div class="col-sm-9">
                                     <input type="text" class="form-control" name="story_name" id="story_name" required 
@@ -103,7 +103,7 @@ function convertDateFormat($date) {
                             </div>
                             
                             <!-- Date -->
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label class="col-sm-2 control-label" for="dated">
                                     <b><?php echo translate('date')?></b><span class="text-danger">*</span>
                                 </label>
@@ -111,7 +111,18 @@ function convertDateFormat($date) {
                                     <input type="date" class="form-control" name="dated" id="dated" required
                                            value="<?= !empty($form_contents['dated']) ? $form_contents['dated'] : convertDateFormat($get_story['date']) ?>">
                                 </div>
-                            </div>
+                            </div> -->
+                           <div class="form-group">
+    <label class="col-sm-2 control-label" for="dated">
+        <b><?php echo translate('date')?></b><span class="text-danger">*</span>
+    </label>
+    <div class="col-sm-9">
+        <input type="date" class="form-control" name="dated" id="dated"
+               value="<?= !empty($form_contents['dated']) ? $form_contents['dated'] : convertDateFormat($get_story['date']) ?>"
+               readonly
+               style="background-color: transparent;">
+    </div>
+</div>
                             
                             <!-- Description -->
                             <div class="form-group">
@@ -137,29 +148,34 @@ function convertDateFormat($date) {
                             </div>
                             
                             <!-- Legion Name -->
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label" for="legion_name">
-                                    <b><?php echo translate('legion_name')?></b>
-                                </label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" name="legion_name" 
-                                           value="<?= !empty($form_contents['legion_name']) ? $form_contents['legion_name'] : $get_story['legion_name'] ?>">
-                                </div>
-                            </div>
-                            
-                            <!-- Area Name -->
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label" for="area_name">
-                                    <b><?php echo translate('area_name')?></b>
-                                </label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" name="area_name" 
-                                           value="<?= !empty($form_contents['area_name']) ? $form_contents['area_name'] : $get_story['area_name'] ?>">
-                                </div>
-                            </div>
+                           <div class="form-group">
+    <label class="col-sm-2 control-label" for="legion_name">
+        <b><?php echo translate('legion_name')?></b>
+    </label>
+    <div class="col-sm-9">
+        <input type="text" class="form-control" name="legion_name" 
+               value="<?= !empty($form_contents['legion_name']) ? $form_contents['legion_name'] : $get_story['legion_name'] ?>"
+               readonly
+               style="background-color: transparent;">
+    </div>
+</div>
+
+<!-- Area Name -->
+<div class="form-group">
+    <label class="col-sm-2 control-label" for="area_name">
+        <b><?php echo translate('area_name')?></b>
+    </label>
+    <div class="col-sm-9">
+        <input type="text" class="form-control" name="area_name" 
+               value="<?= !empty($form_contents['area_name']) ? $form_contents['area_name'] : $get_story['area_name'] ?>"
+               readonly
+               style="background-color: transparent;">
+    </div>
+</div>
+
                             
                             <!-- Additional Images -->
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label class="col-sm-2 control-label">
                                     <b><?php echo translate('additional_images')?></b>
                                 </label>
@@ -168,9 +184,9 @@ function convertDateFormat($date) {
                                     <small class="text-muted">Select multiple images to upload</small>
                                 </div>
                             </div>
-                            
+                             -->
                             <!-- Videos -->
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label class="col-sm-2 control-label">
                                     <b><?php echo translate('videos')?></b>
                                 </label>
@@ -179,7 +195,7 @@ function convertDateFormat($date) {
                                     <small class="text-muted">Select video files to upload</small>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         
                         <div class="panel-footer text-center">
                             <a href="<?=base_url()?>admin/stories" class="btn btn-default btn-sm btn-labeled fa fa-arrow-left">

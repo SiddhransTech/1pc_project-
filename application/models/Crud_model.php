@@ -42,6 +42,18 @@ public function get_report_by_range($start_date, $end_date)
     return $query->result();
 }
 
+public function update_story($id, $data)
+{
+    $this->db->where('happy_story_id', $id);
+    $updated = $this->db->update('happy_story', $data);
+
+    // Debug: check affected rows
+    if ($this->db->affected_rows() > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 
     public function get_legion_and_area_by_admin($admin_id)
@@ -1988,6 +2000,7 @@ public function get_report_by_range($start_date, $end_date)
         $this->db->select(
             $table . '.' . $table . '_id, ' . 
             $table . '.title, ' . 
+            $table . '.date, ' .  // ✅ Added date here
             $table . '.activity_photo, ' .   // changed here from image to activity_photo
             $table . '.approval_status, ' . 
             $table . '.post_time, ' . 

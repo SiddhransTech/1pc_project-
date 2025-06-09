@@ -3317,72 +3317,168 @@ public function delete_area()
 					$this->load->view('back/index', $page_data);
 
 					 
-				}elseif ($para1 == "update_story") {  
-					$this->form_validation->set_rules('story_name', 'Story Name', 'required');
-					$this->form_validation->set_rules('dated', 'Dated', 'required');
-					// $this->form_validation->set_rules('member_name', 'Member Name', 'required');
-					// $this->form_validation->set_rules('partner_name', 'Partner Name', 'required');
-					$this->form_validation->set_rules('description', 'Description', 'required');
+				}
+				// elseif ($para1 == "update_story") {  
+				// 	log_message('debug', 'Story ID to update: ');
+				// 	$this->form_validation->set_rules('story_name', 'Story Name', 'required');
+				// 	$this->form_validation->set_rules('dated', 'Dated', 'required');
+				// 	// $this->form_validation->set_rules('member_name', 'Member Name', 'required');
+				// 	// $this->form_validation->set_rules('partner_name', 'Partner Name', 'required');
+				// 	$this->form_validation->set_rules('description', 'Description', 'required');
 
-				 if ($this->form_validation->run() == FALSE) {
-						$page_data['top'] 		= "stories/index.php";
-						$page_data['folder'] 	= "stories";
-						$page_data['file']	 	= "edit_story.php";
-						$page_data['bottom'] 	= "stories/index.php";
-						$page_data['page_name'] = "stories";
-						$page_data['form_contents'] = $this->input->post();
-					}else{ 
-						$data=array();
-						$data['title'] = $this->input->post('story_name');
-						$data['happy_story_id'] = $para2;
-				        $data['date'] = date('Y-m-d',strtotime($this->input->post('dated')));
-				        $data['member_name'] = $this->input->post('member_name');
-				        $data['partner_name'] = $this->input->post('partner_name');
-						$data['description'] = $this->input->post('description'); 				         
-				        //print_r($_FILES);exit;
-						$config = $this->set_upload_happy_story_image();
-						$this->load->library('upload');
-						$this->upload->initialize($config);
+				//  if ($this->form_validation->run() == FALSE) {
+				// 		$page_data['top'] 		= "stories/index.php";
+				// 		$page_data['folder'] 	= "stories";
+				// 		$page_data['file']	 	= "edit_story.php";
+				// 		$page_data['bottom'] 	= "stories/index.php";
+				// 		$page_data['page_name'] = "stories";
+				// 		$page_data['form_contents'] = $this->input->post();
+				// 	}else{ 
+				// 		$data=array();
+				// 		$data['title'] = $this->input->post('story_name');
+				// 		$data['happy_story_id'] = $para2;
+				//         $data['date'] = date('Y-m-d',strtotime($this->input->post('dated')));
+				//         $data['member_name'] = $this->input->post('member_name');
+				//         $data['partner_name'] = $this->input->post('partner_name');
+				// 		$data['description'] = $this->input->post('description'); 	
+				// 		$data['program_area'] = $this->input->post('program_area');
+				// 		$data['legion_name'] = $this->input->post('legion_name');
+				// 		$data['area_name'] = $this->input->post('area_name');			         
+				//         //print_r($_FILES);exit;
+				// 		$config = $this->set_upload_happy_story_image();
+				// 		$this->load->library('upload');
+				// 		$this->upload->initialize($config);
 
-						if ($_FILES['story_photo']['name'] !== '') {
-							$id = uniqid();
-							$path = $_FILES['story_photo']['name'];
-							$ext = '.' . pathinfo($path, PATHINFO_EXTENSION);
-							if ($ext == ".jpg" || $ext == ".JPG" || $ext == ".jpeg" || $ext == ".JPEG" || $ext == ".png" || $ext == ".PNG") {
-								$this->Crud_model->file_up("story_photo", "happy_story", $id, '', '', $ext);
-								$images[] = array('image' => 'happy_story_' . $id . $ext, 'thumb' => 'happy_story_' . $id . '_thumb' . $ext);
-								$data['image'] = json_encode($images);
-							} else {
-								$this->session->set_flashdata('alert', 'failed_image');
-								redirect(base_url() . 'admin/stories', 'refresh');
-							}
-						}
-						//print_r($data);exit;
-						$this->db->where('happy_story_id', $para2 );
- 
-						$this->db->update('happy_story', $data);
-						$result = $this->db->affected_rows();
-						if ($result == true) {
-							$this->session->set_flashdata('success', 'Updated successfully');
-							redirect('admin/stories');
-						} else {
-							$this->session->set_flashdata('failed', 'Failed');
-							redirect('admin/stories');
-						}
+				// 		if ($_FILES['story_photo']['name'] !== '') {
+				// 			$id = uniqid();
+				// 			$path = $_FILES['story_photo']['name'];
+				// 			$ext = '.' . pathinfo($path, PATHINFO_EXTENSION);
+				// 			if ($ext == ".jpg" || $ext == ".JPG" || $ext == ".jpeg" || $ext == ".JPEG" || $ext == ".png" || $ext == ".PNG") {
+				// 				$this->Crud_model->file_up("story_photo", "happy_story", $id, '', '', $ext);
+				// 				$images[] = array('image' => 'happy_story_' . $id . $ext, 'thumb' => 'happy_story_' . $id . '_thumb' . $ext);
+				// 				$data['image'] = json_encode($images);
+				// 			} else {
+				// 				$this->session->set_flashdata('alert', 'failed_image');
+				// 				redirect(base_url() . 'admin/stories', 'refresh');
+				// 			}
+				// 		}
+				// 		//print_r($data);exit;
+				// 		$this->db->where('happy_story_id', $para2 );
+				// 		log_message('debug', 'Story ID to update: ', $data);
+				// 		$this->db->update('happy_story', $data);
+				// 		$result = $this->db->affected_rows();
+				// 		if ($result == true) {
+				// 			$this->session->set_flashdata('success', 'Updated successfully');
+				// 			redirect('admin/stories');
+				// 		} else {
+				// 			$this->session->set_flashdata('failed', 'Failed');
+				// 			redirect('admin/stories');
+				// 		}
 
- 					$page_data['top'] 		= "stories/index.php";
-					$page_data['folder'] 	= "stories";
-					$page_data['file']	 	= "edit_story.php";
-					$page_data['bottom'] 	= "stories/index.php";
-					$page_data['page_name'] = "stories";
-					$page_data['get_story'] = $this->db->get_where("happy_story", array("happy_story_id" => $para2))->row_array();
-					//print_r($page_data);exit;
+ 				// 	$page_data['top'] 		= "stories/index.php";
+				// 	$page_data['folder'] 	= "stories";
+				// 	$page_data['file']	 	= "edit_story.php";
+				// 	$page_data['bottom'] 	= "stories/index.php";
+				// 	$page_data['page_name'] = "stories";
+				// 	$page_data['get_story'] = $this->db->get_where("happy_story", array("happy_story_id" => $para2))->row_array();
+				// 	//print_r($page_data);exit;
 					
-					 }
-					$this->load->view('back/index', $page_data);
+				// 	 }
+				// 	$this->load->view('back/index', $page_data);
 
 					 
-				}
+				// }
+				elseif ($para1 == "update_story") {
+    $this->form_validation->set_rules('story_name', 'Story Name', 'required');
+    // $this->form_validation->set_rules('dated', 'Dated', 'required');
+    $this->form_validation->set_rules('description', 'Description', 'required');
+
+    if ($this->form_validation->run() == FALSE) {
+        $page_data['top']          = "stories/index.php";
+        $page_data['folder']       = "stories";
+        $page_data['file']         = "edit_story.php";
+        $page_data['bottom']       = "stories/index.php";
+        $page_data['page_name']    = "stories";
+        $page_data['form_contents'] = $this->input->post();
+    } else {
+        $data = array(
+            'title'         => $this->input->post('story_name'),
+            'happy_story_id'=> $para2,
+
+            'description'   => $this->input->post('description'),
+            'program_area'  => $this->input->post('program_area'),
+            'legion_name'   => $this->input->post('legion_name'),
+            'area_name'     => $this->input->post('area_name')
+        );
+
+        // Upload story_photo
+        if (!empty($_FILES['story_photo']['name'])) {
+            $id = uniqid();
+            $path = $_FILES['story_photo']['name'];
+            $ext = '.' . pathinfo($path, PATHINFO_EXTENSION);
+            $allowed_exts = [".jpg", ".JPG", ".jpeg", ".JPEG", ".png", ".PNG"];
+
+            if (in_array($ext, $allowed_exts)) {
+                $this->Crud_model->file_up("story_photo", "happy_story", $id, '', '', $ext);
+                $images[] = array(
+                    'image' => 'happy_story_' . $id . $ext,
+                    'thumb' => 'happy_story_' . $id . '_thumb' . $ext
+                );
+                $data['image'] = json_encode($images);
+            } else {
+                $this->session->set_flashdata('alert', 'failed_image');
+                redirect(base_url() . 'admin/stories', 'refresh');
+            }
+        }
+
+        // Upload activity_photo
+        if (!empty($_FILES['activity_photo']['name'])) {
+            $upload = $this->do_upload('activity_photo');
+            if ($upload['status'] === 'success') {
+                $data['activity_photo'] = $upload['file_name'];
+            } else {
+                $this->session->set_flashdata('error', $upload['error']);
+                redirect('admin/stories/edit_story/' . $para2);
+                return;
+            }
+        }
+
+        // Upload press_coverage
+        if (!empty($_FILES['press_coverage']['name'])) {
+            $upload = $this->do_upload('press_coverage');
+            if ($upload['status'] === 'success') {
+                $data['press_coverage'] = $upload['file_name'];
+            } else {
+                $this->session->set_flashdata('error', $upload['error']);
+                redirect('admin/stories/edit_story/' . $para2);
+                return;
+            }
+        }
+
+        // Update DB
+        $this->db->where('happy_story_id', $para2);
+        $this->db->update('happy_story', $data);
+        $result = $this->db->affected_rows();
+
+        if ($result > 0) {
+            $this->session->set_flashdata('success', 'Updated successfully');
+            redirect('admin/stories');
+        } else {
+            $this->session->set_flashdata('failed', 'Failed');
+            redirect('admin/stories');
+        }
+    }
+
+    // In case of form validation failure or update failure
+    $page_data['top']       = "stories/index.php";
+    $page_data['folder']    = "stories";
+    $page_data['file']      = "edit_story.php";
+    $page_data['bottom']    = "stories/index.php";
+    $page_data['page_name'] = "stories";
+    $page_data['get_story'] = $this->db->get_where("happy_story", array("happy_story_id" => $para2))->row_array();
+
+    $this->load->view('back/index', $page_data);
+}
 				elseif ($para1 == "list_data") {
 					$columns = array(
 						0 => '',
@@ -3453,7 +3549,9 @@ public function delete_area()
 							$nestedData = [];
 							$nestedData['image'] = $story_image;
 							$nestedData['title'] = $row->title;
-							$nestedData['date'] = date('d/m/Y H:i:s A', strtotime($row->date));
+							$nestedData['date'] = $row->date;
+
+
 							$nestedData['description'] = $row->description;
 							$nestedData['options'] = $approve_button . "
 								<a href='" . base_url('admin/stories/view_story/' . $row->happy_story_id) . "' class='btn btn-primary btn-xs add-tooltip' data-toggle='tooltip' data-placement='top' title='" . translate('view') . "'><i class='fa fa-eye'></i></a>
@@ -18252,19 +18350,7 @@ public function generate_pdf() {
     // Create and render PDF
     $this->pdf->create($html, 'project_report');  // 'project_report' is the output file name
 }
-// public function generate()
-//     {
-//         $range = $this->input->get('range'); // e.g., 'this_month', 'last_month'
-// 		// Log the value of $range to CodeIgniter log file
-//     log_message('debug', 'generate() called with range: ' . print_r($range, true));
 
-//         $data['report_data'] = $this->Crud_model->get_report_by_range($range);
-//         $data['title'] = "Report - " . ucfirst(str_replace('_', ' ', $range));
-
-//         $html = $this->load->view('pdf/report_template', $data, true);
-
-//         $this->pdf->create($html, 'Report_' . date('Ymd_His'));
-//     }
 public function generate()
 {
     $this->load->library('pdf'); // Ensure the PDF library is loaded
@@ -18282,10 +18368,80 @@ public function generate()
     }
 
     $data['title'] = "Report - $start_date to $end_date";
+	$data['company'] = "Senior Chamber International";
 
     $html = $this->load->view('pdf/report_template', $data, true);
     $this->pdf->create($html, 'Report_' . date('Ymd_His'));
 }
+public function update_story($id)
+{
+    // Load model if not already loaded
+    $this->load->model('Crud_model');
+
+    // Collect the POST data safely
+    $data = array(
+        'title'         => $this->input->post('story_name', true),
+        'date'          => $this->input->post('dated', true),
+        'description'   => $this->input->post('description', true),
+        'program_area'  => $this->input->post('program_area', true),
+        // legion_name and area_name are readonly, so no update needed from user input
+    );
+
+    // Handle file uploads for photos (if any)
+    if (!empty($_FILES['activity_photo']['name'])) {
+        $upload = $this->do_upload('activity_photo');
+        if ($upload['status'] === 'success') {
+            $data['activity_photo'] = $upload['file_name'];
+        } else {
+            $this->session->set_flashdata('error', $upload['error']);
+            redirect('admin/stories/edit_story/' . $id);
+            return;
+        }
+    }
+
+    if (!empty($_FILES['press_coverage']['name'])) {
+        $upload = $this->do_upload('press_coverage');
+        if ($upload['status'] === 'success') {
+            $data['press_coverage'] = $upload['file_name'];
+        } else {
+            $this->session->set_flashdata('error', $upload['error']);
+            redirect('admin/stories/edit_story/' . $id);
+            return;
+        }
+    }
+
+    // Log the data array before updating
+    log_message('debug', 'Update data: ' . print_r($data, true));
+
+    // Update database
+    $update = $this->Crud_model->update_story($id, $data);
+
+    if ($update) {
+        $this->session->set_flashdata('success', 'Project updated successfully!');
+    } else {
+        $this->session->set_flashdata('error', 'Failed to update the project.');
+    }
+
+    redirect('admin/stories');
+}
+
+// File upload helper function
+private function do_upload($field_name)
+{
+    $config['upload_path'] = './uploads/happy_story_image/';
+    $config['allowed_types'] = 'gif|jpg|png|jpeg';
+    $config['max_size'] = 2048; // 2MB max
+    $config['encrypt_name'] = TRUE;
+
+    $this->load->library('upload', $config);
+
+    if (!$this->upload->do_upload($field_name)) {
+        return ['status' => 'error', 'error' => $this->upload->display_errors()];
+    } else {
+        return ['status' => 'success', 'file_name' => $this->upload->data('file_name')];
+    }
+}
+
 
 
 }
