@@ -40,3 +40,15 @@ CREATE TABLE admin_legion (
     FOREIGN KEY (admin_id) REFERENCES admin(admin_id) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (legion_id) REFERENCES legions(id) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB;
+
+
+
+-- added the forigin key  of legion id to happy stories table --
+
+ALTER TABLE happy_story ADD COLUMN legion_id INT;
+
+-- Optional: enforce referential integrity
+ALTER TABLE happy_story 
+ADD CONSTRAINT fk_legion 
+FOREIGN KEY (legion_id) REFERENCES legions(id) 
+ON DELETE SET NULL ON UPDATE CASCADE;

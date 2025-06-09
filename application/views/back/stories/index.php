@@ -9,7 +9,7 @@
 		<!--Page Title-->
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 		<div id="page-title">
-			<h1 class="page-header text-overflow"><?php echo translate('latest_events')?></h1>
+			<h1 class="page-header text-overflow"><?php echo translate('Projects')?></h1>
 
 		</div>
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -18,7 +18,7 @@
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 		<ol class="breadcrumb">
 			<li><a href="<?=base_url()?>admin"><?php echo translate('home')?></a></li>
-			<li class="active"><a href="#"><?php echo translate('latest_events')?></a></li>
+			<li class="active"><a href="#"><?php echo translate('Projects')?></a></li>
 		</ol>
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 		<!--End breadcrumb-->
@@ -42,12 +42,60 @@
 	            </div>
 			<?php endif ?>
 			<div class="panel-heading">
-				<h3 class="panel-title"><?php echo translate('event_list')?></h3>
+				<h3 class="panel-title"><?php echo translate('Projects_list')?></h3>
 			</div>
-			<div class="text-right" style="margin-right: 30px">
-				<a href="<?=base_url()?>admin/stories/add_story" id="demo-dt-view-btn" class="btn btn-primary add-tooltip"><i class="fa fa-plus"></i> <?php echo translate('add_new_event')?></a>
-			</div>
+			<?php
+				$allowed_roles = [2,7,8,9,1]; // role IDs allowed to see this content
+				$current_user_role_id = $this->session->userdata('role_id'); // adjust this if your session key is different
+			?>
+
+			<?php if (in_array($current_user_role_id, $allowed_roles)): ?>
+				<div class="text-right" style="margin-right: 30px">
+					<a href="<?=base_url()?>admin/stories/add_story" id="demo-dt-view-btn" class="btn btn-primary add-tooltip">
+						<i class="fa fa-plus"></i> <?php echo translate('add_new_project')?>
+					</a>
+				</div>
+			<?php endif; ?>
+
 			<div class="panel-body">
+    <!-- Form to submit date range -->
+    <!-- <form method="post" action="<?= base_url('your_controller/get_projects_by_date') ?>"> -->
+		<form method="post" action="<?= base_url('admin/generate') ?>">
+        <div class="row mb-2" style="margin-bottom: 50px;">
+            <div class="col-md-2">
+                <label for="date_range"><?= translate('select_date_range') ?></label>
+                <select id="date_range" name="date_range" class="form-control" required>
+                    <option value=""><?= translate('choose_range') ?></option>
+                    <?php
+                    $year = date('Y');
+                    $next_year = $year + 1;
+                    $ranges = [
+                        ['start' => "$year-04-01", 'end' => "$year-05-31"],
+                        ['start' => "$year-06-01", 'end' => "$year-07-30"],
+                        ['start' => "$year-08-01", 'end' => "$year-09-30"],
+                        ['start' => "$year-10-01", 'end' => "$year-11-30"],
+                        ['start' => "$year-12-01", 'end' => "$next_year-02-20"],
+                    ];
+                    foreach ($ranges as $range) {
+                        $label = date('j M', strtotime($range['start'])) . ' - ' . date('j M', strtotime($range['end']));
+                        $value = $range['start'] . '|' . $range['end'];
+                        echo '<option value="' . $value . '">' . $label . '</option>';
+                    }
+                    ?>
+                </select>
+            </div>
+
+            <div class="col-md-3 d-flex align-items-end">
+                <button type="submit" class="btn btn-success" id="generate_pdf" style="display: none;">
+                    <i class="fa fa-file-pdf-o"></i> <?= translate('generate_pdf') ?>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
 				<table id="stories_table" class="table table-striped table-bordered" cellspacing="0" width="100%">
 					<thead>
 					<tr>
@@ -61,7 +109,7 @@
 							<?php echo translate('date')?>
 						</th>
 						<th>
-							<?php echo translate('event_name')?>
+							<?php echo translate('description')?>
 						</th>
 						<!--<th>-->
 						<!--	<?php echo translate('member_name')?>-->
@@ -124,11 +172,12 @@
             </div>
            	<!--Modal body-->
             <div class="modal-body">
-            	<p><?php echo translate('are_you_sure_you_want_to')?> "<b id="type_name"></b>" <?php echo translate('this_event?')?>?</p>
+            	<p><?php echo translate('are_you_sure_you_want_to')?> "<b id="type_name"></b>" <?php echo translate('this_project')?>?</p>
             	<div class="text-right">
             		<input type="hidden" id="story_id" name="story_id" value="">
             		<button data-dismiss="modal" class="btn btn-default btn-sm" type="button" id="modal_close"><?php echo translate('close')?></button>
                 	<button class="btn btn-primary btn-sm" id="approval_status" value=""><?php echo translate('confirm')?></button>
+					 
             	</div>
             </div>
         </div>
@@ -181,8 +230,9 @@
 				{ "data": "image" },
 				{ "data": "title" },
 				{ "data": "date" },
-				{ "data": "partner_name" },
+				// { "data": "partner_name" },
 				// { "data": "member_name" },
+				{ "data": "description" },
 				{ "data": "options" },
 			],
 			"drawCallback": function( settings ) {
@@ -231,4 +281,44 @@
 			}
 		});
     })
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdown = document.getElementById("date_range");
+    const button = document.getElementById("generate_pdf");
+
+    dropdown.addEventListener("change", function () {
+        button.style.display = this.value !== "" ? "inline-block" : "none";
+    });
+
+      button.addEventListener("click", function (e) {
+        e.preventDefault(); // Prevent form default behavior
+
+        const selectedRange = dropdown.value;
+        if (selectedRange !== "") {
+            fetch("<?= base_url('admin/generate') ?>?range=" + selectedRange)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Failed to generate PDF");
+                    }
+                    return response.blob();
+                })
+                .then(blob => {
+                    // Create a download link for the blob
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement("a");
+                    a.href = url;
+                    a.download = "Report_<?= date('Ymd_His') ?>.pdf";
+                    document.body.appendChild(a);
+                    a.click();
+                    a.remove();
+                })
+                .catch(error => {
+                    console.error("PDF generation error:", error);
+                    alert("Failed to generate PDF.");
+                });
+        }
+    });
+});
 </script>

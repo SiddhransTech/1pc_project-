@@ -11,6 +11,13 @@ class Pdf extends Dompdf
 	{
 		 parent::__construct();
 	} 
+	public function create($html, $filename = 'document')
+    {
+        $this->loadHtml($html);
+        $this->setPaper('A4', 'portrait');
+        $this->render();
+        $this->stream($filename . ".pdf", array("Attachment" => 1));
+    }
 }
 
 ?>

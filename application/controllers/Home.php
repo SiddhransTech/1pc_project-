@@ -2788,7 +2788,78 @@ public function member_profile($para1 = "", $para2 = "")
             $this->load->view('front/index', $page_data);
         }
     }
-
+    function contribution($para1 = "", $para2 = "")
+    {
+        if ($para1=="") {
+            $page_data['title']         = "Premium Plans || ".$this->system_title;
+            $page_data['top']           = "plans.php";
+            $page_data['page']          = "plans";
+            $page_data['bottom']        = "plans.php";
+            $page_data['page_url']      = "home/plans";
+            $page_data['all_plans']     = $this->db->get("plan")->result();
+            //echo '<pre>';print_r($page_data);exit;
+            if ($this->session->flashdata('alert') == "paypal_cancel") {
+                $page_data['danger_alert'] = translate("you_have_canceled_your_payment_via_paypal!");
+            }
+            elseif ($this->session->flashdata('alert') == "pum_fail") {
+                $page_data['danger_alert'] = translate("your_payment_via_payUMoney_has_been_failed!");
+            }
+            elseif ($this->session->flashdata('alert') == "stripe_failed") {
+                $page_data['danger_alert'] = translate("your_payment_via_stripe_has_been_failed!");
+            }
+            $this->load->view('front/index', $page_data);
+        }
+        elseif ($para1=="subscribe") {
+            if ($this->member_permission() == FALSE) {
+                redirect(base_url().'home/login', 'refresh');
+            }
+            if ($para2==1) {
+                redirect(base_url().'home/plans', 'refresh');
+            }
+            $page_data['title'] = "Premium Plans || ".$this->system_title;
+            $page_data['top'] = "plans.php";
+            $page_data['page'] = "subscribe";
+            $page_data['bottom'] = "plans.php";
+            $page_data['selected_plan'] = $this->db->get_where("plan", array("plan_id" => $para2))->result();
+            $this->load->view('front/index', $page_data);
+        }
+    }
+    // public function contribution($para1 = "", $para2 = "")
+    // {
+    //     if ($para1 == "") {
+    //         $page_data['title']         = "Contributions || " . $this->system_title;
+    //         $page_data['top']           = "contribution.php";
+    //         $page_data['page']          = "contribution";
+    //         $page_data['bottom']        = "contribution.php";
+    //         $page_data['page_url']      = "home/contribution";
+    //         $page_data['all_contributions'] = $this->db->get("contribution")->result();
+    
+    //         // Flash alerts
+    //         if ($this->session->flashdata('alert') == "paypal_cancel") {
+    //             $page_data['danger_alert'] = translate("you_have_canceled_your_payment_via_paypal!");
+    //         } elseif ($this->session->flashdata('alert') == "pum_fail") {
+    //             $page_data['danger_alert'] = translate("your_payment_via_payUMoney_has_been_failed!");
+    //         } elseif ($this->session->flashdata('alert') == "stripe_failed") {
+    //             $page_data['danger_alert'] = translate("your_payment_via_stripe_has_been_failed!");
+    //         }
+    
+    //         $this->load->view('front/index', $page_data);
+    //     }
+    //     elseif ($para1 == "view") {
+    //         if ($this->member_permission() == FALSE) {
+    //             redirect(base_url() . 'home/login', 'refresh');
+    //         }
+    
+    //         $page_data['title']             = "Contribution Details || " . $this->system_title;
+    //         $page_data['top']               = "contribution.php";
+    //         $page_data['page']              = "contribution_view";
+    //         $page_data['bottom']            = "contribution.php";
+    //         $page_data['selected_contribution'] = $this->db->get_where("contribution", array("contribution_id" => $para2))->result();
+    
+    //         $this->load->view('front/index', $page_data);
+    //     }
+    // }
+    
     function stories($para1="",$para2="", $para3="")
     {
         if ($para1=="") {
@@ -3680,48 +3751,115 @@ if ($para1 == "add") {
             // submit the fields to pum
             $this->pum->submit_pum_post();
         }
+        // else if ($this->input->post('payment_type') == 'instamojo') {
+        //   $member_id = $this->session->userdata('member_id');
+        //   $payment_type = $this->input->post('payment_type');
+        //   $plan_id = $this->input->post('plan_id');
+        //   $amount = $this->db->get_where('plan', array('plan_id' => $plan_id))->row()->amount;
+        //   $package_name = $this->db->get_where('plan', array('plan_id' => $plan_id))->row()->name;
+
+        //   $data['plan_id']            = $plan_id;
+        //   $data['member_id']          = $member_id;
+        //   $data['payment_type']       = 'Instamojo';
+        //   $data['payment_status']     = 'due';
+        //   $data['payment_details']    = 'none';
+        //   $exchange = exchange('usd');
+        //   $amount= $amount/$exchange;
+        //   $data['amount']             = $amount;
+        //   $data['purchase_datetime']  = time();
+
+        //   $this->db->insert('package_payment', $data);
+        //   $payment_id = $this->db->insert_id();
+        //   $data['payment_code'] = date('Ym', $data['purchase_datetime']) . $payment_id;
+        //   $this->session->set_userdata('payment_id', $payment_id);
+
+        //   $member_data = $this->db->get_where('member',array('member_id'=>$member_id))->row();
+
+        //   $instamojo_api_key = $this->Crud_model->get_settings_value('business_settings', 'instamojo_api_key', 'value');
+        //   $instamojo_auth_token = $this->Crud_model->get_settings_value('business_settings', 'instamojo_auth_token', 'value');
+        //   $instamojo_account_type = $this->Crud_model->get_settings_value('business_settings', 'instamojo_account_type', 'value');
+
+        //   if($instamojo_account_type == 'sandbox'){
+        //            // testing_url
+        //            $endPoint = 'https://test.instamojo.com/api/1.1/';
+        //        }
+        //    else{
+        //        // live_url
+        //        $endPoint = 'https://www.instamojo.com/api/1.1/';
+        //    }
+
+        //    $api = new \Instamojo\Instamojo(
+        //         $instamojo_api_key,
+        //         $instamojo_auth_token,
+        //         $endPoint
+        //       );
+        //     try {
+        //         $response = $api->paymentRequestCreate(array(
+        //             "purpose" => 'Package Payment',
+        //             "amount" => $data['amount'],
+        //             "buyer_name" => $member_data->first_name,
+        //             "send_email" => true,
+        //             "email" => $member_data->email,
+        //             "phone" => $member_data->mobile,
+        //             "redirect_url" => base_url().'home/instamojo_success'
+        //             ));
+
+        //             return redirect($response['longurl']);
+
+        //     }catch (Exception $e) {
+        //         print('Error: ' . $e->getMessage());
+        //     }
+        // }
+
         else if ($this->input->post('payment_type') == 'instamojo') {
-          $member_id = $this->session->userdata('member_id');
-          $payment_type = $this->input->post('payment_type');
-          $plan_id = $this->input->post('plan_id');
-          $amount = $this->db->get_where('plan', array('plan_id' => $plan_id))->row()->amount;
-          $package_name = $this->db->get_where('plan', array('plan_id' => $plan_id))->row()->name;
-
-          $data['plan_id']            = $plan_id;
-          $data['member_id']          = $member_id;
-          $data['payment_type']       = 'Instamojo';
-          $data['payment_status']     = 'due';
-          $data['payment_details']    = 'none';
-          $exchange = exchange('usd');
-          $amount= $amount/$exchange;
-          $data['amount']             = $amount;
-          $data['purchase_datetime']  = time();
-
-          $this->db->insert('package_payment', $data);
-          $payment_id = $this->db->insert_id();
-          $data['payment_code'] = date('Ym', $data['purchase_datetime']) . $payment_id;
-          $this->session->set_userdata('payment_id', $payment_id);
-
-          $member_data = $this->db->get_where('member',array('member_id'=>$member_id))->row();
-
-          $instamojo_api_key = $this->Crud_model->get_settings_value('business_settings', 'instamojo_api_key', 'value');
-          $instamojo_auth_token = $this->Crud_model->get_settings_value('business_settings', 'instamojo_auth_token', 'value');
-          $instamojo_account_type = $this->Crud_model->get_settings_value('business_settings', 'instamojo_account_type', 'value');
-
-          if($instamojo_account_type == 'sandbox'){
-                   // testing_url
-                   $endPoint = 'https://test.instamojo.com/api/1.1/';
-               }
-           else{
-               // live_url
-               $endPoint = 'https://www.instamojo.com/api/1.1/';
-           }
-
-           $api = new \Instamojo\Instamojo(
+            $member_id = $this->session->userdata('member_id');
+            $payment_type = $this->input->post('payment_type');
+            $plan_id = $this->input->post('plan_id');
+        
+            log_message('info', 'Instamojo Payment Initiated. Member ID: ' . $member_id . ', Plan ID: ' . $plan_id);
+        
+            $plan = $this->db->get_where('plan', array('plan_id' => $plan_id))->row();
+            $amount = $plan->amount;
+            $package_name = $plan->name;
+        
+            $data['plan_id'] = $plan_id;
+            $data['member_id'] = $member_id;
+            $data['payment_type'] = 'Instamojo';
+            $data['payment_status'] = 'due';
+            $data['payment_details'] = 'none';
+        
+            $exchange = exchange('usd');
+            $amount_in_usd = $amount / $exchange;
+            $data['amount'] = $amount_in_usd;
+            $data['purchase_datetime'] = time();
+        
+            log_message('info', 'Prepared payment data: ' . json_encode($data));
+        
+            $this->db->insert('package_payment', $data);
+            $payment_id = $this->db->insert_id();
+        
+            log_message('info', 'Inserted package_payment. Payment ID: ' . $payment_id);
+        
+            $data['payment_code'] = date('Ym', $data['purchase_datetime']) . $payment_id;
+            $this->session->set_userdata('payment_id', $payment_id);
+        
+            $member_data = $this->db->get_where('member', array('member_id' => $member_id))->row();
+            log_message('info', 'Member Data: ' . json_encode($member_data));
+        
+            $instamojo_api_key = $this->Crud_model->get_settings_value('business_settings', 'instamojo_api_key', 'value');
+            $instamojo_auth_token = $this->Crud_model->get_settings_value('business_settings', 'instamojo_auth_token', 'value');
+            $instamojo_account_type = $this->Crud_model->get_settings_value('business_settings', 'instamojo_account_type', 'value');
+        
+            $endPoint = ($instamojo_account_type == 'sandbox') ? 'https://test.instamojo.com/api/1.1/' : 'https://www.instamojo.com/api/1.1/';
+        
+            log_message('info', 'Instamojo endpoint: ' . $endPoint);
+        
+            $api = new \Instamojo\Instamojo(
                 $instamojo_api_key,
                 $instamojo_auth_token,
                 $endPoint
-              );
+            );
+        
             try {
                 $response = $api->paymentRequestCreate(array(
                     "purpose" => 'Package Payment',
@@ -3730,15 +3868,18 @@ if ($para1 == "add") {
                     "send_email" => true,
                     "email" => $member_data->email,
                     "phone" => $member_data->mobile,
-                    "redirect_url" => base_url().'home/instamojo_success'
-                    ));
-
-                    return redirect($response['longurl']);
-
-            }catch (Exception $e) {
-                print('Error: ' . $e->getMessage());
+                    "redirect_url" => base_url() . 'home/instamojo_success'
+                ));
+        
+                log_message('info', 'Instamojo Payment Request Response: ' . json_encode($response));
+                return redirect($response['longurl']);
+        
+            } catch (Exception $e) {
+                log_message('error', 'Instamojo Error: ' . $e->getMessage());
+                echo 'Error: ' . $e->getMessage();
             }
         }
+        
         else if ($this->input->post('payment_type') == 'custom_payment_method_1') {
 
             $member_id  = $this->session->userdata('member_id');
@@ -4371,17 +4512,21 @@ if ($para1 == "add") {
                         //email verification check end
 
                         if($check == 'done'){
+                            //   log_message('debug', 'User fetched from DB with legion_id: ' . $result->legion_id);
                             if ($result->is_blocked == "no") {
                                 $data['login_state'] = 'yes';
                                 $data['member_id'] = $result->member_id;
                                 $data['member_name'] = $result->first_name;
                                 $data['member_email'] = $result->email;
-
+                                $data['legion_id'] = $result->legion_id;
+                                $data['user_type'] = 0;
+                            
                                 if ($remember_me == 'checked') {
                                     $this->session->set_userdata($data);
                                     setcookie('cookie_member_id', $this->session->userdata('member_id'), time() + (1296000), "/");
                                     setcookie('cookie_member_name', $this->session->userdata('member_name'), time() + (1296000), "/");
                                     setcookie('cookie_member_email', $this->session->userdata('member_email'), time() + (1296000), "/");
+                                     setcookie('cookie_legion_id', $this->session->userdata('legion_id'), time() + (1296000), "/"); //
                                 } else {
                                     $this->session->set_userdata($data);
                                 }
@@ -4428,12 +4573,14 @@ if ($para1 == "add") {
                             $data['member_id'] = $result->member_id;
                             $data['member_name'] = $result->first_name;
                             $data['member_email'] = $result->email;
-
+                            $data['legion_id'] = $result->legion_id;
+                            $data['user_type'] = 0;
                             if ($remember_me == 'checked') {
                                 $this->session->set_userdata($data);
                                 setcookie('cookie_member_id', $this->session->userdata('member_id'), time() + (1296000), "/");
                                 setcookie('cookie_member_name', $this->session->userdata('member_name'), time() + (1296000), "/");
                                 setcookie('cookie_member_email', $this->session->userdata('member_email'), time() + (1296000), "/");
+                                 setcookie('cookie_legion_id', $this->session->userdata('legion_id'), time() + (1296000), "/"); 
                             } else {
                                 $this->session->set_userdata($data);
                             }

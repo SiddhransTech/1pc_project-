@@ -3083,13 +3083,18 @@ class Style
      */
     function set_z_index($val)
     {
-        if (round($val) != $val && $val !== "auto") {
+        if (!is_numeric($val) && $val !== "auto") {
             return;
         }
-
+    
+        if (is_numeric($val) && round($val) != $val) {
+            return;
+        }
+    
         $this->_prop_cache["z_index"] = null;
         $this->_props["z_index"] = $val;
     }
+    
 
     /**
      * @param FontMetrics $fontMetrics
