@@ -72,6 +72,18 @@
                     </div>
                 </div>
 
+                <!-- Program Date -->
+            <div class="form-group">
+                <label class="col-sm-2 control-label"><b>Program Date</b><span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                    <input type="date" class="form-control" id="program_date" name="program_date" required>
+                    <?php if (isset($this->session->flashdata('failed')['program_date'])): ?>
+                        <span class="text-danger"><?= $this->session->flashdata('failed')['program_date']; ?></span>
+                    <?php endif; ?>
+                </div>
+            </div>
+
+
                             <!-- Program Name -->
                             <div class="form-group">
                                 <label class="col-sm-2 control-label"><b>Program Name</b><span class="text-danger">*</span></label>

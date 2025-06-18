@@ -123,6 +123,19 @@ function convertDateFormat($date) {
                style="background-color: transparent;">
     </div>
 </div>
+
+<!-- Program Date -->
+<div class="form-group">
+    <label class="col-sm-2 control-label" for="program_date">
+        <b><?php echo translate('program_date')?></b><span class="text-danger">*</span>
+    </label>
+    <div class="col-sm-9">
+        <input type="date" class="form-control" name="program_date" id="program_date"
+               value="<?= !empty($form_contents['program_date']) ? $form_contents['program_date'] : convertDateFormat($get_story['program_date']) ?>"
+               required>
+    </div>
+</div>
+
                             
                             <!-- Description -->
                             <div class="form-group">

@@ -21,13 +21,14 @@
             }
 
             .title-page .report-title {
-    margin-top: 60px;  
- 
-  
+    margin-top: 60px;    
 }
 
-
-
+.report-logo {
+    max-width: 650px; /* increased from 150px */
+    height: auto;
+    margin-bottom: 10px;
+}
 
 
             .company-logo {
@@ -125,18 +126,16 @@
     </head>
     <body>
 
-   <!-- Page 1: Title -->
    <div class="title-page">
-<h1 class="report-title"><?= htmlspecialchars($title) ?></h1>
+    <img src="file://<?= FCPATH . 'uploads/logo1.jpg' ?>" class="report-logo" alt="Company Logo" />
+    <h1 class="report-title"><?= htmlspecialchars($title) ?></h1>
+    <h1 class="report-company"><?= htmlspecialchars($company) ?></h1>
 
-    <h1  class="report-company"><?= htmlspecialchars($company) ?></h1>
-     <!-- <h1 class="legion-info"> legion name:<?=$president_name ?? 'N/A'?></h1>
-     <h1 class="legion-info1"> legion name:<?=$president_name ?? 'N/A'?></h1>
-    <h1 class="legion-info2"> area_name  <?= $legion_name ?? 'N/A' ?></h1> -->
-
-    
- 
+    <h1 class="legion-info">Name: <?= htmlspecialchars($member_name ?? 'N/A') ?></h1>
+    <h1 class="legion-info1">Legion: <?= htmlspecialchars($legion_name ?? 'N/A') ?></h1>
+    <h1 class="legion-info2">Area: <?= htmlspecialchars($area_name ?? 'N/A') ?></h1>
 </div>
+
 
 
 
@@ -187,9 +186,6 @@
     <div class="page-break"></div>
 
     <!-- Detailed Pages -->
-
-   
-
 <?php foreach ($report_data as $i => $report): ?>
     <table class="detail-table">
         <tr>
@@ -208,16 +204,33 @@
         <tr>
             <td colspan="2" class="wrap-text"><strong>Description:</strong> <?= htmlspecialchars($report->description) ?></td>
         </tr>
-        <tr class="image-row">
-            <td>
-                <div><strong>Active Image</strong></div>
-                <img src="<?='uploads/happy_story_image/' . $report->activity_photo ?>" alt="Active Image">
-            </td>
-            <td>
-                <div><strong>Press Coverage Image</strong></div>
-                <img src="<?= 'uploads/happy_story_image/' . ($report->press_coverage ?? 'default.jpg')?>" alt="Press Image">
-            </td>
-        </tr>
+  <tr class="image-row">
+    <td style="text-align: center; vertical-align: top;">
+        <table width="100%">
+            <tr>
+                <td style="font-weight: bold; font-size: 14px; padding: 4px;">Active Image</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="<?= 'uploads/happy_story_image/' . $report->activity_photo ?>" alt="Active Image" style="max-width: 100%; height: auto; max-height: 200px;">
+                </td>
+            </tr>
+        </table>
+    </td>
+    <td style="text-align: center; vertical-align: top;">
+        <table width="100%">
+            <tr>
+                <td style="font-weight: bold; font-size: 14px; padding: 4px;">Press Coverage Image</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="<?= 'uploads/happy_story_image/' . ($report->press_coverage ?? 'user1.jpeg') ?>" alt="Press Image" style="max-width: 100%; height: auto; max-height: 200px;">
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+
     </table>
 
     <?php if ((($i + 1) % 2 === 0) && ($i + 1 < count($report_data))) : ?>
