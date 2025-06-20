@@ -82,13 +82,27 @@
 			</li>
 			
 			<!------ (19-3-21) ------->
-			<li style="margin-top: 16px;">					
-				<span style="font-size: 17px;"><!-- <i class="fa fa-clock-o"></i> --> Start Date: <?php echo  (isset($started)?date_format(date_create($started->member_since),"d/m/y h:i:s A "):'')?></span>
-			</li>
+			<?php
+    $role_id = $this->session->userdata('role_id');
+    if ($role_id == 2) {
+        $roleName = 'President';
+    } elseif ($role_id == 8) {
+        $roleName = 'Secretary';
+    } else {
+        $roleName = null;
+    }
+	log_message('info', 'User role_id: ' . $role_id . ', roleName: ' . ($roleName ?? 'Unknown'));
 
-			<li style="margin: 16px 0px 0px 35px;">
-				<span style="font-size: 17px;"><!-- <i class="fa fa-clock-o"></i> --> Current Date Time: <?php echo date('d-m-Y'); ?> <span id="demo"></span></span>
-			</li>
+?>
+
+<?php if (!empty($roleName)): ?>
+    <li style="margin-left: 25px; display: flex; align-items: center;">
+        <span style="font-size: 16px; font-weight: 600; color: #fff;">
+            <i class="fa fa-user-circle" style="margin-right: 6px;"></i> <?= $roleName ?>
+        </span>
+    </li>
+<?php endif; ?>
+
 			<!------ (19-3-21) ------->
 			<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 			<!--End Navigation toogle button-->
