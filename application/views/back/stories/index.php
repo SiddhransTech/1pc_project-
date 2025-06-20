@@ -23,7 +23,7 @@ $story_data = $this->db->select('*')->from('happy_story')->where('approval_statu
         <?php if (!empty($success_alert)): ?>
             <div class="alert alert-success alert-dismissible fade show" id="success_alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">×</span>
                 </button>
                 <?= $success_alert ?>
             </div>
@@ -31,7 +31,7 @@ $story_data = $this->db->select('*')->from('happy_story')->where('approval_statu
         <?php if (!empty($danger_alert)): ?>
             <div class="alert alert-danger alert-dismissible fade show" id="danger_alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">×</span>
                 </button>
                 <?= $danger_alert ?>
             </div>
@@ -119,7 +119,7 @@ $story_data = $this->db->select('*')->from('happy_story')->where('approval_statu
             <div class="modal-header">
                 <h5 class="modal-title" id="approval_modal_label"><?php echo translate('confirm_your_action')?></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">×</span>
                 </button>
             </div>
             <div class="modal-body">
@@ -128,27 +128,6 @@ $story_data = $this->db->select('*')->from('happy_story')->where('approval_statu
                 <div class="text-right">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo translate('close')?></button>
                     <button class="btn btn-primary" id="approval_status"><?php echo translate('confirm')?></button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Delete Modal -->
-<div class="modal fade" id="delete_modal" tabindex="-1" aria-labelledby="delete_modal_label" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="delete_modal_label"><?php echo translate('confirm_delete')?></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p><?php echo translate('are_you_sure_you_want_to_delete_this_data')?>?</p>
-                <div class="text-right">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo translate('close')?></button>
-                    <button class="btn btn-danger" id="delete_story"><?php echo translate('delete')?></button>
                 </div>
             </div>
         </div>
@@ -272,24 +251,17 @@ $(document).ready(function () {
         });
     });
 
-    // Delete modal
+    // Direct delete functionality
     window.delete_story = function (id) {
-        $('#delete_story').val(id);
-        $('#delete_modal').modal('show');
-    };
-
-    $('#delete_story').on('click', function () {
-        const id = $(this).val();
-        $.ajax({
+        $.ajax({    
             url: `<?= base_url() ?>admin/stories/delete/${id}`,
             success: function () {
-                $('#delete_modal').modal('hide');
                 table.ajax.reload(null, false);
             },
             error: function (xhr) {
                 alert("<?php echo translate('error_deleting_data')?>: " + xhr.statusText);
             }
         });
-    });
+    };
 });
 </script>
